@@ -1,0 +1,15 @@
+{
+  "description": "Evaluator-generated, unexecuted source recovered exactly from retained shell-heredoc payloads; not a copied workspace snapshot or an assertion of final runtime state.",
+  "files": [
+    {
+      "bytes": 284,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/drv.py",
+      "runtime_path": "drv.py",
+      "sha256": "da0e5089883f36f43a9128bd816fb30d75f0665b9c66f6496e77ad65ba36f51e",
+      "source_transcript": "agent/sessions/projects/-root/07edf820-e3d6-40ed-b934-3976c03916e7.jsonl"
+    }
+  ],
+  "schema_version": 1
+}

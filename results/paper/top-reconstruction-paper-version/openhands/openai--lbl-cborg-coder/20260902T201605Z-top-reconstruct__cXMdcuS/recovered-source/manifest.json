@@ -1,0 +1,96 @@
+{
+  "description": "Evaluator-generated, unexecuted source recovered exactly from retained shell-heredoc payloads; not a copied workspace snapshot or an assertion of final runtime state.",
+  "files": [
+    {
+      "bytes": 3574,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/dataset_builder.py",
+      "runtime_path": "/root/dataset_builder.py",
+      "sha256": "98722657f27e0c5c372019f90a05350547050d0482de2ffd3c20b13f8a84def6",
+      "source_transcript": "agent/sessions/bc8c15cc-528c-42-c1794f20615c702/event_cache/25-50.json"
+    },
+    {
+      "bytes": 1027,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/dataset_prepare.py",
+      "runtime_path": "/root/dataset_prepare.py",
+      "sha256": "6a213f5cf6a9a244b464c4cbd68259637103c36d8ffffafeb46da300208ee632",
+      "source_transcript": "agent/sessions/bc8c15cc-528c-42-c1794f20615c702/event_cache/75-100.json"
+    },
+    {
+      "bytes": 182,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/debug_len.py",
+      "runtime_path": "/root/debug_len.py",
+      "sha256": "49a61471075f3578ea28b5845a543fc580b49322350fc92106ed63e00e7715ac",
+      "source_transcript": "agent/sessions/bc8c15cc-528c-42-c1794f20615c702/event_cache/150-175.json"
+    },
+    {
+      "bytes": 1359,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/inference.py",
+      "runtime_path": "/root/inference.py",
+      "sha256": "79d6acd0000b5ea47e3246696cafe0ec808f99e646d659f5416610e6b7acb86f",
+      "source_transcript": "agent/sessions/bc8c15cc-528c-42-c1794f20615c702/event_cache/125-150.json"
+    },
+    {
+      "bytes": 101,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/inspect_tree.py",
+      "runtime_path": "/root/inspect_tree.py",
+      "sha256": "120d7151a2bab9ab698369a49a12f3edaa51018c8597ec6d61a433a7823e7aa0",
+      "source_transcript": "agent/sessions/bc8c15cc-528c-42-c1794f20615c702/event_cache/50-75.json"
+    },
+    {
+      "bytes": 1079,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/plot_results.py",
+      "runtime_path": "/root/plot_results.py",
+      "sha256": "e62ed3fa01553237dfad3762842c55bb3750c3a1363287070855f08c9e928ed0",
+      "source_transcript": "agent/sessions/bc8c15cc-528c-42-c1794f20615c702/events/175.json"
+    },
+    {
+      "bytes": 1279,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/sanity_check.py",
+      "runtime_path": "/root/sanity_check.py",
+      "sha256": "fed85bc2e344776f7f75bea2d5d7ccff7ea8c6ec5c420e569acc2f49f808d8af",
+      "source_transcript": "agent/sessions/bc8c15cc-528c-42-c1794f20615c702/events/177.json"
+    },
+    {
+      "bytes": 5541,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/select_triplets.py",
+      "runtime_path": "/root/select_triplets.py",
+      "sha256": "a365a89ad35cf09701d90aa32c688121e2033603416b826c16e7b0ff1a40a6f9",
+      "source_transcript": "agent/sessions/bc8c15cc-528c-42-c1794f20615c702/event_cache/150-175.json"
+    },
+    {
+      "bytes": 1773,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/train_model.py",
+      "runtime_path": "/root/train_model.py",
+      "sha256": "cd44c15f32c9856ed5d15a6d754425dd6a9df3dabc692dbc68f202c90659ac35",
+      "source_transcript": "agent/sessions/bc8c15cc-528c-42-c1794f20615c702/event_cache/100-125.json"
+    },
+    {
+      "bytes": 5418,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/write_select.py",
+      "runtime_path": "/root/write_select.py",
+      "sha256": "794452fab18f46fe2fe32b4be5577e39e319a59c15a2a1d77f403d53022c202b",
+      "source_transcript": "agent/sessions/bc8c15cc-528c-42-c1794f20615c702/event_cache/150-175.json"
+    }
+  ],
+  "schema_version": 1
+}

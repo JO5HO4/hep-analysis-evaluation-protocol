@@ -1,0 +1,15 @@
+{
+  "description": "Evaluator-generated, unexecuted source recovered exactly from retained shell-heredoc payloads; not a copied workspace snapshot or an assertion of final runtime state.",
+  "files": [
+    {
+      "bytes": 13951,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/build_pipeline.py",
+      "runtime_path": "/root/build_pipeline.py",
+      "sha256": "75e3ed5a6e78959691349077e47100cda368bbe03179fcb81dbcac9dd5e88429",
+      "source_transcript": "agent/trajectory.json"
+    }
+  ],
+  "schema_version": 1
+}

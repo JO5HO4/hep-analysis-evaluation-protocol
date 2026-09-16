@@ -1,0 +1,42 @@
+{
+  "description": "Evaluator-generated, unexecuted source recovered exactly from retained shell-heredoc payloads; not a copied workspace snapshot or an assertion of final runtime state.",
+  "files": [
+    {
+      "bytes": 3156,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/submission/tth-diphoton-bdt/analysis/top_categorization.py",
+      "runtime_path": "/root/submission/tth-diphoton-bdt/analysis/top_categorization.py",
+      "sha256": "48573860467fd6e7951fc56eb4914cf4c877f2d3ee93c5847525fc4c90dcac63",
+      "source_transcript": "agent/trajectory.json"
+    },
+    {
+      "bytes": 691,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/submission/tth-diphoton-bdt/debug_preselection.py",
+      "runtime_path": "/root/submission/tth-diphoton-bdt/debug_preselection.py",
+      "sha256": "2b659d1a30dc60ea2102ff6702747ca4f8375bc0ca253dce7ce8f2a0e8b1aeca",
+      "source_transcript": "agent/trajectory.json"
+    },
+    {
+      "bytes": 3304,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/submission/tth-diphoton-bdt/final_stage.py",
+      "runtime_path": "/root/submission/tth-diphoton-bdt/final_stage.py",
+      "sha256": "7c92c7bf9afdac7ab0ffd71bf5ddc5b79014b6d1fcd968a7859a49a3fc4d636e",
+      "source_transcript": "agent/trajectory.json"
+    },
+    {
+      "bytes": 5342,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/submission/tth-diphoton-bdt/run_pipeline.py",
+      "runtime_path": "/root/submission/tth-diphoton-bdt/run_pipeline.py",
+      "sha256": "991355c56034e2fa73a81489fe32916d8834972ed39d6718b6645256e4538413",
+      "source_transcript": "agent/trajectory.json"
+    }
+  ],
+  "schema_version": 1
+}

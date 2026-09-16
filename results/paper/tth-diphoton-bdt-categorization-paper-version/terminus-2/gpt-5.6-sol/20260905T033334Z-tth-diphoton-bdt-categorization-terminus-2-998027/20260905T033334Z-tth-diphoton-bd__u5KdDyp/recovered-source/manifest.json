@@ -1,0 +1,42 @@
+{
+  "description": "Evaluator-generated, unexecuted source recovered exactly from retained shell-heredoc payloads; not a copied workspace snapshot or an assertion of final runtime state.",
+  "files": [
+    {
+      "bytes": 5780,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/submission/tth-diphoton-bdt/analysis/top_categorization.py",
+      "runtime_path": "/root/submission/tth-diphoton-bdt/analysis/top_categorization.py",
+      "sha256": "85a35b2303849b1b28fefe8a98433e750915ebe8a21dba310d5382c422dcc0a4",
+      "source_transcript": "agent/trajectory.json"
+    },
+    {
+      "bytes": 11784,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/scripts/build_workspace.py",
+      "runtime_path": "scripts/build_workspace.py",
+      "sha256": "a271e7e533352f60ce81ab6b423d4e0acd9cc1d669de5e1287b4715b91bbdc3d",
+      "source_transcript": "agent/trajectory.json"
+    },
+    {
+      "bytes": 14618,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/scripts/postprocess.py",
+      "runtime_path": "scripts/postprocess.py",
+      "sha256": "debded7947501dd338e91d4fbf9e7052889434473802c23b1e4a28edacf225ee",
+      "source_transcript": "agent/trajectory.json"
+    },
+    {
+      "bytes": 11458,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/scripts/run_analysis.py",
+      "runtime_path": "scripts/run_analysis.py",
+      "sha256": "fbce2f8a0d25c1bac0712797afef5ea2bc5524341676d3bd724681bd107d1e08",
+      "source_transcript": "agent/trajectory.json"
+    }
+  ],
+  "schema_version": 1
+}

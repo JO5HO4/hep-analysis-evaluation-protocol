@@ -41,7 +41,8 @@
       "criterion_group": "Classifier and selection",
       "evidence_ids": [
         "E4",
-        "E3"
+        "E3",
+        "E5a"
       ],
       "id": "C3",
       "status": "missing",
@@ -95,6 +96,12 @@
       "detail": "Optimization report searched for an attributable attempt lineage.",
       "id": "E5",
       "kind": "static_inspection",
+      "source": null
+    },
+    {
+      "detail": "No shell-heredoc source payload was recoverable from the retained transcript inventory.",
+      "id": "E5a",
+      "kind": "evaluator_recovered_source",
       "source": null
     },
     {

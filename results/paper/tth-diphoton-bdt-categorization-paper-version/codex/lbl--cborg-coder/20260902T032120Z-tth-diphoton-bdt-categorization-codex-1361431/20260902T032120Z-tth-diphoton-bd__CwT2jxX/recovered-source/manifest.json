@@ -1,0 +1,60 @@
+{
+  "description": "Evaluator-generated, unexecuted source recovered exactly from retained shell-heredoc payloads; not a copied workspace snapshot or an assertion of final runtime state.",
+  "files": [
+    {
+      "bytes": 4291,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/submission/tth-diphoton-bdt/analysis/top_categorization.py",
+      "runtime_path": "/root/submission/tth-diphoton-bdt/analysis/top_categorization.py",
+      "sha256": "b93323f200e9642feb262c21fc5e018fbdb8efb331fc6b8861492dcf330a5e7d",
+      "source_transcript": "agent/sessions/2026/09/02/rollout-2026-09-02T03-22-07-01a06023-66bd-7240-b05f-b5a91b46cfb0.jsonl"
+    },
+    {
+      "bytes": 2538,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/submission/tth-diphoton-bdt/preselection.py",
+      "runtime_path": "/root/submission/tth-diphoton-bdt/preselection.py",
+      "sha256": "2fb348905a0edcb211740058c8269837a09a685988bf548d61edd7bf230cb78d",
+      "source_transcript": "agent/sessions/2026/09/02/rollout-2026-09-02T03-22-07-01a06023-66bd-7240-b05f-b5a91b46cfb0.jsonl"
+    },
+    {
+      "bytes": 4075,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/submission/tth-diphoton-bdt/run_pipeline.py",
+      "runtime_path": "/root/submission/tth-diphoton-bdt/run_pipeline.py",
+      "sha256": "dcbf2e2aa190342fd3ca89971df01fbc12b8a8cdc506f547ee53821bbf84d7ac",
+      "source_transcript": "agent/sessions/2026/09/02/rollout-2026-09-02T03-22-07-01a06023-66bd-7240-b05f-b5a91b46cfb0.jsonl"
+    },
+    {
+      "bytes": 1443,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/submission/tth-diphoton-bdt/utils/bdt_utils.py",
+      "runtime_path": "/root/submission/tth-diphoton-bdt/utils/bdt_utils.py",
+      "sha256": "fad61e1e03a019a69d03cf886afb5660baa552c1b3c8c62ec3650a153ea2c4ff",
+      "source_transcript": "agent/sessions/2026/09/02/rollout-2026-09-02T03-22-07-01a06023-66bd-7240-b05f-b5a91b46cfb0.jsonl"
+    },
+    {
+      "bytes": 4030,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/submission/tth-diphoton-bdt/utils/data_utils.py",
+      "runtime_path": "/root/submission/tth-diphoton-bdt/utils/data_utils.py",
+      "sha256": "15744268f45877a806c822abd06897d5a91c99713adf0ac687d46523e134d9cd",
+      "source_transcript": "agent/sessions/2026/09/02/rollout-2026-09-02T03-22-07-01a06023-66bd-7240-b05f-b5a91b46cfb0.jsonl"
+    },
+    {
+      "bytes": 1115,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/submission/tth-diphoton-bdt/utils/stats_utils.py",
+      "runtime_path": "/root/submission/tth-diphoton-bdt/utils/stats_utils.py",
+      "sha256": "7dcd549238d3613e18b4d3f0242af36503d1b843918ff48213fae230e927effc",
+      "source_transcript": "agent/sessions/2026/09/02/rollout-2026-09-02T03-22-07-01a06023-66bd-7240-b05f-b5a91b46cfb0.jsonl"
+    }
+  ],
+  "schema_version": 1
+}

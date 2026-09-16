@@ -49,7 +49,13 @@ def posix(path: Path) -> str:
 def matrix_runs() -> list[dict[str, Any]]:
     rows = []
     for result in sorted(EVIDENCE.rglob("result.json")):
-        data = read_json(result)
+        try:
+            data = read_json(result)
+        except (OSError, json.JSONDecodeError):
+            # Retain unreadable metadata in the bounded inventory of its run,
+            # but do not let an extra malformed historical attempt prevent the
+            # selected matrix from being regenerated.
+            continue
         if not data.get("trial_name"):
             continue
         model = data["agent_info"]["model_info"]["name"]
@@ -76,7 +82,9 @@ def inventory(run: Path) -> list[dict[str, Any]]:
     for item in sorted(path for path in run.rglob("*") if path.is_file()):
         rel = item.relative_to(run).as_posix()
         lower = rel.lower()
-        if lower.endswith((".json", ".jsonl")):
+        if rel.startswith("recovered-source/") and rel != "recovered-source/manifest.json":
+            kind = "evaluator_recovered_source"
+        elif lower.endswith((".json", ".jsonl")):
             kind = "metadata_or_json"
         elif lower.endswith((".png", ".svg", ".pdf")):
             kind = "plot_or_report"
@@ -99,7 +107,7 @@ def indexed_search(items: list[dict[str, Any]], terms: list[str]) -> list[str]:
     for item in items:
         haystack = item["run_relative_path"].lower()
         path = ROOT / item["path"]
-        if path.suffix.lower() in {".json", ".md", ".txt", ".log", ".jsonl"} and path.stat().st_size <= 2_000_000:
+        if path.suffix.lower() in {".json", ".md", ".txt", ".log", ".jsonl", ".py", ".sh", ".ipynb"} and path.stat().st_size <= 2_000_000:
             try:
                 haystack += " " + path.read_text(errors="replace").lower()
             except OSError:
@@ -207,6 +215,7 @@ def make_record(row: dict[str, Any], comparison: Path | None, comparison_error: 
     items = inventory(run)
     matches = {name: indexed_search(items, terms) for name, terms in TERMS.items()}
     outputs = [item for item in items if "/artifacts/root/results/" in item["path"]]
+    recovered = [item for item in items if item["class"] == "evaluator_recovered_source"]
     reward = result.get("verifier_result", {}).get("rewards", {}).get("reward")
     status = "completed" if isinstance(reward, (int, float)) else "unavailable_or_errored"
     ledger: list[dict[str, Any]] = []
@@ -218,6 +227,7 @@ def make_record(row: dict[str, Any], comparison: Path | None, comparison_error: 
     e_selection = evidence("E3", "static_inspection", next((p for p in matches["selection"] if p.endswith("selection_report.json")), None), "Indexed candidate-selection artifacts searched after inventory completion.")
     e_training = evidence("E4", "static_inspection", next((p for p in matches["classifier"] if p.endswith("training_report_xgb.json")), None), "Indexed classifier/training artifacts searched after inventory completion.")
     e_attempt = evidence("E5", "static_inspection", next((p for p in matches["classifier"] if p.endswith("optimization_summary.json")), None), "Optimization report searched for an attributable attempt lineage.")
+    e_recovered = evidence("E5a", "evaluator_recovered_source", recovered[0]["path"] if recovered else None, f"{len(recovered)} unexecuted source payload(s) materialized from retained transcript heredocs with a run-local provenance manifest." if recovered else "No shell-heredoc source payload was recoverable from the retained transcript inventory.")
     e_baseline = evidence("E6", "reviewer_executed_qc", posix(comparison) if comparison else None, "Evaluator comparison rerun by this generator against the saved labeled candidate table and selection." if comparison else comparison_error or "No compatible baseline comparison.")
     diagnostic_adapter = build_score_diagnostics(run, CANONICAL_CANDIDATES / f"{row['run_id']}.parquet", OUT / "evaluator-diagnostics" / f"{row['run_id']}.json")
     diagnostics = diagnostic_adapter.canonical
@@ -226,7 +236,7 @@ def make_record(row: dict[str, Any], comparison: Path | None, comparison_error: 
     claims = [
         {"id": "C1", "criterion_group": "Execution context", "status": "observed", "value": {"status": status, "harbor_reward": reward}, "evidence_ids": [e_result]},
         {"id": "C2", "criterion_group": "Evidence coverage", "status": "observed", "value": {"inventory_files": len(items), "result_artifacts": len(outputs)}, "evidence_ids": [e_inventory]},
-        {"id": "C3", "criterion_group": "Classifier and selection", "status": "observed" if ledger[3]["source"] or ledger[2]["source"] else "missing", "value": "indexed training and selection evidence" if ledger[3]["source"] or ledger[2]["source"] else "not established", "evidence_ids": [e_training, e_selection]},
+        {"id": "C3", "criterion_group": "Classifier and selection", "status": "observed" if ledger[3]["source"] or ledger[2]["source"] or recovered else "missing", "value": "indexed training/selection evidence, including evaluator-recovered source when present" if ledger[3]["source"] or ledger[2]["source"] or recovered else "not established", "evidence_ids": [e_training, e_selection, e_recovered]},
         {"id": "C4", "criterion_group": "Attempt traceability", "status": "observed" if ledger[4]["source"] else "missing", "value": "saved optimization lineage artifact" if ledger[4]["source"] else "not established", "evidence_ids": [e_attempt]},
         {"id": "C5", "criterion_group": "Baseline diagnostics", "status": "computed" if comparison else "not_established_after_inventory", "value": "same-sample evaluator comparison" if comparison else "not established", "evidence_ids": [e_baseline]},
     ]

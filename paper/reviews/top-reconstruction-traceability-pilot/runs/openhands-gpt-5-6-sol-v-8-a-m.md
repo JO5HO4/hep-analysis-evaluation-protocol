@@ -14,7 +14,7 @@ This pilot note is a non-authoritative review. Execution status, Harbor verifier
 |---|---|---|---|---|
 | C1 | Execution context | observed | {'status': 'completed', 'harbor_reward': 0.0} | E1 |
 | C2 | Evidence coverage | observed | {'inventory_files': 22, 'result_artifacts': 0} | E2 |
-| C3 | Classifier and selection | missing | not established | E4, E3 |
+| C3 | Classifier and selection | missing | not established | E4, E3, E5a |
 | C4 | Attempt traceability | missing | not established | E5 |
 | C5 | Baseline diagnostics | not_established_after_inventory | not established | E6 |
 
@@ -65,6 +65,7 @@ The established review protocol is answered below. `pass` earns 1 and `fail` or 
 | E3 | static_inspection | inventory/search record | Indexed candidate-selection artifacts searched after inventory completion. |
 | E4 | static_inspection | inventory/search record | Indexed classifier/training artifacts searched after inventory completion. |
 | E5 | static_inspection | inventory/search record | Optimization report searched for an attributable attempt lineage. |
+| E5a | evaluator_recovered_source | inventory/search record | No shell-heredoc source payload was recoverable from the retained transcript inventory. |
 | E6 | reviewer_executed_qc | inventory/search record | no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found |
 | E7 | reviewer_executed_qc | inventory/search record | canonical evaluator candidate table is unavailable |
 | E-Q1 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-sol/20260905T023203Z-top-reconstruction-full-chain-no-pipeline-openhands-566489/20260905T023203Z-top-reconstruct__vQ8QaVm/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-sol/20260905T023203Z-top-reconstruction-full-chain-no-pipeline-openhands-566489/20260905T023203Z-top-reconstruct__vQ8QaVm/result.json) | result.json:{started_at,finished_at,agent_execution} provides both finite timestamp intervals. |

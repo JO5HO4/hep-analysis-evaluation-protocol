@@ -1,0 +1,33 @@
+{
+  "description": "Evaluator-generated, unexecuted source recovered exactly from retained shell-heredoc payloads; not a copied workspace snapshot or an assertion of final runtime state.",
+  "files": [
+    {
+      "bytes": 2927,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/analysis/top_categorization.py",
+      "runtime_path": "analysis/top_categorization.py",
+      "sha256": "a684a4f882b2451e58219ddc4246a8747f56533b5b8d97793933432c5d2a78db",
+      "source_transcript": "agent/trajectory.json"
+    },
+    {
+      "bytes": 8598,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/finalize_compliance.py",
+      "runtime_path": "finalize_compliance.py",
+      "sha256": "c054bb8402d6795e21197fcac80fa196363663e862228130cd0d5f9aa06efb0c",
+      "source_transcript": "agent/trajectory.json"
+    },
+    {
+      "bytes": 17305,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/run_analysis.py",
+      "runtime_path": "run_analysis.py",
+      "sha256": "a80c3e21e204cebb938965dd30159576b9c48bf6933b84ad73c4a30dbe897e16",
+      "source_transcript": "agent/trajectory.json"
+    }
+  ],
+  "schema_version": 1
+}

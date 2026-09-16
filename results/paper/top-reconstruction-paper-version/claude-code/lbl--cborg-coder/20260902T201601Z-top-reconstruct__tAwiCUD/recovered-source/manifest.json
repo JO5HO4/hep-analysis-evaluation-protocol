@@ -1,0 +1,69 @@
+{
+  "description": "Evaluator-generated, unexecuted source recovered exactly from retained shell-heredoc payloads; not a copied workspace snapshot or an assertion of final runtime state.",
+  "files": [
+    {
+      "bytes": 4094,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/build_dataset.py",
+      "runtime_path": "build_dataset.py",
+      "sha256": "96f6439aae541e648eb1bea8092a5a6abe9de9c948ebbf76f64df360661b981a",
+      "source_transcript": "agent/sessions/projects/-root/7514514b-f561-4af5-b07d-a3e4d02b041e.jsonl"
+    },
+    {
+      "bytes": 2407,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/build_optimization_report.py",
+      "runtime_path": "build_optimization_report.py",
+      "sha256": "0893f05030a87b6331a2b59ebad6c041394011d900a51f37ef62d4788af3d71a",
+      "source_transcript": "agent/sessions/projects/-root/7514514b-f561-4af5-b07d-a3e4d02b041e.jsonl"
+    },
+    {
+      "bytes": 1003,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/prepare_dataset.py",
+      "runtime_path": "prepare_dataset.py",
+      "sha256": "c3aa5af412ba92876e60806c370d516a9c9ca5ffff15677c879152b58b92ef4b",
+      "source_transcript": "agent/sessions/projects/-root/7514514b-f561-4af5-b07d-a3e4d02b041e.jsonl"
+    },
+    {
+      "bytes": 1608,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/run_inference.py",
+      "runtime_path": "run_inference.py",
+      "sha256": "444ec49c0257a96497e91715e05f4a5d91d1f226a513c5e2fa544bb47ec7fb66",
+      "source_transcript": "agent/sessions/projects/-root/7514514b-f561-4af5-b07d-a3e4d02b041e.jsonl"
+    },
+    {
+      "bytes": 3161,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/sanity_check.py",
+      "runtime_path": "sanity_check.py",
+      "sha256": "582ca2bc6626cbf2b304886ca1e2938a9d1d05ac9b5565db86f373642d031771",
+      "source_transcript": "agent/sessions/projects/-root/7514514b-f561-4af5-b07d-a3e4d02b041e.jsonl"
+    },
+    {
+      "bytes": 5710,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/select_triplets.py",
+      "runtime_path": "select_triplets.py",
+      "sha256": "9248dca01eca8c25c6d6051abcefd74b6187c312b4dad714ee4cd5d93bf8c8ab",
+      "source_transcript": "agent/sessions/projects/-root/7514514b-f561-4af5-b07d-a3e4d02b041e.jsonl"
+    },
+    {
+      "bytes": 2261,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/train_xgb.py",
+      "runtime_path": "train_xgb.py",
+      "sha256": "e131f3d4e50bbb8553a8dab1911b098283aa8eed1bc2fad70b0b03dc6e25ab7b",
+      "source_transcript": "agent/sessions/projects/-root/7514514b-f561-4af5-b07d-a3e4d02b041e.jsonl"
+    }
+  ],
+  "schema_version": 1
+}

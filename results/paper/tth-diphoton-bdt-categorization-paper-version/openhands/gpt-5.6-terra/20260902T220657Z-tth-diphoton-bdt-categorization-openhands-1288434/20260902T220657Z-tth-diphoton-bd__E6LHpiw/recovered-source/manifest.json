@@ -1,0 +1,24 @@
+{
+  "description": "Evaluator-generated, unexecuted source recovered exactly from retained shell-heredoc payloads; not a copied workspace snapshot or an assertion of final runtime state.",
+  "files": [
+    {
+      "bytes": 3402,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/submission/tth-diphoton-bdt/analysis/top_categorization.py",
+      "runtime_path": "/root/submission/tth-diphoton-bdt/analysis/top_categorization.py",
+      "sha256": "255534aa98e8ace11477f4ab53214f0c15dff176da82fa6a5fe28b3eaef73602",
+      "source_transcript": "agent/sessions/6b5c4ea8-3715-47-28da8a9717decc3/event_cache/25-50.json"
+    },
+    {
+      "bytes": 23089,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/submission/tth-diphoton-bdt/run_analysis.py",
+      "runtime_path": "/root/submission/tth-diphoton-bdt/run_analysis.py",
+      "sha256": "9d9d09f26a25d02b842969b16496fa400053a64055c156a05f1708740ac9c20f",
+      "source_transcript": "agent/sessions/6b5c4ea8-3715-47-28da8a9717decc3/event_cache/25-50.json"
+    }
+  ],
+  "schema_version": 1
+}

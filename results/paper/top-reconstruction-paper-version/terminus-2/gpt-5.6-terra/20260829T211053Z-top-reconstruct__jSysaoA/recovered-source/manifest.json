@@ -1,0 +1,24 @@
+{
+  "description": "Evaluator-generated, unexecuted source recovered exactly from retained shell-heredoc payloads; not a copied workspace snapshot or an assertion of final runtime state.",
+  "files": [
+    {
+      "bytes": 1749,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/model_variants.py",
+      "runtime_path": "/root/model_variants.py",
+      "sha256": "b7e67df233145f0e56bded62408d8f9d6b1c47d1477b09aa5b1b79a89d02c368",
+      "source_transcript": "agent/trajectory.json"
+    },
+    {
+      "bytes": 12696,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/run_top_pipeline.py",
+      "runtime_path": "/root/run_top_pipeline.py",
+      "sha256": "3c2e7167a30428ef05e3e30e21e67d8d0cd5440168bf8a143a4c810b94d80ae4",
+      "source_transcript": "agent/trajectory.json"
+    }
+  ],
+  "schema_version": 1
+}

@@ -1,0 +1,15 @@
+{
+  "description": "Evaluator-generated, unexecuted source recovered exactly from retained shell-heredoc payloads; not a copied workspace snapshot or an assertion of final runtime state.",
+  "files": [
+    {
+      "bytes": 76,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/submission/run.sh",
+      "runtime_path": "/root/submission/run.sh",
+      "sha256": "abce7adc9f7becdd8223187937d26696c6a488e2cbc65259bcb43128b19bbf31",
+      "source_transcript": "agent/sessions/ef06bef0-6979-4a-dabaddfb174bc54/event_cache/50-75.json"
+    }
+  ],
+  "schema_version": 1
+}

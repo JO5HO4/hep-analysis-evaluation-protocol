@@ -1,0 +1,3 @@
+# Recovered transcript payloads are byte-exact evidence.  Preserve their
+# original whitespace rather than normalizing or flagging it as source style.
+results/paper/**/recovered-source/** -whitespace

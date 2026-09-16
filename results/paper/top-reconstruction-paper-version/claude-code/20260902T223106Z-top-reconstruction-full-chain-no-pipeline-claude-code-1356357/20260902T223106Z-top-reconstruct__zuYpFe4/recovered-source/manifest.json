@@ -1,0 +1,78 @@
+{
+  "description": "Evaluator-generated, unexecuted source recovered exactly from retained shell-heredoc payloads; not a copied workspace snapshot or an assertion of final runtime state.",
+  "files": [
+    {
+      "bytes": 1817,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/tmp/diag.py",
+      "runtime_path": "/tmp/diag.py",
+      "sha256": "5921f0ec684e9bb5561299392ed321b1a98d24a8acdcfbdc3edba18a79883a44",
+      "source_transcript": "agent/sessions/projects/-root/7307cd9a-5550-46da-ab3a-85bcbcc40dd5.jsonl"
+    },
+    {
+      "bytes": 674,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/tmp/diag2.py",
+      "runtime_path": "/tmp/diag2.py",
+      "sha256": "fee5c8d032ff6796ae343b9d29698b30c1211c077a5144b9d8af7027c62c9687",
+      "source_transcript": "agent/sessions/projects/-root/7307cd9a-5550-46da-ab3a-85bcbcc40dd5.jsonl"
+    },
+    {
+      "bytes": 1593,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/tmp/diag3.py",
+      "runtime_path": "/tmp/diag3.py",
+      "sha256": "88a593ea52ba27674e3a2ee20a1119a742c796e7892485911ee3cdd6544e7fd2",
+      "source_transcript": "agent/sessions/projects/-root/7307cd9a-5550-46da-ab3a-85bcbcc40dd5.jsonl"
+    },
+    {
+      "bytes": 391,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/tmp/it1.py",
+      "runtime_path": "/tmp/it1.py",
+      "sha256": "ca0deca2b9714161e9dbc8ebc7921f57584eaa988e1b4be1978511a7d6c21df4",
+      "source_transcript": "agent/sessions/projects/-root/7307cd9a-5550-46da-ab3a-85bcbcc40dd5.jsonl"
+    },
+    {
+      "bytes": 1108,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/tmp/it2.py",
+      "runtime_path": "/tmp/it2.py",
+      "sha256": "9a541411056024c7545ffff9b8ba97bb870eaf8a5ee5acd10363fe1e4e42a463",
+      "source_transcript": "agent/sessions/projects/-root/7307cd9a-5550-46da-ab3a-85bcbcc40dd5.jsonl"
+    },
+    {
+      "bytes": 710,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/tmp/it3.py",
+      "runtime_path": "/tmp/it3.py",
+      "sha256": "e99cb72775217e5acb975f84f4393cde5f73a45a34fbb7958639939a3cedf5e6",
+      "source_transcript": "agent/sessions/projects/-root/7307cd9a-5550-46da-ab3a-85bcbcc40dd5.jsonl"
+    },
+    {
+      "bytes": 488,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/tmp/it4.py",
+      "runtime_path": "/tmp/it4.py",
+      "sha256": "84102d9994435730de949963a3ab2a683c918661587d6cab761466b1f9c25f50",
+      "source_transcript": "agent/sessions/projects/-root/7307cd9a-5550-46da-ab3a-85bcbcc40dd5.jsonl"
+    },
+    {
+      "bytes": 195,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/tmp/runcfg.py",
+      "runtime_path": "/tmp/runcfg.py",
+      "sha256": "dce80c4d5a2f832166062dbed6d9787d6791e64011f6efd57e6d4341f5192847",
+      "source_transcript": "agent/sessions/projects/-root/7307cd9a-5550-46da-ab3a-85bcbcc40dd5.jsonl"
+    }
+  ],
+  "schema_version": 1
+}

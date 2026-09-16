@@ -41,11 +41,12 @@
       "criterion_group": "Classifier and selection",
       "evidence_ids": [
         "E4",
-        "E3"
+        "E3",
+        "E5a"
       ],
       "id": "C3",
       "status": "observed",
-      "value": "indexed training and selection evidence"
+      "value": "indexed training/selection evidence, including evaluator-recovered source when present"
     },
     {
       "criterion_group": "Attempt traceability",
@@ -62,56 +63,8 @@
         "E6"
       ],
       "id": "C5",
-      "status": "computed",
-      "value": "same-sample evaluator comparison"
-    },
-    {
-      "criterion_group": "Fake-mass sculpting",
-      "evidence_ids": [
-        "E6"
-      ],
-      "id": "C6",
-      "status": "computed",
-      "value": {
-        "agent": {
-          "histogram": {
-            "bin_count": 40,
-            "range_GeV": [
-              0.0,
-              400.0
-            ],
-            "version": "fixed-unweighted-0-400-GeV-40-bin/v1"
-          },
-          "selected_fake_count": 1787,
-          "selected_fake_modal_bin_center_GeV": 165.0,
-          "selected_fake_modal_bin_center_shift_GeV": 0.0,
-          "selected_fake_population_stddev_GeV": 146.9305645561014,
-          "selected_fake_width_retention": 0.8127431553260874,
-          "unbiased_fake_count": 20385,
-          "unbiased_fake_modal_bin_center_GeV": 165.0,
-          "unbiased_fake_population_stddev_GeV": 180.78351517725199
-        },
-        "agent_better_than_baseline": true,
-        "baseline": {
-          "histogram": {
-            "bin_count": 40,
-            "range_GeV": [
-              0.0,
-              400.0
-            ],
-            "version": "fixed-unweighted-0-400-GeV-40-bin/v1"
-          },
-          "selected_fake_count": 1855,
-          "selected_fake_modal_bin_center_GeV": 175.0,
-          "selected_fake_modal_bin_center_shift_GeV": 10.0,
-          "selected_fake_population_stddev_GeV": 141.79806914529098,
-          "selected_fake_width_retention": 0.7843528709255536,
-          "unbiased_fake_count": 20385,
-          "unbiased_fake_modal_bin_center_GeV": 165.0,
-          "unbiased_fake_population_stddev_GeV": 180.78351517725199
-        },
-        "definition": "agent mode shift <= baseline mode shift and agent width retention >= baseline width retention, with at least one strict improvement"
-      }
+      "status": "not_established_after_inventory",
+      "value": "not established"
     }
   ],
   "evidence_ledger": [
@@ -146,16 +99,22 @@
       "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/optimization_summary.json"
     },
     {
-      "detail": "Evaluator comparison rerun by this generator against the saved labeled candidate table and selection.",
-      "id": "E6",
-      "kind": "reviewer_executed_qc",
-      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+      "detail": "No shell-heredoc source payload was recoverable from the retained transcript inventory.",
+      "id": "E5a",
+      "kind": "evaluator_recovered_source",
+      "source": null
     },
     {
-      "detail": "reviewer-generated score/mass diagnostics from recovered inference scores",
+      "detail": "evaluator-owned raw ROOT input is unavailable; canonicalized evaluator-side candidate keys",
+      "id": "E6",
+      "kind": "reviewer_executed_qc",
+      "source": null
+    },
+    {
+      "detail": "canonical evaluator candidate table is unavailable",
       "id": "E7",
       "kind": "reviewer_executed_qc",
-      "source": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json"
+      "source": null
     },
     {
       "detail": "result.json:{started_at,finished_at,agent_execution} provides both finite timestamp intervals.",
@@ -212,16 +171,16 @@
       "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json"
     },
     {
-      "detail": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json; adapter canonicalization and comparison validation accepted the recovered selection.",
+      "detail": "artifacts/root/results/select_triplets/selection_report.json records the final event-level maximum; saved selected-candidate table was included in the audit.",
       "id": "E-Q10",
       "kind": "rubric_answer",
-      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/select_triplets/selection_report.json"
     },
     {
-      "detail": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:score_mass_correlation; reviewer computed Pearson score\u2013mass correlation on the discovered final inference partition.",
+      "detail": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
       "id": "E-Q11",
       "kind": "rubric_answer",
-      "source": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json"
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json"
     },
     {
       "detail": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
@@ -236,10 +195,10 @@
       "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json"
     },
     {
-      "detail": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:score_distribution; evaluator-generated score distribution states quantity, unit, class scope, normalization, and finite values.",
+      "detail": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
       "id": "E-Q14",
       "kind": "rubric_answer",
-      "source": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json"
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json"
     },
     {
       "detail": "artifacts/root/results/select_triplets/selected_triplets.parquet:triplet_mass plus artifacts/root/results/sanity_checks/sanity_check_report.json establish a saved reconstructed-mass comparison.",
@@ -248,82 +207,82 @@
       "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/result.json"
     },
     {
-      "detail": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json; adapter canonicalization and comparison validation accepted the recovered selection.",
+      "detail": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
       "id": "E-Q16",
       "kind": "rubric_answer",
-      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json"
     },
     {
-      "detail": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.truth_matched_selected_mass_bias_GeV; direction lower_is_better.",
+      "detail": "evaluator-owned raw ROOT input is unavailable; canonicalized evaluator-side candidate keys",
       "id": "E-Q17",
       "kind": "rubric_answer",
-      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/result.json"
     },
     {
-      "detail": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.truth_matched_selected_mass_resolution_GeV; direction lower_is_better.",
+      "detail": "evaluator-owned raw ROOT input is unavailable; canonicalized evaluator-side candidate keys",
       "id": "E-Q18",
       "kind": "rubric_answer",
-      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/result.json"
     },
     {
-      "detail": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.reconstruction_efficiency; direction higher_is_better.",
+      "detail": "evaluator-owned raw ROOT input is unavailable; canonicalized evaluator-side candidate keys",
       "id": "E-Q19",
       "kind": "rubric_answer",
-      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/result.json"
     },
     {
-      "detail": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.purity; direction higher_is_better.",
+      "detail": "evaluator-owned raw ROOT input is unavailable; canonicalized evaluator-side candidate keys",
       "id": "E-Q20",
       "kind": "rubric_answer",
-      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/result.json"
     },
     {
-      "detail": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.fake_to_true_ratio; direction lower_is_better.",
+      "detail": "evaluator-owned raw ROOT input is unavailable; canonicalized evaluator-side candidate keys",
       "id": "E-Q21",
       "kind": "rubric_answer",
-      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/result.json"
     },
     {
-      "detail": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.f1; direction higher_is_better.",
+      "detail": "evaluator-owned raw ROOT input is unavailable; canonicalized evaluator-side candidate keys",
       "id": "E-Q22",
       "kind": "rubric_answer",
-      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/result.json"
     },
     {
-      "detail": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.selection_accuracy; direction higher_is_better.",
+      "detail": "evaluator-owned raw ROOT input is unavailable; canonicalized evaluator-side candidate keys",
       "id": "E-Q23",
       "kind": "rubric_answer",
-      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/result.json"
     },
     {
-      "detail": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.balanced_selection_accuracy; direction higher_is_better.",
+      "detail": "evaluator-owned raw ROOT input is unavailable; canonicalized evaluator-side candidate keys",
       "id": "E-Q24",
       "kind": "rubric_answer",
-      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/result.json"
     },
     {
-      "detail": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:pareto_improvement.",
+      "detail": "evaluator-owned raw ROOT input is unavailable; canonicalized evaluator-side candidate keys",
       "id": "E-Q25",
       "kind": "rubric_answer",
-      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/result.json"
     },
     {
-      "detail": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:score_distribution,mass_distribution; evaluator-generated diagnostic plot inputs establish quantities, units, and finite values.",
+      "detail": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
       "id": "E-Q26",
       "kind": "rubric_answer",
-      "source": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json"
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json"
     },
     {
-      "detail": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:score_distribution,mass_distribution; reviewer-generated histograms use an explicit candidate-count statistical unit.",
+      "detail": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
       "id": "E-Q27",
       "kind": "rubric_answer",
-      "source": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json"
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json"
     },
     {
-      "detail": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:partition; every reviewer-generated performance diagnostic uses the discovered final inference artifact.",
+      "detail": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
       "id": "E-Q28",
       "kind": "rubric_answer",
-      "source": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json"
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json"
     },
     {
       "detail": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
@@ -338,10 +297,10 @@
       "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json"
     },
     {
-      "detail": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:frozen_classifier_comparison; frozen mass-blind baseline on event_id modulo 10: train 0-6, validation 7, test 8-9.",
+      "detail": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
       "id": "E-Q31",
       "kind": "rubric_answer",
-      "source": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json"
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json"
     }
   ],
   "missing_protocol": {
@@ -382,13 +341,13 @@
         "E6"
       ],
       "id": "Q3",
-      "result": "completed",
+      "result": "not completed: incompatible or absent saved inputs",
       "type": "reviewer_executed_qc"
     }
   ],
   "review_reward": {
-    "earned": 20,
-    "fraction": 0.6451612903225806,
+    "earned": 6,
+    "fraction": 0.1935483870967742,
     "meaning": "non-authoritative rubric-review reward; not the Harbor verifier reward or outcome grade",
     "possible": 31
   },
@@ -507,9 +466,9 @@
         "E-Q10"
       ],
       "id": "Q10",
-      "observed_value": "validated by evaluator-side canonical selection",
+      "observed_value": "reported maximum 2 candidates/event",
       "question": "N_top <= 2 for every event",
-      "reason": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json; adapter canonicalization and comparison validation accepted the recovered selection.",
+      "reason": "artifacts/root/results/select_triplets/selection_report.json records the final event-level maximum; saved selected-candidate table was included in the audit.",
       "reward": 1,
       "status": "pass"
     },
@@ -519,11 +478,11 @@
         "E-Q11"
       ],
       "id": "Q11",
-      "observed_value": "Pearson r=-0.316455 on 21323 candidates",
+      "observed_value": "N/A",
       "question": "Score-mass correlation measured and reported",
-      "reason": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:score_mass_correlation; reviewer computed Pearson score\u2013mass correlation on the discovered final inference partition.",
-      "reward": 1,
-      "status": "pass"
+      "reason": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "reward": 0,
+      "status": "missing"
     },
     {
       "criterion_group": "Physics and Diagnostics",
@@ -555,11 +514,11 @@
         "E-Q14"
       ],
       "id": "Q14",
-      "observed_value": "21323 finite score_xgb values; candidate count",
+      "observed_value": "N/A",
       "question": "BDT-score distribution quantity, normalization, and finite values established",
-      "reason": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:score_distribution; evaluator-generated score distribution states quantity, unit, class scope, normalization, and finite values.",
-      "reward": 1,
-      "status": "pass"
+      "reason": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "reward": 0,
+      "status": "missing"
     },
     {
       "criterion_group": "Physics and Diagnostics",
@@ -579,11 +538,11 @@
         "E-Q16"
       ],
       "id": "Q16",
-      "observed_value": "validated by evaluator-side canonical selection",
+      "observed_value": "N/A",
       "question": "Zero overlapping selected triplets",
-      "reason": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json; adapter canonicalization and comparison validation accepted the recovered selection.",
-      "reward": 1,
-      "status": "pass"
+      "reason": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "reward": 0,
+      "status": "missing"
     },
     {
       "criterion_group": "Baseline Comparison and Physics Quality",
@@ -591,11 +550,11 @@
         "E-Q17"
       ],
       "id": "Q17",
-      "observed_value": "10.577 vs 5.11263 GeV",
+      "observed_value": "N/A",
       "question": "Selected-mass bias no worse than mass-greedy/v2-n-top-2",
-      "reason": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.truth_matched_selected_mass_bias_GeV; direction lower_is_better.",
+      "reason": "evaluator-owned raw ROOT input is unavailable; canonicalized evaluator-side candidate keys",
       "reward": 0,
-      "status": "fail"
+      "status": "missing"
     },
     {
       "criterion_group": "Baseline Comparison and Physics Quality",
@@ -603,11 +562,11 @@
         "E-Q18"
       ],
       "id": "Q18",
-      "observed_value": "22.6166 vs 18.6939 GeV",
+      "observed_value": "N/A",
       "question": "Selected truth-matched mass resolution strictly better than baseline",
-      "reason": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.truth_matched_selected_mass_resolution_GeV; direction lower_is_better.",
+      "reason": "evaluator-owned raw ROOT input is unavailable; canonicalized evaluator-side candidate keys",
       "reward": 0,
-      "status": "fail"
+      "status": "missing"
     },
     {
       "criterion_group": "Baseline Comparison and Physics Quality",
@@ -615,11 +574,11 @@
         "E-Q19"
       ],
       "id": "Q19",
-      "observed_value": "0.463753 vs 0.391258 fraction",
+      "observed_value": "N/A",
       "question": "Reconstruction efficiency at least baseline",
-      "reason": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.reconstruction_efficiency; direction higher_is_better.",
-      "reward": 1,
-      "status": "pass"
+      "reason": "evaluator-owned raw ROOT input is unavailable; canonicalized evaluator-side candidate keys",
+      "reward": 0,
+      "status": "missing"
     },
     {
       "criterion_group": "Baseline Comparison and Physics Quality",
@@ -627,11 +586,11 @@
         "E-Q20"
       ],
       "id": "Q20",
-      "observed_value": "0.19577 vs 0.165167 fraction",
+      "observed_value": "N/A",
       "question": "Selected-candidate purity at least baseline",
-      "reason": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.purity; direction higher_is_better.",
-      "reward": 1,
-      "status": "pass"
+      "reason": "evaluator-owned raw ROOT input is unavailable; canonicalized evaluator-side candidate keys",
+      "reward": 0,
+      "status": "missing"
     },
     {
       "criterion_group": "Baseline Comparison and Physics Quality",
@@ -639,11 +598,11 @@
         "E-Q21"
       ],
       "id": "Q21",
-      "observed_value": "4.10805 vs 5.0545 ratio",
+      "observed_value": "N/A",
       "question": "Fake-to-true ratio no greater than baseline",
-      "reason": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.fake_to_true_ratio; direction lower_is_better.",
-      "reward": 1,
-      "status": "pass"
+      "reason": "evaluator-owned raw ROOT input is unavailable; canonicalized evaluator-side candidate keys",
+      "reward": 0,
+      "status": "missing"
     },
     {
       "criterion_group": "Baseline Comparison and Physics Quality",
@@ -651,11 +610,11 @@
         "E-Q22"
       ],
       "id": "Q22",
-      "observed_value": "0.275316 vs 0.232278 fraction",
+      "observed_value": "N/A",
       "question": "Selected-candidate F1 at least baseline",
-      "reason": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.f1; direction higher_is_better.",
-      "reward": 1,
-      "status": "pass"
+      "reason": "evaluator-owned raw ROOT input is unavailable; canonicalized evaluator-side candidate keys",
+      "reward": 0,
+      "status": "missing"
     },
     {
       "criterion_group": "Baseline Comparison and Physics Quality",
@@ -663,11 +622,11 @@
         "E-Q23"
       ],
       "id": "Q23",
-      "observed_value": "0.892604 vs 0.886226 fraction",
+      "observed_value": "N/A",
       "question": "Candidate-level selection accuracy at least baseline",
-      "reason": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.selection_accuracy; direction higher_is_better.",
-      "reward": 1,
-      "status": "pass"
+      "reason": "evaluator-owned raw ROOT input is unavailable; canonicalized evaluator-side candidate keys",
+      "reward": 0,
+      "status": "missing"
     },
     {
       "criterion_group": "Baseline Comparison and Physics Quality",
@@ -675,11 +634,11 @@
         "E-Q24"
       ],
       "id": "Q24",
-      "observed_value": "0.688045 vs 0.65013 fraction",
+      "observed_value": "N/A",
       "question": "Balanced selection accuracy at least baseline",
-      "reason": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.balanced_selection_accuracy; direction higher_is_better.",
-      "reward": 1,
-      "status": "pass"
+      "reason": "evaluator-owned raw ROOT input is unavailable; canonicalized evaluator-side candidate keys",
+      "reward": 0,
+      "status": "missing"
     },
     {
       "criterion_group": "Baseline Comparison and Physics Quality",
@@ -687,11 +646,11 @@
         "E-Q25"
       ],
       "id": "Q25",
-      "observed_value": "true",
+      "observed_value": "N/A",
       "question": "Baseline Pareto improvement",
-      "reason": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:pareto_improvement.",
-      "reward": 1,
-      "status": "pass"
+      "reason": "evaluator-owned raw ROOT input is unavailable; canonicalized evaluator-side candidate keys",
+      "reward": 0,
+      "status": "missing"
     },
     {
       "criterion_group": "Plotting and Presentation Quality",
@@ -699,11 +658,11 @@
         "E-Q26"
       ],
       "id": "Q26",
-      "observed_value": "score (unitless classifier score) and mass (GeV) inputs finite",
+      "observed_value": "N/A",
       "question": "Plot quantity, unit, and finite values established",
-      "reason": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:score_distribution,mass_distribution; evaluator-generated diagnostic plot inputs establish quantities, units, and finite values.",
-      "reward": 1,
-      "status": "pass"
+      "reason": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "reward": 0,
+      "status": "missing"
     },
     {
       "criterion_group": "Plotting and Presentation Quality",
@@ -711,11 +670,11 @@
         "E-Q27"
       ],
       "id": "Q27",
-      "observed_value": "candidate count for score and mass diagnostics",
+      "observed_value": "N/A",
       "question": "Histogram statistical normalization established",
-      "reason": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:score_distribution,mass_distribution; reviewer-generated histograms use an explicit candidate-count statistical unit.",
-      "reward": 1,
-      "status": "pass"
+      "reason": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "reward": 0,
+      "status": "missing"
     },
     {
       "criterion_group": "Plotting and Presentation Quality",
@@ -723,11 +682,11 @@
         "E-Q28"
       ],
       "id": "Q28",
-      "observed_value": "discovered final inference artifact",
+      "observed_value": "N/A",
       "question": "Evaluated partition established for every performance plot",
-      "reason": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:partition; every reviewer-generated performance diagnostic uses the discovered final inference artifact.",
-      "reward": 1,
-      "status": "pass"
+      "reason": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "reward": 0,
+      "status": "missing"
     },
     {
       "criterion_group": "Methodology",
@@ -759,11 +718,11 @@
         "E-Q31"
       ],
       "id": "Q31",
-      "observed_value": "AUC 0.866072 vs 0.821288",
+      "observed_value": "N/A",
       "question": "Held-out AUC at least frozen classifier baseline",
-      "reason": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:frozen_classifier_comparison; frozen mass-blind baseline on event_id modulo 10: train 0-6, validation 7, test 8-9.",
-      "reward": 1,
-      "status": "pass"
+      "reason": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "reward": 0,
+      "status": "missing"
     }
   ],
   "run": {

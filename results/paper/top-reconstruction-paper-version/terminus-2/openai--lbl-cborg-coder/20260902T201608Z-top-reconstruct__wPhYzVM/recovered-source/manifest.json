@@ -1,0 +1,69 @@
+{
+  "description": "Evaluator-generated, unexecuted source recovered exactly from retained shell-heredoc payloads; not a copied workspace snapshot or an assertion of final runtime state.",
+  "files": [
+    {
+      "bytes": 2911,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/build_raw_dataset.py",
+      "runtime_path": "build_raw_dataset.py",
+      "sha256": "03cab62206a78f9eca3cabe8af97a0cb9562d53a7cf7e8dc2312c76a2196e726",
+      "source_transcript": "agent/trajectory.json"
+    },
+    {
+      "bytes": 404,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/inspect_root.py",
+      "runtime_path": "inspect_root.py",
+      "sha256": "64781a695498a6dafaaf6e8c488d509ef4701ed63c2c3a8a3494f3fdee64c2cf",
+      "source_transcript": "agent/trajectory.json"
+    },
+    {
+      "bytes": 923,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/prepare_dataset.py",
+      "runtime_path": "prepare_dataset.py",
+      "sha256": "31b6d37a25d25ea38268fac888a62c4e38f80b183cf6b7fec50bc652d9ea6133",
+      "source_transcript": "agent/trajectory.json"
+    },
+    {
+      "bytes": 852,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/run_inference.py",
+      "runtime_path": "run_inference.py",
+      "sha256": "b9d092895fc870b5542b27cb4c5f1313b1356d8b705f77d9611ec1baedb6ddf7",
+      "source_transcript": "agent/trajectory.json"
+    },
+    {
+      "bytes": 2280,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/sanity_check.py",
+      "runtime_path": "sanity_check.py",
+      "sha256": "fa1c836f5a642a8e405e4b9671ac8c5684a00e870063b82f3c10f40cd724d5cc",
+      "source_transcript": "agent/trajectory.json"
+    },
+    {
+      "bytes": 4322,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/select_triplets.py",
+      "runtime_path": "select_triplets.py",
+      "sha256": "9c9a3cd55a7da2a567152d7c25a9aae0f9958074d7d7863aaa7fef8ffc0cb664",
+      "source_transcript": "agent/trajectory.json"
+    },
+    {
+      "bytes": 1323,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/train_model.py",
+      "runtime_path": "train_model.py",
+      "sha256": "9168682887bbd1a1a6c8c515154b46fdbf8e03b636e78ff2f0d35404c531eddb",
+      "source_transcript": "agent/trajectory.json"
+    }
+  ],
+  "schema_version": 1
+}

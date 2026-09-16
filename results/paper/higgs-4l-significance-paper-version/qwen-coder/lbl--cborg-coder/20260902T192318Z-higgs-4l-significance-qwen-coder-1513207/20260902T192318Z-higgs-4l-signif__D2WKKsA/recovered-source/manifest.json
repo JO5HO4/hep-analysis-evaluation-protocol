@@ -1,0 +1,15 @@
+{
+  "description": "Evaluator-generated, unexecuted source recovered exactly from retained shell-heredoc payloads; not a copied workspace snapshot or an assertion of final runtime state.",
+  "files": [
+    {
+      "bytes": 149,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/submission/run.sh",
+      "runtime_path": "/root/submission/run.sh",
+      "sha256": "e18d329e4fe7e3874d7f11f4b2a3a6bcd7efa2c8a7df0e43e45b6bd26e396d11",
+      "source_transcript": "agent/qwen-sessions/-root/chats/8cea31c7-5512-42cf-bd37-dbbdd23456c1.jsonl"
+    }
+  ],
+  "schema_version": 1
+}

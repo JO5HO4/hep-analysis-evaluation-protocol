@@ -1,0 +1,24 @@
+{
+  "description": "Evaluator-generated, unexecuted source recovered exactly from retained shell-heredoc payloads; not a copied workspace snapshot or an assertion of final runtime state.",
+  "files": [
+    {
+      "bytes": 6792,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/submission/analysis.py",
+      "runtime_path": "/root/submission/analysis.py",
+      "sha256": "a55eb307ef767a66a0be583b898a2b0ef87057cf010dee516f21584c351d3161",
+      "source_transcript": "agent/sessions/2026/09/02/rollout-2026-09-02T19-24-33-01a06394-88a4-7883-990d-bc936c3f63f9.jsonl"
+    },
+    {
+      "bytes": 66,
+      "executed": false,
+      "extraction": "shell-heredoc",
+      "recovered_path": "recovered-source/root/submission/run.sh",
+      "runtime_path": "/root/submission/run.sh",
+      "sha256": "cbaa809968a76318917e898d2e80ac371728a950f3e942726f367e37c62cc3c8",
+      "source_transcript": "agent/sessions/2026/09/02/rollout-2026-09-02T19-24-33-01a06394-88a4-7883-990d-bc936c3f63f9.jsonl"
+    }
+  ],
+  "schema_version": 1
+}
