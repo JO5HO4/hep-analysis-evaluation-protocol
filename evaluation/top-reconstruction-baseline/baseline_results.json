@@ -1,0 +1,49 @@
+{
+  "limitations": [
+    "Results are valid only for the input sample and are not a hidden-test score.",
+    "The candidate table has no b-quark matching fields; b-jet inclusion is not evaluated."
+  ],
+  "metrics": {
+    "definition": {
+      "fake_to_true_ratio": "selected non-truth triplets / selected truth-matched triplets",
+      "mass_resolution": "population standard deviation of triplet_mass for selected truth-matched triplets",
+      "purity": "selected truth-matched triplets / all selected triplets",
+      "reconstruction_efficiency": "selected truth-matched triplets / all truth-matched input triplets"
+    },
+    "fake_selected_count": 9302,
+    "fake_selected_mass": {
+      "count": 9302,
+      "mean_GeV": 220.11738205276464,
+      "median_GeV": 176.84678160486402,
+      "stddev_GeV": 131.93756874840867
+    },
+    "fake_to_true_ratio": 5.389339513325608,
+    "purity": 0.15651070003627132,
+    "reconstruction_efficiency": 0.38355555555555554,
+    "true_selected_count": 1726,
+    "truth_candidate_count": 4500,
+    "truth_matched_selected_mass": {
+      "count": 1726,
+      "mean_GeV": 168.59629389053094,
+      "median_GeV": 167.32760891685348,
+      "stddev_GeV": 24.083889794591318
+    }
+  },
+  "sample": {
+    "candidate_count": 105784,
+    "event_count": 8665,
+    "selected_candidate_count": 11028,
+    "selected_event_count": 8665
+  },
+  "schema_version": "top-reconstruction-baseline-results/v1",
+  "selector": {
+    "jet_disjoint": true,
+    "maximum_selected_per_event": 2,
+    "name": "mass-greedy/v2-n-top-2",
+    "ranking": "ascending abs(triplet_mass - 172.5 GeV)",
+    "tie_break": "ascending canonical sorted jet-index triplet",
+    "top_mass_reference_GeV": 172.5,
+    "uses_candidate_score": false,
+    "uses_truth_labels": false
+  }
+}

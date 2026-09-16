@@ -1,0 +1,9 @@
+[project]
+name = "top-reconstruction-mass-baseline"
+version = "0.1.0"
+description = "Deterministic mass-only reference selector for top reconstruction"
+requires-python = ">=3.11"
+dependencies = ["pandas>=2.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

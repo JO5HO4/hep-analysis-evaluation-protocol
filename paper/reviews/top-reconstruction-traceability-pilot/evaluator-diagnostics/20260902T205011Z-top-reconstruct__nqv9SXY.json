@@ -1,0 +1,48 @@
+{
+  "class_imbalance": {
+    "declared_treatment": {
+      "field": "scale_pos_weight",
+      "value": 22.237745098039216
+    },
+    "fake_candidates": 21036,
+    "treatment_source": "<source-repository>/results/paper/top-reconstruction-paper-version/qwen-coder/lbl--cborg-coder/20260902T205011Z-top-reconstruct__nqv9SXY/artifacts/root/results/train/training_report_xgb.json",
+    "truth_candidates": 911,
+    "truth_to_fake_ratio": 0.043306712302719146
+  },
+  "frozen_classifier_comparison": {
+    "agent_at_least_baseline": true,
+    "agent_auc": 0.8342790921897998,
+    "baseline": "gaussian-naive-bayes-mass-blind/v1",
+    "baseline_auc": 0.8227924598241441,
+    "partition": "event_id modulo 10: train 0-6, validation 7, test 8-9"
+  },
+  "mass_distribution": {
+    "finite_count": 21947,
+    "maximum": 1695.1782418510684,
+    "minimum": 35.559184302548246,
+    "normalization": "candidate count",
+    "quantity": "triplet_mass",
+    "unit": "GeV"
+  },
+  "owner": "reviewer",
+  "partition": "discovered final inference artifact",
+  "schema_version": "top-reconstruction-evaluator-diagnostics/v1",
+  "score_column": "score_xgb",
+  "score_distribution": {
+    "fake_count": 21036,
+    "finite_count": 21947,
+    "maximum": 0.9470580220222473,
+    "minimum": 8.166271436493844e-05,
+    "normalization": "candidate count",
+    "quantity": "score_xgb",
+    "truth_count": 911,
+    "unit": "unitless classifier score"
+  },
+  "score_mass_correlation": {
+    "candidate_count": 21947,
+    "method": "pearson",
+    "value": -0.48703295884845377
+  },
+  "source_candidates": "<source-repository>/.project/evaluator-data/top-reconstruction/canonical-candidates/20260902T205011Z-top-reconstruct__nqv9SXY.parquet",
+  "source_inference": "<source-repository>/results/paper/top-reconstruction-paper-version/qwen-coder/lbl--cborg-coder/20260902T205011Z-top-reconstruct__nqv9SXY/artifacts/root/results/infer/inference_test_xgb.parquet"
+}

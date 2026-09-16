@@ -1,0 +1,12 @@
+# Local evaluator cache populated only when regenerating comparisons.
+.project/
+
+# Duplicate historical run trees were present under the source paper directory.
+# The retained, canonical evidence export lives only under results/paper/.
+paper/*-paper-version/
+
+# Python and editor state.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store

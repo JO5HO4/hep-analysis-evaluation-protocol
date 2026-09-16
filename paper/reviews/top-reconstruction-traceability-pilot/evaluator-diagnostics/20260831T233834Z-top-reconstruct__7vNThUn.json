@@ -1,0 +1,45 @@
+{
+  "class_imbalance": {
+    "declared_treatment": null,
+    "fake_candidates": 20385,
+    "treatment_source": null,
+    "truth_candidates": 938,
+    "truth_to_fake_ratio": 0.046014226146676475
+  },
+  "frozen_classifier_comparison": {
+    "agent_at_least_baseline": true,
+    "agent_auc": 0.8660721255171338,
+    "baseline": "gaussian-naive-bayes-mass-blind/v1",
+    "baseline_auc": 0.8212877883961328,
+    "partition": "event_id modulo 10: train 0-6, validation 7, test 8-9"
+  },
+  "mass_distribution": {
+    "finite_count": 21323,
+    "maximum": 4557.169519245662,
+    "minimum": 31.885894644874135,
+    "normalization": "candidate count",
+    "quantity": "triplet_mass",
+    "unit": "GeV"
+  },
+  "owner": "reviewer",
+  "partition": "discovered final inference artifact",
+  "schema_version": "top-reconstruction-evaluator-diagnostics/v1",
+  "score_column": "score_xgb",
+  "score_distribution": {
+    "fake_count": 20385,
+    "finite_count": 21323,
+    "maximum": 0.6241010427474976,
+    "minimum": 5.7123819715343416e-05,
+    "normalization": "candidate count",
+    "quantity": "score_xgb",
+    "truth_count": 938,
+    "unit": "unitless classifier score"
+  },
+  "score_mass_correlation": {
+    "candidate_count": 21323,
+    "method": "pearson",
+    "value": -0.3164553053157792
+  },
+  "source_candidates": "<source-repository>/.project/evaluator-data/top-reconstruction/canonical-candidates/20260831T233834Z-top-reconstruct__7vNThUn.parquet",
+  "source_inference": "<source-repository>/results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/infer/inference_test_xgb.parquet"
+}

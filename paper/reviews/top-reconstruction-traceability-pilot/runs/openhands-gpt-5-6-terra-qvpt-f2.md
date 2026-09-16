@@ -1,0 +1,106 @@
+# Technical trace: openhands / gpt-5.6-terra / 20260829T215720Z-top-reconstruct__qvptHf2
+
+This pilot note is a non-authoritative review. Execution status, Harbor verifier reward, review findings, and any authoritative outcome grade are distinct quantities.
+
+## Run context
+
+| Execution status | Harbor verifier reward | Authoritative outcome grade |
+|---|---:|---|
+| completed | 0.0 | not produced by this pilot |
+
+## Findings
+
+| Claim | Criterion group | Status | Value | Evidence ledger |
+|---|---|---|---|---|
+| C1 | Execution context | observed | {'status': 'completed', 'harbor_reward': 0.0} | E1 |
+| C2 | Evidence coverage | observed | {'inventory_files': 22, 'result_artifacts': 0} | E2 |
+| C3 | Classifier and selection | missing | not established | E4, E3 |
+| C4 | Attempt traceability | missing | not established | E5 |
+| C5 | Baseline diagnostics | not_established_after_inventory | not established | E6 |
+
+## 31-question review protocol and non-authoritative reward
+
+The established review protocol is answered below. `pass` earns 1 and `fail` or `missing` earns 0 for this review-only reward: **1 / 31 = 0.032258**. It must not be confused with the Harbor verifier reward or an authoritative outcome grade.
+
+| Question | Criterion group | Answer | Review reward | Observed value | Evidence ledger |
+|---|---|---|---:|---|---|
+| Q1 | Execution and Meta | pass | 1 | finite wall-clock and agent-execution intervals (s) | E-Q1 |
+| Q2 | Execution and Meta | missing | 0 | N/A | E-Q2 |
+| Q3 | BDT Setup and Features | missing | 0 | N/A | E-Q3 |
+| Q4 | BDT Setup and Features | missing | 0 | N/A | E-Q4 |
+| Q5 | BDT Setup and Features | missing | 0 | N/A | E-Q5 |
+| Q6 | BDT Setup and Features | missing | 0 | N/A | E-Q6 |
+| Q7 | BDT Setup and Features | missing | 0 | N/A | E-Q7 |
+| Q8 | Candidate Selection | missing | 0 | N/A | E-Q8 |
+| Q9 | Candidate Selection | missing | 0 | N/A | E-Q9 |
+| Q10 | Candidate Selection | missing | 0 | N/A | E-Q10 |
+| Q11 | Physics and Diagnostics | missing | 0 | N/A | E-Q11 |
+| Q12 | Physics and Diagnostics | missing | 0 | N/A | E-Q12 |
+| Q13 | Physics and Diagnostics | missing | 0 | N/A | E-Q13 |
+| Q14 | Physics and Diagnostics | missing | 0 | N/A | E-Q14 |
+| Q15 | Physics and Diagnostics | missing | 0 | N/A | E-Q15 |
+| Q16 | Reconstruction Performance and Jet Disjointness | missing | 0 | N/A | E-Q16 |
+| Q17 | Baseline Comparison and Physics Quality | missing | 0 | N/A | E-Q17 |
+| Q18 | Baseline Comparison and Physics Quality | missing | 0 | N/A | E-Q18 |
+| Q19 | Baseline Comparison and Physics Quality | missing | 0 | N/A | E-Q19 |
+| Q20 | Baseline Comparison and Physics Quality | missing | 0 | N/A | E-Q20 |
+| Q21 | Baseline Comparison and Physics Quality | missing | 0 | N/A | E-Q21 |
+| Q22 | Baseline Comparison and Physics Quality | missing | 0 | N/A | E-Q22 |
+| Q23 | Baseline Comparison and Physics Quality | missing | 0 | N/A | E-Q23 |
+| Q24 | Baseline Comparison and Physics Quality | missing | 0 | N/A | E-Q24 |
+| Q25 | Baseline Comparison and Physics Quality | missing | 0 | N/A | E-Q25 |
+| Q26 | Plotting and Presentation Quality | missing | 0 | N/A | E-Q26 |
+| Q27 | Plotting and Presentation Quality | missing | 0 | N/A | E-Q27 |
+| Q28 | Plotting and Presentation Quality | missing | 0 | N/A | E-Q28 |
+| Q29 | Methodology | missing | 0 | N/A | E-Q29 |
+| Q30 | Methodology | missing | 0 | N/A | E-Q30 |
+| Q31 | Frozen Classifier Baseline Comparison | missing | 0 | N/A | E-Q31 |
+
+## Evidence ledger
+
+| ID | Type | Source | What it supports |
+|---|---|---|---|
+| E1 | execution_metadata | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | Run identity, timestamps, agent/model, and Harbor reward. |
+| E2 | complete_inventory | inventory/search record | Complete bounded inventory contains 22 files, including 0 result artifacts. |
+| E3 | static_inspection | inventory/search record | Indexed candidate-selection artifacts searched after inventory completion. |
+| E4 | static_inspection | inventory/search record | Indexed classifier/training artifacts searched after inventory completion. |
+| E5 | static_inspection | inventory/search record | Optimization report searched for an attributable attempt lineage. |
+| E6 | reviewer_executed_qc | inventory/search record | no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found |
+| E7 | reviewer_executed_qc | inventory/search record | canonical evaluator candidate table is unavailable |
+| E-Q1 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | result.json:{started_at,finished_at,agent_execution} provides both finite timestamp intervals. |
+| E-Q2 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | No direct evidence establishes this condition; searched result.json |
+| E-Q3 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | No direct evidence establishes this condition; searched result.json |
+| E-Q4 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | No direct evidence establishes this condition; searched result.json |
+| E-Q5 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | No direct evidence establishes this condition; searched result.json |
+| E-Q6 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | No direct evidence establishes this condition; searched result.json |
+| E-Q7 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | No direct evidence establishes this condition; searched result.json |
+| E-Q8 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | No direct evidence establishes this condition; searched result.json |
+| E-Q9 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | No direct evidence establishes this condition; searched result.json |
+| E-Q10 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | No direct evidence establishes this condition; searched result.json |
+| E-Q11 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | No direct evidence establishes this condition; searched result.json |
+| E-Q12 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | No direct evidence establishes this condition; searched result.json |
+| E-Q13 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | No direct evidence establishes this condition; searched result.json |
+| E-Q14 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | No direct evidence establishes this condition; searched result.json |
+| E-Q15 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | No direct evidence establishes this condition; searched result.json |
+| E-Q16 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | No direct evidence establishes this condition; searched result.json |
+| E-Q17 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found |
+| E-Q18 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found |
+| E-Q19 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found |
+| E-Q20 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found |
+| E-Q21 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found |
+| E-Q22 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found |
+| E-Q23 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found |
+| E-Q24 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found |
+| E-Q25 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found |
+| E-Q26 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | No direct evidence establishes this condition; searched result.json |
+| E-Q27 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | No direct evidence establishes this condition; searched result.json |
+| E-Q28 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | No direct evidence establishes this condition; searched result.json |
+| E-Q29 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | No direct evidence establishes this condition; searched result.json |
+| E-Q30 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | No direct evidence establishes this condition; searched result.json |
+| E-Q31 | rubric_answer | [`results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json`](../../../../results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json) | No direct evidence establishes this condition; searched result.json |
+
+## Attempt and QC traceability
+
+The machine-readable record has the complete attempt ledger, QC ledger, terminology mapping, inventory, and indexed search results. QC labels distinguish static inspection, agent-executed checks, and reviewer-executed QC; a saved script alone is never credited as an executed check.
+
+Missing findings are only emitted after the complete bounded inventory and its indexed searches. The record names searched evidence classes and the expected absent input/artifact.

@@ -1,0 +1,48 @@
+{
+  "class_imbalance": {
+    "declared_treatment": {
+      "field": "scale_pos_weight",
+      "value": 11.0
+    },
+    "fake_candidates": 15241,
+    "treatment_source": "<source-repository>/results/paper/top-reconstruction-paper-version/claude-code/claude-sonnet-5/20260829T211123Z-top-reconstruct__sw4nasz/artifacts/root/results/train/training_report_xgb.json",
+    "truth_candidates": 689,
+    "truth_to_fake_ratio": 0.045207007414211665
+  },
+  "frozen_classifier_comparison": {
+    "agent_at_least_baseline": true,
+    "agent_auc": 0.9638210712273858,
+    "baseline": "gaussian-naive-bayes-mass-blind/v1",
+    "baseline_auc": 0.8188735136212268,
+    "partition": "event_id modulo 10: train 0-6, validation 7, test 8-9"
+  },
+  "mass_distribution": {
+    "finite_count": 15930,
+    "maximum": 2002.6719350921228,
+    "minimum": 36.51203531655971,
+    "normalization": "candidate count",
+    "quantity": "triplet_mass",
+    "unit": "GeV"
+  },
+  "owner": "reviewer",
+  "partition": "discovered final inference artifact",
+  "schema_version": "top-reconstruction-evaluator-diagnostics/v1",
+  "score_column": "score_xgb",
+  "score_distribution": {
+    "fake_count": 15241,
+    "finite_count": 15930,
+    "maximum": 0.9920365214347839,
+    "minimum": 4.6459390432573855e-06,
+    "normalization": "candidate count",
+    "quantity": "score_xgb",
+    "truth_count": 689,
+    "unit": "unitless classifier score"
+  },
+  "score_mass_correlation": {
+    "candidate_count": 15930,
+    "method": "pearson",
+    "value": -0.28491756630536896
+  },
+  "source_candidates": "<source-repository>/.project/evaluator-data/top-reconstruction/canonical-candidates/20260829T211123Z-top-reconstruct__sw4nasz.parquet",
+  "source_inference": "<source-repository>/results/paper/top-reconstruction-paper-version/claude-code/claude-sonnet-5/20260829T211123Z-top-reconstruct__sw4nasz/artifacts/root/results/infer/inference_test_xgb.parquet"
+}

@@ -1,0 +1,226 @@
+{
+  "agent": {
+    "balanced_selection_accuracy": 0.5477315498870251,
+    "candidate_count": 97901,
+    "confusion_matrix": {
+      "false_negative": 3248,
+      "false_positive": 6238,
+      "true_negative": 87788,
+      "true_positive": 627
+    },
+    "f1": 0.11675977653631284,
+    "fake_mass_sculpting": {
+      "histogram": {
+        "bin_count": 40,
+        "range_GeV": [
+          0.0,
+          400.0
+        ],
+        "version": "fixed-unweighted-0-400-GeV-40-bin/v1"
+      },
+      "selected_fake_count": 6238,
+      "selected_fake_modal_bin_center_GeV": 165.0,
+      "selected_fake_modal_bin_center_shift_GeV": 10.0,
+      "selected_fake_population_stddev_GeV": 138.89012290243414,
+      "selected_fake_width_retention": 0.8304329724355755,
+      "unbiased_fake_count": 94026,
+      "unbiased_fake_modal_bin_center_GeV": 175.0,
+      "unbiased_fake_population_stddev_GeV": 167.25025078795167
+    },
+    "fake_selected_count": 6238,
+    "fake_to_true_ratio": 9.94896331738437,
+    "purity": 0.09133284777858704,
+    "reconstruction_efficiency": 0.16180645161290322,
+    "selected_candidate_count": 6865,
+    "selection_accuracy": 0.9031061991195187,
+    "true_selected_count": 627,
+    "truth_candidate_count": 3875,
+    "truth_matched_selected_mass": {
+      "count": 627,
+      "mean_GeV": 166.0991894278198,
+      "median_GeV": 162.94841721796746,
+      "stddev_GeV": 30.690666890574292
+    },
+    "truth_matched_selected_mass_bias_GeV": 9.55158278203254
+  },
+  "baseline": {
+    "metrics": {
+      "balanced_selection_accuracy": 0.6338251684674726,
+      "candidate_count": 97901,
+      "confusion_matrix": {
+        "false_negative": 2549,
+        "false_positive": 7009,
+        "true_negative": 87017,
+        "true_positive": 1326
+      },
+      "f1": 0.21719901719901716,
+      "fake_mass_sculpting": {
+        "histogram": {
+          "bin_count": 40,
+          "range_GeV": [
+            0.0,
+            400.0
+          ],
+          "version": "fixed-unweighted-0-400-GeV-40-bin/v1"
+        },
+        "selected_fake_count": 7009,
+        "selected_fake_modal_bin_center_GeV": 175.0,
+        "selected_fake_modal_bin_center_shift_GeV": 0.0,
+        "selected_fake_population_stddev_GeV": 128.68677694102823,
+        "selected_fake_width_retention": 0.7694265110799974,
+        "unbiased_fake_count": 94026,
+        "unbiased_fake_modal_bin_center_GeV": 175.0,
+        "unbiased_fake_population_stddev_GeV": 167.25025078795167
+      },
+      "fake_selected_count": 7009,
+      "fake_to_true_ratio": 5.285822021116139,
+      "purity": 0.1590881823635273,
+      "reconstruction_efficiency": 0.34219354838709676,
+      "selected_candidate_count": 8335,
+      "selection_accuracy": 0.9023707623006915,
+      "true_selected_count": 1326,
+      "truth_candidate_count": 3875,
+      "truth_matched_selected_mass": {
+        "count": 1326,
+        "mean_GeV": 168.71502030236837,
+        "median_GeV": 168.0634695745361,
+        "stddev_GeV": 21.695608521774222
+      },
+      "truth_matched_selected_mass_bias_GeV": 4.4365304254639
+    },
+    "selector": "mass-greedy/v2-n-top-2"
+  },
+  "comparison_owner": "evaluator",
+  "definition": "agent efficiency >= baseline efficiency and agent fake-to-true ratio <= baseline ratio, with at least one strict improvement",
+  "evaluator_input_provenance": {
+    "candidate_adapter": {
+      "canonical": ".project/evaluator-data/top-reconstruction/canonical-candidates/20260829T214149Z-top-reconstruct__WZoC7Fw.parquet",
+      "detail": "reconstructed 97901 massless triplet candidates for 5985 inference events from inference_test_xgb.parquet; raw_sha256=9b1522ee48c2974d0c9b40a86b20dfefd03f079d0cf2517942553eaeb010d6fe",
+      "source": ".project/evaluator-data/top-reconstruction/ttbar_10k.root"
+    },
+    "selection_adapter": {
+      "canonical": "paper/reviews/top-reconstruction-traceability-pilot/normalized-inputs/20260829T214149Z-top-reconstruct__WZoC7Fw/selected-candidates.parquet",
+      "detail": "canonicalized evaluator-side candidate keys",
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--medium/20260829T214149Z-top-reconstruct__WZoC7Fw/artifacts/root/results/select_triplets/selected_triplets.parquet"
+    }
+  },
+  "fake_mass_sculpting_comparison": {
+    "agent": {
+      "histogram": {
+        "bin_count": 40,
+        "range_GeV": [
+          0.0,
+          400.0
+        ],
+        "version": "fixed-unweighted-0-400-GeV-40-bin/v1"
+      },
+      "selected_fake_count": 6238,
+      "selected_fake_modal_bin_center_GeV": 165.0,
+      "selected_fake_modal_bin_center_shift_GeV": 10.0,
+      "selected_fake_population_stddev_GeV": 138.89012290243414,
+      "selected_fake_width_retention": 0.8304329724355755,
+      "unbiased_fake_count": 94026,
+      "unbiased_fake_modal_bin_center_GeV": 175.0,
+      "unbiased_fake_population_stddev_GeV": 167.25025078795167
+    },
+    "agent_better_than_baseline": false,
+    "baseline": {
+      "histogram": {
+        "bin_count": 40,
+        "range_GeV": [
+          0.0,
+          400.0
+        ],
+        "version": "fixed-unweighted-0-400-GeV-40-bin/v1"
+      },
+      "selected_fake_count": 7009,
+      "selected_fake_modal_bin_center_GeV": 175.0,
+      "selected_fake_modal_bin_center_shift_GeV": 0.0,
+      "selected_fake_population_stddev_GeV": 128.68677694102823,
+      "selected_fake_width_retention": 0.7694265110799974,
+      "unbiased_fake_count": 94026,
+      "unbiased_fake_modal_bin_center_GeV": 175.0,
+      "unbiased_fake_population_stddev_GeV": 167.25025078795167
+    },
+    "definition": "agent mode shift <= baseline mode shift and agent width retention >= baseline width retention, with at least one strict improvement"
+  },
+  "metric_comparisons": {
+    "balanced_selection_accuracy": {
+      "agent": 0.5477315498870251,
+      "agent_no_worse_than_baseline": false,
+      "baseline": 0.6338251684674726,
+      "delta_agent_minus_baseline": -0.0860936185804475,
+      "direction": "higher_is_better",
+      "relative_improvement_percent": -13.583180798675677,
+      "unit": "fraction"
+    },
+    "f1": {
+      "agent": 0.11675977653631284,
+      "agent_no_worse_than_baseline": false,
+      "baseline": 0.21719901719901716,
+      "delta_agent_minus_baseline": -0.10043924066270432,
+      "direction": "higher_is_better",
+      "relative_improvement_percent": -46.24295356303242,
+      "unit": "fraction"
+    },
+    "fake_to_true_ratio": {
+      "agent": 9.94896331738437,
+      "agent_no_worse_than_baseline": false,
+      "baseline": 5.285822021116139,
+      "delta_agent_minus_baseline": 4.663141296268232,
+      "direction": "lower_is_better",
+      "relative_improvement_percent": -88.21979396278607,
+      "unit": "ratio"
+    },
+    "purity": {
+      "agent": 0.09133284777858704,
+      "agent_no_worse_than_baseline": false,
+      "baseline": 0.1590881823635273,
+      "delta_agent_minus_baseline": -0.06775533458494025,
+      "direction": "higher_is_better",
+      "relative_improvement_percent": -42.589797418210935,
+      "unit": "fraction"
+    },
+    "reconstruction_efficiency": {
+      "agent": 0.16180645161290322,
+      "agent_no_worse_than_baseline": false,
+      "baseline": 0.34219354838709676,
+      "delta_agent_minus_baseline": -0.18038709677419354,
+      "direction": "higher_is_better",
+      "relative_improvement_percent": -52.71493212669684,
+      "unit": "fraction"
+    },
+    "selection_accuracy": {
+      "agent": 0.9031061991195187,
+      "agent_no_worse_than_baseline": true,
+      "baseline": 0.9023707623006915,
+      "delta_agent_minus_baseline": 0.000735436818827262,
+      "direction": "higher_is_better",
+      "relative_improvement_percent": 0.08150051503798578,
+      "unit": "fraction"
+    },
+    "truth_matched_selected_mass_bias_GeV": {
+      "agent": 9.55158278203254,
+      "agent_no_worse_than_baseline": false,
+      "baseline": 4.4365304254639,
+      "delta_agent_minus_baseline": 5.11505235656864,
+      "direction": "lower_is_better",
+      "relative_improvement_percent": -115.29397673484435,
+      "unit": "GeV"
+    },
+    "truth_matched_selected_mass_resolution_GeV": {
+      "agent": 30.690666890574292,
+      "agent_no_worse_than_baseline": false,
+      "baseline": 21.695608521774222,
+      "delta_agent_minus_baseline": 8.99505836880007,
+      "direction": "lower_is_better",
+      "relative_improvement_percent": -41.460272293226616,
+      "unit": "GeV"
+    }
+  },
+  "pareto_improvement": false,
+  "schema_version": "top-reconstruction-baseline-comparison/v2",
+  "unavailable_metrics": {
+    "roc_auc": "The task artifact records only selected candidates, not an agent-produced continuous score for every candidate."
+  }
+}

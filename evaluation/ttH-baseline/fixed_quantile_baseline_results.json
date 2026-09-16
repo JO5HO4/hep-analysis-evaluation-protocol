@@ -1,0 +1,111 @@
+{
+  "baseline": {
+    "boundaries": [
+      0.0398535342666679,
+      0.3032849942876863,
+      0.6098609047595003,
+      0.8162974951655385,
+      0.9658413502684374
+    ],
+    "category_count": 4,
+    "name": "fixed-score-quantiles-4/v1",
+    "uses_agent_category": false,
+    "uses_agent_score": true
+  },
+  "categories": [
+    {
+      "fit": {
+        "continuum_scale_hat": 1.0,
+        "continuum_scale_mu0": 1.001908532811795,
+        "expected_Z": 0.1311950243664535,
+        "method": "binned Poisson profile likelihood on S+B Asimov data",
+        "mu_gen": 1.0,
+        "mu_hat": 1.0,
+        "mu_uncertainty": 7.6788467491225285,
+        "q0": 0.017212134418514324
+      },
+      "index": 0,
+      "yields_36fb": {
+        "continuum_background": 355.66666666666663,
+        "expected_counting_Z": 0.03776861776851231,
+        "resonant_higgs_background": 1.4479829946704095,
+        "signal_ttH_tH": 0.7139693034618239,
+        "total_background": 357.114649661337
+      }
+    },
+    {
+      "fit": {
+        "continuum_scale_hat": 1.0,
+        "continuum_scale_mu0": 1.0079190473359607,
+        "expected_Z": 0.39760376915165685,
+        "method": "binned Poisson profile likelihood on S+B Asimov data",
+        "mu_gen": 1.0,
+        "mu_hat": 1.0,
+        "mu_uncertainty": 2.5903595227412133,
+        "q0": 0.15808875724360405
+      },
+      "index": 1,
+      "yields_36fb": {
+        "continuum_background": 185.77777777777777,
+        "expected_counting_Z": 0.11864367071003827,
+        "resonant_higgs_background": 1.5472856455397406,
+        "signal_ttH_tH": 1.6261816848312245,
+        "total_background": 187.32506342331752
+      }
+    },
+    {
+      "fit": {
+        "continuum_scale_hat": 1.0,
+        "continuum_scale_mu0": 1.0288114693352721,
+        "expected_Z": 0.8395571906159557,
+        "method": "binned Poisson profile likelihood on S+B Asimov data",
+        "mu_gen": 1.0,
+        "mu_hat": 1.0,
+        "mu_uncertainty": 1.3086107867561168,
+        "q0": 0.7048562763149562
+      },
+      "index": 2,
+      "yields_36fb": {
+        "continuum_background": 64.77777777777777,
+        "expected_counting_Z": 0.26759628618638936,
+        "resonant_higgs_background": 0.8790201352670473,
+        "signal_ttH_tH": 2.1802048714795044,
+        "total_background": 65.65679791304481
+      }
+    },
+    {
+      "fit": {
+        "continuum_scale_hat": 1.0,
+        "continuum_scale_mu0": 1.0956028221183378,
+        "expected_Z": 1.4946507608423094,
+        "method": "binned Poisson profile likelihood on S+B Asimov data",
+        "mu_gen": 1.0,
+        "mu_hat": 1.0,
+        "mu_uncertainty": 0.8403748891493357,
+        "q0": 2.2339808968864947
+      },
+      "index": 3,
+      "yields_36fb": {
+        "continuum_background": 19.55555555555556,
+        "expected_counting_Z": 0.5683728677553793,
+        "resonant_higgs_background": 0.6646990080228689,
+        "signal_ttH_tH": 2.609091172384804,
+        "total_background": 20.22025456357843
+      }
+    }
+  ],
+  "fit": {
+    "expected_Z": 1.764692059500345,
+    "mu_uncertainty": 0.6794840440467594,
+    "q0": 3.1141380648635693
+  },
+  "input_provenance": {
+    "path": "results/paper/tth-diphoton-bdt-categorization-paper-version/claude-code/claude-opus-5/20260908T234508Z-tth-diphoton-bdt-categorization-claude-code-2290597/20260908T234508Z-tth-diphoton-bd__UezeyUP/artifacts/root/results/tth-diphoton-bdt/preselected_events.csv",
+    "role": "development-proxy"
+  },
+  "limitations": [
+    "Evaluator-side development baseline; not an authoritative outcome scorer.",
+    "It holds the supplied BDT score fixed and tests only category-boundary optimization."
+  ],
+  "schema_version": "tth-fixed-quantile-baseline-results/v1"
+}

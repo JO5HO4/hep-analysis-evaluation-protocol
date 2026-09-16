@@ -1,0 +1,27 @@
+{
+  "baseline": {
+    "features": [
+      "dr_ab",
+      "dr_ac",
+      "dr_bc",
+      "mij_over_m123_ab",
+      "mij_over_m123_ac",
+      "mij_over_m123_bc"
+    ],
+    "mass_blind": true,
+    "name": "gaussian-naive-bayes-mass-blind/v1",
+    "partition": "event_id modulo 10: train 0-6, validation 7, test 8-9"
+  },
+  "input_provenance": {
+    "path": ".project/harbor-jobs/20260828T171457Z-top-reconstruction-full-chain-no-pipeline-oracle-92054/20260828T171457Z-top-reconstruct__AF2SYvr/artifacts/root/results/dataset_build/triplets_raw.parquet",
+    "role": "development-proxy"
+  },
+  "sample": {
+    "test_candidates": 22123,
+    "train_candidates": 72959
+  },
+  "schema_version": "top-classifier-baseline-results/v1",
+  "test": {
+    "roc_auc": 0.81434759027127
+  }
+}

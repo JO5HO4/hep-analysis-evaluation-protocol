@@ -1,0 +1,41 @@
+{
+  "class_imbalance": {
+    "declared_treatment": null,
+    "fake_candidates": 20257,
+    "treatment_source": null,
+    "truth_candidates": 900,
+    "truth_to_fake_ratio": 0.04442908624179296
+  },
+  "frozen_classifier_comparison": {
+    "unavailable": "ValueError: inference scores do not cover every evaluator candidate"
+  },
+  "mass_distribution": {
+    "finite_count": 21157,
+    "maximum": 2058.795854422358,
+    "minimum": 38.22038691346833,
+    "normalization": "candidate count",
+    "quantity": "triplet_mass",
+    "unit": "GeV"
+  },
+  "owner": "reviewer",
+  "partition": "discovered final inference artifact",
+  "schema_version": "top-reconstruction-evaluator-diagnostics/v1",
+  "score_column": "score_xgb",
+  "score_distribution": {
+    "fake_count": 20257,
+    "finite_count": 21157,
+    "maximum": 0.5184696316719055,
+    "minimum": 0.00036345820990391076,
+    "normalization": "candidate count",
+    "quantity": "score_xgb",
+    "truth_count": 900,
+    "unit": "unitless classifier score"
+  },
+  "score_mass_correlation": {
+    "candidate_count": 21157,
+    "method": "pearson",
+    "value": -0.35111234987992357
+  },
+  "source_candidates": "<source-repository>/.project/evaluator-data/top-reconstruction/canonical-candidates/20260829T214149Z-top-reconstruct__WZoC7Fw.parquet",
+  "source_inference": "<source-repository>/results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--medium/20260829T214149Z-top-reconstruct__WZoC7Fw/artifacts/root/results/infer/inference_test_xgb.parquet"
+}

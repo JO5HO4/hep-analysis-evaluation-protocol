@@ -1,0 +1,1 @@
+Blocked by terminal backend failure: every command now fails before execution with `CreateProcess … No such file or directory`, including `/tmp` and `/bin/sh`. The requested output directory could not be verified or created, so I cannot truthfully confirm the two report files were written and re-opened.

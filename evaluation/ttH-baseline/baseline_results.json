@@ -1,0 +1,154 @@
+{
+  "baseline": {
+    "category": "inclusive_hadronic",
+    "continuum_model": "constant rate fitted only to observed TI sideband yield",
+    "name": "inclusive-hadronic-constant-sideband/v1",
+    "sideband_intervals_GeV": [
+      [
+        105.0,
+        120.0
+      ],
+      [
+        130.0,
+        160.0
+      ]
+    ],
+    "signal_window_GeV": [
+      123.0,
+      127.0
+    ],
+    "uses_agent_category": false,
+    "uses_bdt_score": false
+  },
+  "fit": {
+    "continuum_scale_hat": 1.0,
+    "continuum_scale_mu0": 1.0104376333924705,
+    "expected_Z": 0.9503023534159705,
+    "method": "binned Poisson profile likelihood on S+B Asimov data",
+    "mu_gen": 1.0,
+    "mu_hat": 1.0,
+    "mu_uncertainty": 1.0932358884156064,
+    "q0": 0.903074562907932
+  },
+  "input_provenance": {
+    "path": "results/paper/tth-diphoton-bdt-categorization-paper-version/claude-code/claude-opus-5/20260908T234508Z-tth-diphoton-bdt-categorization-claude-code-2290597/20260908T234508Z-tth-diphoton-bd__UezeyUP/artifacts/root/results/tth-diphoton-bdt/preselected_events.csv",
+    "role": "development-proxy"
+  },
+  "limitations": [
+    "This is an evaluator-side development baseline, not the task verifier or an authoritative outcome scorer.",
+    "The baseline requires a trusted evaluator event table; agent-produced event tables are unsuitable as the canonical evaluation input.",
+    "The continuum model is intentionally a constant sideband-rate model and is not a substitute for the task's full RooFit workspace model."
+  ],
+  "mass_bins": [
+    {
+      "asimov_total": 56.88888888888889,
+      "continuum_background": 56.88888888888889,
+      "high_GeV": 110.0,
+      "low_GeV": 105.0,
+      "resonant_higgs_background": 0.0,
+      "signal": 0.0
+    },
+    {
+      "asimov_total": 56.88888888888889,
+      "continuum_background": 56.88888888888889,
+      "high_GeV": 115.0,
+      "low_GeV": 110.0,
+      "resonant_higgs_background": 0.0,
+      "signal": 0.0
+    },
+    {
+      "asimov_total": 56.88888888888889,
+      "continuum_background": 56.88888888888889,
+      "high_GeV": 120.0,
+      "low_GeV": 115.0,
+      "resonant_higgs_background": 0.0,
+      "signal": 0.0
+    },
+    {
+      "asimov_total": 34.13333333333333,
+      "continuum_background": 34.13333333333333,
+      "high_GeV": 123.0,
+      "low_GeV": 120.0,
+      "resonant_higgs_background": 0.0,
+      "signal": 0.0
+    },
+    {
+      "asimov_total": 57.17954592676854,
+      "continuum_background": 45.51111111111111,
+      "high_GeV": 127.0,
+      "low_GeV": 123.0,
+      "resonant_higgs_background": 4.538987783500066,
+      "signal": 7.129447032157357
+    },
+    {
+      "asimov_total": 34.13333333333333,
+      "continuum_background": 34.13333333333333,
+      "high_GeV": 130.0,
+      "low_GeV": 127.0,
+      "resonant_higgs_background": 0.0,
+      "signal": 0.0
+    },
+    {
+      "asimov_total": 56.88888888888889,
+      "continuum_background": 56.88888888888889,
+      "high_GeV": 135.0,
+      "low_GeV": 130.0,
+      "resonant_higgs_background": 0.0,
+      "signal": 0.0
+    },
+    {
+      "asimov_total": 56.88888888888889,
+      "continuum_background": 56.88888888888889,
+      "high_GeV": 140.0,
+      "low_GeV": 135.0,
+      "resonant_higgs_background": 0.0,
+      "signal": 0.0
+    },
+    {
+      "asimov_total": 56.88888888888889,
+      "continuum_background": 56.88888888888889,
+      "high_GeV": 145.0,
+      "low_GeV": 140.0,
+      "resonant_higgs_background": 0.0,
+      "signal": 0.0
+    },
+    {
+      "asimov_total": 56.88888888888889,
+      "continuum_background": 56.88888888888889,
+      "high_GeV": 150.0,
+      "low_GeV": 145.0,
+      "resonant_higgs_background": 0.0,
+      "signal": 0.0
+    },
+    {
+      "asimov_total": 56.88888888888889,
+      "continuum_background": 56.88888888888889,
+      "high_GeV": 155.0,
+      "low_GeV": 150.0,
+      "resonant_higgs_background": 0.0,
+      "signal": 0.0
+    },
+    {
+      "asimov_total": 56.88888888888889,
+      "continuum_background": 56.88888888888889,
+      "high_GeV": 160.0,
+      "low_GeV": 155.0,
+      "resonant_higgs_background": 0.0,
+      "signal": 0.0
+    }
+  ],
+  "sample": {
+    "inclusive_hadronic_event_count": 80585,
+    "input_event_count": 125381,
+    "observed_ti_sideband_rate_per_GeV": 11.377777777777778,
+    "observed_ti_sideband_yield": 512.0
+  },
+  "schema_version": "tth-inclusive-hadronic-baseline-results/v1",
+  "yields_36fb": {
+    "continuum_background": 625.7777777777779,
+    "expected_counting_Z": 0.28343976319277536,
+    "resonant_higgs_background": 4.538987783500066,
+    "signal_ttH_tH": 7.129447032157357,
+    "total_background": 630.316765561278
+  }
+}

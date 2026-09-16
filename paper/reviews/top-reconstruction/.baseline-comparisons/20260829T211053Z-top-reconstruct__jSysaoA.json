@@ -1,0 +1,138 @@
+{
+  "agent": {
+    "balanced_selection_accuracy": 0.8127052703513041,
+    "candidate_count": 21301,
+    "confusion_matrix": {
+      "false_negative": 264,
+      "false_positive": 1571,
+      "true_negative": 18843,
+      "true_positive": 623
+    },
+    "f1": 0.4044141512495943,
+    "fake_selected_count": 1571,
+    "fake_to_true_ratio": 2.521669341894061,
+    "purity": 0.28395624430264355,
+    "reconstruction_efficiency": 0.7023675310033822,
+    "selected_candidate_count": 2194,
+    "selection_accuracy": 0.9138538096802967,
+    "true_selected_count": 623,
+    "truth_candidate_count": 887,
+    "truth_matched_selected_mass": {
+      "count": 623,
+      "mean_GeV": 165.77888052351412,
+      "median_GeV": 165.22928233164203,
+      "stddev_GeV": 22.40640568059024
+    },
+    "truth_matched_selected_mass_bias_GeV": 7.270717668357975
+  },
+  "baseline": {
+    "metrics": {
+      "balanced_selection_accuracy": 0.6668339388193151,
+      "candidate_count": 21301,
+      "confusion_matrix": {
+        "false_negative": 512,
+        "false_positive": 1819,
+        "true_negative": 18595,
+        "true_positive": 375
+      },
+      "f1": 0.24342745861733203,
+      "fake_selected_count": 1819,
+      "fake_to_true_ratio": 4.850666666666666,
+      "purity": 0.17092069279854147,
+      "reconstruction_efficiency": 0.4227733934611049,
+      "selected_candidate_count": 2194,
+      "selection_accuracy": 0.8905685179099573,
+      "true_selected_count": 375,
+      "truth_candidate_count": 887,
+      "truth_matched_selected_mass": {
+        "count": 375,
+        "mean_GeV": 170.01035226425535,
+        "median_GeV": 169.38174034166656,
+        "stddev_GeV": 22.056935045518685
+      },
+      "truth_matched_selected_mass_bias_GeV": 3.118259658333443
+    },
+    "selector": "mass-greedy/v2-n-top-2"
+  },
+  "comparison_owner": "evaluator",
+  "definition": "agent efficiency >= baseline efficiency and agent fake-to-true ratio <= baseline ratio, with at least one strict improvement",
+  "metric_comparisons": {
+    "balanced_selection_accuracy": {
+      "agent": 0.8127052703513041,
+      "agent_no_worse_than_baseline": true,
+      "baseline": 0.6668339388193151,
+      "delta_agent_minus_baseline": 0.14587133153198906,
+      "direction": "higher_is_better",
+      "relative_improvement_percent": 21.875211059333058,
+      "unit": "fraction"
+    },
+    "f1": {
+      "agent": 0.4044141512495943,
+      "agent_no_worse_than_baseline": true,
+      "baseline": 0.24342745861733203,
+      "delta_agent_minus_baseline": 0.16098669263226226,
+      "direction": "higher_is_better",
+      "relative_improvement_percent": 66.13333333333333,
+      "unit": "fraction"
+    },
+    "fake_to_true_ratio": {
+      "agent": 2.521669341894061,
+      "agent_no_worse_than_baseline": true,
+      "baseline": 4.850666666666666,
+      "delta_agent_minus_baseline": -2.3289973247726055,
+      "direction": "lower_is_better",
+      "relative_improvement_percent": 48.01396353984207,
+      "unit": "ratio"
+    },
+    "purity": {
+      "agent": 0.28395624430264355,
+      "agent_no_worse_than_baseline": true,
+      "baseline": 0.17092069279854147,
+      "delta_agent_minus_baseline": 0.11303555150410208,
+      "direction": "higher_is_better",
+      "relative_improvement_percent": 66.13333333333333,
+      "unit": "fraction"
+    },
+    "reconstruction_efficiency": {
+      "agent": 0.7023675310033822,
+      "agent_no_worse_than_baseline": true,
+      "baseline": 0.4227733934611049,
+      "delta_agent_minus_baseline": 0.27959413754227735,
+      "direction": "higher_is_better",
+      "relative_improvement_percent": 66.13333333333334,
+      "unit": "fraction"
+    },
+    "selection_accuracy": {
+      "agent": 0.9138538096802967,
+      "agent_no_worse_than_baseline": true,
+      "baseline": 0.8905685179099573,
+      "delta_agent_minus_baseline": 0.023285291770339445,
+      "direction": "higher_is_better",
+      "relative_improvement_percent": 2.6146547179757538,
+      "unit": "fraction"
+    },
+    "truth_matched_selected_mass_bias_GeV": {
+      "agent": 7.270717668357975,
+      "agent_no_worse_than_baseline": false,
+      "baseline": 3.118259658333443,
+      "delta_agent_minus_baseline": 4.152458010024532,
+      "direction": "lower_is_better",
+      "relative_improvement_percent": -133.1658830568272,
+      "unit": "GeV"
+    },
+    "truth_matched_selected_mass_resolution_GeV": {
+      "agent": 22.40640568059024,
+      "agent_no_worse_than_baseline": false,
+      "baseline": 22.056935045518685,
+      "delta_agent_minus_baseline": 0.3494706350715546,
+      "direction": "lower_is_better",
+      "relative_improvement_percent": -1.584402521702836,
+      "unit": "GeV"
+    }
+  },
+  "pareto_improvement": true,
+  "schema_version": "top-reconstruction-baseline-comparison/v1",
+  "unavailable_metrics": {
+    "roc_auc": "The task artifact records only selected candidates, not an agent-produced continuous score for every candidate."
+  }
+}

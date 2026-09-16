@@ -1,0 +1,1080 @@
+{
+  "attempt_ledger": [
+    {
+      "action_or_configuration": "saved optimization report",
+      "evidence_ids": [
+        "E5"
+      ],
+      "evidence_type": "static_inspection",
+      "hypothesis": "not established from a complete attributable transcript",
+      "id": "A1",
+      "next_decision": "do not infer an attempted configuration without direct executed evidence",
+      "observed_result": "artifact present; detailed attempt-to-final lineage requires direct inspection"
+    }
+  ],
+  "claims": [
+    {
+      "criterion_group": "Execution context",
+      "evidence_ids": [
+        "E1"
+      ],
+      "id": "C1",
+      "status": "observed",
+      "value": {
+        "harbor_reward": 0.350805,
+        "status": "completed"
+      }
+    },
+    {
+      "criterion_group": "Evidence coverage",
+      "evidence_ids": [
+        "E2"
+      ],
+      "id": "C2",
+      "status": "observed",
+      "value": {
+        "inventory_files": 33,
+        "result_artifacts": 21
+      }
+    },
+    {
+      "criterion_group": "Classifier and selection",
+      "evidence_ids": [
+        "E4",
+        "E3"
+      ],
+      "id": "C3",
+      "status": "observed",
+      "value": "indexed training and selection evidence"
+    },
+    {
+      "criterion_group": "Attempt traceability",
+      "evidence_ids": [
+        "E5"
+      ],
+      "id": "C4",
+      "status": "observed",
+      "value": "saved optimization lineage artifact"
+    },
+    {
+      "criterion_group": "Baseline diagnostics",
+      "evidence_ids": [
+        "E6"
+      ],
+      "id": "C5",
+      "status": "computed",
+      "value": "same-sample evaluator comparison"
+    },
+    {
+      "criterion_group": "Fake-mass sculpting",
+      "evidence_ids": [
+        "E6"
+      ],
+      "id": "C6",
+      "status": "computed",
+      "value": {
+        "agent": {
+          "histogram": {
+            "bin_count": 40,
+            "range_GeV": [
+              0.0,
+              400.0
+            ],
+            "version": "fixed-unweighted-0-400-GeV-40-bin/v1"
+          },
+          "selected_fake_count": 1787,
+          "selected_fake_modal_bin_center_GeV": 165.0,
+          "selected_fake_modal_bin_center_shift_GeV": 0.0,
+          "selected_fake_population_stddev_GeV": 146.9305645561014,
+          "selected_fake_width_retention": 0.8127431553260874,
+          "unbiased_fake_count": 20385,
+          "unbiased_fake_modal_bin_center_GeV": 165.0,
+          "unbiased_fake_population_stddev_GeV": 180.78351517725199
+        },
+        "agent_better_than_baseline": true,
+        "baseline": {
+          "histogram": {
+            "bin_count": 40,
+            "range_GeV": [
+              0.0,
+              400.0
+            ],
+            "version": "fixed-unweighted-0-400-GeV-40-bin/v1"
+          },
+          "selected_fake_count": 1855,
+          "selected_fake_modal_bin_center_GeV": 175.0,
+          "selected_fake_modal_bin_center_shift_GeV": 10.0,
+          "selected_fake_population_stddev_GeV": 141.79806914529098,
+          "selected_fake_width_retention": 0.7843528709255536,
+          "unbiased_fake_count": 20385,
+          "unbiased_fake_modal_bin_center_GeV": 165.0,
+          "unbiased_fake_population_stddev_GeV": 180.78351517725199
+        },
+        "definition": "agent mode shift <= baseline mode shift and agent width retention >= baseline width retention, with at least one strict improvement"
+      }
+    }
+  ],
+  "evidence_ledger": [
+    {
+      "detail": "Run identity, timestamps, agent/model, and Harbor reward.",
+      "id": "E1",
+      "kind": "execution_metadata",
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/result.json"
+    },
+    {
+      "detail": "Complete bounded inventory contains 33 files, including 21 result artifacts.",
+      "id": "E2",
+      "kind": "complete_inventory",
+      "source": null
+    },
+    {
+      "detail": "Indexed candidate-selection artifacts searched after inventory completion.",
+      "id": "E3",
+      "kind": "static_inspection",
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/select_triplets/selection_report.json"
+    },
+    {
+      "detail": "Indexed classifier/training artifacts searched after inventory completion.",
+      "id": "E4",
+      "kind": "static_inspection",
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json"
+    },
+    {
+      "detail": "Optimization report searched for an attributable attempt lineage.",
+      "id": "E5",
+      "kind": "static_inspection",
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/optimization_summary.json"
+    },
+    {
+      "detail": "Evaluator comparison rerun by this generator against the saved labeled candidate table and selection.",
+      "id": "E6",
+      "kind": "reviewer_executed_qc",
+      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+    },
+    {
+      "detail": "reviewer-generated score/mass diagnostics from recovered inference scores",
+      "id": "E7",
+      "kind": "reviewer_executed_qc",
+      "source": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json"
+    },
+    {
+      "detail": "result.json:{started_at,finished_at,agent_execution} provides both finite timestamp intervals.",
+      "id": "E-Q1",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "id": "E-Q2",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json"
+    },
+    {
+      "detail": "artifacts/root/results/train/training_report_xgb.json and saved selection outputs directly evidence a trained classifier used downstream.",
+      "id": "E-Q3",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "id": "E-Q4",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "id": "E-Q5",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json"
+    },
+    {
+      "detail": "artifacts/root/results/dataset_prepare/{train,val,test}.parquet:event_id; direct set intersections are empty.",
+      "id": "E-Q6",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "id": "E-Q7",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json"
+    },
+    {
+      "detail": "artifacts/root/results/select_triplets/selection_report.json records the final selection method/configuration.",
+      "id": "E-Q8",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/select_triplets/selection_report.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "id": "E-Q9",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json"
+    },
+    {
+      "detail": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json; adapter canonicalization and comparison validation accepted the recovered selection.",
+      "id": "E-Q10",
+      "kind": "rubric_answer",
+      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+    },
+    {
+      "detail": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:score_mass_correlation; reviewer computed Pearson score\u2013mass correlation on the discovered final inference partition.",
+      "id": "E-Q11",
+      "kind": "rubric_answer",
+      "source": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "id": "E-Q12",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "id": "E-Q13",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json"
+    },
+    {
+      "detail": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:score_distribution; evaluator-generated score distribution states quantity, unit, class scope, normalization, and finite values.",
+      "id": "E-Q14",
+      "kind": "rubric_answer",
+      "source": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json"
+    },
+    {
+      "detail": "artifacts/root/results/select_triplets/selected_triplets.parquet:triplet_mass plus artifacts/root/results/sanity_checks/sanity_check_report.json establish a saved reconstructed-mass comparison.",
+      "id": "E-Q15",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/result.json"
+    },
+    {
+      "detail": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json; adapter canonicalization and comparison validation accepted the recovered selection.",
+      "id": "E-Q16",
+      "kind": "rubric_answer",
+      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+    },
+    {
+      "detail": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.truth_matched_selected_mass_bias_GeV; direction lower_is_better.",
+      "id": "E-Q17",
+      "kind": "rubric_answer",
+      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+    },
+    {
+      "detail": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.truth_matched_selected_mass_resolution_GeV; direction lower_is_better.",
+      "id": "E-Q18",
+      "kind": "rubric_answer",
+      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+    },
+    {
+      "detail": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.reconstruction_efficiency; direction higher_is_better.",
+      "id": "E-Q19",
+      "kind": "rubric_answer",
+      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+    },
+    {
+      "detail": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.purity; direction higher_is_better.",
+      "id": "E-Q20",
+      "kind": "rubric_answer",
+      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+    },
+    {
+      "detail": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.fake_to_true_ratio; direction lower_is_better.",
+      "id": "E-Q21",
+      "kind": "rubric_answer",
+      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+    },
+    {
+      "detail": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.f1; direction higher_is_better.",
+      "id": "E-Q22",
+      "kind": "rubric_answer",
+      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+    },
+    {
+      "detail": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.selection_accuracy; direction higher_is_better.",
+      "id": "E-Q23",
+      "kind": "rubric_answer",
+      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+    },
+    {
+      "detail": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.balanced_selection_accuracy; direction higher_is_better.",
+      "id": "E-Q24",
+      "kind": "rubric_answer",
+      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+    },
+    {
+      "detail": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:pareto_improvement.",
+      "id": "E-Q25",
+      "kind": "rubric_answer",
+      "source": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json"
+    },
+    {
+      "detail": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:score_distribution,mass_distribution; evaluator-generated diagnostic plot inputs establish quantities, units, and finite values.",
+      "id": "E-Q26",
+      "kind": "rubric_answer",
+      "source": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json"
+    },
+    {
+      "detail": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:score_distribution,mass_distribution; reviewer-generated histograms use an explicit candidate-count statistical unit.",
+      "id": "E-Q27",
+      "kind": "rubric_answer",
+      "source": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json"
+    },
+    {
+      "detail": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:partition; every reviewer-generated performance diagnostic uses the discovered final inference artifact.",
+      "id": "E-Q28",
+      "kind": "rubric_answer",
+      "source": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "id": "E-Q29",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "id": "E-Q30",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json"
+    },
+    {
+      "detail": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:frozen_classifier_comparison; frozen mass-blind baseline on event_id modulo 10: train 0-6, validation 7, test 8-9.",
+      "id": "E-Q31",
+      "kind": "rubric_answer",
+      "source": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json"
+    }
+  ],
+  "missing_protocol": {
+    "baseline_expected_artifact": "labeled test-candidate table plus selected-candidate table",
+    "evidence_classes_searched": [
+      "agent_or_trajectory_log",
+      "metadata_or_json",
+      "other_artifact",
+      "plot_or_report",
+      "table_or_sidecar",
+      "verifier_output"
+    ],
+    "required_before_missing": "complete source inventory and indexed searches"
+  },
+  "non_authoritative": true,
+  "qc_ledger": [
+    {
+      "check": "complete bounded source inventory",
+      "evidence_ids": [
+        "E2"
+      ],
+      "id": "Q1",
+      "result": "33 files indexed",
+      "type": "static_inspection"
+    },
+    {
+      "check": "agent-saved mass/selection QC",
+      "evidence_ids": [
+        "E3"
+      ],
+      "id": "Q2",
+      "result": "saved QC artifact located",
+      "type": "agent_executed_check"
+    },
+    {
+      "check": "mass-greedy comparison and fake-mass diagnostic",
+      "evidence_ids": [
+        "E6"
+      ],
+      "id": "Q3",
+      "result": "completed",
+      "type": "reviewer_executed_qc"
+    }
+  ],
+  "review_reward": {
+    "earned": 20,
+    "fraction": 0.6451612903225806,
+    "meaning": "non-authoritative rubric-review reward; not the Harbor verifier reward or outcome grade",
+    "possible": 31
+  },
+  "rubric_answers": [
+    {
+      "criterion_group": "Execution and Meta",
+      "evidence_ids": [
+        "E-Q1"
+      ],
+      "id": "Q1",
+      "observed_value": "finite wall-clock and agent-execution intervals (s)",
+      "question": "Both trial wall-clock and pure agent execution time established",
+      "reason": "result.json:{started_at,finished_at,agent_execution} provides both finite timestamp intervals.",
+      "reward": 1,
+      "status": "pass"
+    },
+    {
+      "criterion_group": "Execution and Meta",
+      "evidence_ids": [
+        "E-Q2"
+      ],
+      "id": "Q2",
+      "observed_value": "N/A",
+      "question": "Total run cost established in USD",
+      "reason": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "BDT Setup and Features",
+      "evidence_ids": [
+        "E-Q3"
+      ],
+      "id": "Q3",
+      "observed_value": "XGBoost training report and inference/selection artifacts",
+      "question": "Classifier trained and used, with package identified",
+      "reason": "artifacts/root/results/train/training_report_xgb.json and saved selection outputs directly evidence a trained classifier used downstream.",
+      "reward": 1,
+      "status": "pass"
+    },
+    {
+      "criterion_group": "BDT Setup and Features",
+      "evidence_ids": [
+        "E-Q4"
+      ],
+      "id": "Q4",
+      "observed_value": "N/A",
+      "question": "At least two final input features identified",
+      "reason": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "BDT Setup and Features",
+      "evidence_ids": [
+        "E-Q5"
+      ],
+      "id": "Q5",
+      "observed_value": "N/A",
+      "question": "Additional feature set tested",
+      "reason": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "BDT Setup and Features",
+      "evidence_ids": [
+        "E-Q6"
+      ],
+      "id": "Q6",
+      "observed_value": "event-disjoint partitions: 5199/1733/1733 event IDs",
+      "question": "Nonempty event-disjoint train/validation/test partitions",
+      "reason": "artifacts/root/results/dataset_prepare/{train,val,test}.parquet:event_id; direct set intersections are empty.",
+      "reward": 1,
+      "status": "pass"
+    },
+    {
+      "criterion_group": "BDT Setup and Features",
+      "evidence_ids": [
+        "E-Q7"
+      ],
+      "id": "Q7",
+      "observed_value": "N/A",
+      "question": "At least two distinct ML setups tried",
+      "reason": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Candidate Selection",
+      "evidence_ids": [
+        "E-Q8"
+      ],
+      "id": "Q8",
+      "observed_value": "greedy_by_score_with_jet_disjoint_constraint",
+      "question": "Specific final candidate-selection algorithm established",
+      "reason": "artifacts/root/results/select_triplets/selection_report.json records the final selection method/configuration.",
+      "reward": 1,
+      "status": "pass"
+    },
+    {
+      "criterion_group": "Candidate Selection",
+      "evidence_ids": [
+        "E-Q9"
+      ],
+      "id": "Q9",
+      "observed_value": "N/A",
+      "question": "At least two selection configurations compared on common validation data",
+      "reason": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Candidate Selection",
+      "evidence_ids": [
+        "E-Q10"
+      ],
+      "id": "Q10",
+      "observed_value": "validated by evaluator-side canonical selection",
+      "question": "N_top <= 2 for every event",
+      "reason": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json; adapter canonicalization and comparison validation accepted the recovered selection.",
+      "reward": 1,
+      "status": "pass"
+    },
+    {
+      "criterion_group": "Physics and Diagnostics",
+      "evidence_ids": [
+        "E-Q11"
+      ],
+      "id": "Q11",
+      "observed_value": "Pearson r=-0.316455 on 21323 candidates",
+      "question": "Score-mass correlation measured and reported",
+      "reason": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:score_mass_correlation; reviewer computed Pearson score\u2013mass correlation on the discovered final inference partition.",
+      "reward": 1,
+      "status": "pass"
+    },
+    {
+      "criterion_group": "Physics and Diagnostics",
+      "evidence_ids": [
+        "E-Q12"
+      ],
+      "id": "Q12",
+      "observed_value": "N/A",
+      "question": "Final selection has no triplet-mass input or hard mass window",
+      "reason": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Physics and Diagnostics",
+      "evidence_ids": [
+        "E-Q13"
+      ],
+      "id": "Q13",
+      "observed_value": "N/A",
+      "question": "At least two pipeline optimization attempts",
+      "reason": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Physics and Diagnostics",
+      "evidence_ids": [
+        "E-Q14"
+      ],
+      "id": "Q14",
+      "observed_value": "21323 finite score_xgb values; candidate count",
+      "question": "BDT-score distribution quantity, normalization, and finite values established",
+      "reason": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:score_distribution; evaluator-generated score distribution states quantity, unit, class scope, normalization, and finite values.",
+      "reward": 1,
+      "status": "pass"
+    },
+    {
+      "criterion_group": "Physics and Diagnostics",
+      "evidence_ids": [
+        "E-Q15"
+      ],
+      "id": "Q15",
+      "observed_value": "2222 finite selected triplet-mass values",
+      "question": "Reconstructed-mass comparison quantity, normalization, and finite values established",
+      "reason": "artifacts/root/results/select_triplets/selected_triplets.parquet:triplet_mass plus artifacts/root/results/sanity_checks/sanity_check_report.json establish a saved reconstructed-mass comparison.",
+      "reward": 1,
+      "status": "pass"
+    },
+    {
+      "criterion_group": "Reconstruction Performance and Jet Disjointness",
+      "evidence_ids": [
+        "E-Q16"
+      ],
+      "id": "Q16",
+      "observed_value": "validated by evaluator-side canonical selection",
+      "question": "Zero overlapping selected triplets",
+      "reason": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json; adapter canonicalization and comparison validation accepted the recovered selection.",
+      "reward": 1,
+      "status": "pass"
+    },
+    {
+      "criterion_group": "Baseline Comparison and Physics Quality",
+      "evidence_ids": [
+        "E-Q17"
+      ],
+      "id": "Q17",
+      "observed_value": "10.577 vs 5.11263 GeV",
+      "question": "Selected-mass bias no worse than mass-greedy/v2-n-top-2",
+      "reason": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.truth_matched_selected_mass_bias_GeV; direction lower_is_better.",
+      "reward": 0,
+      "status": "fail"
+    },
+    {
+      "criterion_group": "Baseline Comparison and Physics Quality",
+      "evidence_ids": [
+        "E-Q18"
+      ],
+      "id": "Q18",
+      "observed_value": "22.6166 vs 18.6939 GeV",
+      "question": "Selected truth-matched mass resolution strictly better than baseline",
+      "reason": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.truth_matched_selected_mass_resolution_GeV; direction lower_is_better.",
+      "reward": 0,
+      "status": "fail"
+    },
+    {
+      "criterion_group": "Baseline Comparison and Physics Quality",
+      "evidence_ids": [
+        "E-Q19"
+      ],
+      "id": "Q19",
+      "observed_value": "0.463753 vs 0.391258 fraction",
+      "question": "Reconstruction efficiency at least baseline",
+      "reason": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.reconstruction_efficiency; direction higher_is_better.",
+      "reward": 1,
+      "status": "pass"
+    },
+    {
+      "criterion_group": "Baseline Comparison and Physics Quality",
+      "evidence_ids": [
+        "E-Q20"
+      ],
+      "id": "Q20",
+      "observed_value": "0.19577 vs 0.165167 fraction",
+      "question": "Selected-candidate purity at least baseline",
+      "reason": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.purity; direction higher_is_better.",
+      "reward": 1,
+      "status": "pass"
+    },
+    {
+      "criterion_group": "Baseline Comparison and Physics Quality",
+      "evidence_ids": [
+        "E-Q21"
+      ],
+      "id": "Q21",
+      "observed_value": "4.10805 vs 5.0545 ratio",
+      "question": "Fake-to-true ratio no greater than baseline",
+      "reason": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.fake_to_true_ratio; direction lower_is_better.",
+      "reward": 1,
+      "status": "pass"
+    },
+    {
+      "criterion_group": "Baseline Comparison and Physics Quality",
+      "evidence_ids": [
+        "E-Q22"
+      ],
+      "id": "Q22",
+      "observed_value": "0.275316 vs 0.232278 fraction",
+      "question": "Selected-candidate F1 at least baseline",
+      "reason": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.f1; direction higher_is_better.",
+      "reward": 1,
+      "status": "pass"
+    },
+    {
+      "criterion_group": "Baseline Comparison and Physics Quality",
+      "evidence_ids": [
+        "E-Q23"
+      ],
+      "id": "Q23",
+      "observed_value": "0.892604 vs 0.886226 fraction",
+      "question": "Candidate-level selection accuracy at least baseline",
+      "reason": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.selection_accuracy; direction higher_is_better.",
+      "reward": 1,
+      "status": "pass"
+    },
+    {
+      "criterion_group": "Baseline Comparison and Physics Quality",
+      "evidence_ids": [
+        "E-Q24"
+      ],
+      "id": "Q24",
+      "observed_value": "0.688045 vs 0.65013 fraction",
+      "question": "Balanced selection accuracy at least baseline",
+      "reason": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:metric_comparisons.balanced_selection_accuracy; direction higher_is_better.",
+      "reward": 1,
+      "status": "pass"
+    },
+    {
+      "criterion_group": "Baseline Comparison and Physics Quality",
+      "evidence_ids": [
+        "E-Q25"
+      ],
+      "id": "Q25",
+      "observed_value": "true",
+      "question": "Baseline Pareto improvement",
+      "reason": "paper/reviews/top-reconstruction-traceability-pilot/baseline-comparisons/20260831T233834Z-top-reconstruct__7vNThUn.json:pareto_improvement.",
+      "reward": 1,
+      "status": "pass"
+    },
+    {
+      "criterion_group": "Plotting and Presentation Quality",
+      "evidence_ids": [
+        "E-Q26"
+      ],
+      "id": "Q26",
+      "observed_value": "score (unitless classifier score) and mass (GeV) inputs finite",
+      "question": "Plot quantity, unit, and finite values established",
+      "reason": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:score_distribution,mass_distribution; evaluator-generated diagnostic plot inputs establish quantities, units, and finite values.",
+      "reward": 1,
+      "status": "pass"
+    },
+    {
+      "criterion_group": "Plotting and Presentation Quality",
+      "evidence_ids": [
+        "E-Q27"
+      ],
+      "id": "Q27",
+      "observed_value": "candidate count for score and mass diagnostics",
+      "question": "Histogram statistical normalization established",
+      "reason": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:score_distribution,mass_distribution; reviewer-generated histograms use an explicit candidate-count statistical unit.",
+      "reward": 1,
+      "status": "pass"
+    },
+    {
+      "criterion_group": "Plotting and Presentation Quality",
+      "evidence_ids": [
+        "E-Q28"
+      ],
+      "id": "Q28",
+      "observed_value": "discovered final inference artifact",
+      "question": "Evaluated partition established for every performance plot",
+      "reason": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:partition; every reviewer-generated performance diagnostic uses the discovered final inference artifact.",
+      "reward": 1,
+      "status": "pass"
+    },
+    {
+      "criterion_group": "Methodology",
+      "evidence_ids": [
+        "E-Q29"
+      ],
+      "id": "Q29",
+      "observed_value": "N/A",
+      "question": "Candidate class-imbalance ratio and treatment established",
+      "reason": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Methodology",
+      "evidence_ids": [
+        "E-Q30"
+      ],
+      "id": "Q30",
+      "observed_value": "N/A",
+      "question": "Final reproducibility configuration complete",
+      "reason": "No direct evidence establishes this condition; searched result.json, artifacts/root/results/optimization_summary.json, artifacts/root/results/optimization_report.md, artifacts/root/results/train/feature_importance.png, artifacts/root/results/train/training_report_xgb.json, artifacts/root/results/train/roc_curve.png, artifacts/root/results/train/model_xgb.json, artifacts/root/results/dataset_prepare/val.parquet, artifacts/root/results/dataset_prepare/train.parquet, artifacts/root/results/dataset_prepare/split_info.json, artifacts/root/results/dataset_prepare/test.parquet, artifacts/root/results/select_triplets/selection_report.json, artifacts/root/results/select_triplets/selected_triplets.parquet, artifacts/root/results/select_triplets/event_selection.parquet, artifacts/root/results/select_triplets/plots/n_selected_per_event.png, artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png, artifacts/root/results/select_triplets/plots/score_distribution.png, artifacts/root/results/dataset_build/triplets_raw.parquet, \u2026",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Frozen Classifier Baseline Comparison",
+      "evidence_ids": [
+        "E-Q31"
+      ],
+      "id": "Q31",
+      "observed_value": "AUC 0.866072 vs 0.821288",
+      "question": "Held-out AUC at least frozen classifier baseline",
+      "reason": "paper/reviews/top-reconstruction-traceability-pilot/evaluator-diagnostics/20260831T233834Z-top-reconstruct__7vNThUn.json:frozen_classifier_comparison; frozen mass-blind baseline on event_id modulo 10: train 0-6, validation 7, test 8-9.",
+      "reward": 1,
+      "status": "pass"
+    }
+  ],
+  "run": {
+    "agent": "qwen-coder",
+    "evidence_root": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn",
+    "execution_status": "completed",
+    "harbor_verifier_reward": 0.350805,
+    "id": "20260831T233834Z-top-reconstruct__7vNThUn",
+    "model": "qwen-3"
+  },
+  "schema_version": "top-reconstruction-traceability-review/v1",
+  "source_inventory": {
+    "complete": true,
+    "files": [
+      {
+        "bytes": 1404,
+        "class": "agent_or_trajectory_log",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/agent/qwen-code.txt",
+        "run_relative_path": "agent/qwen-code.txt"
+      },
+      {
+        "bytes": 462588,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/agent/qwen-sessions/-root/chats/bc566cd4-9786-450b-8b4e-6f1416028406.jsonl",
+        "run_relative_path": "agent/qwen-sessions/-root/chats/bc566cd4-9786-450b-8b4e-6f1416028406.jsonl"
+      },
+      {
+        "bytes": 120535,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/agent/trajectory.json",
+        "run_relative_path": "agent/trajectory.json"
+      },
+      {
+        "bytes": 309,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/manifest.json",
+        "run_relative_path": "artifacts/manifest.json"
+      },
+      {
+        "bytes": 3191652,
+        "class": "table_or_sidecar",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/dataset_build/triplets_raw.parquet",
+        "run_relative_path": "artifacts/root/results/dataset_build/triplets_raw.parquet"
+      },
+      {
+        "bytes": 85880,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/dataset_prepare/split_info.json",
+        "run_relative_path": "artifacts/root/results/dataset_prepare/split_info.json"
+      },
+      {
+        "bytes": 776152,
+        "class": "table_or_sidecar",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/dataset_prepare/test.parquet",
+        "run_relative_path": "artifacts/root/results/dataset_prepare/test.parquet"
+      },
+      {
+        "bytes": 2355477,
+        "class": "table_or_sidecar",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/dataset_prepare/train.parquet",
+        "run_relative_path": "artifacts/root/results/dataset_prepare/train.parquet"
+      },
+      {
+        "bytes": 759835,
+        "class": "table_or_sidecar",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/dataset_prepare/val.parquet",
+        "run_relative_path": "artifacts/root/results/dataset_prepare/val.parquet"
+      },
+      {
+        "bytes": 407,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/infer/inference_report_xgb.json",
+        "run_relative_path": "artifacts/root/results/infer/inference_report_xgb.json"
+      },
+      {
+        "bytes": 901962,
+        "class": "table_or_sidecar",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/infer/inference_test_xgb.parquet",
+        "run_relative_path": "artifacts/root/results/infer/inference_test_xgb.parquet"
+      },
+      {
+        "bytes": 3699,
+        "class": "other_artifact",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/optimization_report.md",
+        "run_relative_path": "artifacts/root/results/optimization_report.md"
+      },
+      {
+        "bytes": 2279,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/optimization_summary.json",
+        "run_relative_path": "artifacts/root/results/optimization_summary.json"
+      },
+      {
+        "bytes": 160727,
+        "class": "plot_or_report",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/sanity_checks/mass_comparison.png",
+        "run_relative_path": "artifacts/root/results/sanity_checks/mass_comparison.png"
+      },
+      {
+        "bytes": 1274,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/sanity_checks/sanity_check_report.json",
+        "run_relative_path": "artifacts/root/results/sanity_checks/sanity_check_report.json"
+      },
+      {
+        "bytes": 65450,
+        "class": "table_or_sidecar",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/select_triplets/event_selection.parquet",
+        "run_relative_path": "artifacts/root/results/select_triplets/event_selection.parquet"
+      },
+      {
+        "bytes": 89423,
+        "class": "plot_or_report",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/select_triplets/plots/n_selected_per_event.png",
+        "run_relative_path": "artifacts/root/results/select_triplets/plots/n_selected_per_event.png"
+      },
+      {
+        "bytes": 103258,
+        "class": "plot_or_report",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/select_triplets/plots/score_distribution.png",
+        "run_relative_path": "artifacts/root/results/select_triplets/plots/score_distribution.png"
+      },
+      {
+        "bytes": 98682,
+        "class": "plot_or_report",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png",
+        "run_relative_path": "artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png"
+      },
+      {
+        "bytes": 86133,
+        "class": "table_or_sidecar",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/select_triplets/selected_triplets.parquet",
+        "run_relative_path": "artifacts/root/results/select_triplets/selected_triplets.parquet"
+      },
+      {
+        "bytes": 612,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/select_triplets/selection_report.json",
+        "run_relative_path": "artifacts/root/results/select_triplets/selection_report.json"
+      },
+      {
+        "bytes": 102711,
+        "class": "plot_or_report",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/feature_importance.png",
+        "run_relative_path": "artifacts/root/results/train/feature_importance.png"
+      },
+      {
+        "bytes": 562012,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/model_xgb.json",
+        "run_relative_path": "artifacts/root/results/train/model_xgb.json"
+      },
+      {
+        "bytes": 154182,
+        "class": "plot_or_report",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/roc_curve.png",
+        "run_relative_path": "artifacts/root/results/train/roc_curve.png"
+      },
+      {
+        "bytes": 871,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json",
+        "run_relative_path": "artifacts/root/results/train/training_report_xgb.json"
+      },
+      {
+        "bytes": 525,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/config.json",
+        "run_relative_path": "config.json"
+      },
+      {
+        "bytes": 1112,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/lock.json",
+        "run_relative_path": "lock.json"
+      },
+      {
+        "bytes": 4223,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/result.json",
+        "run_relative_path": "result.json"
+      },
+      {
+        "bytes": 7484,
+        "class": "agent_or_trajectory_log",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/trial.log",
+        "run_relative_path": "trial.log"
+      },
+      {
+        "bytes": 3939,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/verifier/ctrf.json",
+        "run_relative_path": "verifier/ctrf.json"
+      },
+      {
+        "bytes": 9,
+        "class": "verifier_output",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/verifier/reward.txt",
+        "run_relative_path": "verifier/reward.txt"
+      },
+      {
+        "bytes": 4821,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/verifier/score_report.json",
+        "run_relative_path": "verifier/score_report.json"
+      },
+      {
+        "bytes": 4821,
+        "class": "verifier_output",
+        "path": "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/verifier/test-stdout.txt",
+        "run_relative_path": "verifier/test-stdout.txt"
+      }
+    ],
+    "scope": "bounded preserved run tree plus pilot evaluator baseline-comparison output",
+    "searches": {
+      "baseline": [
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/agent/qwen-code.txt",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/agent/qwen-sessions/-root/chats/bc566cd4-9786-450b-8b4e-6f1416028406.jsonl",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/agent/trajectory.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/optimization_report.md",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/optimization_summary.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/sanity_checks/sanity_check_report.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/select_triplets/selection_report.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/trial.log",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/verifier/ctrf.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/verifier/score_report.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/verifier/test-stdout.txt"
+      ],
+      "classifier": [
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/agent/qwen-code.txt",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/agent/qwen-sessions/-root/chats/bc566cd4-9786-450b-8b4e-6f1416028406.jsonl",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/agent/trajectory.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/optimization_report.md",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/optimization_summary.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/train/training_report_xgb.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/trial.log",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/verifier/ctrf.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/verifier/score_report.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/verifier/test-stdout.txt"
+      ],
+      "execution": [
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/agent/qwen-code.txt",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/agent/qwen-sessions/-root/chats/bc566cd4-9786-450b-8b4e-6f1416028406.jsonl",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/agent/trajectory.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/config.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/lock.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/result.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/trial.log",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/verifier/reward.txt",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/verifier/score_report.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/verifier/test-stdout.txt"
+      ],
+      "mass diagnostics": [
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/agent/qwen-code.txt",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/agent/qwen-sessions/-root/chats/bc566cd4-9786-450b-8b4e-6f1416028406.jsonl",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/agent/trajectory.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/optimization_report.md",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/optimization_summary.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/sanity_checks/mass_comparison.png",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/sanity_checks/sanity_check_report.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/select_triplets/plots/n_selected_per_event.png",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/select_triplets/plots/score_distribution.png",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/trial.log",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/verifier/ctrf.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/verifier/score_report.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/verifier/test-stdout.txt"
+      ],
+      "selection": [
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/agent/qwen-code.txt",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/agent/qwen-sessions/-root/chats/bc566cd4-9786-450b-8b4e-6f1416028406.jsonl",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/agent/trajectory.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/dataset_build/triplets_raw.parquet",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/infer/inference_report_xgb.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/optimization_report.md",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/optimization_summary.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/sanity_checks/sanity_check_report.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/select_triplets/event_selection.parquet",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/select_triplets/plots/n_selected_per_event.png",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/select_triplets/plots/score_distribution.png",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/select_triplets/plots/triplet_mass_distribution.png",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/select_triplets/selected_triplets.parquet",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/artifacts/root/results/select_triplets/selection_report.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/trial.log",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/verifier/ctrf.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/verifier/score_report.json",
+        "results/paper/top-reconstruction-paper-version/qwen-coder/google--qwen-3--best/20260831T233834Z-top-reconstruct__7vNThUn/verifier/test-stdout.txt"
+      ]
+    }
+  },
+  "terminology_mapping": [
+    {
+      "agent_language": "BDT / classifier score",
+      "canonical_term": "candidate-classifier evidence",
+      "evidence_ids": [
+        "E4"
+      ]
+    },
+    {
+      "agent_language": "triplet / top candidate",
+      "canonical_term": "selected jet triplet",
+      "evidence_ids": [
+        "E3"
+      ]
+    },
+    {
+      "agent_language": "sanity check / mass plot",
+      "canonical_term": "mass-diagnostic artifact",
+      "evidence_ids": [
+        "E2"
+      ]
+    }
+  ]
+}

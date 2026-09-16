@@ -1,0 +1,41 @@
+{
+  "class_imbalance": {
+    "declared_treatment": null,
+    "fake_candidates": 20414,
+    "treatment_source": null,
+    "truth_candidates": 887,
+    "truth_to_fake_ratio": 0.04345057313608308
+  },
+  "frozen_classifier_comparison": {
+    "unavailable": "ValueError: zero-size array to reduction operation minimum which has no identity"
+  },
+  "mass_distribution": {
+    "finite_count": 21301,
+    "maximum": 2052.0858726610963,
+    "minimum": 36.611479520553935,
+    "normalization": "candidate count",
+    "quantity": "triplet_mass",
+    "unit": "GeV"
+  },
+  "owner": "reviewer",
+  "partition": "discovered final inference artifact",
+  "schema_version": "top-reconstruction-evaluator-diagnostics/v1",
+  "score_column": "score_xgb",
+  "score_distribution": {
+    "fake_count": 20414,
+    "finite_count": 21301,
+    "maximum": 0.9680297374725342,
+    "minimum": 2.7479683922138065e-05,
+    "normalization": "candidate count",
+    "quantity": "score_xgb",
+    "truth_count": 887,
+    "unit": "unitless classifier score"
+  },
+  "score_mass_correlation": {
+    "candidate_count": 21301,
+    "method": "pearson",
+    "value": -0.2165951525742996
+  },
+  "source_candidates": "<source-repository>/.project/evaluator-data/top-reconstruction/canonical-candidates/20260829T211053Z-top-reconstruct__jSysaoA.parquet",
+  "source_inference": "<source-repository>/results/paper/top-reconstruction-paper-version/terminus-2/gpt-5.6-terra/20260829T211053Z-top-reconstruct__jSysaoA/artifacts/root/results/infer/inference_test_xgb.parquet"
+}

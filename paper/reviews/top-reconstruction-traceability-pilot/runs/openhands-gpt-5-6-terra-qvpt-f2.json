@@ -1,0 +1,958 @@
+{
+  "attempt_ledger": [
+    {
+      "action_or_configuration": "not established",
+      "evidence_ids": [
+        "E5"
+      ],
+      "evidence_type": "static_inspection",
+      "hypothesis": "not established from a complete attributable transcript",
+      "id": "A1",
+      "next_decision": "do not infer an attempted configuration without direct executed evidence",
+      "observed_result": "not established"
+    }
+  ],
+  "claims": [
+    {
+      "criterion_group": "Execution context",
+      "evidence_ids": [
+        "E1"
+      ],
+      "id": "C1",
+      "status": "observed",
+      "value": {
+        "harbor_reward": 0.0,
+        "status": "completed"
+      }
+    },
+    {
+      "criterion_group": "Evidence coverage",
+      "evidence_ids": [
+        "E2"
+      ],
+      "id": "C2",
+      "status": "observed",
+      "value": {
+        "inventory_files": 22,
+        "result_artifacts": 0
+      }
+    },
+    {
+      "criterion_group": "Classifier and selection",
+      "evidence_ids": [
+        "E4",
+        "E3"
+      ],
+      "id": "C3",
+      "status": "missing",
+      "value": "not established"
+    },
+    {
+      "criterion_group": "Attempt traceability",
+      "evidence_ids": [
+        "E5"
+      ],
+      "id": "C4",
+      "status": "missing",
+      "value": "not established"
+    },
+    {
+      "criterion_group": "Baseline diagnostics",
+      "evidence_ids": [
+        "E6"
+      ],
+      "id": "C5",
+      "status": "not_established_after_inventory",
+      "value": "not established"
+    }
+  ],
+  "evidence_ledger": [
+    {
+      "detail": "Run identity, timestamps, agent/model, and Harbor reward.",
+      "id": "E1",
+      "kind": "execution_metadata",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "Complete bounded inventory contains 22 files, including 0 result artifacts.",
+      "id": "E2",
+      "kind": "complete_inventory",
+      "source": null
+    },
+    {
+      "detail": "Indexed candidate-selection artifacts searched after inventory completion.",
+      "id": "E3",
+      "kind": "static_inspection",
+      "source": null
+    },
+    {
+      "detail": "Indexed classifier/training artifacts searched after inventory completion.",
+      "id": "E4",
+      "kind": "static_inspection",
+      "source": null
+    },
+    {
+      "detail": "Optimization report searched for an attributable attempt lineage.",
+      "id": "E5",
+      "kind": "static_inspection",
+      "source": null
+    },
+    {
+      "detail": "no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found",
+      "id": "E6",
+      "kind": "reviewer_executed_qc",
+      "source": null
+    },
+    {
+      "detail": "canonical evaluator candidate table is unavailable",
+      "id": "E7",
+      "kind": "reviewer_executed_qc",
+      "source": null
+    },
+    {
+      "detail": "result.json:{started_at,finished_at,agent_execution} provides both finite timestamp intervals.",
+      "id": "E-Q1",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json",
+      "id": "E-Q2",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json",
+      "id": "E-Q3",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json",
+      "id": "E-Q4",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json",
+      "id": "E-Q5",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json",
+      "id": "E-Q6",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json",
+      "id": "E-Q7",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json",
+      "id": "E-Q8",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json",
+      "id": "E-Q9",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json",
+      "id": "E-Q10",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json",
+      "id": "E-Q11",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json",
+      "id": "E-Q12",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json",
+      "id": "E-Q13",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json",
+      "id": "E-Q14",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json",
+      "id": "E-Q15",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json",
+      "id": "E-Q16",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found",
+      "id": "E-Q17",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found",
+      "id": "E-Q18",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found",
+      "id": "E-Q19",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found",
+      "id": "E-Q20",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found",
+      "id": "E-Q21",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found",
+      "id": "E-Q22",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found",
+      "id": "E-Q23",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found",
+      "id": "E-Q24",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found",
+      "id": "E-Q25",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json",
+      "id": "E-Q26",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json",
+      "id": "E-Q27",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json",
+      "id": "E-Q28",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json",
+      "id": "E-Q29",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json",
+      "id": "E-Q30",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    },
+    {
+      "detail": "No direct evidence establishes this condition; searched result.json",
+      "id": "E-Q31",
+      "kind": "rubric_answer",
+      "source": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json"
+    }
+  ],
+  "missing_protocol": {
+    "baseline_expected_artifact": "labeled test-candidate table plus selected-candidate table",
+    "evidence_classes_searched": [
+      "agent_or_trajectory_log",
+      "metadata_or_json",
+      "verifier_output"
+    ],
+    "required_before_missing": "complete source inventory and indexed searches"
+  },
+  "non_authoritative": true,
+  "qc_ledger": [
+    {
+      "check": "complete bounded source inventory",
+      "evidence_ids": [
+        "E2"
+      ],
+      "id": "Q1",
+      "result": "22 files indexed",
+      "type": "static_inspection"
+    },
+    {
+      "check": "agent-saved mass/selection QC",
+      "evidence_ids": [
+        "E3"
+      ],
+      "id": "Q2",
+      "result": "not established",
+      "type": "static_inspection"
+    },
+    {
+      "check": "mass-greedy comparison and fake-mass diagnostic",
+      "evidence_ids": [
+        "E6"
+      ],
+      "id": "Q3",
+      "result": "not completed: incompatible or absent saved inputs",
+      "type": "reviewer_executed_qc"
+    }
+  ],
+  "review_reward": {
+    "earned": 1,
+    "fraction": 0.03225806451612903,
+    "meaning": "non-authoritative rubric-review reward; not the Harbor verifier reward or outcome grade",
+    "possible": 31
+  },
+  "rubric_answers": [
+    {
+      "criterion_group": "Execution and Meta",
+      "evidence_ids": [
+        "E-Q1"
+      ],
+      "id": "Q1",
+      "observed_value": "finite wall-clock and agent-execution intervals (s)",
+      "question": "Both trial wall-clock and pure agent execution time established",
+      "reason": "result.json:{started_at,finished_at,agent_execution} provides both finite timestamp intervals.",
+      "reward": 1,
+      "status": "pass"
+    },
+    {
+      "criterion_group": "Execution and Meta",
+      "evidence_ids": [
+        "E-Q2"
+      ],
+      "id": "Q2",
+      "observed_value": "N/A",
+      "question": "Total run cost established in USD",
+      "reason": "No direct evidence establishes this condition; searched result.json",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "BDT Setup and Features",
+      "evidence_ids": [
+        "E-Q3"
+      ],
+      "id": "Q3",
+      "observed_value": "N/A",
+      "question": "Classifier trained and used, with package identified",
+      "reason": "No direct evidence establishes this condition; searched result.json",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "BDT Setup and Features",
+      "evidence_ids": [
+        "E-Q4"
+      ],
+      "id": "Q4",
+      "observed_value": "N/A",
+      "question": "At least two final input features identified",
+      "reason": "No direct evidence establishes this condition; searched result.json",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "BDT Setup and Features",
+      "evidence_ids": [
+        "E-Q5"
+      ],
+      "id": "Q5",
+      "observed_value": "N/A",
+      "question": "Additional feature set tested",
+      "reason": "No direct evidence establishes this condition; searched result.json",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "BDT Setup and Features",
+      "evidence_ids": [
+        "E-Q6"
+      ],
+      "id": "Q6",
+      "observed_value": "N/A",
+      "question": "Nonempty event-disjoint train/validation/test partitions",
+      "reason": "No direct evidence establishes this condition; searched result.json",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "BDT Setup and Features",
+      "evidence_ids": [
+        "E-Q7"
+      ],
+      "id": "Q7",
+      "observed_value": "N/A",
+      "question": "At least two distinct ML setups tried",
+      "reason": "No direct evidence establishes this condition; searched result.json",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Candidate Selection",
+      "evidence_ids": [
+        "E-Q8"
+      ],
+      "id": "Q8",
+      "observed_value": "N/A",
+      "question": "Specific final candidate-selection algorithm established",
+      "reason": "No direct evidence establishes this condition; searched result.json",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Candidate Selection",
+      "evidence_ids": [
+        "E-Q9"
+      ],
+      "id": "Q9",
+      "observed_value": "N/A",
+      "question": "At least two selection configurations compared on common validation data",
+      "reason": "No direct evidence establishes this condition; searched result.json",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Candidate Selection",
+      "evidence_ids": [
+        "E-Q10"
+      ],
+      "id": "Q10",
+      "observed_value": "N/A",
+      "question": "N_top <= 2 for every event",
+      "reason": "No direct evidence establishes this condition; searched result.json",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Physics and Diagnostics",
+      "evidence_ids": [
+        "E-Q11"
+      ],
+      "id": "Q11",
+      "observed_value": "N/A",
+      "question": "Score-mass correlation measured and reported",
+      "reason": "No direct evidence establishes this condition; searched result.json",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Physics and Diagnostics",
+      "evidence_ids": [
+        "E-Q12"
+      ],
+      "id": "Q12",
+      "observed_value": "N/A",
+      "question": "Final selection has no triplet-mass input or hard mass window",
+      "reason": "No direct evidence establishes this condition; searched result.json",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Physics and Diagnostics",
+      "evidence_ids": [
+        "E-Q13"
+      ],
+      "id": "Q13",
+      "observed_value": "N/A",
+      "question": "At least two pipeline optimization attempts",
+      "reason": "No direct evidence establishes this condition; searched result.json",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Physics and Diagnostics",
+      "evidence_ids": [
+        "E-Q14"
+      ],
+      "id": "Q14",
+      "observed_value": "N/A",
+      "question": "BDT-score distribution quantity, normalization, and finite values established",
+      "reason": "No direct evidence establishes this condition; searched result.json",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Physics and Diagnostics",
+      "evidence_ids": [
+        "E-Q15"
+      ],
+      "id": "Q15",
+      "observed_value": "N/A",
+      "question": "Reconstructed-mass comparison quantity, normalization, and finite values established",
+      "reason": "No direct evidence establishes this condition; searched result.json",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Reconstruction Performance and Jet Disjointness",
+      "evidence_ids": [
+        "E-Q16"
+      ],
+      "id": "Q16",
+      "observed_value": "N/A",
+      "question": "Zero overlapping selected triplets",
+      "reason": "No direct evidence establishes this condition; searched result.json",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Baseline Comparison and Physics Quality",
+      "evidence_ids": [
+        "E-Q17"
+      ],
+      "id": "Q17",
+      "observed_value": "N/A",
+      "question": "Selected-mass bias no worse than mass-greedy/v2-n-top-2",
+      "reason": "no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Baseline Comparison and Physics Quality",
+      "evidence_ids": [
+        "E-Q18"
+      ],
+      "id": "Q18",
+      "observed_value": "N/A",
+      "question": "Selected truth-matched mass resolution strictly better than baseline",
+      "reason": "no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Baseline Comparison and Physics Quality",
+      "evidence_ids": [
+        "E-Q19"
+      ],
+      "id": "Q19",
+      "observed_value": "N/A",
+      "question": "Reconstruction efficiency at least baseline",
+      "reason": "no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Baseline Comparison and Physics Quality",
+      "evidence_ids": [
+        "E-Q20"
+      ],
+      "id": "Q20",
+      "observed_value": "N/A",
+      "question": "Selected-candidate purity at least baseline",
+      "reason": "no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Baseline Comparison and Physics Quality",
+      "evidence_ids": [
+        "E-Q21"
+      ],
+      "id": "Q21",
+      "observed_value": "N/A",
+      "question": "Fake-to-true ratio no greater than baseline",
+      "reason": "no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Baseline Comparison and Physics Quality",
+      "evidence_ids": [
+        "E-Q22"
+      ],
+      "id": "Q22",
+      "observed_value": "N/A",
+      "question": "Selected-candidate F1 at least baseline",
+      "reason": "no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Baseline Comparison and Physics Quality",
+      "evidence_ids": [
+        "E-Q23"
+      ],
+      "id": "Q23",
+      "observed_value": "N/A",
+      "question": "Candidate-level selection accuracy at least baseline",
+      "reason": "no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Baseline Comparison and Physics Quality",
+      "evidence_ids": [
+        "E-Q24"
+      ],
+      "id": "Q24",
+      "observed_value": "N/A",
+      "question": "Balanced selection accuracy at least baseline",
+      "reason": "no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Baseline Comparison and Physics Quality",
+      "evidence_ids": [
+        "E-Q25"
+      ],
+      "id": "Q25",
+      "observed_value": "N/A",
+      "question": "Baseline Pareto improvement",
+      "reason": "no readable inference artifact established the evaluated event set; no readable selection table with candidate keys was found",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Plotting and Presentation Quality",
+      "evidence_ids": [
+        "E-Q26"
+      ],
+      "id": "Q26",
+      "observed_value": "N/A",
+      "question": "Plot quantity, unit, and finite values established",
+      "reason": "No direct evidence establishes this condition; searched result.json",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Plotting and Presentation Quality",
+      "evidence_ids": [
+        "E-Q27"
+      ],
+      "id": "Q27",
+      "observed_value": "N/A",
+      "question": "Histogram statistical normalization established",
+      "reason": "No direct evidence establishes this condition; searched result.json",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Plotting and Presentation Quality",
+      "evidence_ids": [
+        "E-Q28"
+      ],
+      "id": "Q28",
+      "observed_value": "N/A",
+      "question": "Evaluated partition established for every performance plot",
+      "reason": "No direct evidence establishes this condition; searched result.json",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Methodology",
+      "evidence_ids": [
+        "E-Q29"
+      ],
+      "id": "Q29",
+      "observed_value": "N/A",
+      "question": "Candidate class-imbalance ratio and treatment established",
+      "reason": "No direct evidence establishes this condition; searched result.json",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Methodology",
+      "evidence_ids": [
+        "E-Q30"
+      ],
+      "id": "Q30",
+      "observed_value": "N/A",
+      "question": "Final reproducibility configuration complete",
+      "reason": "No direct evidence establishes this condition; searched result.json",
+      "reward": 0,
+      "status": "missing"
+    },
+    {
+      "criterion_group": "Frozen Classifier Baseline Comparison",
+      "evidence_ids": [
+        "E-Q31"
+      ],
+      "id": "Q31",
+      "observed_value": "N/A",
+      "question": "Held-out AUC at least frozen classifier baseline",
+      "reason": "No direct evidence establishes this condition; searched result.json",
+      "reward": 0,
+      "status": "missing"
+    }
+  ],
+  "run": {
+    "agent": "openhands",
+    "evidence_root": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2",
+    "execution_status": "completed",
+    "harbor_verifier_reward": 0.0,
+    "id": "20260829T215720Z-top-reconstruct__qvptHf2",
+    "model": "gpt-5.6-terra"
+  },
+  "schema_version": "top-reconstruction-traceability-review/v1",
+  "source_inventory": {
+    "complete": true,
+    "files": [
+      {
+        "bytes": 32,
+        "class": "agent_or_trajectory_log",
+        "path": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/.jwt_secret",
+        "run_relative_path": "agent/.jwt_secret"
+      },
+      {
+        "bytes": 37965,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/completions/gpt-5.6-terra-1788040774.0611305.json",
+        "run_relative_path": "agent/completions/gpt-5.6-terra-1788040774.0611305.json"
+      },
+      {
+        "bytes": 72960,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/openhands.trajectory.json",
+        "run_relative_path": "agent/openhands.trajectory.json"
+      },
+      {
+        "bytes": 9064,
+        "class": "agent_or_trajectory_log",
+        "path": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/openhands.txt",
+        "run_relative_path": "agent/openhands.txt"
+      },
+      {
+        "bytes": 1684,
+        "class": "agent_or_trajectory_log",
+        "path": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/agent_state.pkl",
+        "run_relative_path": "agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/agent_state.pkl"
+      },
+      {
+        "bytes": 1080,
+        "class": "agent_or_trajectory_log",
+        "path": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/conversation_stats.pkl",
+        "run_relative_path": "agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/conversation_stats.pkl"
+      },
+      {
+        "bytes": 42576,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/0.json",
+        "run_relative_path": "agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/0.json"
+      },
+      {
+        "bytes": 14315,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/1.json",
+        "run_relative_path": "agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/1.json"
+      },
+      {
+        "bytes": 7301,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/2.json",
+        "run_relative_path": "agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/2.json"
+      },
+      {
+        "bytes": 197,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/3.json",
+        "run_relative_path": "agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/3.json"
+      },
+      {
+        "bytes": 552,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/4.json",
+        "run_relative_path": "agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/4.json"
+      },
+      {
+        "bytes": 335,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/5.json",
+        "run_relative_path": "agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/5.json"
+      },
+      {
+        "bytes": 40640,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/trajectory.json",
+        "run_relative_path": "agent/trajectory.json"
+      },
+      {
+        "bytes": 309,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/artifacts/manifest.json",
+        "run_relative_path": "artifacts/manifest.json"
+      },
+      {
+        "bytes": 775,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/config.json",
+        "run_relative_path": "config.json"
+      },
+      {
+        "bytes": 1340,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/lock.json",
+        "run_relative_path": "lock.json"
+      },
+      {
+        "bytes": 4908,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json",
+        "run_relative_path": "result.json"
+      },
+      {
+        "bytes": 7493,
+        "class": "agent_or_trajectory_log",
+        "path": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/trial.log",
+        "run_relative_path": "trial.log"
+      },
+      {
+        "bytes": 2432,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/verifier/ctrf.json",
+        "run_relative_path": "verifier/ctrf.json"
+      },
+      {
+        "bytes": 9,
+        "class": "verifier_output",
+        "path": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/verifier/reward.txt",
+        "run_relative_path": "verifier/reward.txt"
+      },
+      {
+        "bytes": 3179,
+        "class": "metadata_or_json",
+        "path": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/verifier/score_report.json",
+        "run_relative_path": "verifier/score_report.json"
+      },
+      {
+        "bytes": 3179,
+        "class": "verifier_output",
+        "path": "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/verifier/test-stdout.txt",
+        "run_relative_path": "verifier/test-stdout.txt"
+      }
+    ],
+    "scope": "bounded preserved run tree plus pilot evaluator baseline-comparison output",
+    "searches": {
+      "baseline": [
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/completions/gpt-5.6-terra-1788040774.0611305.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/openhands.trajectory.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/0.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/1.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/2.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/trajectory.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/trial.log",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/verifier/ctrf.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/verifier/score_report.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/verifier/test-stdout.txt"
+      ],
+      "classifier": [
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/completions/gpt-5.6-terra-1788040774.0611305.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/openhands.trajectory.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/0.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/1.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/2.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/trajectory.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/trial.log",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/verifier/ctrf.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/verifier/score_report.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/verifier/test-stdout.txt"
+      ],
+      "execution": [
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/.jwt_secret",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/completions/gpt-5.6-terra-1788040774.0611305.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/openhands.trajectory.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/openhands.txt",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/agent_state.pkl",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/conversation_stats.pkl",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/0.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/1.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/2.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/3.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/4.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/5.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/trajectory.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/config.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/lock.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/result.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/trial.log",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/verifier/reward.txt",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/verifier/score_report.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/verifier/test-stdout.txt"
+      ],
+      "mass diagnostics": [
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/completions/gpt-5.6-terra-1788040774.0611305.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/openhands.trajectory.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/1.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/2.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/trajectory.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/trial.log",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/verifier/ctrf.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/verifier/score_report.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/verifier/test-stdout.txt"
+      ],
+      "selection": [
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/completions/gpt-5.6-terra-1788040774.0611305.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/openhands.trajectory.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/1.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/sessions/4bbf07af-5add-48-05959edc64a6cf7/events/2.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/agent/trajectory.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/trial.log",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/verifier/ctrf.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/verifier/score_report.json",
+        "results/paper/top-reconstruction-paper-version/openhands/gpt-5.6-terra/20260829T215720Z-top-reconstruct__qvptHf2/verifier/test-stdout.txt"
+      ]
+    }
+  },
+  "terminology_mapping": [
+    {
+      "agent_language": "BDT / classifier score",
+      "canonical_term": "candidate-classifier evidence",
+      "evidence_ids": [
+        "E4"
+      ]
+    },
+    {
+      "agent_language": "triplet / top candidate",
+      "canonical_term": "selected jet triplet",
+      "evidence_ids": [
+        "E3"
+      ]
+    },
+    {
+      "agent_language": "sanity check / mass plot",
+      "canonical_term": "mass-diagnostic artifact",
+      "evidence_ids": [
+        "E2"
+      ]
+    }
+  ]
+}
