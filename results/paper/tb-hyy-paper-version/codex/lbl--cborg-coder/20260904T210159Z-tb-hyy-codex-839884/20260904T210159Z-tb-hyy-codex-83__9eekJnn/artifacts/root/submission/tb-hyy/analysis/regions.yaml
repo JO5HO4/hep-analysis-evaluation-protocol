@@ -1,7 +1,0 @@
-inclusive:
-  mass_min: 105
-  mass_max: 160
-  blinding_min: 120
-  blinding_max: 130
-  sideband_low_max: 120
-  sideband_high_min: 130

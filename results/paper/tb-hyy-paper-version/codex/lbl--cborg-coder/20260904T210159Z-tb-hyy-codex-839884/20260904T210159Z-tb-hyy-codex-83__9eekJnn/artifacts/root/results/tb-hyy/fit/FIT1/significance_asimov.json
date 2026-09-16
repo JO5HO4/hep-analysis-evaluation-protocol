@@ -1,8 +1,0 @@
-{
-  "dataset_type": "asimov",
-  "generation_hypothesis": "signal_plus_background",
-  "mu_gen": 1.0,
-  "mu_hat": 9.999991297857378,
-  "mu_uncertainty": 0.15906890240242255,
-  "backend": "ROOT/PyROOT/RooFit"
-}
