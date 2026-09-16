@@ -3,6 +3,32 @@
 Standalone development repository for the artifact-adaptive evaluation protocol
 and the retained paper evidence used to exercise it.
 
+## How this project works
+
+The people and models doing an analysis are free to work in the way that makes
+sense for the problem. They can choose their own model, inputs, selection
+method, checks, plots, and report. They do not need to fill out a special
+submission form or put every result in a pre-agreed file.
+
+After a run is finished, this project reads the work that was saved and answers
+the same set of questions for every run. The review follows this plan:
+
+1. Make a complete list of the files saved for that run, within that run's
+   preserved folder.
+2. Look through the available reports, tables, plots, logs, and saved outputs
+   for evidence that answers each question. Use both the standard physics names
+   and the words the agent used.
+3. Record what the evidence supports, with a link back to the exact file. If
+   an answer cannot be found, record what was searched instead of guessing.
+4. When a question needs a fair comparison, rebuild the same comparison sample
+   from the saved selection and shared reference data. For example, this can
+   recover triplet masses and compare a selection with the common baseline.
+5. Keep the results separate: whether the run finished, the harness reward,
+   the evidence review, and any formal scientific score are different things.
+
+This lets us understand and compare work produced in many different styles
+without telling the agent in advance how it must solve the analysis.
+
 ## Contents
 
 - `evaluation/` contains the evaluation prompts, rubrics, task notes, and
