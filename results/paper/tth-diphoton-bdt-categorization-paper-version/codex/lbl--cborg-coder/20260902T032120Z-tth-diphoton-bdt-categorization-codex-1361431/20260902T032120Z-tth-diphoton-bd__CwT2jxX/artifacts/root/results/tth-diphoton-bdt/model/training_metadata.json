@@ -1,0 +1,10 @@
+{
+    "model": "XGBoost",
+    "features": [
+        "n_jets",
+        "n_btags",
+        "ht",
+        "met",
+        "n_central_jets"
+    ]
+}

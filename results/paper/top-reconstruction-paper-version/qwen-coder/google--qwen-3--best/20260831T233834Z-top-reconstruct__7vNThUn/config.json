@@ -1,0 +1,12 @@
+{
+    "task": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260831T233834Z-top-reconstruction-full-chain-no-pipeline-qwen-coder-905518"
+    },
+    "trial_name": "20260831T233834Z-top-reconstruct__7vNThUn",
+    "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260831T233834Z-top-reconstruction-full-chain-no-pipeline-qwen-coder-905518",
+    "agent": {
+        "name": "harbor_agents.preinstalled:PreinstalledQwenCode",
+        "model_name": "google/qwen-3"
+    },
+    "job_id": "539a4460-b555-4b12-8378-3bfdf7f06a3a"
+}

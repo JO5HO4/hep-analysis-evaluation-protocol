@@ -1,0 +1,62 @@
+{
+  "final_triplet_reconstruction_efficiency": 0.4638,
+  "total_truth_triplets": 938,
+  "selected_truth_triplets": 435,
+  "classifier_validation_auc": 0.8429,
+  "classifier_training_auc": 0.9072,
+  "selected_candidates_mean_mass": 204.4,
+  "truth_triplets_mean_mass_validation": 168.8,
+  "fake_triplets_mean_mass_validation": 268.2,
+  "feature_set": [
+    "dr_ab",
+    "dr_ac",
+    "dr_bc",
+    "mij_over_m123_ab",
+    "mij_over_m123_ac",
+    "mij_over_m123_bc"
+  ],
+  "classifier_type": "XGBoost",
+  "classifier_hyperparameters": {
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "max_depth": 6,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 1,
+    "gamma": 0,
+    "reg_alpha": 0,
+    "reg_lambda": 1,
+    "tree_method": "hist"
+  },
+  "selection_strategy": "greedy_by_score_with_jet_disjoint_constraint",
+  "max_candidates_per_event": 2,
+  "data_split": {
+    "train_fraction": 0.6,
+    "val_fraction": 0.2,
+    "test_fraction": 0.2
+  },
+  "optimization_iterations": [
+    {
+      "iteration": 1,
+      "description": "Baseline implementation with basic physics features",
+      "triplet_reconstruction_efficiency": 0.4638,
+      "notes": "First complete implementation serving as baseline for future optimization"
+    }
+  ],
+  "artifacts": {
+    "dataset_build": "/root/results/dataset_build/triplets_raw.parquet",
+    "dataset_prepare_train": "/root/results/dataset_prepare/train.parquet",
+    "dataset_prepare_val": "/root/results/dataset_prepare/val.parquet",
+    "dataset_prepare_test": "/root/results/dataset_prepare/test.parquet",
+    "model": "/root/results/train/model_xgb.json",
+    "training_report": "/root/results/train/training_report_xgb.json",
+    "inference_results": "/root/results/infer/inference_test_xgb.parquet",
+    "inference_report": "/root/results/infer/inference_report_xgb.json",
+    "selected_triplets": "/root/results/select_triplets/selected_triplets.parquet",
+    "event_selection": "/root/results/select_triplets/event_selection.parquet",
+    "selection_report": "/root/results/select_triplets/selection_report.json",
+    "optimization_report": "/root/results/optimization_report.md",
+    "sanity_check_report": "/root/results/sanity_checks/sanity_check_report.json"
+  }
+}

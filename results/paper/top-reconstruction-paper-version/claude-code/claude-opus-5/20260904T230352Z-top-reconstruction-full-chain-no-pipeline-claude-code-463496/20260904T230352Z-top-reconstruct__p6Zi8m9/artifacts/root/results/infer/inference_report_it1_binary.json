@@ -1,0 +1,24 @@
+{
+  "tag": "it1_binary",
+  "split": "test",
+  "model": "/root/results/train/model_it1_binary.json",
+  "source_parquet": "/root/results/dataset_prepare/test.parquet",
+  "n_features": 72,
+  "n_trees_used": 281,
+  "n_events": 1733,
+  "n_triplets": 22021,
+  "n_truth_triplets": 931,
+  "truth_fraction": 0.04227782571182054,
+  "auc": 0.9616251561641352,
+  "average_precision": 0.6300776250803323,
+  "score_quantiles": {
+    "0.01": 3.119821631116793e-05,
+    "0.1": 9.698732174001634e-05,
+    "0.5": 0.001764977816492319,
+    "0.9": 0.07979461550712585,
+    "0.99": 0.7311326026916503
+  },
+  "score_mean_truth": 0.43337630286423146,
+  "score_mean_fake": 0.023029365307056612,
+  "inference_seconds": 0.062
+}

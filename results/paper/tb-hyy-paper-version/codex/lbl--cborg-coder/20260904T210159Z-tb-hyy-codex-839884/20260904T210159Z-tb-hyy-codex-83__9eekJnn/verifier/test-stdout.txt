@@ -1,0 +1,96 @@
+{
+  "asimov_mu": {
+    "artifact": "/root/results/tb-hyy/fit/FIT1/significance_asimov.json",
+    "backend_artifact": "/root/results/tb-hyy/fit/FIT1/backend.json",
+    "checks": {
+      "cov_qual_ok": true,
+      "dataset_type_ok": true,
+      "fit_status_ok": true,
+      "generation_ok": true,
+      "mu_closure_ok": false,
+      "mu_gen_ok": true,
+      "not_fixed_background_fallback": true,
+      "root_backend_ok": true,
+      "uncertainty_finite_positive": true
+    },
+    "cov_qual_free": null,
+    "errors": [],
+    "expected_mu_uncertainty": 0.146,
+    "fit_status_free": null,
+    "mu_gen": 1.0,
+    "mu_hat": 9.999991297857378,
+    "mu_hat_score": 0.0,
+    "mu_uncertainty": 0.15906890240242255,
+    "mu_uncertainty_component_score": 0.0,
+    "mu_uncertainty_relative_difference": 0.08951303015357918,
+    "mu_uncertainty_score": 100.0,
+    "score": 0.0
+  },
+  "asimov_plot": {
+    "accepted_artifact": "fit/FIT1/plots/asimov_sb_fit.png",
+    "checks": {
+      "required_plot_file_exists_and_is_non_empty": true
+    },
+    "errors": [],
+    "plot": {
+      "exists": true,
+      "name": "asimov_sb_fit",
+      "non_empty": true,
+      "path": "/root/results/tb-hyy/fit/FIT1/plots/asimov_sb_fit.png",
+      "size_bytes": 19630
+    },
+    "score": 100.0
+  },
+  "event_count": {
+    "accepted_schema": "canonical aggregated.mass_window.data_unweighted or equivalent inclusive count alias",
+    "artifact": "/root/results/tb-hyy/report/cutflow_table.json",
+    "checks": {
+      "inclusive_category_preserves_selected_events": true,
+      "mass_window_count_matches_reference": false
+    },
+    "errors": [],
+    "expected_observed_data_mass_window": 228498,
+    "observed_data_categorized": 1,
+    "observed_data_mass_window": 1,
+    "score": 0.0
+  },
+  "result_root": "/root/results/tb-hyy",
+  "reward": 0.2,
+  "score_units": "weighted points out of 100; Harbor reward is total_score / 100",
+  "score_weights": {
+    "asimov_mu": 26.666666666666668,
+    "asimov_plot": 10.0,
+    "event_count": 26.666666666666668,
+    "sideband_plot": 10.0,
+    "spurious_background": 26.666666666666668
+  },
+  "sideband_plot": {
+    "accepted_artifact": "fit/FIT1/plots/sidebands_background_fit.png",
+    "checks": {
+      "required_plot_file_exists_and_is_non_empty": true
+    },
+    "errors": [],
+    "plot": {
+      "exists": true,
+      "name": "sidebands_background_fit",
+      "non_empty": true,
+      "path": "/root/results/tb-hyy/fit/FIT1/plots/sidebands_background_fit.png",
+      "size_bytes": 21217
+    },
+    "score": 100.0
+  },
+  "spurious_background": {
+    "errors": [
+      "int() argument must be a string, a bytes-like object or a real number, not 'NoneType'"
+    ],
+    "score": 0.0
+  },
+  "total_score": 20.0,
+  "weighted_scores": {
+    "asimov_mu": 0.0,
+    "asimov_plot": 10.0,
+    "event_count": 0.0,
+    "sideband_plot": 10.0,
+    "spurious_background": 0.0
+  }
+}

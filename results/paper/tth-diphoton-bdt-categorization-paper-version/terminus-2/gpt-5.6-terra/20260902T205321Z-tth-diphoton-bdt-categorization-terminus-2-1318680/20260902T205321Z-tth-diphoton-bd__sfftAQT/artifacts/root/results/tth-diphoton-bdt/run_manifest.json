@@ -1,0 +1,7 @@
+{
+  "completed": true,
+  "input_scope": "nominal Higgs MC and observed data only; continuum MC excluded",
+  "blinding": "observed TI 125 +/- 2 GeV never inspected/reported",
+  "row_policy": "uncapped",
+  "postprocessing": "Added explicit provenance/preselection flags, signed-weight summaries, and per-category TI-sideband diagnostics without reading or reporting TI observed signal-window data."
+}

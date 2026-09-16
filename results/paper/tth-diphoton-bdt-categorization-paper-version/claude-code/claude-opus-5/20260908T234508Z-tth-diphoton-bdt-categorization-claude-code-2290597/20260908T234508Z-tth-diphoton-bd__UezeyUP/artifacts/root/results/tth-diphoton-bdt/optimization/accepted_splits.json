@@ -1,0 +1,271 @@
+{
+  "accepted_boundary_sequence": [
+    0.73,
+    0.88,
+    0.36
+  ],
+  "accepted_splits": [
+    {
+      "iteration": 1,
+      "n_boundaries": 1,
+      "candidate_boundary": 0.73,
+      "thresholds": [
+        0.73
+      ],
+      "combined_significance": 1.5127508625626847,
+      "previous_combined_significance": 0.0,
+      "relative_improvement": null,
+      "min_relative_improvement": 0.05,
+      "n_viable_candidates": 84,
+      "accepted": true,
+      "categories": [
+        {
+          "category": "ttH_had_BDT1",
+          "score_low": 0.73,
+          "score_high": 1.0,
+          "signal_yield": 3.6820043380711125,
+          "background_yield": 4.81447351552663,
+          "counting_significance": 1.5127508625626847
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "n_boundaries": 2,
+      "candidate_boundary": 0.88,
+      "thresholds": [
+        0.88,
+        0.73
+      ],
+      "combined_significance": 1.6404605386905686,
+      "previous_combined_significance": 1.5127508625626847,
+      "relative_improvement": 0.08442214728705336,
+      "min_relative_improvement": 0.05,
+      "n_viable_candidates": 79,
+      "accepted": true,
+      "categories": [
+        {
+          "category": "ttH_had_BDT1",
+          "score_low": 0.88,
+          "score_high": 1.0,
+          "signal_yield": 1.4833971556779126,
+          "background_yield": 0.9343655588121916,
+          "counting_significance": 1.2769046410208222
+        },
+        {
+          "category": "ttH_had_BDT2",
+          "score_low": 0.73,
+          "score_high": 1.0,
+          "signal_yield": 2.1986071823931996,
+          "background_yield": 3.8801079567144385,
+          "counting_significance": 1.0298666499797124
+        }
+      ]
+    },
+    {
+      "iteration": 3,
+      "n_boundaries": 3,
+      "candidate_boundary": 0.36,
+      "thresholds": [
+        0.88,
+        0.73,
+        0.36
+      ],
+      "combined_significance": 1.7516610358750713,
+      "previous_combined_significance": 1.6404605386905686,
+      "relative_improvement": 0.0677861457571323,
+      "min_relative_improvement": 0.05,
+      "n_viable_candidates": 75,
+      "accepted": true,
+      "categories": [
+        {
+          "category": "ttH_had_BDT1",
+          "score_low": 0.88,
+          "score_high": 1.0,
+          "signal_yield": 1.4833971556779126,
+          "background_yield": 0.9343655588121916,
+          "counting_significance": 1.2769046410208222
+        },
+        {
+          "category": "ttH_had_BDT2",
+          "score_low": 0.73,
+          "score_high": 1.0,
+          "signal_yield": 2.1986071823931996,
+          "background_yield": 3.8801079567144385,
+          "counting_significance": 1.0298666499797124
+        },
+        {
+          "category": "ttH_had_BDT3",
+          "score_low": 0.36,
+          "score_high": 1.0,
+          "signal_yield": 2.504402937229864,
+          "background_yield": 15.813371141178603,
+          "counting_significance": 0.614170664882309
+        }
+      ]
+    }
+  ],
+  "all_iterations_including_rejected": [
+    {
+      "iteration": 1,
+      "n_boundaries": 1,
+      "candidate_boundary": 0.73,
+      "thresholds": [
+        0.73
+      ],
+      "combined_significance": 1.5127508625626847,
+      "previous_combined_significance": 0.0,
+      "relative_improvement": null,
+      "min_relative_improvement": 0.05,
+      "n_viable_candidates": 84,
+      "accepted": true,
+      "categories": [
+        {
+          "category": "ttH_had_BDT1",
+          "score_low": 0.73,
+          "score_high": 1.0,
+          "signal_yield": 3.6820043380711125,
+          "background_yield": 4.81447351552663,
+          "counting_significance": 1.5127508625626847
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "n_boundaries": 2,
+      "candidate_boundary": 0.88,
+      "thresholds": [
+        0.88,
+        0.73
+      ],
+      "combined_significance": 1.6404605386905686,
+      "previous_combined_significance": 1.5127508625626847,
+      "relative_improvement": 0.08442214728705336,
+      "min_relative_improvement": 0.05,
+      "n_viable_candidates": 79,
+      "accepted": true,
+      "categories": [
+        {
+          "category": "ttH_had_BDT1",
+          "score_low": 0.88,
+          "score_high": 1.0,
+          "signal_yield": 1.4833971556779126,
+          "background_yield": 0.9343655588121916,
+          "counting_significance": 1.2769046410208222
+        },
+        {
+          "category": "ttH_had_BDT2",
+          "score_low": 0.73,
+          "score_high": 1.0,
+          "signal_yield": 2.1986071823931996,
+          "background_yield": 3.8801079567144385,
+          "counting_significance": 1.0298666499797124
+        }
+      ]
+    },
+    {
+      "iteration": 3,
+      "n_boundaries": 3,
+      "candidate_boundary": 0.36,
+      "thresholds": [
+        0.88,
+        0.73,
+        0.36
+      ],
+      "combined_significance": 1.7516610358750713,
+      "previous_combined_significance": 1.6404605386905686,
+      "relative_improvement": 0.0677861457571323,
+      "min_relative_improvement": 0.05,
+      "n_viable_candidates": 75,
+      "accepted": true,
+      "categories": [
+        {
+          "category": "ttH_had_BDT1",
+          "score_low": 0.88,
+          "score_high": 1.0,
+          "signal_yield": 1.4833971556779126,
+          "background_yield": 0.9343655588121916,
+          "counting_significance": 1.2769046410208222
+        },
+        {
+          "category": "ttH_had_BDT2",
+          "score_low": 0.73,
+          "score_high": 1.0,
+          "signal_yield": 2.1986071823931996,
+          "background_yield": 3.8801079567144385,
+          "counting_significance": 1.0298666499797124
+        },
+        {
+          "category": "ttH_had_BDT3",
+          "score_low": 0.36,
+          "score_high": 1.0,
+          "signal_yield": 2.504402937229864,
+          "background_yield": 15.813371141178603,
+          "counting_significance": 0.614170664882309
+        }
+      ]
+    },
+    {
+      "iteration": 4,
+      "n_boundaries": 4,
+      "candidate_boundary": 0.6,
+      "thresholds": [
+        0.88,
+        0.73,
+        0.6,
+        0.36
+      ],
+      "combined_significance": 1.767328811669109,
+      "previous_combined_significance": 1.7516610358750713,
+      "relative_improvement": 0.008944524924144744,
+      "min_relative_improvement": 0.05,
+      "n_viable_candidates": 72,
+      "accepted": false,
+      "categories": [
+        {
+          "category": "ttH_had_BDT1",
+          "score_low": 0.88,
+          "score_high": 1.0,
+          "signal_yield": 1.4833971556779126,
+          "background_yield": 0.9343655588121916,
+          "counting_significance": 1.2769046410208222
+        },
+        {
+          "category": "ttH_had_BDT2",
+          "score_low": 0.73,
+          "score_high": 1.0,
+          "signal_yield": 2.1986071823931996,
+          "background_yield": 3.8801079567144385,
+          "counting_significance": 1.0298666499797124
+        },
+        {
+          "category": "ttH_had_BDT3",
+          "score_low": 0.6,
+          "score_high": 1.0,
+          "signal_yield": 1.1873790466555403,
+          "background_yield": 4.593162115299487,
+          "counting_significance": 0.5324147130924746
+        },
+        {
+          "category": "ttH_had_BDT4",
+          "score_low": 0.36,
+          "score_high": 1.0,
+          "signal_yield": 1.317023890574324,
+          "background_yield": 11.22020902587912,
+          "counting_significance": 0.3858431324223004
+        }
+      ]
+    }
+  ],
+  "min_relative_improvement": 0.05,
+  "config": {
+    "grid_min": 0.05,
+    "grid_max": 0.98,
+    "grid_step": 0.01,
+    "max_boundaries": 4,
+    "min_relative_improvement": 0.05,
+    "min_background_yield": 0.8,
+    "min_signal_yield": 0.0001
+  },
+  "status": "relative-improvement-below-threshold"
+}

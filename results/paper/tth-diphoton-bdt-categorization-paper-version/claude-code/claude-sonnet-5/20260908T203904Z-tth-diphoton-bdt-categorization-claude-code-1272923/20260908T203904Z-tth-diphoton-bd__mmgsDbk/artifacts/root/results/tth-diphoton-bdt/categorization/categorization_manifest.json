@@ -1,0 +1,74 @@
+{
+  "category_order": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "ttH_had_BDT3",
+    "ttH_had_BDT4",
+    "tH_had_4j1b",
+    "tH_had_4j2b",
+    "unassigned"
+  ],
+  "bdt_boundaries_descending": [
+    0.87,
+    0.68
+  ],
+  "lumi_ifb": 36.0,
+  "sideband_scale_factors": {
+    "signal_window_gev": [
+      123.0,
+      127.0
+    ],
+    "sideband_low_gev": [
+      105.0,
+      120.0
+    ],
+    "sideband_high_gev": [
+      130.0,
+      160.0
+    ],
+    "TI_sideband_yield": 691.0,
+    "NTI_sideband_yield": 26367.0,
+    "NTI_window_yield": 2615.0,
+    "SF1": 0.026207001175712064,
+    "SF2": 0.09917700155497403,
+    "SF1_times_SF2": 0.0025991317963548013,
+    "blinded_region_gev": [
+      123.0,
+      127.0
+    ],
+    "blinding_note": "Observed TI data in the 125+/-2 GeV window is never inspected, counted, summed, or plotted anywhere in this pipeline.",
+    "computed_on": "full hadronic-channel observed data (all partitions), a fixed data-driven calibration constant"
+  },
+  "retention_threshold": 0.8,
+  "kept_categories": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "tH_had_4j1b",
+    "tH_had_4j2b"
+  ],
+  "merged_categories": [
+    "ttH_had_BDT3",
+    "ttH_had_BDT4"
+  ],
+  "n_hadronic_events_categorized": 272376,
+  "blinding": {
+    "signal_window_gev": [
+      123.0,
+      127.0
+    ],
+    "observed_TI_data_in_signal_window_used": false,
+    "note": "Observed TI data in the 125+/-2 GeV window is never inspected, counted or reported anywhere in this pipeline; only TI *MC* and NTI *data* enter the signal-window model."
+  },
+  "cut_based_categories": {
+    "tH_had_4j1b": {
+      "n_leptons": 0,
+      "n_jets_central": 4,
+      "n_bjets": 1
+    },
+    "tH_had_4j2b": {
+      "n_leptons": 0,
+      "n_jets_central": 4,
+      "n_bjets_min": 2
+    }
+  }
+}

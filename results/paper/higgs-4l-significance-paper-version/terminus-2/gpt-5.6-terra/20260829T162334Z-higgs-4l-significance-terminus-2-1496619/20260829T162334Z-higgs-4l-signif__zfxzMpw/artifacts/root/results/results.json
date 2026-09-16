@@ -1,0 +1,16 @@
+{
+  "logL_b": -11.082750320271758,
+  "logL_sb": -5.8159224919108095,
+  "test_statistic": -10.533655656721898,
+  "p_value": 0.000212,
+  "significance": 3.5246766533968237,
+  "mu_hat": 1.6238865611147593,
+  "mu_lo": 1.0089693335395655,
+  "mu_hi": 2.366643166595182,
+  "n_toys": 1000000,
+  "n_signal_like_toys": 212,
+  "toy_seed": 20250308,
+  "evidence_at_3sigma": true,
+  "mu_uncertainty_minus": 0.6149172275751937,
+  "mu_uncertainty_plus": 0.7427566054804227
+}

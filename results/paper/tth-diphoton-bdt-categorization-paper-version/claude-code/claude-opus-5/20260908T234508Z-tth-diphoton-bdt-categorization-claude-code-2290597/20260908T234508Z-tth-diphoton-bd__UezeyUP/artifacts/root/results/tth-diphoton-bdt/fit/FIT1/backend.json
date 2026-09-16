@@ -1,0 +1,11 @@
+{
+  "backend": "ROOT/PyROOT/RooFit",
+  "root_version": "6.38.00",
+  "workspace_class": "RooWorkspace",
+  "model_class": "RooSimultaneous over RooAddPdf per category",
+  "minimizer": "Minuit2/migrad + hesse (RooMinimizer)",
+  "likelihood": "RooAddition of per-category extended NLLs (shared mu)",
+  "combined_asimov_dataset_written": true,
+  "hs3_json_export": true,
+  "hs3_json_export_error": null
+}

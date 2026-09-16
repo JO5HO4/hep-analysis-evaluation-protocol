@@ -1,0 +1,20 @@
+{
+    "task": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260829T174904Z-higgs-4l-significance-openhands-1563552"
+    },
+    "trial_name": "20260829T174904Z-higgs-4l-signif__V5CzXRE",
+    "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260829T174904Z-higgs-4l-significance-openhands-1563552",
+    "agent": {
+        "name": "harbor_agents.preinstalled:PreinstalledOpenHands",
+        "model_name": "gpt-5.6-sol",
+        "kwargs": {
+            "model_info": {
+                "max_input_tokens": 1050000,
+                "max_output_tokens": 128000,
+                "input_cost_per_token": 0,
+                "output_cost_per_token": 0
+            }
+        }
+    },
+    "job_id": "2174cf84-86f6-4d74-b590-4297d520b9ed"
+}

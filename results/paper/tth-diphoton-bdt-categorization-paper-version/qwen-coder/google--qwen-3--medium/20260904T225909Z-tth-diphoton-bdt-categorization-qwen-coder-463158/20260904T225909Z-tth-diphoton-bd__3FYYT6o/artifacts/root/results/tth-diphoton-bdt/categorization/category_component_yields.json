@@ -1,0 +1,11 @@
+{
+  "ttH_tH_signal": {
+    "unassigned": 2000.0
+  },
+  "resonant_higgs_bkg": {
+    "unassigned": 1000.0
+  },
+  "nti_continuum_proxy": {
+    "unassigned": 1000.0
+  }
+}

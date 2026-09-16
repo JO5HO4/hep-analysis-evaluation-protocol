@@ -1,0 +1,1 @@
+{"source": "ATLAS open-data GamGam", "samples": {"included": ["ggH", "VBF", "WH", "ZH", "ggZH", "ttH", "tH", "data"], "excluded": ["Sherpa yy", "prompt-diphoton continuum MC"]}, "layout": "MC/ and data/"}

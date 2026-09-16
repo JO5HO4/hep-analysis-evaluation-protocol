@@ -1,0 +1,122 @@
+{
+    "id": "4450b379-dc1f-4937-95dc-0e3ec6401b28",
+    "task_name": "haichenwangberkeley/top-reconstruction-full-chain-no-pipeline",
+    "trial_name": "20260902T201605Z-top-reconstruct__cXMdcuS",
+    "trial_uri": "file:///tmp/terminal-bench-harbor-jobs/20260902T201605Z-top-reconstruction-full-chain-no-pipeline-openhands-1305603/20260902T201605Z-top-reconstruct__cXMdcuS",
+    "task_id": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260902T201605Z-top-reconstruction-full-chain-no-pipeline-openhands-1305603"
+    },
+    "source": null,
+    "task_checksum": "e9ea6e6ba87ee7c40adbdeaa1e90741908c6b1ba370f62ba848a2cc341614498",
+    "config": {
+        "task": {
+            "path": "/tmp/terminal-bench-staged-tasks/20260902T201605Z-top-reconstruction-full-chain-no-pipeline-openhands-1305603",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "20260902T201605Z-top-reconstruct__cXMdcuS",
+        "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260902T201605Z-top-reconstruction-full-chain-no-pipeline-openhands-1305603",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "harbor_agents.preinstalled:PreinstalledOpenHands",
+            "import_path": null,
+            "model_name": "openai/lbl/cborg-coder",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "model_info": {
+                    "max_input_tokens": 114688,
+                    "max_output_tokens": 16384,
+                    "input_cost_per_token": 0,
+                    "output_cost_per_token": 0
+                }
+            },
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "084c619f-16e9-414f-837a-99213a818a11",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "openhands",
+        "version": "/opt/openhands-venv/lib/python3.13/site-packages/fastmcp/server/auth/providers/jwt.py:10: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.\r\nIt will be compatible before version 2.0.0.\r\n  from authlib.jose import JsonWebKey, JsonWebToken\r\nOpenHands version: 0.62.0\r\n/opt/openhands-venv/lib/python3.13/site-packages/litellm/llms/custom_httpx/async_client_cleanup.py:66: DeprecationWarning: There is no current event loop\r\n  loop = asyncio.get_event_loop()",
+        "model_info": {
+            "name": "lbl/cborg-coder",
+            "provider": "openai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 3146582,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 25637,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.083333
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-09-02T20:16:35.136125Z",
+    "finished_at": "2026-09-02T20:35:05.403369Z",
+    "environment_setup": {
+        "started_at": "2026-09-02T20:16:35.346074Z",
+        "finished_at": "2026-09-02T20:16:48.668324Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-02T20:16:48.668385Z",
+        "finished_at": "2026-09-02T20:17:04.113739Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-02T20:17:04.113957Z",
+        "finished_at": "2026-09-02T20:33:35.863078Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-02T20:34:05.544513Z",
+        "finished_at": "2026-09-02T20:35:05.403350Z"
+    },
+    "step_results": null
+}

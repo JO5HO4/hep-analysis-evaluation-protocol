@@ -1,0 +1,19 @@
+{
+  "number_selected_rows": 272376,
+  "number_scored_rows": 272376,
+  "number_unscored_rows": 0,
+  "score_range": [
+    0.3710165054160368,
+    0.6344022378539207
+  ],
+  "features": [
+    "n_jets",
+    "n_bjets",
+    "ht_jets",
+    "leading_jet_pt",
+    "min_dr_gam_jet"
+  ],
+  "model_path": "/root/results/tth-diphoton-bdt/model/bdt_model.joblib",
+  "categorical_code_maps": {},
+  "scope": "all and only hadronic-preselection rows"
+}

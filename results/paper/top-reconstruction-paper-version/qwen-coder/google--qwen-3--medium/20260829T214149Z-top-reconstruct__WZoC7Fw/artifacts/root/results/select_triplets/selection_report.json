@@ -1,0 +1,11 @@
+{
+  "triplet_reconstruction_efficiency": 0.6966666666666667,
+  "total_truth_triplets": 900,
+  "selected_truth_triplets": 627,
+  "total_selected_triplets": 6865,
+  "total_events": 5985,
+  "avg_triplets_per_event": 1.1470342522974102,
+  "selection_strategy": "Greedy selection by score with jet-disjoint constraint",
+  "max_triplets_per_event": 2,
+  "jet_disjoint_constraint": true
+}

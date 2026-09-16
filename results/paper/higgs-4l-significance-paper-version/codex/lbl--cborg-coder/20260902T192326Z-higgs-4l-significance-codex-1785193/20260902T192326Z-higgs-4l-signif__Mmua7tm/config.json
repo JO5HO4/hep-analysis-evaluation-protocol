@@ -1,0 +1,12 @@
+{
+    "task": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260902T192326Z-higgs-4l-significance-codex-1785193"
+    },
+    "trial_name": "20260902T192326Z-higgs-4l-signif__Mmua7tm",
+    "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260902T192326Z-higgs-4l-significance-codex-1785193",
+    "agent": {
+        "name": "harbor_agents.preinstalled:PreinstalledCodex",
+        "model_name": "lbl/cborg-coder"
+    },
+    "job_id": "0942ec6c-a880-4608-bba6-a90ab99dcd46"
+}

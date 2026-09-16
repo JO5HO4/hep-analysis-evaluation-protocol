@@ -1,0 +1,11 @@
+{
+  "signal_weight_sum_before_balancing": 0.3544250785960844,
+  "background_weight_sum_before_balancing": 41.039346816560965,
+  "balance_factor_applied_to_signal": 115.79131753069562,
+  "signal_weight_sum_after_balancing": 41.03934681656096,
+  "background_weight_sum_after_balancing": 41.039346816560965,
+  "n_signal_rows": 39119,
+  "n_background_rows_ggH": 699,
+  "n_background_rows_NTI": 15762,
+  "note": "bdt_fit_weight is a classifier-fit-only quantity; category yields and significance never use it. Negative SM-normalized weights are clipped at 0 for the classifier sample_weight but retained unmodified elsewhere."
+}

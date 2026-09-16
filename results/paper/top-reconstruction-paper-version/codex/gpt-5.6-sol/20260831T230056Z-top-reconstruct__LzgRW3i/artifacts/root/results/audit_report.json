@@ -1,0 +1,10 @@
+{
+  "duplicate_candidates": 0,
+  "event_selection_max": 2,
+  "event_splits_disjoint": true,
+  "inference_required_columns_present": true,
+  "max_selected_per_event": 2,
+  "required_raw_columns_present": true,
+  "selected_jet_disjoint": true,
+  "unordered_index_order_ok": true
+}

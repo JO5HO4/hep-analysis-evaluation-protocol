@@ -1,0 +1,18 @@
+{
+  "pdf": "RooGaussian",
+  "source": "ttH+tH TI MC",
+  "categories": {
+    "ttH_had_BDT1": {
+      "mean": 125.09678834502381,
+      "sigma": 1.7907340929996072
+    },
+    "tH_had_4j1b": {
+      "mean": 125.0713325579553,
+      "sigma": 1.723765923574227
+    },
+    "tH_had_4j2b": {
+      "mean": 125.02705391274907,
+      "sigma": 1.8948845021644452
+    }
+  }
+}

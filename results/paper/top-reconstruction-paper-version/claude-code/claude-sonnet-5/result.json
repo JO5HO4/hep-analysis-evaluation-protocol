@@ -1,0 +1,39 @@
+{
+    "id": "e1df8466-4869-4735-bd41-1f1aab3fa706",
+    "started_at": "2026-08-29T14:11:56.148050",
+    "updated_at": "2026-08-29T14:26:11.077221",
+    "finished_at": "2026-08-29T14:26:11.077221",
+    "n_total_trials": 1,
+    "stats": {
+        "n_completed_trials": 1,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "claude-code__claude-sonnet-5__adhoc": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.833333
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "0.833333": [
+                            "20260829T211123Z-top-reconstruct__sw4nasz"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": 3246913,
+        "n_cache_tokens": 2707965,
+        "n_output_tokens": 40073,
+        "cost_usd": 4.0718283
+    }
+}

@@ -1,0 +1,181 @@
+[?2004hroot@nid004218:~# asciinema rec --stdin /logs/agent/recording.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent/recording.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@nid004218:~# clear
+[?2004l[H[J[3J[?2004hroot@nid004218:~# cat /root/data/four_lepton_counts.json
+[?2004l{
+  "description": "Four-lepton (H->ZZ*->4l) event counts in three final-state channels.",
+  "channels": ["4mu", "2e2mu", "4e"],
+  "observed": [6, 5, 2],
+  "background": [1.25, 2.07, 1.53],
+  "signal": [2.09, 2.29, 0.9]
+}
+[?2004hroot@nid004218:~# mkdir -p /root/submission/diagnostics /root/results
+[?2004l[?2004hroot@nid004218:~# cat << 'EOF' > /root/submission/analysis.py
+[?2004l[?2004h> import json
+[?2004l[?2004h> import numpy as np
+[?2004l[?2004h> from scipy.stats import poisson, norm
+[?2004l[?2004h> from scipy.optimize import minimize_scalar
+[?2004l[?2004h> import sys
+[?2004l[?2004h> import matplotlib.pyplot as plt
+[?2004l[?2004h> 
+[?2004l[?2004h> def log_poisson(k, lam):
+[?2004l[?2004h>     # log(k! ) is handled by log_factorial
+[?2004l[?2004h>     from math import lgamma
+[?2004l[?2004h>     return -lam + k * np.log(lam) - lgamma(k + 1)
+[?2004l[?2004h> 
+[?2004l[?2004h> def calculate_logL(observed, expected):
+[?2004l[?2004h>     return np.sum([log_poisson(k, lam) for k, lam in zip(observed, expected)])
+[?2004l[?2004h> 
+[?2004l[?2004h> def run_analysis(input_json, output_json, diag_dir):
+[?2004l[?2004h>     with open(input_json, 'r') as f:
+[?2004l[?2004h>         data = json.load(f)
+[?2004l[?2004h>     
+[?2004l[?2004h>     obs = np.array(data['observed'])
+[?2004l[?2004h>     bkg = np.array(data['background'])
+[?2004l[?2004h>     sig = np.array(data['signal'])
+[?2004l[?2004h> 
+[?2004l[?2004h>     # 1. Likelihoods
+[?2004l[?2004h>     logL_b = calculate_logL(obs, bkg)
+[?2004l[?2004h>     logL_sb = calculate_logL(obs, sig + bkg)
+[?2004l[?2004h> 
+[?2004l[?2004h>     # 2. Test statistic
+[?2004l[?2004h>     q_obs = -2 * (logL_sb - logL_b)
+[?2004l[?2004h> 
+[?2004l[?2004h>     # 3. Significance via pseudo-experiments
+[?2004l[?2004h>     n_toys = 10**6
+[?2004l[?2004h>     # Generate toys: for each channel, draw from Poisson(bkg)
+[?2004l[?2004h>     # Shape: (n_toys, n_channels)
+[?2004l[?2004h>     toys = np.random.poisson(bkg, (n_toys, len(obs)))
+[?2004l[?2004h>     
+[?2004l[?2004h>     # Calculate q for each toy
+[?2004l[?2004h>     # q_toy = -2 * (logL_sb_toy - logL_b_toy)
+[?2004l[?2004h>     # logL_b_toy = sum(-bkg + k*log(bkg) - log(k!))
+[?2004l[?2004h>     # logL_sb_toy = sum(-(sig+bkg) + k*log(sig+bkg) - log(k!))
+[?2004l[?2004h>     # q_toy = -2 * [ sum(-(sig+bkg) + k*log(sig+bkg)) - sum(-bkg + k*log(bkg)) ]
+[?2004l[?2004h>     # q_toy = -2 * [ sum(-sig + k*log((sig+bkg)/bkg)) ]
+[?2004l[?2004h>     # q_toy = 2 * sum(sig) - 2 * sum(k * log((sig+bkg)/bkg))
+[?2004l[?2004h>     
+[?2004l[?2004h>     log_ratio = np.log((sig + bkg) / bkg)
+[?2004l[?2004h>     sum_sig = np.sum(sig)
+[?2004l[?2004h>     # Vectorized q calculation
+[?2004l[?2004h>     # toys: (10^6, 3), log_ratio: (3,) -> product: (10^6,)
+[?2004l[?2004h>     q_toys = 2 * sum_sig - 2 * np.sum(toys * log_ratio, axis=1)
+[?2004l[?2004h>     
+[?2004l[?2004h>     p_value = np.sum(q_toys >= q_obs) / n_toys
+[?2004l[?2004h>     significance = norm.ppf(1 - p_value)
+[?2004l[?2004h> 
+[?2004l[?2004h>     # 4. Signal-strength measurement
+[?2004l[?2004h>     def get_logL_mu(mu):
+[?2004l[?2004h>         expected = mu * sig + bkg
+[?2004l[?2004h>         return calculate_logL(obs, expected)
+[?2004l[?2004h> 
+[?2004l[?2004h>     def profile_likelihood(mu):
+[?2004l[?2004h>         return -2 * (get_logL_mu(mu) - get_logL_mu(mu_hat))
+[?2004l[?2004h> 
+[?2004l[?2004h>     # Find mu_hat
+[?2004l[?2004h>     res = minimize_scalar(lambda mu: -get_logL_mu(mu), bounds=(0, 10), method='bounded')
+[?2004l[?2004h>     mu_hat = res.x
+[?2004l[?2004h> 
+[?2004l[?2004h>     # Find 1-sigma interval: profile_likelihood(mu) = 1
+[?2004l[?2004h>     # Lower bound
+[?2004l[?2004h>     res_lo = minimize_scalar(lambda mu: (profile_likelihood(mu) - 1)**2, bounds=(0, mu_hat), method='bounded')
+[?2004l[?2004h>     mu_lo = res_lo.x
+[?2004l[?2004h>     # Upper bound
+[?2004l[?2004h>     res_hi = minimize_scalar(lambda mu: (profile_likelihood(mu) - 1)**2, bounds=(mu_hat, 10), method='bounded')
+[?2004l[?2004h>     mu_hi = res_hi.x
+[?2004l[?2004h> 
+[?2004l[?2004h>     # Results
+[?2004l[?2004h>     results = {
+[?2004l[?2004h>         "logL_b": float(logL_b),
+[?2004l[?2004h>         "logL_sb": float(logL_sb),
+[?2004l[?2004h>         "test_statistic": float(q_obs),
+[?2004l[?2004h>         "p_value": float(p_value),
+[?2004l[?2004h>         "significance": float(significance),
+[?2004l[?2004h>         "mu_hat": float(mu_hat),
+[?2004l[?2004h>         "mu_lo": float(mu_lo),
+[?2004l[?2004h>         "mu_hi": float(mu_hi)
+[?2004l[?2004h>     }
+[?2004l[?2004h> 
+[?2004l[?2004h>     with open(output_json, 'w') as f:
+[?2004l[?2004h>         json.dump(results, f, indent=2)
+[?2004l[?2004h> 
+[?2004l[?2004h>     # Diagnostics
+[?2004l[?2004h>     plt.figure()
+[?2004l[?2004h>     plt.hist(q_toys, bins=100, density=True, alpha=0.5, label='Background-only toys')
+[?2004l[?2004h>     plt.axvline(q_obs, color='red', linestyle='--', label=f'Observed q={q_obs:.2f}')
+[?2004l[?2004h>     plt.title('Distribution of Test Statistic q')
+[?2004l[?2004h>     plt.xlabel('q')
+[?2004l[?2004h>     plt.ylabel('Probability Density')
+[?2004l[?2004h>     plt.legend()
+[?2004l[?2004h>     plt.savefig(f'{diag_dir}/q_dist.png')
+[?2004l[?2004h>     plt.close()
+[?2004l[?2004h> 
+[?2004l[?2004h>     plt.figure()
+[?2004l[?2004h>     mu_range = np.linspace(0, 10, 200)
+[?2004l[?2004h>     q_mu = [profile_likelihood(mu) for mu in mu_range]
+[?2004l[?2004h>     plt.plot(mu_range, q_mu)
+[?2004l[?2004h>     plt.axvline(mu_hat, color='red', linestyle='--', label=f'mu_hat={mu_hat:.2f}')
+[?2004l[?2004h>     plt.axhline(1, color='green', linestyle=':', label='1-sigma level')
+[?2004l[?2004h>     plt.title('Profile Likelihood Scan')
+[?2004l[?2004h>     plt.xlabel('mu')
+[?2004l[?2004h>     plt.ylabel('-2 Delta log L')
+[?2004l[?2004h>     plt.legend()
+[?2004l[?2004h>     plt.savefig(f'{diag_dir}/mu_scan.png')
+[?2004l[?2004h>     plt.close()
+[?2004l[?2004h> 
+[?2004l[?2004h> if __name__ == "__main__":
+[?2004l[?2004h>     if len(sys.argv) != 3:
+[?2004l[?2004h>         print("Usage: python analysis.py INPUT_JSON OUTPUT_JSON")
+[?2004l[?2004h>         sys.exit(1)
+[?2004l[?2004h>     run_analysis(sys.argv[1], sys.argv[2], '/root/submission/diagnostics/')
+[?2004l[?2004h> EOF
+[?2004l[?2004hroot@nid004218:~# cat << 'EOF' > /root/submission/run.sh
+[?2004l[?2004h> #!/bin/bash
+[?2004l[?2004h> python3 /root/submission/analysis.py "$1" "$2"
+[?2004l[?2004h> EOF
+[?2004l[?2004hroot@nid004218:~# chmod +x /root/submission/run.sh
+[?2004l[?2004hroot@nid004218:~# /root/submission/run.sh /root/data/four_lepton_counts.json /root/results/results.json
+[?2004l[?2004hroot@nid004218:~# cat << 'EOF' > /root/submission/README.md
+[?2004l[?2004h> # Higgs Signal Strength Analysis
+[?2004l[?2004h> 
+[?2004l[?2004h> This package provides a statistical analysis of a four-lepton counting experiment to measure the signal strength $\mu$ of the Higgs boson.
+[?2004l[?2004h> 
+[?2004l[?2004h> ## Methodology
+[?2004l[?2004h> 
+[?2004l[?2004h> 1. **Likelihoods**: We use the Poisson log-likelihood for each channel $i$: 
+[?2004l[?2004h>    $$\log P(k_i | \lambda_i) = -\lambda_i + k_i \log(\lambda_i) - \log(k_i!)$$
+[?2004l[?2004h>    where $\lambda_i$ is either the background-only expectation ($B_i$) or the signal-plus-background expectation ($\mu S_i + B_i$).
+[?2004l[?2004h> 
+[?2004l[?2004h> 2. **Test Statistic**: The observed likelihood-ratio test statistic is computed as:
+[?2004l[?2004h>    $$q = -2 \log \frac{L(\text{data} | S+B)}{L(\text{data} | B)} = -2 (\log L_{sb} - \log L_b)$$
+[?2004l[?2004h> 
+[?2004l[?2004h> 3. **Significance**: We estimate the p-value by generating $10^6$ toy datasets from the background-only hypothesis. The p-value is the fraction of toys with $q_{toy} \ge q_{obs}$. The significance $Z$ is calculated as $\Phi^{-1}(1-p)$.
+[?2004l[?2004h> 
+[?2004l[?2004h> 4. **Signal Strength $\mu$**: 
+[?2004l[?2004h>    - The best-fit $\hat{\mu}$ is the value that maximizes the likelihood (minimizes $-2\log L(\mu)$).
+[?2004l[?2004h>    - The $\pm 1\sigma$ interval is found by searching for $\mu$ values where $-2\Delta \log L(\mu) = q(\mu) - q(\hat{\mu}) = 1$.
+[?2004l[?2004h> 
+[?2004l[?2004h> ## How to Run
+[?2004l[?2004h> 
+[?2004l[?2004h> Execute the `run.sh` script with the input JSON file and the desired output JSON path:
+[?2004l[?2004h> 
+[?2004l[?2004h> ```bash
+[?2004l[?2004h> /root/submission/run.sh /root/data/four_lepton_counts.json /root/results/results.json
+[?2004l[?2004h> ```
+[?2004l[?2004h> 
+[?2004l[?2004h> ## Diagnostics
+[?2004l[?2004h> 
+[?2004l[?2004h> Plots of the test statistic distribution and the profile likelihood scan are saved in the `diagnostics/` directory.
+[?2004l[?2004h> EOF
+[?2004l[?2004hroot@nid004218:~# cat /root/results/results.json
+[?2004l{
+  "logL_b": -11.082750320271757,
+  "logL_sb": -5.815922491910811,
+  "test_statistic": -10.53365565672189,
+  "p_value": 0.999741,
+  "significance": -3.471271488166993,
+  "mu_hat": 1.6238866986318632,
+  "mu_lo": 1.008969477246336,
+  "mu_hi": 2.3666424563978943
+}[?2004hroot@nid004218:~# 

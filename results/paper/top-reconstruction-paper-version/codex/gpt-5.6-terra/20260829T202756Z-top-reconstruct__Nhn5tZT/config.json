@@ -1,0 +1,12 @@
+{
+    "task": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260829T202756Z-top-reconstruction-full-chain-no-pipeline-codex-422154"
+    },
+    "trial_name": "20260829T202756Z-top-reconstruct__Nhn5tZT",
+    "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260829T202756Z-top-reconstruction-full-chain-no-pipeline-codex-422154",
+    "agent": {
+        "name": "harbor_agents.preinstalled:PreinstalledCodex",
+        "model_name": "gpt-5.6-terra"
+    },
+    "job_id": "40c7b171-ef1d-4b6f-a83a-3eac4c4c7401"
+}

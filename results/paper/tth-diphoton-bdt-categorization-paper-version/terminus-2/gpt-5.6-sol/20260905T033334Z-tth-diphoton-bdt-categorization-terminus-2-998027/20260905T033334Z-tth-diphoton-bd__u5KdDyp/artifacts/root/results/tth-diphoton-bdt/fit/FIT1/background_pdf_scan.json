@@ -1,0 +1,80 @@
+{
+  "candidates": [
+    "RooExponential"
+  ],
+  "selection": "single documented smooth baseline",
+  "results": {
+    "ttH_had_BDT1": {
+      "safe_name": "c0",
+      "observed_TI_sideband_rows": 33,
+      "signal_window_observed_count": null,
+      "blinded": true,
+      "slope": 0.003801673068782642,
+      "slope_error": 0.010289164402683713,
+      "fit_status": 0,
+      "covariance_quality": 3,
+      "sideband_fraction": 0.8236035751284634,
+      "extrapolated_full_continuum_yield": 40.0678202433164,
+      "signal_yield_36fb": 3.4953598847056444,
+      "resonant_higgs_yield_36fb": 0.3631228619892039,
+      "signal_shape": {
+        "mean": 125.09678834502381,
+        "sigma": 1.7907340929996072
+      },
+      "resonant_shape": {
+        "mean": 124.59698797077569,
+        "sigma": 1.922942257806937
+      },
+      "plot_png": "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT1.png",
+      "plot_pdf": "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT1.pdf"
+    },
+    "tH_had_4j1b": {
+      "safe_name": "c1",
+      "observed_TI_sideband_rows": 147,
+      "signal_window_observed_count": null,
+      "blinded": true,
+      "slope": -0.01865043372818671,
+      "slope_error": 0.004805314361353649,
+      "fit_status": 0,
+      "covariance_quality": 3,
+      "sideband_fraction": 0.7994887587111441,
+      "extrapolated_full_continuum_yield": 183.8675008226241,
+      "signal_yield_36fb": 2.0739833226577655,
+      "resonant_higgs_yield_36fb": 1.2678177384339975,
+      "signal_shape": {
+        "mean": 125.0713325579553,
+        "sigma": 1.723765923574227
+      },
+      "resonant_shape": {
+        "mean": 125.09478990436806,
+        "sigma": 1.6669663939142092
+      },
+      "plot_png": "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_tH_had_4j1b.png",
+      "plot_pdf": "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_tH_had_4j1b.pdf"
+    },
+    "tH_had_4j2b": {
+      "safe_name": "c2",
+      "observed_TI_sideband_rows": 18,
+      "signal_window_observed_count": null,
+      "blinded": true,
+      "slope": -0.026491180367074083,
+      "slope_error": 0.01397157974091332,
+      "fit_status": 0,
+      "covariance_quality": 3,
+      "sideband_fraction": 0.7960910291850082,
+      "extrapolated_full_continuum_yield": 22.61047963123935,
+      "signal_yield_36fb": 0.4942150539368024,
+      "resonant_higgs_yield_36fb": 0.194913928047485,
+      "signal_shape": {
+        "mean": 125.02705391274907,
+        "sigma": 1.8948845021644452
+      },
+      "resonant_shape": {
+        "mean": 125.13526182111336,
+        "sigma": 1.4756041022755013
+      },
+      "plot_png": "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_tH_had_4j2b.png",
+      "plot_pdf": "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_tH_had_4j2b.pdf"
+    }
+  }
+}

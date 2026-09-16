@@ -1,0 +1,2 @@
+## Mass sanity check
+Selected-test triplet masses are plotted against validation truth and fake triplets in `../select_triplets/plots/triplet_mass_comparison.png`. No narrow mass-window cut was applied, so the selected spectrum remains a physically interpretable reconstructed shape with detector/generator-level combinatorial broadening. Numerical quantiles and widths are in `mass_sanity_report.json`.

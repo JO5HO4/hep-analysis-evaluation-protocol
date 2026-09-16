@@ -1,0 +1,30 @@
+{
+  "selected_test": {
+    "count": 1649,
+    "mean": 211.1989906876429,
+    "std": 116.6019688288725,
+    "median": 172.33588636908473,
+    "q10": 142.14737347533784,
+    "q90": 312.63087302136586,
+    "fraction_130_220_GeV": 0.6913280776228017
+  },
+  "validation_truth": {
+    "count": 700,
+    "mean": 171.32580199647663,
+    "std": 32.78732572913859,
+    "median": 166.44400846518766,
+    "q10": 144.255170281237,
+    "q90": 201.18964138776042,
+    "fraction_130_220_GeV": 0.8985714285714286
+  },
+  "validation_fake": {
+    "count": 14735,
+    "mean": 269.70033402391886,
+    "std": 157.2978688644977,
+    "median": 228.4322080232565,
+    "q10": 134.26631370333484,
+    "q90": 447.17971348598604,
+    "fraction_130_220_GeV": 0.38588394977943674
+  },
+  "interpretation": "Selected candidates show a broad top-like enhancement rather than a delta-function spike. Their distribution is pulled toward the truth-matched top mass region relative to generic combinatorial candidates; finite jet resolution, radiation, and remaining backgrounds naturally retain broad tails."
+}

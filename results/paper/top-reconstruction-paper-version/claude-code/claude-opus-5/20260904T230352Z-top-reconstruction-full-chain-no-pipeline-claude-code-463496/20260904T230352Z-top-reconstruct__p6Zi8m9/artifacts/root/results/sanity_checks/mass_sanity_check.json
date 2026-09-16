@@ -1,0 +1,113 @@
+{
+  "description": "Invariant-mass sanity check of the final selected hadronic top candidates, compared with truth-matched and combinatorial (fake) triplets from the validation sample.",
+  "reference_top_mass_gev": 172.5,
+  "mass_statistics": {
+    "selected candidates (test)": {
+      "n": 2221,
+      "mean": 208.30817885473635,
+      "std": 136.6575415635632,
+      "median": 171.8572330557773,
+      "q16": 147.2759403810229,
+      "q25": 155.1658406496607,
+      "q75": 217.91219152135753,
+      "q84": 258.3546899338446,
+      "iqr": 62.74635087169682,
+      "half_width_68": 55.53937477641085,
+      "frac_130_210": 0.6708689779378658,
+      "frac_150_200": 0.5083295812696983,
+      "frac_above_300": 0.09770373705538046
+    },
+    "selected, truth-matched": {
+      "n": 736,
+      "mean": 166.35537940645966,
+      "std": 27.156052633421258,
+      "median": 164.53770974820316,
+      "q16": 149.01210958669606,
+      "q25": 153.76359436377246,
+      "q75": 172.72698089846642,
+      "q84": 176.58786834966355,
+      "iqr": 18.963386534693967,
+      "half_width_68": 13.787879381483748,
+      "frac_130_210": 0.9402173913043478,
+      "frac_150_200": 0.7730978260869565,
+      "frac_above_300": 0.006793478260869565
+    },
+    "selected, fake": {
+      "n": 1485,
+      "mean": 229.1009467967779,
+      "std": 162.06985758790583,
+      "median": 187.72903477504204,
+      "q16": 145.92787461160765,
+      "q25": 156.43403543649018,
+      "q75": 252.14804283886562,
+      "q84": 289.82382557197303,
+      "iqr": 95.71400740237544,
+      "half_width_68": 71.94797548018269,
+      "frac_130_210": 0.5373737373737374,
+      "frac_150_200": 0.3771043771043771,
+      "frac_above_300": 0.14276094276094276
+    },
+    "truth triplets (val)": {
+      "n": 885,
+      "mean": 171.30927065884788,
+      "std": 37.23715229302269,
+      "median": 164.71809178624568,
+      "q16": 148.0543945888602,
+      "q25": 154.4111844930468,
+      "q75": 174.63263631769965,
+      "q84": 182.91413918946668,
+      "iqr": 20.22145182465286,
+      "half_width_68": 17.429872300303245,
+      "frac_130_210": 0.8813559322033898,
+      "frac_150_200": 0.7096045197740113,
+      "frac_above_300": 0.0192090395480226
+    },
+    "fake triplets (val)": {
+      "n": 19617,
+      "mean": 275.62119221262196,
+      "std": 167.00278743623343,
+      "median": 229.7115797114406,
+      "q16": 149.9995348091523,
+      "q25": 170.92832483915663,
+      "q75": 326.18111608957884,
+      "q84": 393.6119389490716,
+      "iqr": 155.2527912504222,
+      "half_width_68": 121.80620206995965,
+      "frac_130_210": 0.3398073099862364,
+      "frac_150_200": 0.22026813478105725,
+      "frac_above_300": 0.3022888311158689
+    },
+    "all triplets (test)": {
+      "n": 22021,
+      "mean": 271.018082306042,
+      "std": 171.728472879403,
+      "median": 224.09214887114967,
+      "q16": 148.22399395295628,
+      "q25": 166.4970673182814,
+      "q75": 319.73544999163755,
+      "q84": 387.6615961436236,
+      "iqr": 153.23838267335614,
+      "half_width_68": 119.71880109533367,
+      "frac_130_210": 0.3602470369193043,
+      "frac_150_200": 0.2395440715680487,
+      "frac_above_300": 0.2879069978656737
+    }
+  },
+  "histogram_peak_gev": {
+    "selected_candidates": 167.5,
+    "truth_triplets_val": 162.5
+  },
+  "selected_vs_truth": {
+    "median_shift_gev": 7.1391412695316205,
+    "width_ratio_half68_selected_over_truth": 3.18644760096404,
+    "selected_purity": 0.3313822602431337
+  },
+  "narrow_spike_check": {
+    "criterion": "a physical hadronic-top peak has 68% half-width >~10 GeV and is not a delta-like spike; flagged if half_width_68 < 5 GeV or if >90% of candidates fall in a 5 GeV window",
+    "selected_half_width_68_gev": 55.53937477641085,
+    "truth_half_width_68_gev": 17.429872300303245,
+    "max_frac_in_any_5gev_window": 0.08329581269698334,
+    "is_artificially_narrow": false
+  },
+  "verdict": "PASS: the selected-candidate mass distribution peaks at the hadronic top mass with a physical width and a combinatorial tail."
+}

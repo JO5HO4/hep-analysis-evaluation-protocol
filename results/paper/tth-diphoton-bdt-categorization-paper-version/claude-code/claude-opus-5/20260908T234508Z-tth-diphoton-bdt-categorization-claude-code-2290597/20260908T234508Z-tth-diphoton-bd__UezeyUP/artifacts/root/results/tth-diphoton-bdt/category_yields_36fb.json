@@ -1,0 +1,127 @@
+{
+  "luminosity_fb": 36.0,
+  "weight_column": "significance_model_weight_36fb",
+  "blinding": {
+    "observed_ti_signal_window_blinded": true,
+    "blinded_range_gev": [
+      120.0,
+      130.0
+    ],
+    "signal_window_gev": [
+      123.0,
+      127.0
+    ],
+    "statement": "Observed TI data in the 125 +/- 2 GeV signal window is never inspected, counted, plotted or reported.",
+    "nti_control_shapes_blinded": false,
+    "nti_policy": "NTI control-shape distributions retain 120-130 GeV entries; the removal policy applies only to observed TI data.",
+    "observed_significance": "blocked"
+  },
+  "categories": [
+    {
+      "category": "ttH_had_BDT1",
+      "kept": true,
+      "is_catch_all": false,
+      "n_hadronic_rows": 9778,
+      "signal_ttH_tH_yield": 1.4833971557,
+      "resonant_higgs_bkg_yield": 0.3142374227,
+      "nti_continuum_bkg_yield": 0.6201281361,
+      "total_background_yield": 0.9343655588,
+      "total_model_yield": 2.4177627145,
+      "S_over_B": 1.5875982817,
+      "S_over_sqrtB": 1.534613559,
+      "expected_counting_significance": 1.276904641,
+      "signal_raw_rows": 4572,
+      "resonant_raw_rows": 115,
+      "nti_proxy_raw_rows": 196,
+      "observed_ti_sideband_rows": 4,
+      "observed_ti_signal_window": "BLINDED"
+    },
+    {
+      "category": "ttH_had_BDT2",
+      "kept": true,
+      "is_catch_all": false,
+      "n_hadronic_rows": 17978,
+      "signal_ttH_tH_yield": 2.1986071824,
+      "resonant_higgs_bkg_yield": 0.5927960516,
+      "nti_continuum_bkg_yield": 3.2873119051,
+      "total_background_yield": 3.8801079567,
+      "total_model_yield": 6.0787151391,
+      "S_over_B": 0.5666355697,
+      "S_over_sqrtB": 1.1161581578,
+      "expected_counting_significance": 1.02986665,
+      "signal_raw_rows": 6926,
+      "resonant_raw_rows": 317,
+      "nti_proxy_raw_rows": 1039,
+      "observed_ti_sideband_rows": 36,
+      "observed_ti_signal_window": "BLINDED"
+    },
+    {
+      "category": "ttH_had_BDT3",
+      "kept": true,
+      "is_catch_all": false,
+      "n_hadronic_rows": 27736,
+      "signal_ttH_tH_yield": 2.5044029372,
+      "resonant_higgs_bkg_yield": 1.8857994314,
+      "nti_continuum_bkg_yield": 13.9275717098,
+      "total_background_yield": 15.8133711412,
+      "total_model_yield": 18.3177740784,
+      "S_over_B": 0.1583724884,
+      "S_over_sqrtB": 0.6297845068,
+      "expected_counting_significance": 0.6141706649,
+      "signal_raw_rows": 7850,
+      "resonant_raw_rows": 901,
+      "nti_proxy_raw_rows": 4402,
+      "observed_ti_sideband_rows": 144,
+      "observed_ti_signal_window": "BLINDED"
+    },
+    {
+      "category": "tH_had_4j1b",
+      "kept": true,
+      "is_catch_all": false,
+      "n_hadronic_rows": 4176,
+      "signal_ttH_tH_yield": 0.181875787,
+      "resonant_higgs_bkg_yield": 0.1423088746,
+      "nti_continuum_bkg_yield": 4.6667806161,
+      "total_background_yield": 4.8090894907,
+      "total_model_yield": 4.9909652777,
+      "S_over_B": 0.0378191729,
+      "S_over_sqrtB": 0.0829360708,
+      "expected_counting_significance": 0.0824213778,
+      "signal_raw_rows": 709,
+      "resonant_raw_rows": 89,
+      "nti_proxy_raw_rows": 1475,
+      "observed_ti_sideband_rows": 43,
+      "observed_ti_signal_window": "BLINDED"
+    },
+    {
+      "category": "unassigned",
+      "kept": false,
+      "is_catch_all": true,
+      "n_hadronic_rows": 20917,
+      "signal_ttH_tH_yield": 6.7966699226,
+      "resonant_higgs_bkg_yield": 2.4343537292,
+      "nti_continuum_bkg_yield": 31.313306954,
+      "total_background_yield": 33.7476606832,
+      "total_model_yield": 40.5443306058,
+      "S_over_B": 0.201396772,
+      "S_over_sqrtB": 1.1699689664,
+      "expected_counting_significance": 1.1336672894,
+      "signal_raw_rows": 21679,
+      "resonant_raw_rows": 1009,
+      "nti_proxy_raw_rows": 9897,
+      "observed_ti_sideband_rows": 324,
+      "observed_ti_signal_window": "BLINDED"
+    }
+  ],
+  "combined_expected_counting_significance": 1.7535990613959818,
+  "kept_categories": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "ttH_had_BDT3",
+    "tH_had_4j1b"
+  ],
+  "dropped_categories": [
+    "ttH_had_BDT4",
+    "tH_had_4j2b"
+  ]
+}

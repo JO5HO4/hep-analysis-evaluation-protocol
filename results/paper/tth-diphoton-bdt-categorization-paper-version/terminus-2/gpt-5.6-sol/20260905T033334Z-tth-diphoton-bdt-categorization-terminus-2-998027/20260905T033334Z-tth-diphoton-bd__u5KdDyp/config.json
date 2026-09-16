@@ -1,0 +1,35 @@
+{
+    "task": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260905T033334Z-tth-diphoton-bdt-categorization-terminus-2-998027"
+    },
+    "trial_name": "20260905T033334Z-tth-diphoton-bd__u5KdDyp",
+    "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260905T033334Z-tth-diphoton-bdt-categorization-terminus-2-998027",
+    "agent": {
+        "name": "harbor_agents.preinstalled:PreinstalledTerminus2",
+        "model_name": "gpt-5.6-sol",
+        "kwargs": {
+            "model_info": {
+                "max_input_tokens": 1050000,
+                "max_output_tokens": 128000,
+                "input_cost_per_token": 0,
+                "output_cost_per_token": 0
+            },
+            "api_base": "https://api.cborg.lbl.gov/v1"
+        },
+        "env": {
+            "TB_HYY_INPUTS": "/data/GamGam"
+        }
+    },
+    "environment": {
+        "type": "docker",
+        "mounts": [
+            {
+                "type": "bind",
+                "source": "<source-repository>/data/GamGam",
+                "target": "/data/GamGam",
+                "read_only": true
+            }
+        ]
+    },
+    "job_id": "337094d6-f4a2-4662-b1a0-6b415451cde1"
+}

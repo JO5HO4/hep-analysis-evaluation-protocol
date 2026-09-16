@@ -1,0 +1,75 @@
+{
+    "schema_version": 3,
+    "created_at": "2026-09-02T21:32:55.374514Z",
+    "harbor": {
+        "version": "0.21.0",
+        "git_commit_hash": "957c2dfd8d6ce072826618fe86f3b0e1a5350071",
+        "is_editable": true
+    },
+    "n_concurrent_trials": 1,
+    "retry": {
+        "max_retries": 0,
+        "exclude_exceptions": [
+            "ModelNotFoundError",
+            "ApiUsageLimitError",
+            "VerifierTimeoutError",
+            "AgentTimeoutError",
+            "VerifierOutputParseError",
+            "RewardFileEmptyError",
+            "AgentAuthenticationError",
+            "RewardFileNotFoundError",
+            "AgentSafetyRefusalError"
+        ],
+        "wait_multiplier": 1.0,
+        "min_wait_sec": 1.0,
+        "max_wait_sec": 60.0
+    },
+    "trials": [
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "20260902T213233Z-tth-diphoton-bdt-categorization-codex-1340268",
+                "type": "local",
+                "digest": "sha256:3e3a7f538625e0af8d6429ff48336890774b8ebfb511f891f77e38b433dbb932",
+                "path": "/tmp/terminal-bench-staged-tasks/20260902T213233Z-tth-diphoton-bdt-categorization-codex-1340268"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "harbor_agents.preinstalled:PreinstalledCodex",
+                "model_name": "gpt-5.6-terra",
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {},
+                "env": {
+                    "TB_HYY_INPUTS": "/data/GamGam"
+                },
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "<source-repository>/data/GamGam",
+                        "target": "/data/GamGam",
+                        "read_only": true
+                    }
+                ],
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "separate"
+            }
+        }
+    ]
+}

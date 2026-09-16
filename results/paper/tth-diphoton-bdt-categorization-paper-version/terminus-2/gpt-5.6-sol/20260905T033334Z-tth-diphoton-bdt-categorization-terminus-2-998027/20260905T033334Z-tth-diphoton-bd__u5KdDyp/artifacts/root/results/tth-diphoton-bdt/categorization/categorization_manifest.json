@@ -1,0 +1,23 @@
+{
+  "category_priority": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "ttH_had_BDT3",
+    "ttH_had_BDT4",
+    "tH_had_4j1b",
+    "tH_had_4j2b"
+  ],
+  "kept_workspace_categories": [
+    "ttH_had_BDT1",
+    "tH_had_4j1b",
+    "tH_had_4j2b"
+  ],
+  "lower_priority_tH_definition": "after BDT failure: zero leptons, exactly four central jets, one or >=2 b tags",
+  "background_retention_minimum": 0.8,
+  "luminosity_fb": 36,
+  "blinding": {
+    "observed_TI_125_plus_minus_2_GeV": true,
+    "observed_significance": "blocked"
+  },
+  "NTI_120_130_retained": true
+}

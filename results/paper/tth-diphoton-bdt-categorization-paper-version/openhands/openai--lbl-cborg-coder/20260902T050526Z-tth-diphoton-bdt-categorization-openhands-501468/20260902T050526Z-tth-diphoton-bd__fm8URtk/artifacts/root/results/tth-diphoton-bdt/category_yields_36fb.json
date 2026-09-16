@@ -1,0 +1,58 @@
+[
+    {
+        "category": "ttH_had_BDT1",
+        "signal_yield": 0.0,
+        "background_yield": 0.0,
+        "total_yield": 0.0,
+        "S_B": 0,
+        "S_sqrt_B": 0
+    },
+    {
+        "category": "ttH_had_BDT2",
+        "signal_yield": 0.0,
+        "background_yield": 0.0,
+        "total_yield": 0.0,
+        "S_B": 0,
+        "S_sqrt_B": 0
+    },
+    {
+        "category": "ttH_had_BDT3",
+        "signal_yield": 27576.0,
+        "background_yield": 54576.0,
+        "total_yield": 82152.0,
+        "S_B": 0.5052770448548812,
+        "S_sqrt_B": 118.04033119624076
+    },
+    {
+        "category": "ttH_had_BDT4",
+        "signal_yield": 36.0,
+        "background_yield": 180.0,
+        "total_yield": 216.0,
+        "S_B": 0.2,
+        "S_sqrt_B": 2.6832815729997477
+    },
+    {
+        "category": "tH_had_4j1b",
+        "signal_yield": 0.0,
+        "background_yield": 0.0,
+        "total_yield": 0.0,
+        "S_B": 0,
+        "S_sqrt_B": 0
+    },
+    {
+        "category": "tH_had_4j2b",
+        "signal_yield": 0.0,
+        "background_yield": 0.0,
+        "total_yield": 0.0,
+        "S_B": 0,
+        "S_sqrt_B": 0
+    },
+    {
+        "category": "unassigned",
+        "signal_yield": 19692.0,
+        "background_yield": 38628.0,
+        "total_yield": 58320.0,
+        "S_B": 0.5097856477166822,
+        "S_sqrt_B": 100.1933080342041
+    }
+]

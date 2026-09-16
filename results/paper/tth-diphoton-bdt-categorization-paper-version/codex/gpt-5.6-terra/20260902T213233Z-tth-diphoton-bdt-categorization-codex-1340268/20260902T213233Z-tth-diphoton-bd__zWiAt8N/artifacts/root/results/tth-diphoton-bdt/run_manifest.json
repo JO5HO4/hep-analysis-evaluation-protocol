@@ -1,0 +1,6 @@
+{
+  "input_contract": "only nominal Higgs MC and GamGam data; all continuum MC excluded",
+  "capped": false,
+  "max_selected_per_sample": null,
+  "blinded_TI_data_signal_window": true
+}

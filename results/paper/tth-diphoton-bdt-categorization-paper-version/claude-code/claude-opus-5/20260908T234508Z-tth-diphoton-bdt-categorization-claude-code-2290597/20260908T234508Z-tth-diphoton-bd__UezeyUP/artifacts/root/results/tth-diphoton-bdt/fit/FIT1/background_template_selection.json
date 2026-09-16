@@ -1,0 +1,36 @@
+{
+  "continuum_background": {
+    "source": "observed TI data sidebands (105-120, 130-160 GeV)",
+    "not_used": "NTI proxy is NOT used in the statistical workspace",
+    "per_category_pdf": {
+      "ttH_had_BDT1": "exponential",
+      "ttH_had_BDT2": "power_law",
+      "ttH_had_BDT3": "power_law",
+      "tH_had_4j1b": "power_law"
+    },
+    "per_category_sideband_events": {
+      "ttH_had_BDT1": 4,
+      "ttH_had_BDT2": 36,
+      "ttH_had_BDT3": 144,
+      "tH_had_4j1b": 43
+    }
+  },
+  "resonant_higgs_background": {
+    "source": "non-top Higgs TI MC (ggH, VBF, WH, ZH, ggZH), normalisation fixed",
+    "per_category_yield_36fb": {
+      "ttH_had_BDT1": 0.379969227149334,
+      "ttH_had_BDT2": 0.749600514292689,
+      "ttH_had_BDT3": 2.1993511694239376,
+      "tH_had_4j1b": 0.19460498642920643
+    }
+  },
+  "signal": {
+    "source": "ttH + tH TI MC",
+    "per_category_yield_36fb": {
+      "ttH_had_BDT1": 1.7789501633891247,
+      "ttH_had_BDT2": 2.7462702779884975,
+      "ttH_had_BDT3": 3.1900272197102595,
+      "tH_had_4j1b": 0.24168633425880184
+    }
+  }
+}

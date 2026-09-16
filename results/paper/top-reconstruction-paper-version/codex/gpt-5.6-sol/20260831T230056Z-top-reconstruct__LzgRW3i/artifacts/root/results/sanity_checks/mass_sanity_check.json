@@ -1,0 +1,58 @@
+{
+  "interpretation": "The selected distribution has an IQR of 69.7 GeV and is therefore broad rather than an artificial narrow spike. Its concentration in the top-mass region relative to generic fake triplets is consistent with hadronic-top reconstruction.",
+  "selected_test_fake_mass_GeV": {
+    "count": 1180,
+    "fraction_130_220_GeV": 0.573728813559322,
+    "mean": 233.63043097803148,
+    "median": 185.60487365722656,
+    "q05": 126.49875259399414,
+    "q25": 157.31604766845703,
+    "q75": 256.94127655029297,
+    "q95": 489.3933486938475,
+    "std": 167.4389183877224
+  },
+  "selected_test_mass_GeV": {
+    "count": 1650,
+    "fraction_130_220_GeV": 0.6842424242424242,
+    "mean": 214.31572224934897,
+    "median": 173.42528533935547,
+    "q05": 129.87918548583986,
+    "q25": 157.00778198242188,
+    "q75": 226.6636199951172,
+    "q95": 435.6365997314453,
+    "std": 145.26249104625472
+  },
+  "selected_test_truth_mass_GeV": {
+    "count": 470,
+    "fraction_130_220_GeV": 0.9617021276595744,
+    "mean": 165.82347480286944,
+    "median": 166.37185668945312,
+    "q05": 135.88465270996093,
+    "q25": 155.93478775024414,
+    "q75": 173.42882919311523,
+    "q95": 188.62730712890624,
+    "std": 20.07005359902286
+  },
+  "validation_fake_mass_GeV": {
+    "count": 16250,
+    "fraction_130_220_GeV": 0.3627692307692308,
+    "mean": 271.5642097940298,
+    "median": 230.52893829345703,
+    "q05": 112.30698165893556,
+    "q25": 169.03134155273438,
+    "q75": 325.6756286621094,
+    "q95": 576.4175415039062,
+    "std": 153.6718731765784
+  },
+  "validation_truth_mass_GeV": {
+    "count": 655,
+    "fraction_130_220_GeV": 0.8977099236641222,
+    "mean": 171.3885923079862,
+    "median": 165.3878173828125,
+    "q05": 134.78362579345702,
+    "q25": 153.8271484375,
+    "q75": 175.52190399169922,
+    "q95": 241.5154846191405,
+    "std": 35.199706731518695
+  }
+}

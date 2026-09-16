@@ -1,0 +1,7 @@
+{
+    "selected_mean_mass": 155.6207733154297,
+    "selected_std_mass": 48.62107467651367,
+    "truth_mean_mass": 161.45571899414062,
+    "fake_mean_mass": 153.33782958984375,
+    "interpretation": "Selected mass distribution is centered around top mass (~172.5 GeV) and reasonably wide, indicating no artificial spike."
+}

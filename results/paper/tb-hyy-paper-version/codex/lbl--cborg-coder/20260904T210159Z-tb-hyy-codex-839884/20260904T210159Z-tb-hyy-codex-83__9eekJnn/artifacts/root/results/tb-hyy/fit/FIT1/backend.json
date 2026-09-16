@@ -1,0 +1,7 @@
+{
+  "configuration": {
+    "analytic_background_families": {
+      "inclusive": "RooFit_Analytic"
+    }
+  }
+}

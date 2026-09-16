@@ -1,0 +1,106 @@
+inputs:
+  env_var: TB_HYY_INPUTS
+  default_dir: /data/GamGam
+  layout:
+    mc_subdir: MC
+    data_subdir: data
+object_definitions:
+  photon:
+    pt_min_gev: 25.0
+    abs_eta_max: 2.37
+    crack_veto_abs_eta:
+    - 1.37
+    - 1.52
+    require_tight_id: false
+    require_tight_iso: false
+    tight_definition_for_TI_NTI_split: tight ID AND tight isolation on BOTH photons
+      -> TI; otherwise NTI
+  lepton:
+    pt_min_gev: 10.0
+    require_id: false
+    require_iso: false
+    types_included:
+    - electron
+    - muon
+  jet:
+    pt_min_gev: 25.0
+    central_abs_eta_max: 2.5
+    forward_abs_eta_min: 2.5
+    btag_definition: jet_btag_quantile >= 4
+    btag_quantile_min: 4
+channels:
+  hadronic:
+    n_leptons: 0
+    min_jets: 3
+    min_bjets: 1
+    required_for_categorization: true
+  leptonic_bookkeeping:
+    min_leptons: 1
+    min_bjets: 1
+    required_for_categorization: false
+    note: legacy bookkeeping only; excluded from BDT training/optimization/categorization
+      metrics because forward jets are not reconstructed in this open-data sample
+mass_windows:
+  signal_window_gev:
+  - 123.0
+  - 127.0
+  sideband_low_gev:
+  - 105.0
+  - 120.0
+  sideband_high_gev:
+  - 130.0
+  - 160.0
+  fit_range_gev:
+  - 105.0
+  - 160.0
+partitioning:
+  seed: 2024
+  fractions:
+    train: 0.6
+    val: 0.2
+    test: 0.2
+bdt:
+  features:
+  - n_jets_central
+  - n_bjets
+  - jet_ht
+  - leading_jet_pt
+  - dijet_mass_leading
+  algorithm: sklearn.ensemble.GradientBoostingClassifier
+  hyperparameters:
+    n_estimators: 300
+    max_depth: 3
+    learning_rate: 0.05
+    subsample: 0.8
+    random_state: 42
+  signal_definition: ttH + tH hadronic-preselection MC (TI and NTI), SM-normalized
+    MC weight
+  background_definition: resonant ggH TI MC in 125+/-2 GeV window, plus NTI observed-data
+    sidebands (105-120, 130-160) scaled by SF1*SF2
+  exclude_from_training: nominal TI observed data in 125+/-2 GeV window (blinded)
+  class_balancing: scale signal class weights so sum(signal)==sum(background) after
+    SM-normalized/NTI-mixture weights are built
+boundary_optimization:
+  min_relative_improvement: 0.05
+  max_boundaries: 4
+  grid_step: 0.01
+  partition_used: val
+luminosities:
+  bdt_training_reference_ifb: 1.0
+  categorization_significance_ifb: 36.0
+cut_based_categories:
+  tH_had_4j1b:
+    n_leptons: 0
+    n_jets_central: 4
+    n_bjets: 1
+  tH_had_4j2b:
+    n_leptons: 0
+    n_jets_central: 4
+    n_bjets_min: 2
+category_retention:
+  min_expected_background_signal_window: 0.8
+plots:
+  bdt_score_bin_edges_n: 21
+throttling:
+  env_var: TTH_MAX_SELECTED_PER_SAMPLE
+  default: null

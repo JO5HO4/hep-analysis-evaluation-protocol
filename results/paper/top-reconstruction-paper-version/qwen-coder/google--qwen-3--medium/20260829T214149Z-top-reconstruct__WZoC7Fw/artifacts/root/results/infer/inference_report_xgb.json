@@ -1,0 +1,17 @@
+{
+  "test_examples": 21157,
+  "truth_fraction": 0.04253911235052229,
+  "score_mean": 0.04159341752529144,
+  "score_std": 0.05420120060443878,
+  "score_min": 0.00036345820990391076,
+  "score_max": 0.5184696316719055,
+  "model_path": "/root/results/train/model_xgb.json",
+  "feature_columns": [
+    "dr_ab",
+    "dr_ac",
+    "dr_bc",
+    "mij_over_m123_ab",
+    "mij_over_m123_ac",
+    "mij_over_m123_bc"
+  ]
+}

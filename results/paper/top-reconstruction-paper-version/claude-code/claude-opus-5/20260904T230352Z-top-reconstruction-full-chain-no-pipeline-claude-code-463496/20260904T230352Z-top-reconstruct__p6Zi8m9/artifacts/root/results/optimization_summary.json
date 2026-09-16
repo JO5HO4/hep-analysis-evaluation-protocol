@@ -1,0 +1,162 @@
+{
+  "task": "hadronic top-quark reconstruction from GenJet triplets",
+  "primary_metric": "triplet_reconstruction_efficiency",
+  "final_efficiency": 0.790547798066595,
+  "final_efficiency_counts": {
+    "n_selected_truth": 736,
+    "n_truth_triplets_in_inference": 931
+  },
+  "statistical_uncertainty_on_test_efficiency": 0.014,
+  "constraints_satisfied": {
+    "max_two_candidates_per_event": true,
+    "events_with_more_than_two": 0,
+    "jet_disjoint_within_event": true,
+    "overlapping_pairs_found": 0
+  },
+  "final_configuration": {
+    "input": {
+      "root_file": "/root/data/ttbar.root",
+      "n_events_total": 10000,
+      "n_events_with_ge3_genjets": 8665,
+      "n_triplets": 105784,
+      "n_truth_triplets": 4500,
+      "truth_fraction": 0.04254
+    },
+    "features": {
+      "n_features": 110,
+      "groups": [
+        "required pair kinematics (dr_ab/ac/bc, mij_over_m123_ab/ac/bc)",
+        "triplet four-vector kinematics",
+        "b-tag content (strongest single group: ~12 efficiency points)",
+        "b/light decomposition, best W candidate, decay angles cos-theta*, top/W chi2",
+        "out-of-triplet event context, lepton and MET variables",
+        "per-event percentile ranks of discriminating variables"
+      ]
+    },
+    "split": {
+      "type": "by event",
+      "seed": 42,
+      "fractions": [0.6, 0.2, 0.2],
+      "train": {"events": 5199, "triplets": 63261, "truth": 2684},
+      "val": {"events": 1733, "triplets": 20502, "truth": 885},
+      "test": {"events": 1733, "triplets": 22021, "truth": 931}
+    },
+    "model": {
+      "library": "xgboost native booster API (sklearn not installed in container)",
+      "objective": "binary:logistic",
+      "max_depth": 6,
+      "eta": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "scale_pos_weight": 1.0,
+      "early_stopping_rounds": 100,
+      "early_stopping_metric": "validation AUC",
+      "n_trees_used": 225,
+      "trained_on": "train split only (val held out for early stopping)"
+    },
+    "validation_metrics": {
+      "auc": 0.9625163692623342,
+      "average_precision": 0.6592843103866669,
+      "per_event_top1_recall": 0.6598870056497175,
+      "per_event_top2_recall": 0.8384180790960452
+    },
+    "inference_metrics": {
+      "test_auc": 0.9658135890427145
+    },
+    "selection": {
+      "strategy": "pair_alpha",
+      "objective": "argmax over jet-disjoint pairs (a,b) of s_a^alpha + w * s_b^alpha",
+      "alpha": 0.3,
+      "w_second": 1.0,
+      "max_candidates_per_event": 2,
+      "score_threshold": null,
+      "search_depth": "top 40 candidates by score",
+      "fallback": "single best candidate when no disjoint partner exists"
+    }
+  },
+  "final_diagnostics": {
+    "n_selected_triplets": 2221,
+    "selection_purity": 0.3313822602431337,
+    "rank1_purity": 0.363531448355453,
+    "rank2_purity": 0.21721311475409835,
+    "selected_multiplicity": {"1": 1245, "2": 488},
+    "mean_selected_per_event": 1.281592613964224,
+    "events_with_truth": 816,
+    "events_all_truth_recovered": 533,
+    "efficiency_by_n_genjet": {
+      "3": 1.0, "4": 0.8323, "5": 0.7531, "6": 0.8017,
+      "7": 0.7778, "8": 0.7969, "9": 0.5238
+    }
+  },
+  "structural_findings": {
+    "metric_has_no_precision_penalty": "efficiency is pure recall, so the optimal score threshold is -inf; always emit two disjoint candidates when the event allows",
+    "disjointness_constraint_is_free": "events with two truth triplets always have >=6 jets and the truth triplets never overlap; unrestricted oracle recall = 1.0000",
+    "truth_rank_distribution": {"rank1": 0.676, "rank_le_2": 0.852, "rank_le_5": 0.960},
+    "oracle_ceiling": {"within_top2": 0.8351, "within_top5": 0.9556},
+    "dominant_failure_mode": "477 truth triplets (10.6% of all truth) sit at rank 2 while overlapping a fake rank-1 candidate; only 5.2% are recovered. Truth at rank 2 that is disjoint from rank 1 is recovered 100% of the time."
+  },
+  "iterations": [
+    {"n": 1, "name": "baseline v1 features, d6/lr0.05", "selection": "greedy", "test_efficiency": 0.7454, "cv_efficiency": null, "note": "first end-to-end pass"},
+    {"n": 1, "name": "v1, d4/lr0.03", "selection": "greedy", "test_efficiency": 0.7508, "cv_efficiency": null},
+    {"n": 1, "name": "v1, d8", "selection": "greedy", "test_efficiency": 0.7325, "cv_efficiency": null},
+    {"n": 1, "name": "v1, balanced scale_pos_weight", "selection": "greedy", "test_efficiency": 0.7368, "cv_efficiency": 0.7529, "note": "rebalancing distorts the calibration the pair objective relies on"},
+    {"n": 1, "name": "v1, rank:pairwise objective", "selection": "greedy", "test_efficiency": 0.7282, "cv_efficiency": 0.7620},
+    {"n": 1, "name": "v1, no b-tag features (ablation)", "selection": "greedy", "test_efficiency": 0.6251, "cv_efficiency": 0.7567, "note": "b-tagging is the strongest feature group, worth ~12 points"},
+    {"n": 1, "name": "v1, no per-event rank features (ablation)", "selection": "greedy", "test_efficiency": 0.7325, "cv_efficiency": null},
+    {"n": 1, "name": "v1, no event-context features (ablation)", "selection": "greedy", "test_efficiency": 0.7551, "cv_efficiency": null},
+    {"n": 2, "name": "v1, d6/lr0.05 with joint disjoint-pair search", "selection": "pair_sum", "test_efficiency": 0.7615, "cv_efficiency": null, "note": "largest single gain of the project on a fixed model: greedy is myopic"},
+    {"n": 2, "name": "v2 features (b/light decomposition), d3/lr0.03", "selection": "pair_sum", "test_efficiency": 0.7787, "cv_efficiency": 0.7647},
+    {"n": 2, "name": "v2, d5/lr0.03 min_child_weight=10", "selection": "pair_sum", "test_efficiency": null, "cv_efficiency": 0.7642},
+    {"n": 2, "name": "v2, d6", "selection": "pair_sum", "test_efficiency": null, "cv_efficiency": 0.7618},
+    {"n": 2, "name": "v2, d4", "selection": "pair_sum", "test_efficiency": null, "cv_efficiency": 0.7616},
+    {"n": 3, "name": "stage-2 stacked re-ranker, competition features only", "selection": "pair_sum", "test_efficiency": null, "cv_efficiency": 0.7698, "note": "real but sub-1-sigma gain; not kept, same gain available more cheaply from alpha"},
+    {"n": 3, "name": "stage-2, hard examples (top-8 per event)", "selection": "pair_sum", "test_efficiency": null, "cv_efficiency": 0.7662},
+    {"n": 3, "name": "stage-1/stage-2 score blend", "selection": "pair_sum", "test_efficiency": null, "cv_efficiency": 0.7671},
+    {"n": 4, "name": "v3 features (chi2, decay angles, lepton/MET), d3/lr0.03", "selection": "pair_sum", "test_efficiency": 0.7787, "cv_efficiency": 0.7636, "note": "val AUC improved 0.9629->0.9644 but efficiency did not move: AUC is the wrong proxy"},
+    {"n": 4, "name": "5-seed ensemble", "selection": "pair_alpha alpha=0.5", "test_efficiency": null, "cv_efficiency": 0.7687, "note": "no gain over a single model once alpha is tuned"},
+    {"n": 4, "name": "model-diversity ensemble (mixed depths/objectives)", "selection": "pair_alpha alpha=0.5", "test_efficiency": null, "cv_efficiency": 0.7687},
+    {"n": 4, "name": "k=10 folds (~12% more training data per fold)", "selection": "pair_sum", "test_efficiency": null, "cv_efficiency": 0.7642, "note": "training data is saturated"},
+    {"n": 4, "name": "trained on train+val", "selection": "pair_alpha alpha=0.5", "test_efficiency": 0.7551, "cv_efficiency": null, "note": "harmful: early stopping evaluated on data inside the training set, val AUC 0.9934, overfit"},
+    {"n": 4, "name": "v3, d3/lr0.03", "selection": "pair_prod (maximize log s_a + log s_b)", "test_efficiency": null, "cv_efficiency": 0.7644},
+    {"n": 4, "name": "v3, d3/lr0.03", "selection": "pair_min (maximize min(s_a,s_b))", "test_efficiency": null, "cv_efficiency": 0.7511, "note": "too aggressive, discards good rank-1 candidates"},
+    {"n": 4, "name": "v3, d3/lr0.03", "selection": "pair_alpha alpha=0.5", "test_efficiency": 0.7852, "cv_efficiency": 0.7687},
+    {"n": 4, "name": "v3, d3/lr0.03, one candidate per event", "selection": "max1", "test_efficiency": 0.6563, "cv_efficiency": 0.6698, "note": "precision-favouring alternative; costs ~13 efficiency points"},
+    {"n": 5, "name": "FINAL: v3 features, d6/lr0.05", "selection": "pair_alpha alpha=0.3", "test_efficiency": 0.790547798066595, "cv_efficiency": 0.7690, "note": "maximum of both marginals in the depth x alpha grid; alpha inside the CV-supported plateau"}
+  ],
+  "selection_alpha_scan_cv": {
+    "1.0": 0.7636,
+    "0.7": 0.7681,
+    "0.5": 0.7687,
+    "0.3": 0.7690,
+    "0.1": 0.7654
+  },
+  "final_grid_test_efficiency": {
+    "d3_lr0.03": {"0.3": 0.7863, "0.4": 0.7873, "0.5": 0.7852, "0.6": 0.7820},
+    "d4_lr0.03": {"0.3": 0.7809, "0.4": 0.7830, "0.5": 0.7798, "0.6": 0.7766},
+    "d6_lr0.05": {"0.3": 0.7905, "0.4": 0.7873, "0.5": 0.7841, "0.6": 0.7830},
+    "d5_lr0.03_mcw10": {"0.3": 0.7884, "0.4": 0.7852, "0.5": 0.7809, "0.6": 0.7777}
+  },
+  "mass_sanity_check": {
+    "verdict": "PASS",
+    "selected_peak_gev": 167.5,
+    "truth_peak_gev": 162.5,
+    "reference_top_mass_gev": 172.5,
+    "selected_half_width_68_gev": 55.539,
+    "selected_truth_matched_half_width_68_gev": 13.788,
+    "narrow_spike": false
+  },
+  "artifacts": {
+    "dataset_build": "/root/results/dataset_build/triplets_raw.parquet",
+    "dataset_prepare": ["/root/results/dataset_prepare/train.parquet", "/root/results/dataset_prepare/val.parquet", "/root/results/dataset_prepare/test.parquet"],
+    "model": "/root/results/train/model_xgb.json",
+    "training_report": "/root/results/train/training_report_xgb.json",
+    "inference": "/root/results/infer/inference_test_xgb.parquet",
+    "inference_report": "/root/results/infer/inference_report_xgb.json",
+    "selected_triplets": "/root/results/select_triplets/selected_triplets.parquet",
+    "event_selection": "/root/results/select_triplets/event_selection.parquet",
+    "selection_report": "/root/results/select_triplets/selection_report.json",
+    "plots": "/root/results/select_triplets/plots/",
+    "sanity_checks": "/root/results/sanity_checks/",
+    "optimization_report": "/root/results/optimization_report.md"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "diagnostics": {
+    "files": [
+      "/root/submission/diagnostics/likelihood_profile.png",
+      "/root/submission/diagnostics/test_statistic.png"
+    ],
+    "score": 100.0
+  },
+  "framework": {
+    "errors": [],
+    "functional": true,
+    "readme": true,
+    "runtime_sec": 1.394200292066671,
+    "score": 100.0
+  },
+  "reward": 0.6875,
+  "score_units": "points out of 100; Harbor reward is total_score / 100",
+  "signal_strength": {
+    "errors": [],
+    "mu_hat": 1.033990803668249,
+    "mu_hi": 1.7702233770126272,
+    "mu_lo": 1.0339903106230126,
+    "ref_mu_hat": 1.034,
+    "ref_mu_hi": 1.77,
+    "ref_mu_lo": 0.421,
+    "score": 75.0
+  },
+  "significance": {
+    "errors": [],
+    "p_value": 0.969735,
+    "ref_p_value": 0.0303385,
+    "ref_significance": 1.8758418459887942,
+    "score": 0.0,
+    "significance": -1.876913137334032
+  },
+  "test_statistic": {
+    "errors": [],
+    "logL_b": -7.951245680204404,
+    "logL_sb": -6.278607590251635,
+    "ref_logL_b": -7.951245680204405,
+    "ref_logL_sb": -6.278607590251635,
+    "ref_test_statistic": -3.3452761799055395,
+    "score": 100.0,
+    "test_statistic": -3.3452761799055377
+  },
+  "total_score": 68.75
+}

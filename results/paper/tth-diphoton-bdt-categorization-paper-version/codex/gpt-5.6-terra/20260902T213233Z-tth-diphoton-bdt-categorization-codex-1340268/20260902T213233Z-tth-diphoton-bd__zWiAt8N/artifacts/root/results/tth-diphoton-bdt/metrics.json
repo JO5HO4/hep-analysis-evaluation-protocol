@@ -1,0 +1,12 @@
+{
+  "training_wall_time_s": 1.6965007781982422,
+  "total_wall_time_s": 63.88823938369751,
+  "expected_counting_z_combined": 1.435087899760357,
+  "features": [
+    "n_jets",
+    "n_bjets",
+    "jet_ht",
+    "lead_jet_pt",
+    "central_jet_fraction"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "triplet_reconstruction_efficiency": 0.6948905109489051,
+  "numerator_selected_truth_triplets": 476,
+  "denominator_truth_triplets_in_inference": 685,
+  "selection": {
+    "strategy": "exact",
+    "score_utility": "score^1",
+    "score_threshold": 0.0,
+    "max_candidates_per_event": 2,
+    "require_jet_disjoint": true,
+    "candidate_search_top_n": 120
+  },
+  "selected_rows": 1649,
+  "event_multiplicity": {
+    "0": 207,
+    "1": 937,
+    "2": 356
+  },
+  "test_auc": 0.9498936586527827
+}

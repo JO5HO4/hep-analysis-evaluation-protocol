@@ -1,0 +1,132 @@
+{
+    "id": "afc52f6b-8097-4c4c-85d6-e387edb21a86",
+    "task_name": "haichenwangberkeley/tth-diphoton-bdt-categorization",
+    "trial_name": "20260905T044026Z-tth-diphoton-bd__cMU3hZC",
+    "trial_uri": "file:///tmp/terminal-bench-harbor-jobs/20260905T044026Z-tth-diphoton-bdt-categorization-openhands-512532/20260905T044026Z-tth-diphoton-bd__cMU3hZC",
+    "task_id": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260905T044026Z-tth-diphoton-bdt-categorization-openhands-512532"
+    },
+    "source": null,
+    "task_checksum": "31ad0448cc9391819b3faa67428ce00606878660e3e38bbbc9ac23e57ff507f0",
+    "config": {
+        "task": {
+            "path": "/tmp/terminal-bench-staged-tasks/20260905T044026Z-tth-diphoton-bdt-categorization-openhands-512532",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "20260905T044026Z-tth-diphoton-bd__cMU3hZC",
+        "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260905T044026Z-tth-diphoton-bdt-categorization-openhands-512532",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "harbor_agents.preinstalled:PreinstalledOpenHands",
+            "import_path": null,
+            "model_name": "gpt-5.6-sol",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "model_info": {
+                    "max_input_tokens": 1050000,
+                    "max_output_tokens": 128000,
+                    "input_cost_per_token": 0,
+                    "output_cost_per_token": 0
+                }
+            },
+            "env": {
+                "TB_HYY_INPUTS": "/data/GamGam"
+            },
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": [
+                {
+                    "type": "bind",
+                    "source": "<source-repository>/data/GamGam",
+                    "target": "/data/GamGam",
+                    "read_only": true
+                }
+            ],
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "994d5f55-0382-4990-a12c-a2d02c387a7b",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "openhands",
+        "version": "/opt/openhands-venv/lib/python3.13/site-packages/fastmcp/server/auth/providers/jwt.py:10: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.\r\nIt will be compatible before version 2.0.0.\r\n  from authlib.jose import JsonWebKey, JsonWebToken\r\nOpenHands version: 0.62.0\r\n/opt/openhands-venv/lib/python3.13/site-packages/litellm/llms/custom_httpx/async_client_cleanup.py:66: DeprecationWarning: There is no current event loop\r\n  loop = asyncio.get_event_loop()",
+        "model_info": {
+            "name": "gpt-5.6-sol",
+            "provider": "openai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-09-05T04:41:10.181143Z",
+    "finished_at": "2026-09-05T04:43:54.888595Z",
+    "environment_setup": {
+        "started_at": "2026-09-05T04:41:10.397611Z",
+        "finished_at": "2026-09-05T04:41:26.118483Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-05T04:41:26.118552Z",
+        "finished_at": "2026-09-05T04:41:42.520445Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-05T04:41:42.520778Z",
+        "finished_at": "2026-09-05T04:42:06.830408Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-05T04:42:47.797933Z",
+        "finished_at": "2026-09-05T04:43:54.888577Z"
+    },
+    "step_results": null
+}

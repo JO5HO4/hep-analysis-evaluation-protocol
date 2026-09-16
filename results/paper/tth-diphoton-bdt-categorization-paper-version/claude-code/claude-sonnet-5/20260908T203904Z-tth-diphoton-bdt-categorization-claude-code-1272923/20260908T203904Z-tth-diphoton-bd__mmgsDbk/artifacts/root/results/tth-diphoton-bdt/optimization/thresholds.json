@@ -1,0 +1,9 @@
+{
+  "boundaries_descending": [
+    0.87,
+    0.68
+  ],
+  "n_categories_from_bdt": 3,
+  "final_expected_significance": 1.1696032911778633,
+  "min_relative_improvement": 0.05
+}

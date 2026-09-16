@@ -1,0 +1,25 @@
+{
+  "features": [
+    "n_jets_central",
+    "n_bjets",
+    "jet_ht",
+    "leading_jet_pt",
+    "dijet_mass_leading"
+  ],
+  "excluded_input": "m_gammagamma",
+  "algorithm": "sklearn.ensemble.GradientBoostingClassifier",
+  "hyperparameters": {
+    "n_estimators": 300,
+    "max_depth": 3,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "random_state": 42
+  },
+  "signal_definition": "ttH + tH hadronic-preselection MC (TI and NTI), SM-normalized MC weight",
+  "background_definition": "resonant ggH TI MC in 125+/-2 GeV window, plus NTI observed-data sidebands (105-120, 130-160) scaled by SF1*SF2",
+  "training_partition": "train",
+  "excluded_from_training": "nominal TI observed data in 125+/-2 GeV window (blinded)",
+  "n_training_rows": 55580,
+  "train_wall_time_seconds": 14.026696681976318,
+  "random_state": 42
+}

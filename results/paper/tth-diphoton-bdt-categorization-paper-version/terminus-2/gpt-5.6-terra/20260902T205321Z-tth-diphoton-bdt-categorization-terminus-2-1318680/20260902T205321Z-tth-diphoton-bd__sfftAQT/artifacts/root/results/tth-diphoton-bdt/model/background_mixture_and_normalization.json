@@ -1,0 +1,8 @@
+{
+  "signal": "ttH+tH TI MC 125+/-2 GeV",
+  "background": "ggH TI MC 125+/-2 GeV plus NTI data sidebands",
+  "SF1": 0.02493333333333333,
+  "SF2": 0.09933333333333333,
+  "SF1xSF2": 0.0024767111111111107,
+  "mc_luminosity_fb": 36
+}

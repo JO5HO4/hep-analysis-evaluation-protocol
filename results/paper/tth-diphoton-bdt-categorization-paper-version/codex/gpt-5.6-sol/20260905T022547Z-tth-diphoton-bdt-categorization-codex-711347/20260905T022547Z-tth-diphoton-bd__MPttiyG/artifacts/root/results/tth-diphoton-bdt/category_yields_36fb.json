@@ -1,0 +1,91 @@
+{
+  "categories": {
+    "tH_had_4j1b": {
+      "S_over_B": 0.0711809212645581,
+      "S_over_sqrt_B": 0.26441231065807114,
+      "category": "tH_had_4j1b",
+      "expected_counting_significance": 0.26136498793102575,
+      "kept": true,
+      "nti_continuum_proxy": 13.25557216140949,
+      "resonant_higgs_background": 0.5430630530498249,
+      "signal_ttH_tH": 0.9821995667587872,
+      "total_background": 13.798635214459313,
+      "total_model_yield": 14.7808347812181
+    },
+    "tH_had_4j2b": {
+      "S_over_B": 0.09962480630933525,
+      "S_over_sqrt_B": 0.11239009230355236,
+      "category": "tH_had_4j2b",
+      "expected_counting_significance": 0.11059739986432109,
+      "kept": true,
+      "nti_continuum_proxy": 1.2163936806940472,
+      "resonant_higgs_background": 0.05629175942087184,
+      "signal_ttH_tH": 0.1267910404641599,
+      "total_background": 1.272685440114919,
+      "total_model_yield": 1.399476480579079
+    },
+    "ttH_had_BDT1": {
+      "S_over_B": 1.3623969059579415,
+      "S_over_sqrt_B": 1.4124614555753177,
+      "category": "ttH_had_BDT1",
+      "expected_counting_significance": 1.1987784024955592,
+      "kept": true,
+      "nti_continuum_proxy": 0.8005325932772789,
+      "resonant_higgs_background": 0.2743125865844662,
+      "signal_ttH_tH": 1.4643657474274487,
+      "total_background": 1.074845179861745,
+      "total_model_yield": 2.5392109272891936
+    },
+    "ttH_had_BDT2": {
+      "S_over_B": 0.3893632322526018,
+      "S_over_sqrt_B": 1.1301160236090424,
+      "category": "ttH_had_BDT2",
+      "expected_counting_significance": 1.0666154680050541,
+      "kept": true,
+      "nti_continuum_proxy": 6.861707942376676,
+      "resonant_higgs_background": 1.562637917757038,
+      "signal_ttH_tH": 3.2801305337154876,
+      "total_background": 8.424345860133714,
+      "total_model_yield": 11.704476393849202
+    },
+    "ttH_had_BDT3": {
+      "S_over_B": null,
+      "S_over_sqrt_B": null,
+      "category": "ttH_had_BDT3",
+      "expected_counting_significance": 0.0,
+      "kept": false,
+      "nti_continuum_proxy": 0.0,
+      "resonant_higgs_background": 0.0,
+      "signal_ttH_tH": 0.0,
+      "total_background": 0.0,
+      "total_model_yield": 0.0
+    },
+    "ttH_had_BDT4": {
+      "S_over_B": null,
+      "S_over_sqrt_B": null,
+      "category": "ttH_had_BDT4",
+      "expected_counting_significance": 0.0,
+      "kept": false,
+      "nti_continuum_proxy": 0.0,
+      "resonant_higgs_background": 0.0,
+      "signal_ttH_tH": 0.0,
+      "total_background": 0.0,
+      "total_model_yield": 0.0
+    },
+    "unassigned": {
+      "S_over_B": 0.041048401215858475,
+      "S_over_sqrt_B": 0.2875448063873755,
+      "category": "unassigned",
+      "expected_counting_significance": 0.28561049869306127,
+      "kept": true,
+      "nti_continuum_proxy": 46.39710169672956,
+      "resonant_higgs_background": 2.673181285465233,
+      "signal_ttH_tH": 2.014256663628844,
+      "total_background": 49.07028298219479,
+      "total_model_yield": 51.08453964582363
+    }
+  },
+  "combined_expected_counting_significance": 1.6295035000423839,
+  "integrated_luminosity_fb": 36.0,
+  "weight_column": "significance_model_weight_36fb"
+}

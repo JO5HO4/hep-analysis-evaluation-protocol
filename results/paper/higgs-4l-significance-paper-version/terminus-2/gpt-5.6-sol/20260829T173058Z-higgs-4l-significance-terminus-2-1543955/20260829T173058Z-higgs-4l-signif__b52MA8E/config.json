@@ -1,0 +1,21 @@
+{
+    "task": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260829T173058Z-higgs-4l-significance-terminus-2-1543955"
+    },
+    "trial_name": "20260829T173058Z-higgs-4l-signif__b52MA8E",
+    "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260829T173058Z-higgs-4l-significance-terminus-2-1543955",
+    "agent": {
+        "name": "harbor_agents.preinstalled:PreinstalledTerminus2",
+        "model_name": "gpt-5.6-sol",
+        "kwargs": {
+            "model_info": {
+                "max_input_tokens": 1050000,
+                "max_output_tokens": 128000,
+                "input_cost_per_token": 0,
+                "output_cost_per_token": 0
+            },
+            "api_base": "https://api.cborg.lbl.gov/v1"
+        }
+    },
+    "job_id": "f0212a66-5387-418e-b25c-3c27b82ef8bf"
+}

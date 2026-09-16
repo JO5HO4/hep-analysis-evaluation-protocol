@@ -1,0 +1,41 @@
+{
+  "external_input_env_var": "TB_HYY_INPUTS",
+  "resolved_inputs_dir": "/data/GamGam",
+  "expected_layout": {
+    "MC": "MC/*.root",
+    "data": "data/*.root"
+  },
+  "root_inputs_copied_into_submission": false,
+  "processed_mc_processes": [
+    "VBF",
+    "WH",
+    "ZH",
+    "ggH",
+    "ggZH",
+    "tH",
+    "ttH"
+  ],
+  "processed_data_samples": [
+    "data"
+  ],
+  "excluded_by_policy": [
+    "Sherpa yy continuum diphoton MC",
+    "any non-nominal-Higgs MC process"
+  ],
+  "rejected_mc_files_found_but_not_processed": [],
+  "signal_processes": [
+    "tH",
+    "ttH"
+  ],
+  "resonant_higgs_background_processes": [
+    "VBF",
+    "WH",
+    "ZH",
+    "ggH",
+    "ggZH"
+  ],
+  "row_throttling_env_var": "TTH_MAX_SELECTED_PER_SAMPLE",
+  "row_throttling_active": false,
+  "row_throttling_value": null,
+  "load_wall_time_seconds": 11.691535472869873
+}

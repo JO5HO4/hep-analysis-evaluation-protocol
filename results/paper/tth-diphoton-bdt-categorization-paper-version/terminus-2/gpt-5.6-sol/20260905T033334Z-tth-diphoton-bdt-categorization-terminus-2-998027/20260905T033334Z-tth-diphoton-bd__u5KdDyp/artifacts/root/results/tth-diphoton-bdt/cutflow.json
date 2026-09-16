@@ -1,0 +1,54 @@
+{
+  "input_tree_rows": {
+    "VBF": 59,
+    "WH": 912,
+    "ZH": 1012,
+    "ggH": 2551,
+    "ggZH": 962,
+    "tH": 12594,
+    "ttH": 102792,
+    "data": 235202
+  },
+  "hadronic_selected": {
+    "VBF": {
+      "raw_selected": 53,
+      "written_selected": 53,
+      "signed_weighted_yield_36fb": 0.18828165785151124
+    },
+    "WH": {
+      "raw_selected": 706,
+      "written_selected": 706,
+      "signed_weighted_yield_36fb": 0.2201602567739667
+    },
+    "ZH": {
+      "raw_selected": 821,
+      "written_selected": 821,
+      "signed_weighted_yield_36fb": 1.3769327273614105
+    },
+    "ggH": {
+      "raw_selected": 2413,
+      "written_selected": 2413,
+      "signed_weighted_yield_36fb": 7.802536653242048
+    },
+    "ggZH": {
+      "raw_selected": 853,
+      "written_selected": 853,
+      "signed_weighted_yield_36fb": 0.20328801668653942
+    },
+    "tH": {
+      "raw_selected": 7566,
+      "written_selected": 7566,
+      "signed_weighted_yield_36fb": 0.15612751989666904
+    },
+    "ttH": {
+      "raw_selected": 57677,
+      "written_selected": 57677,
+      "signed_weighted_yield_36fb": 20.182053969969356
+    },
+    "data": {
+      "raw_selected": 202287,
+      "written_selected": 202287,
+      "signed_weighted_yield_36fb": 0.0
+    }
+  }
+}

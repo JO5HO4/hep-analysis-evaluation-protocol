@@ -1,0 +1,142 @@
+{
+    "id": "04242929-eb73-43fc-bda1-e5a120fdecfc",
+    "task_name": "haichenwangberkeley/top-reconstruction-full-chain-no-pipeline",
+    "trial_name": "20260902T201608Z-top-reconstruct__wPhYzVM",
+    "trial_uri": "file:///tmp/terminal-bench-harbor-jobs/20260902T201608Z-top-reconstruction-full-chain-no-pipeline-terminus-2-1258835/20260902T201608Z-top-reconstruct__wPhYzVM",
+    "task_id": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260902T201608Z-top-reconstruction-full-chain-no-pipeline-terminus-2-1258835"
+    },
+    "source": null,
+    "task_checksum": "e9ea6e6ba87ee7c40adbdeaa1e90741908c6b1ba370f62ba848a2cc341614498",
+    "config": {
+        "task": {
+            "path": "/tmp/terminal-bench-staged-tasks/20260902T201608Z-top-reconstruction-full-chain-no-pipeline-terminus-2-1258835",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "20260902T201608Z-top-reconstruct__wPhYzVM",
+        "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260902T201608Z-top-reconstruction-full-chain-no-pipeline-terminus-2-1258835",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "harbor_agents.preinstalled:PreinstalledTerminus2",
+            "import_path": null,
+            "model_name": "openai/lbl/cborg-coder",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "model_info": {
+                    "max_input_tokens": 114688,
+                    "max_output_tokens": 16384,
+                    "input_cost_per_token": 0,
+                    "output_cost_per_token": 0
+                },
+                "api_base": "https://api.cborg.lbl.gov/v1"
+            },
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "01b65550-bef5-4b68-8e59-eb8fa4214033",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "terminus-2",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "lbl/cborg-coder",
+            "provider": "openai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 208663,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 12937,
+        "cost_usd": null,
+        "rollout_details": [],
+        "metadata": {
+            "n_episodes": 14,
+            "api_request_times_msec": [
+                8405.66086769104,
+                3044.692039489746,
+                2583.507537841797,
+                15115.97466468811,
+                11545.205354690552,
+                7850.870847702026,
+                10500.880718231201,
+                4106.313228607178,
+                10462.54587173462,
+                31422.9679107666,
+                26412.314653396606,
+                20725.8083820343,
+                5459.254741668701,
+                7150.562763214111
+            ],
+            "summarization_count": 0
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.346174
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-09-02T20:16:35.143678Z",
+    "finished_at": "2026-09-02T20:23:21.649291Z",
+    "environment_setup": {
+        "started_at": "2026-09-02T20:16:35.346234Z",
+        "finished_at": "2026-09-02T20:16:48.463801Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-02T20:16:48.463861Z",
+        "finished_at": "2026-09-02T20:17:04.731842Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-02T20:17:04.732414Z",
+        "finished_at": "2026-09-02T20:21:44.404574Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-02T20:22:16.705765Z",
+        "finished_at": "2026-09-02T20:23:21.649277Z"
+    },
+    "step_results": null
+}

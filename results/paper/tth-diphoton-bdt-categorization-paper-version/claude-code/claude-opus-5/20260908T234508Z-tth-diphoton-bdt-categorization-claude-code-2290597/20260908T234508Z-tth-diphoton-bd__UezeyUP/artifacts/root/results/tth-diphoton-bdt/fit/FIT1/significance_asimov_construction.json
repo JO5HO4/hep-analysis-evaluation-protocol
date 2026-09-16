@@ -1,0 +1,86 @@
+{
+  "strategy": [
+    "1. per category: model = mu*(ttH+tH signal) + fixed resonant-Higgs background + floating smooth continuum background",
+    "2. the continuum PDF and its normalisation are determined from OBSERVED TI DATA SIDEBANDS ONLY (105-120, 130-160 GeV) and extrapolated over the full 105-160 GeV fit range",
+    "3. S+B Asimov pseudo-data generated with mu_gen = 1",
+    "4. free-mu fit -> mu_hat, NLL_min; mu = 0 fit -> NLL_0",
+    "5. q0 = 2*(NLL_0 - NLL_min); expected Z = sqrt(q0)"
+  ],
+  "shared_mu": "one signal-strength parameter multiplies the ttH+tH component in every hadronic category",
+  "signal_template": "ttH + tH TI MC (shape and normalisation)",
+  "resonant_background_template": "non-top Higgs TI MC (fixed)",
+  "continuum_template": "observed TI data sidebands (floating normalisation and floating shape parameters)",
+  "distinct_from_nti_proxy": "the NTI proxy is used for BDT training and categorization control estimates; the workspace continuum is taken from observed TI data sidebands only",
+  "luminosity_fb": 36.0,
+  "fit_range_gev": [
+    105.0,
+    160.0
+  ],
+  "sidebands_gev": [
+    [
+      105.0,
+      120.0
+    ],
+    [
+      130.0,
+      160.0
+    ]
+  ],
+  "binning": {
+    "n_bins": 55,
+    "low": 105.0,
+    "high": 160.0
+  },
+  "per_category": [
+    {
+      "category": "ttH_had_BDT1",
+      "n_sig_36fb": 1.7789501633891247,
+      "n_resonant_36fb": 0.379969227149334,
+      "n_ti_sideband_observed": 4,
+      "n_continuum_full_range_extrapolated": 4.90501825628121,
+      "background_pdf": "exponential",
+      "signal_shape_source": "per-category fit",
+      "resonant_shape_source": "per-category fit",
+      "asimov_total": 7.063937646819669
+    },
+    {
+      "category": "ttH_had_BDT2",
+      "n_sig_36fb": 2.7462702779884975,
+      "n_resonant_36fb": 0.749600514292689,
+      "n_ti_sideband_observed": 36,
+      "n_continuum_full_range_extrapolated": 43.89354040543834,
+      "background_pdf": "power_law",
+      "signal_shape_source": "per-category fit",
+      "resonant_shape_source": "per-category fit",
+      "asimov_total": 47.389411197719525
+    },
+    {
+      "category": "ttH_had_BDT3",
+      "n_sig_36fb": 3.1900272197102595,
+      "n_resonant_36fb": 2.1993511694239376,
+      "n_ti_sideband_observed": 144,
+      "n_continuum_full_range_extrapolated": 179.840383809354,
+      "background_pdf": "power_law",
+      "signal_shape_source": "per-category fit",
+      "resonant_shape_source": "per-category fit",
+      "asimov_total": 185.22976219848823
+    },
+    {
+      "category": "tH_had_4j1b",
+      "n_sig_36fb": 0.24168633425880184,
+      "n_resonant_36fb": 0.19460498642920643,
+      "n_ti_sideband_observed": 43,
+      "n_continuum_full_range_extrapolated": 53.71600596387933,
+      "background_pdf": "power_law",
+      "signal_shape_source": "per-category fit",
+      "resonant_shape_source": "per-category fit",
+      "asimov_total": 54.15229728456735
+    }
+  ],
+  "nti_scale_factors_for_reference": {
+    "SF1": 0.032464650307526474,
+    "SF2": 0.0974573584427113,
+    "SF1xSF2": 0.0031639190617378855
+  },
+  "blinding": "observed TI data in 125 +/- 2 GeV never read"
+}

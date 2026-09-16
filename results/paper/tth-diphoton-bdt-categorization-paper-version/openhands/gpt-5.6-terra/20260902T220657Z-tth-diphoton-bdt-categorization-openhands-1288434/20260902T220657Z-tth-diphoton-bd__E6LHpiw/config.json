@@ -1,0 +1,34 @@
+{
+    "task": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260902T220657Z-tth-diphoton-bdt-categorization-openhands-1288434"
+    },
+    "trial_name": "20260902T220657Z-tth-diphoton-bd__E6LHpiw",
+    "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260902T220657Z-tth-diphoton-bdt-categorization-openhands-1288434",
+    "agent": {
+        "name": "harbor_agents.preinstalled:PreinstalledOpenHands",
+        "model_name": "gpt-5.6-terra",
+        "kwargs": {
+            "model_info": {
+                "max_input_tokens": 1050000,
+                "max_output_tokens": 128000,
+                "input_cost_per_token": 0,
+                "output_cost_per_token": 0
+            }
+        },
+        "env": {
+            "TB_HYY_INPUTS": "/data/GamGam"
+        }
+    },
+    "environment": {
+        "type": "docker",
+        "mounts": [
+            {
+                "type": "bind",
+                "source": "<source-repository>/data/GamGam",
+                "target": "/data/GamGam",
+                "read_only": true
+            }
+        ]
+    },
+    "job_id": "05e34c94-d454-4d15-b1b6-14061e7f3510"
+}

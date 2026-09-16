@@ -1,0 +1,29 @@
+{
+  "categories": {
+    "inclusive": {
+      "candidates": [
+        {
+          "model": "exp",
+          "dof": 1,
+          "spurious_yield": 0.1,
+          "spurious_ratio": 0.01,
+          "pass": true
+        },
+        {
+          "model": "poly1",
+          "dof": 2,
+          "spurious_yield": 0.5,
+          "spurious_ratio": 0.05,
+          "pass": false
+        },
+        {
+          "model": "poly2",
+          "dof": 3,
+          "spurious_yield": 0.8,
+          "spurious_ratio": 0.08,
+          "pass": false
+        }
+      ]
+    }
+  }
+}

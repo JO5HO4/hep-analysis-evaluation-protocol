@@ -1,0 +1,39 @@
+{
+    "id": "8899b3a6-7cba-4b9d-814e-2313ea336e89",
+    "started_at": "2026-09-04T14:02:03.434875",
+    "updated_at": "2026-09-04T14:06:30.668004",
+    "finished_at": "2026-09-04T14:06:30.668004",
+    "n_total_trials": 1,
+    "stats": {
+        "n_completed_trials": 1,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "claude-code__cborg-coder__adhoc": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "20260904T210145Z-tth-diphoton-bd__MqqLxno"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": 221792,
+        "n_cache_tokens": 42336,
+        "n_output_tokens": 4553,
+        "cost_usd": 1.0322730000000002
+    }
+}

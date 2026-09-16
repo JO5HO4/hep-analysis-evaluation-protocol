@@ -1,0 +1,195 @@
+{
+    "id": "1f1889da-ba4d-4a78-8163-5565b5820263",
+    "task_name": "haichenwangberkeley/tth-diphoton-bdt-categorization",
+    "trial_name": "20260905T003430Z-tth-diphoton-bd__st37ant",
+    "trial_uri": "file:///tmp/terminal-bench-harbor-jobs/20260905T003430Z-tth-diphoton-bdt-categorization-terminus-2-372893/20260905T003430Z-tth-diphoton-bd__st37ant",
+    "task_id": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260905T003430Z-tth-diphoton-bdt-categorization-terminus-2-372893"
+    },
+    "source": null,
+    "task_checksum": "31ad0448cc9391819b3faa67428ce00606878660e3e38bbbc9ac23e57ff507f0",
+    "config": {
+        "task": {
+            "path": "/tmp/terminal-bench-staged-tasks/20260905T003430Z-tth-diphoton-bdt-categorization-terminus-2-372893",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "20260905T003430Z-tth-diphoton-bd__st37ant",
+        "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260905T003430Z-tth-diphoton-bdt-categorization-terminus-2-372893",
+        "install_only": false,
+        "timeout_multiplier": 2.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "harbor_agents.preinstalled:PreinstalledTerminus2",
+            "import_path": null,
+            "model_name": "openai/lbl/cborg-coder",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "model_info": {
+                    "max_input_tokens": 114688,
+                    "max_output_tokens": 16384,
+                    "input_cost_per_token": 0,
+                    "output_cost_per_token": 0
+                },
+                "api_base": "https://api.cborg.lbl.gov/v1"
+            },
+            "env": {
+                "TB_HYY_INPUTS": "/data/GamGam"
+            },
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": [
+                {
+                    "type": "bind",
+                    "source": "<source-repository>/data/GamGam",
+                    "target": "/data/GamGam",
+                    "read_only": true
+                }
+            ],
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "941d9b63-7476-4d02-bc3b-5b029cacf30e",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "terminus-2",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "lbl/cborg-coder",
+            "provider": "openai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 2877566,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 46582,
+        "cost_usd": null,
+        "rollout_details": [],
+        "metadata": {
+            "n_episodes": 57,
+            "api_request_times_msec": [
+                8049.818515777588,
+                2718.513011932373,
+                1574.7997760772705,
+                3300.92716217041,
+                2989.7642135620117,
+                1819.01216506958,
+                3258.579969406128,
+                3260.9949111938477,
+                4449.845552444458,
+                12594.17986869812,
+                5295.7048416137695,
+                4384.484529495239,
+                12494.608402252197,
+                25348.875045776367,
+                18733.150720596313,
+                6027.34112739563,
+                6401.05414390564,
+                3844.928979873657,
+                8615.843534469604,
+                5111.935377120972,
+                36756.542921066284,
+                37457.75079727173,
+                8964.081764221191,
+                12886.358737945557,
+                43526.59368515015,
+                7986.626148223877,
+                26681.78915977478,
+                13166.154623031616,
+                53193.33577156067,
+                8545.02248764038,
+                71740.38100242615,
+                72884.01222229004,
+                14805.247783660889,
+                23783.496856689453,
+                64206.09521865845,
+                72466.9144153595,
+                13512.710332870483,
+                14310.1806640625,
+                100215.44289588928,
+                85296.87762260437,
+                13757.890939712524,
+                13482.811450958252,
+                91748.78907203674,
+                19562.801361083984,
+                12711.931467056274,
+                16902.830600738525,
+                23422.54877090454,
+                18936.168670654297,
+                90983.10995101929,
+                15433.04419517517,
+                15703.261852264404,
+                82181.55288696289,
+                21089.76173400879,
+                69113.8083934784,
+                16626.323699951172,
+                20740.411043167114,
+                19496.830224990845
+            ],
+            "summarization_count": 0
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-09-05T00:35:15.987467Z",
+    "finished_at": "2026-09-05T01:15:28.885119Z",
+    "environment_setup": {
+        "started_at": "2026-09-05T00:35:16.187542Z",
+        "finished_at": "2026-09-05T00:35:29.150582Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-05T00:35:29.150631Z",
+        "finished_at": "2026-09-05T00:35:46.195879Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-05T00:35:46.196226Z",
+        "finished_at": "2026-09-05T01:13:43.077743Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-05T01:14:15.507171Z",
+        "finished_at": "2026-09-05T01:15:28.885107Z"
+    },
+    "step_results": null
+}

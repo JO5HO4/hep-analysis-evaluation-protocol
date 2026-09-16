@@ -1,0 +1,12 @@
+{
+    "task": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260829T173916Z-higgs-4l-significance-qwen-coder-1554570"
+    },
+    "trial_name": "20260829T173916Z-higgs-4l-signif__eNaET5b",
+    "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260829T173916Z-higgs-4l-significance-qwen-coder-1554570",
+    "agent": {
+        "name": "harbor_agents.preinstalled:PreinstalledQwenCode",
+        "model_name": "google/qwen-3"
+    },
+    "job_id": "39c608f2-a713-43f7-8988-f95ef5a18b6e"
+}

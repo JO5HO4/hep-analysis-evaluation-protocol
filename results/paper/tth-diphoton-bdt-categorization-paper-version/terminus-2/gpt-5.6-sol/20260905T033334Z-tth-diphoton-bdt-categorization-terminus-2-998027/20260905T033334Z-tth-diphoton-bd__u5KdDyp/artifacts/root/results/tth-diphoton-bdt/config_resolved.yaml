@@ -1,0 +1,27 @@
+input_root: /data/GamGam
+output_root: /root/results/tth-diphoton-bdt
+samples:
+- VBF
+- WH
+- ZH
+- ggH
+- ggZH
+- tH
+- ttH
+- data
+max_selected_per_sample: null
+uncapped: true
+luminosity_fb: 36
+seed: 1729
+features:
+- n_jets
+- n_bjets
+- ht_jets
+- leading_jet_pt
+- min_dr_gam_jet
+selection:
+  photons: pT>25, |eta|<2.37 excluding crack; no ID/isolation
+  leptons: pT>10
+  jets: pT>25
+  btag_quantile_min: 4
+  hadronic: Nlep=0, Njet>=3, Nb>=1

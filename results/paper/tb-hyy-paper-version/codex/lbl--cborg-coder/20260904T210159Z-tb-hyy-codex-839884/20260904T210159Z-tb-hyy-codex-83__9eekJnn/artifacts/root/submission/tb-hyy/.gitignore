@@ -1,0 +1,10 @@
+# ROOT inputs
+input/
+*.root
+
+# Generated outputs
+/root/results/
+caches/
+reports/
+*.npz
+*.npy

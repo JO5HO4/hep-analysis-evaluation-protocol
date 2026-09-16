@@ -1,0 +1,25 @@
+{
+  "iterations": [
+    {
+      "step": 1,
+      "boundary": 0.68,
+      "significance_before": 0.756175848507846,
+      "significance_after": 1.093509498407587,
+      "relative_improvement": 0.4461047659289807
+    },
+    {
+      "step": 2,
+      "boundary": 0.87,
+      "significance_before": 1.093509498407587,
+      "significance_after": 1.1696032911778633,
+      "relative_improvement": 0.06958676891338132
+    }
+  ],
+  "rejected_next_candidate": {
+    "candidate_boundary": 0.95,
+    "significance_before": 1.1696032911778633,
+    "significance_after": 1.1961351539604341,
+    "relative_improvement": 0.02268449736991725,
+    "reason": "below_min_relative_improvement"
+  }
+}

@@ -1,0 +1,600 @@
+{
+  "target_metric": "triplet_reconstruction_efficiency",
+  "final_triplet_reconstruction_efficiency": 0.7787325456498388,
+  "final_counts": {
+    "n_selected_truth_triplets": 725,
+    "n_truth_triplets_in_inference_sample": 931
+  },
+  "final_configuration": {
+    "dataset": {
+      "n_events": 10000,
+      "n_candidate_triplets": 105784,
+      "truth_coverage": 1.0,
+      "signal_fraction": 0.042539514482341376
+    },
+    "split": {
+      "scheme": "event-level 60/20/20",
+      "seed": 42,
+      "n_events": {
+        "train": 5199,
+        "val": 1733,
+        "test": 1733
+      },
+      "n_rows": {
+        "train": 63261,
+        "val": 20502,
+        "test": 22021
+      },
+      "n_truth": {
+        "train": 2684,
+        "val": 885,
+        "test": 931
+      },
+      "class_balancing": "none (probabilities kept calibrated)"
+    },
+    "classifier": {
+      "type": "XGBoost binary:logistic, blended ensemble",
+      "ensemble": [
+        {
+          "feature_set": "kin_btag_compl",
+          "seed": 0,
+          "best_iteration": 201
+        },
+        {
+          "feature_set": "kin_btag_compl",
+          "seed": 101,
+          "best_iteration": 169
+        },
+        {
+          "feature_set": "full_rank_compl",
+          "seed": 0,
+          "best_iteration": 152
+        },
+        {
+          "feature_set": "full_rank_compl",
+          "seed": 101,
+          "best_iteration": 153
+        },
+        {
+          "feature_set": "kin_btag",
+          "seed": 0,
+          "best_iteration": 81
+        },
+        {
+          "feature_set": "kin_btag",
+          "seed": 101,
+          "best_iteration": 87
+        }
+      ],
+      "feature_sets_blended": [
+        "kin_btag_compl",
+        "full_rank_compl",
+        "kin_btag"
+      ],
+      "n_features_per_member": {
+        "kin_btag_compl": 78,
+        "full_rank_compl": 98,
+        "kin_btag": 58
+      },
+      "params": {
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "eta": 0.05,
+        "max_depth": 6,
+        "min_child_weight": 5,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0,
+        "tree_method": "hist",
+        "nthread": 32,
+        "seed": 0,
+        "disable_default_eval_metric": 1
+      },
+      "early_stopping": "validation top-2 jet-disjoint truth recall"
+    },
+    "selection": {
+      "strategy": "maxsum",
+      "max_candidates_per_event": 2,
+      "score_threshold_rank1": null,
+      "score_threshold_rank2": null,
+      "jet_disjoint_constraint": true,
+      "score_column": "score_xgb",
+      "note": "maxsum = choose the jet-disjoint pair of triplets maximising the sum of calibrated truth probabilities; this maximises the expected number of recovered truth triplets. No score threshold is applied because the target metric is pure recall."
+    }
+  },
+  "final_metrics": {
+    "validation_auc": 0.9623729447161735,
+    "validation_average_precision": 0.6543940755273239,
+    "validation_selection_efficiency": {
+      "maxsum/max2": 0.7559322033898305,
+      "greedy/max2": 0.7536723163841808,
+      "greedy/max1": 0.6734463276836158
+    },
+    "test_auc": 0.9671862546021628,
+    "test_average_precision": 0.6671437088092429,
+    "selection_purity": 0.3264295362449347,
+    "selected_multiplicity": {
+      "1": 1245,
+      "2": 488
+    },
+    "efficiency_by_n_truth_in_event": {
+      "1": {
+        "n_events": 701,
+        "n_truth": 701,
+        "n_recovered": 535,
+        "efficiency": 0.7631954350927247
+      },
+      "2": {
+        "n_events": 115,
+        "n_truth": 230,
+        "n_recovered": 190,
+        "efficiency": 0.8260869565217391
+      }
+    },
+    "efficiency_rank1_only": 0.6745435016111708,
+    "constraint_checks": {
+      "max_selected_per_event": 2,
+      "events_exceeding_two": 0,
+      "overlapping_pairs_within_event": 0,
+      "all_constraints_satisfied": true
+    }
+  },
+  "mass_sanity_check": {
+    "checks": {
+      "selected_median_in_physical_window_140_205": true,
+      "selected_peak_near_mtop_within_25GeV": true,
+      "not_an_artificially_narrow_spike": true,
+      "selected_core_width_comparable_to_truth_iqr": false,
+      "selected_rms_inflated_by_fake_tail": true,
+      "selected_shifted_below_fake_median": true,
+      "overall_physically_plausible": true
+    },
+    "selected": {
+      "label": "selected candidates (test)",
+      "n": 2221,
+      "mean": 206.75241557932395,
+      "std": 135.17994461722836,
+      "median": 171.38937377929688,
+      "q16": 147.04507141113282,
+      "q84": 257.1481079101562,
+      "iqr": 59.33781433105469,
+      "modal_peak_100_260": 169.0,
+      "fwhm_100_260": 30.0,
+      "frac_in_140_210": 0.6307969383160739,
+      "frac_within_25GeV_of_mtop": 0.5258892390814949
+    },
+    "truth_dev": {
+      "label": "truth-matched triplets (validation)",
+      "n": 885,
+      "mean": 171.30926513671875,
+      "std": 37.21610641479492,
+      "median": 164.7180938720703,
+      "q16": 148.0543975830078,
+      "q84": 182.9141387939453,
+      "iqr": 20.221450805664062,
+      "modal_peak_100_260": 171.0,
+      "fwhm_100_260": 22.0,
+      "frac_in_140_210": 0.8350282485875706,
+      "frac_within_25GeV_of_mtop": 0.7299435028248588
+    },
+    "fake_dev": {
+      "label": "combinatorial fake triplets (validation)",
+      "n": 19617,
+      "mean": 275.6211853027344,
+      "std": 166.99851989746094,
+      "median": 229.71157836914062,
+      "q16": 149.99954223632812,
+      "q84": 393.6119079589844,
+      "iqr": 155.25279235839844,
+      "modal_peak_100_260": 177.0,
+      "fwhm_100_260": 130.0,
+      "frac_in_140_210": 0.30412397410409336,
+      "frac_within_25GeV_of_mtop": 0.2208798491104654
+    }
+  },
+  "iterations": [
+    {
+      "iteration": "1",
+      "configuration": "features: required 6 columns only",
+      "metric": "single-split test efficiency",
+      "efficiency": 0.4715
+    },
+    {
+      "iteration": "1",
+      "configuration": "features: + triplet & jet kinematics",
+      "metric": "single-split test efficiency",
+      "efficiency": 0.6412
+    },
+    {
+      "iteration": "1",
+      "configuration": "features: + b-tagging (kin_btag)",
+      "metric": "single-split test efficiency",
+      "efficiency": 0.7573
+    },
+    {
+      "iteration": "1",
+      "configuration": "features: + event context (full)",
+      "metric": "single-split test efficiency",
+      "efficiency": 0.7411
+    },
+    {
+      "iteration": "1",
+      "configuration": "features: + within-event rank context (full_rank)",
+      "metric": "single-split test efficiency",
+      "efficiency": 0.7519
+    },
+    {
+      "iteration": "2",
+      "configuration": "kin_btag, greedy selection",
+      "metric": "single-split test efficiency",
+      "efficiency": 0.7573
+    },
+    {
+      "iteration": "2",
+      "configuration": "kin_btag, maxsum selection",
+      "metric": "single-split test efficiency",
+      "efficiency": 0.7734
+    },
+    {
+      "iteration": "2",
+      "configuration": "kin_btag, objective=rank:pairwise",
+      "metric": "single-split test efficiency",
+      "efficiency": 0.7712
+    },
+    {
+      "iteration": "2",
+      "configuration": "kin_btag, objective=rank:ndcg",
+      "metric": "single-split test efficiency",
+      "efficiency": 0.7734
+    },
+    {
+      "iteration": "2",
+      "configuration": "kin_btag, scale_pos_weight=5",
+      "metric": "single-split test efficiency",
+      "efficiency": 0.7648
+    },
+    {
+      "iteration": "2",
+      "configuration": "kin_btag, scale_pos_weight=22",
+      "metric": "single-split test efficiency",
+      "efficiency": 0.7648
+    },
+    {
+      "iteration": "2",
+      "configuration": "kin_btag, eta=0.03 depth=8",
+      "metric": "single-split test efficiency",
+      "efficiency": 0.7573
+    },
+    {
+      "iteration": "2",
+      "configuration": "kin_btag, depth=4",
+      "metric": "single-split test efficiency",
+      "efficiency": 0.7648
+    },
+    {
+      "iteration": "2",
+      "configuration": "kin_btag, depth=10",
+      "metric": "single-split test efficiency",
+      "efficiency": 0.7497
+    },
+    {
+      "iteration": "3",
+      "configuration": "kin_btag, 5-seed ensemble",
+      "metric": "single-split test efficiency",
+      "efficiency": 0.7669
+    },
+    {
+      "iteration": "3",
+      "configuration": "kin_btag, 5-seed + refit on train+val",
+      "metric": "single-split test efficiency",
+      "efficiency": 0.7648
+    },
+    {
+      "iteration": "3",
+      "configuration": "full_rank, 5-seed + refit on train+val",
+      "metric": "single-split test efficiency",
+      "efficiency": 0.7691
+    },
+    {
+      "iteration": "4",
+      "configuration": "kin_btag, 5-fold CV baseline",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7636
+    },
+    {
+      "iteration": "4",
+      "configuration": "full_rank, 5-fold CV",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7653
+    },
+    {
+      "iteration": "4",
+      "configuration": "kin_btag two-stage score-context",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7678
+    },
+    {
+      "iteration": "4",
+      "configuration": "full_rank two-stage score-context",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7669
+    },
+    {
+      "iteration": "4",
+      "configuration": "kin_btag baseline (eta .05, depth 6)",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7636,
+      "oof_auc": 0.9593,
+      "greedy_efficiency": 0.7547
+    },
+    {
+      "iteration": "4",
+      "configuration": "kin_btag, eta=0.03 min_child_weight=3",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7662,
+      "oof_auc": 0.9579,
+      "greedy_efficiency": 0.7573
+    },
+    {
+      "iteration": "4",
+      "configuration": "kin_btag, depth=7 colsample=0.6",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.764,
+      "oof_auc": 0.9579,
+      "greedy_efficiency": 0.7562
+    },
+    {
+      "iteration": "4",
+      "configuration": "kin_btag, depth=5 subsample=1.0",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7689,
+      "oof_auc": 0.9571,
+      "greedy_efficiency": 0.7611
+    },
+    {
+      "iteration": "4",
+      "configuration": "kin_btag, objective=rank:pairwise",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7567,
+      "oof_auc": 0.9442,
+      "greedy_efficiency": 0.7564
+    },
+    {
+      "iteration": "4",
+      "configuration": "kin_btag, early stopping on AUC",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7631,
+      "oof_auc": 0.9593,
+      "greedy_efficiency": 0.7578
+    },
+    {
+      "iteration": "4",
+      "configuration": "full_rank, early stopping on AUC",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7669,
+      "oof_auc": 0.9631,
+      "greedy_efficiency": 0.7562
+    },
+    {
+      "iteration": "4",
+      "configuration": "kin_btag, 5-seed ensemble",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7691,
+      "oof_auc": 0.9591,
+      "greedy_efficiency": 0.7616
+    },
+    {
+      "iteration": "5",
+      "configuration": "kin_btag + complement (leftover-jet) features",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.772,
+      "oof_auc": 0.9637,
+      "greedy_efficiency": 0.7633
+    },
+    {
+      "iteration": "5",
+      "configuration": "full + complement features",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7587,
+      "oof_auc": 0.9624,
+      "greedy_efficiency": 0.756
+    },
+    {
+      "iteration": "5",
+      "configuration": "full_rank + complement features",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7691,
+      "oof_auc": 0.9643,
+      "greedy_efficiency": 0.7631
+    },
+    {
+      "iteration": "5",
+      "configuration": "full_rank_compl, depth=5 subsample=1.0",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7607,
+      "oof_auc": 0.9631,
+      "greedy_efficiency": 0.7536
+    },
+    {
+      "iteration": "5",
+      "configuration": "full_compl, depth=5 subsample=1.0",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7649,
+      "oof_auc": 0.9633,
+      "greedy_efficiency": 0.7613
+    },
+    {
+      "iteration": "5",
+      "configuration": "full_rank_compl, early stopping on AUC",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7611,
+      "oof_auc": 0.9642,
+      "greedy_efficiency": 0.7591
+    },
+    {
+      "iteration": "5",
+      "configuration": "full_rank_compl, 5-seed ensemble",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7644,
+      "oof_auc": 0.9644,
+      "greedy_efficiency": 0.7596
+    },
+    {
+      "iteration": "5",
+      "configuration": "full_rank_compl, depth=7",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7669,
+      "oof_auc": 0.9642,
+      "greedy_efficiency": 0.7622
+    },
+    {
+      "iteration": "6",
+      "configuration": "kin_btag_compl, per-event weight normalisation",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7613,
+      "oof_auc": 0.9585,
+      "greedy_efficiency": 0.758
+    },
+    {
+      "iteration": "6",
+      "configuration": "kin_btag_compl, 1/sqrt(n_triplets) weights",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7613,
+      "oof_auc": 0.9624,
+      "greedy_efficiency": 0.7587
+    },
+    {
+      "iteration": "6",
+      "configuration": "kin_btag_compl, background-only reweighting",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7649,
+      "oof_auc": 0.9546,
+      "greedy_efficiency": 0.7649
+    },
+    {
+      "iteration": "6",
+      "configuration": "full_rank_compl, per-event weight normalisation",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7631,
+      "oof_auc": 0.9603,
+      "greedy_efficiency": 0.7558
+    },
+    {
+      "iteration": "6",
+      "configuration": "kin_btag_compl, 5-seed ensemble",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7704,
+      "oof_auc": 0.9644,
+      "greedy_efficiency": 0.7653
+    },
+    {
+      "iteration": "6",
+      "configuration": "kin_btag_compl, event-norm + 5 seeds",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.768,
+      "oof_auc": 0.9611,
+      "greedy_efficiency": 0.7618
+    },
+    {
+      "iteration": "6",
+      "configuration": "kin_btag_compl, event-norm depth=5",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7616,
+      "oof_auc": 0.9605,
+      "greedy_efficiency": 0.7529
+    },
+    {
+      "iteration": "6",
+      "configuration": "kin_btag_compl two-stage (score-context features)",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.764,
+      "oof_auc": 0.966,
+      "greedy_efficiency": 0.7636
+    },
+    {
+      "iteration": "7",
+      "configuration": "kin_btag_compl, 10-fold (80% train per model)",
+      "metric": "10-fold OOF efficiency",
+      "efficiency": 0.7671,
+      "oof_auc": 0.9644,
+      "greedy_efficiency": 0.7584
+    },
+    {
+      "iteration": "7",
+      "configuration": "kin_btag_compl, njet<6 / njet>=6 specialists",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7584,
+      "oof_auc": 0.9582,
+      "greedy_efficiency": 0.7542
+    },
+    {
+      "iteration": "7",
+      "configuration": "specialists, 10-fold",
+      "metric": "10-fold OOF efficiency",
+      "efficiency": 0.7638,
+      "oof_auc": 0.9572,
+      "greedy_efficiency": 0.7578
+    },
+    {
+      "iteration": "7",
+      "configuration": "blend kin_btag_compl + full_rank_compl + full_compl",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7704,
+      "oof_auc": 0.9647,
+      "greedy_efficiency": 0.7629
+    },
+    {
+      "iteration": "7",
+      "configuration": "blend of 3 feature views x 3 seeds, 10-fold",
+      "metric": "10-fold OOF efficiency",
+      "efficiency": 0.7729,
+      "oof_auc": 0.9642,
+      "greedy_efficiency": 0.7669
+    },
+    {
+      "iteration": "7",
+      "configuration": "kin_btag_compl, 10-fold + 5 seeds",
+      "metric": "10-fold OOF efficiency",
+      "efficiency": 0.7724,
+      "oof_auc": 0.9644,
+      "greedy_efficiency": 0.7664
+    },
+    {
+      "iteration": "7",
+      "configuration": "kin_btag_compl, model seed 1 (seed-noise probe)",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7687,
+      "oof_auc": 0.9635,
+      "greedy_efficiency": 0.7633
+    },
+    {
+      "iteration": "7",
+      "configuration": "kin_btag_compl, model seed 2 (seed-noise probe)",
+      "metric": "5-fold OOF efficiency",
+      "efficiency": 0.7651,
+      "oof_auc": 0.9637,
+      "greedy_efficiency": 0.7607
+    },
+    {
+      "iteration": "8",
+      "configuration": "A kbc-5seed (mean over 3 fold seeds)",
+      "metric": "5-fold OOF efficiency, fold-seed averaged",
+      "efficiency": 0.7702,
+      "fold_seed_std": 0.001
+    },
+    {
+      "iteration": "8",
+      "configuration": "B blend3 (mean over 3 fold seeds)",
+      "metric": "5-fold OOF efficiency, fold-seed averaged",
+      "efficiency": 0.7724,
+      "fold_seed_std": 0.0008
+    },
+    {
+      "iteration": "8",
+      "configuration": "C kbc-1seed (mean over 3 fold seeds)",
+      "metric": "5-fold OOF efficiency, fold-seed averaged",
+      "efficiency": 0.7696,
+      "fold_seed_std": 0.0018
+    }
+  ]
+}

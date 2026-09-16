@@ -1,0 +1,10 @@
+{
+    "scored_rows": 8000,
+    "features": [
+        "n_jets",
+        "n_btags",
+        "ht",
+        "met",
+        "n_central_jets"
+    ]
+}

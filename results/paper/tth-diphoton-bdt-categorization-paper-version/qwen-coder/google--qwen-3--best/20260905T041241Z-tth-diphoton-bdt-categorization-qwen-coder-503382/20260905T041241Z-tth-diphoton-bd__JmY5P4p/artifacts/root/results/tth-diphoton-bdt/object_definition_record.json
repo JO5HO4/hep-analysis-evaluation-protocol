@@ -1,0 +1,19 @@
+{
+  "photon_selection": {
+    "pt_min": 20.0,
+    "eta_max": null,
+    "tight_id_required": false,
+    "isolation_required": false,
+    "notes": "Photon tight ID and isolation are not required for this preselection sample"
+  },
+  "lepton_selection": {
+    "pt_min": 10.0,
+    "tight_id_required": false,
+    "isolation_required": false
+  },
+  "jet_selection": {
+    "pt_min": 25.0,
+    "central_eta_max": 2.5,
+    "btag_definition": "jet_btag_quantile >= 4"
+  }
+}

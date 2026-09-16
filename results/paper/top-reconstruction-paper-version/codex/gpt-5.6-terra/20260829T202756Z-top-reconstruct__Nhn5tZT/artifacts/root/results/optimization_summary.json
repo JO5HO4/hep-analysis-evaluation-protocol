@@ -1,0 +1,31 @@
+{
+  "iterations": [
+    {
+      "name": "iteration_1_baseline",
+      "validation_auc": 0.9397743577,
+      "validation_efficiency": 0.6834677419,
+      "configuration": "depth-3 XGBoost + exact score-sum pair selection"
+    },
+    {
+      "name": "iteration_2_kinematic_btag",
+      "validation_auc": 0.942809956,
+      "validation_efficiency": 0.6885080645,
+      "configuration": "deeper feature model + exact score-sum pair selection"
+    },
+    {
+      "name": "iteration_3_deeper",
+      "validation_auc": 0.9434007372,
+      "validation_efficiency": 0.7036290323,
+      "configuration": "depth-6 model + exact score-sum pair selection"
+    },
+    {
+      "name": "iteration_4_selection",
+      "validation_auc": 0.9434007372,
+      "validation_efficiency": 0.7096774193548387,
+      "configuration": "score-ordered greedy, two jet-disjoint candidates"
+    }
+  ],
+  "combined_development_retrain_test_efficiency": 0.7130177515,
+  "final_test_efficiency": 0.7248520710059172,
+  "final_selection": "score-ordered greedy, threshold 0.0"
+}

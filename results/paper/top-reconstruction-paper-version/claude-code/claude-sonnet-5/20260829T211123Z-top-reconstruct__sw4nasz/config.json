@@ -1,0 +1,13 @@
+{
+    "task": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260829T211123Z-top-reconstruction-full-chain-no-pipeline-claude-code-920888"
+    },
+    "trial_name": "20260829T211123Z-top-reconstruct__sw4nasz",
+    "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260829T211123Z-top-reconstruction-full-chain-no-pipeline-claude-code-920888",
+    "agent_setup_timeout_multiplier": 2.0,
+    "agent": {
+        "name": "harbor_agents.preinstalled:PreinstalledClaudeCode",
+        "model_name": "claude-sonnet-5"
+    },
+    "job_id": "e1df8466-4869-4735-bd41-1f1aab3fa706"
+}

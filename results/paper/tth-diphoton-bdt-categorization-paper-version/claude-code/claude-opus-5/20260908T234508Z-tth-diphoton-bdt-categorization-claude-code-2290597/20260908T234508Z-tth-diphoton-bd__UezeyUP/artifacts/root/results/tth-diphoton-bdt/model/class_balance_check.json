@@ -1,0 +1,52 @@
+{
+  "order_of_operations": [
+    "1. SM-normalised MC weights for ttH+tH signal (xsec, filter eff, k-factor, signed generator weight sum, generator weight, per-event scale factors), scaled to the data luminosity",
+    "2. ggH resonant MC (same normalisation) + NTI data sideband proxy weighted by SF1*SF2 form the background mixture",
+    "3. ONLY THEN class balancing is applied"
+  ],
+  "negative_weight_handling": {
+    "policy": "classifier fit weights use |w|; signed weights preserved in bdt_physical_weight and in every yield/significance weight",
+    "n_negative_weight_rows": 2730,
+    "sum_signed_weights": 60.6510230755478,
+    "sum_abs_weights": 63.52022067305627
+  },
+  "before_balancing": {
+    "signal_class_weight_sum": 9.846831657602182,
+    "background_class_weight_sum": 53.67338901545409,
+    "signal_raw_rows": 22898,
+    "background_raw_rows": 16821,
+    "ratio_signal_over_background": 0.18345835502891386
+  },
+  "balancing": {
+    "applied": true,
+    "target_per_class_weight_sum": 31.760110336528136,
+    "signal_scale_factor": 3.2254141678158934,
+    "background_scale_factor": 0.5917291775144569
+  },
+  "after_balancing": {
+    "signal_class_weight_sum": 31.760110336528136,
+    "background_class_weight_sum": 31.760110336528136,
+    "ratio_signal_over_background": 1.0
+  },
+  "component_signed_weight_sums": {
+    "background_ggH_resonant": 3.6234085207214064,
+    "background_nti_continuum": 49.8981675226682,
+    "signal_ttH_tH": 7.129447032158184
+  },
+  "component_raw_rows": {
+    "background_ggH_resonant": 1050,
+    "background_nti_continuum": 15771,
+    "signal_ttH_tH": 22898
+  },
+  "background_mixture": {
+    "resonant": "ggH TI MC in 125 +/- 2 GeV",
+    "continuum": "NTI observed-data sidebands 105-120 and 130-160 GeV, weighted by SF1*SF2",
+    "SF1": 0.032464650307526474,
+    "SF2": 0.0974573584427113,
+    "SF1xSF2": 0.0031639190617378855
+  },
+  "blinding": {
+    "nominal_TI_observed_data_in_signal_window_used_for_training": false,
+    "nominal_TI_observed_data_in_signal_window_used_for_thresholds": false
+  }
+}

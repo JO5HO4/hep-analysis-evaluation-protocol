@@ -1,0 +1,26 @@
+{
+  "fractions": {
+    "test": 0.15,
+    "train": 0.7,
+    "val": 0.15
+  },
+  "seed": 314159,
+  "split_unit": "event_id",
+  "splits": {
+    "test": {
+      "candidates": 15443,
+      "events": 1500,
+      "truth_triplets": 643
+    },
+    "train": {
+      "candidates": 73436,
+      "events": 7000,
+      "truth_triplets": 3202
+    },
+    "val": {
+      "candidates": 16905,
+      "events": 1500,
+      "truth_triplets": 655
+    }
+  }
+}

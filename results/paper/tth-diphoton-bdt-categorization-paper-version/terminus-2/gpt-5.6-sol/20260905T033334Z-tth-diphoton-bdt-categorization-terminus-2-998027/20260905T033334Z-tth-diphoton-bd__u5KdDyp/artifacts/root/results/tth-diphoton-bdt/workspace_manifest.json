@@ -1,0 +1,15 @@
+{
+  "backend": "ROOT/PyROOT/RooFit",
+  "workspace_file": "/root/results/tth-diphoton-bdt/fit/FIT1/workspace.root",
+  "workspace_name": "combined_hadronic",
+  "hadronic_categories": [
+    "ttH_had_BDT1",
+    "tH_had_4j1b",
+    "tH_had_4j2b"
+  ],
+  "leptonic_categories_excluded": true,
+  "model": "mu*(ttH+tH)+fixed non-top resonant Higgs+floating smooth continuum",
+  "continuum_source": "observed TI data sidebands 105-120 and 130-160 GeV only",
+  "asimov": "S+B mu_gen=1",
+  "blinded": true
+}

@@ -1,0 +1,25 @@
+{
+    "job_name": "20260829T162334Z-higgs-4l-significance-terminus-2-1496619",
+    "jobs_dir": "/tmp/terminal-bench-harbor-jobs",
+    "n_concurrent_trials": 1,
+    "agents": [
+        {
+            "name": "harbor_agents.preinstalled:PreinstalledTerminus2",
+            "model_name": "gpt-5.6-terra",
+            "kwargs": {
+                "model_info": {
+                    "max_input_tokens": 1050000,
+                    "max_output_tokens": 128000,
+                    "input_cost_per_token": 0,
+                    "output_cost_per_token": 0
+                },
+                "api_base": "https://api.cborg.lbl.gov/v1"
+            }
+        }
+    ],
+    "tasks": [
+        {
+            "path": "/tmp/terminal-bench-staged-tasks/20260829T162334Z-higgs-4l-significance-terminus-2-1496619"
+        }
+    ]
+}

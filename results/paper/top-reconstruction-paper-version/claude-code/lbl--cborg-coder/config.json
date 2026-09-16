@@ -1,0 +1,17 @@
+{
+    "job_name": "20260902T201601Z-top-reconstruction-full-chain-no-pipeline-claude-code-1237600",
+    "jobs_dir": "/tmp/terminal-bench-harbor-jobs",
+    "agent_setup_timeout_multiplier": 2.0,
+    "n_concurrent_trials": 1,
+    "agents": [
+        {
+            "name": "harbor_agents.preinstalled:PreinstalledClaudeCode",
+            "model_name": "lbl/cborg-coder"
+        }
+    ],
+    "tasks": [
+        {
+            "path": "/tmp/terminal-bench-staged-tasks/20260902T201601Z-top-reconstruction-full-chain-no-pipeline-claude-code-1237600"
+        }
+    ]
+}

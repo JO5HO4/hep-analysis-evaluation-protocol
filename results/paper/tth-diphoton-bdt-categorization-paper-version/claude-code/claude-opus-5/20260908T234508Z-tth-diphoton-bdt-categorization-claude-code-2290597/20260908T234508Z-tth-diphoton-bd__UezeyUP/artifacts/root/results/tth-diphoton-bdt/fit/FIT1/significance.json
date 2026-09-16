@@ -1,0 +1,9 @@
+{
+  "expected_asimov_Z_roofit": 1.6836784831999643,
+  "expected_combined_counting_Z": 1.7535990613959818,
+  "observed_Z": null,
+  "observed_status": "blocked - observed TI data in the 125 +/- 2 GeV signal window is blinded; an explicit unblinding step is required",
+  "q0": 2.834773234790532,
+  "mu_hat": 1.000060360840747,
+  "mu_uncertainty": 0.7086130013158694
+}

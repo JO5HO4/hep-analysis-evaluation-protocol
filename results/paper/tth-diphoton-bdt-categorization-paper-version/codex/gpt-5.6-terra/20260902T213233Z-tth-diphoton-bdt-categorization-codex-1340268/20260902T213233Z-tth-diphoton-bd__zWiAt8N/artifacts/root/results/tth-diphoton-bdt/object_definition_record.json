@@ -1,0 +1,10 @@
+{
+  "photons": {
+    "tight_id_required": false,
+    "isolation_required": false,
+    "acceptance": "pT>25, |eta|<2.37, crack excluded"
+  },
+  "leptons": "pT>10 no ID/isolation",
+  "jets": "pT>25, central |eta|<=2.5, forward |eta|>2.5",
+  "btag": "jet_btag_quantile >=4"
+}

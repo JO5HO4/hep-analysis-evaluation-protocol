@@ -1,0 +1,11 @@
+{
+  "unassigned": {
+    "ttH_tH_signal": 2000.0,
+    "resonant_higgs_bkg": 1000.0,
+    "nti_continuum_proxy": 1000.0,
+    "total_background": 2000.0,
+    "total_model": 4000.0,
+    "s_over_b": 1.0,
+    "s_over_sqrt_b": 44.72135954999579
+  }
+}

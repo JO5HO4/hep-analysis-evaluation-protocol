@@ -1,0 +1,343 @@
+[?2004hroot@nid004896:~# asciinema rec --stdin /logs/agent/recording.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent/recording.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@nid004896:~# clear
+[?2004l[H[J[3J[?2004hroot@nid004896:~# python3 - <<'PY'
+[?2004l[?2004h> import importlib
+[?2004l[?2004h> for p in ['uproot','awkward','numpy','pandas','pyarrow','sklearn','xgboost','matplotlib']:
+[?2004l[?2004h>  try:
+[?2004l[?2004h>   m=importlib.import_module(p); print(p, getattr(m,'__version__','OK'))
+[?2004l[?2004h>  except Exception as e: print(p, 'MISSING', e)
+[?2004l[?2004h> import uproot
+[?2004l[?2004h> f=uproot.open('/root/data/ttbar.root')
+[?2004l[?2004h> print(f.keys())
+[?2004l[?2004h> for key,obj in f.items():
+[?2004l[?2004h>  print('OBJECT',key,type(obj),getattr(obj,'num_entries',None))
+[?2004l[?2004h>  if hasattr(obj,'keys'): print(obj.keys())
+[?2004l[?2004h> PY
+[?2004luproot 5.6.0
+awkward 2.7.4
+numpy 2.2.6
+pandas 2.3.0
+pyarrow 20.0.0
+sklearn MISSING No module named 'sklearn'
+xgboost 3.0.2
+matplotlib 3.10.3
+['output;1']
+OBJECT output;1 <class 'uproot.models.TTree.Model_TTree_v20'> 10000
+['higgs_pt', 'higgs_eta', 'higgs_phi', 'higgs_m', 'dRmin_top0', 'dRmin_top1', 'dRmin_top2', 'dRmin_top3', 'reco_triplet_0', 'reco_triplet_1', 'reco_triplet_2', 'reco_triplet_3', 'truth_triplet_0', 'truth_triplet_1', 'truth_triplet_2', 'truth_triplet_3', 'triplet_0_pt', 'triplet_0_eta', 'triplet_0_phi', 'triplet_0_m', 'triplet_1_pt', 'triplet_1_eta', 'triplet_1_phi', 'triplet_1_m', 'triplet_2_pt', 'triplet_2_eta', 'triplet_2_phi', 'triplet_2_m', 'triplet_3_pt', 'triplet_3_eta', 'triplet_3_phi', 'triplet_3_m', 'top_pt', 'top_eta', 'top_phi', 'top_m', 'top_PID', 'genlep_pt', 'genlep_eta', 'genlep_phi', 'genlep_m', 'genlep_PID', 'genph_pt', 'genph_eta', 'genph_phi', 'genjet_pt', 'genjet_eta', 'genjet_phi', 'genjet_m', 'genjet_btag', 'bottom_pt', 'bottom_eta', 'bottom_phi', 'bottom_m', 'W_pt', 'W_eta', 'W_phi', 'W_m', 'Wpart0_pt', 'Wpart0_eta', 'Wpart0_phi', 'Wpart0_m', 'Wpart0_PID', 'Wpart1_pt', 'Wpart1_eta', 'Wpart1_phi', 'Wpart1_m', 'Wpart1_PID', 'jet_pt', 'jet_eta', 'jet_phi', 'jet_m', 'jet_e', 'jet_btag', 'ph_pt', 'ph_eta', 'ph_phi', 'ph_e', 'ph_iso', 'ele_pt', 'ele_eta', 'ele_phi', 'ele_iso', 'ele_charge', 'mu_pt', 'mu_eta', 'mu_phi', 'mu_iso', 'mu_charge', 'N_jet', 'N_jet_central', 'N_ph', 'N_ele', 'N_mu', 'N_lep', 'N_genlep', 'N_genjet', 'N_bjet', 'N_bjet_central', 'N_top', 'N_hadtop', 'N_gen_triplet', 'N_reco_triplet', 'N_jet_orig', 'N_ph_orig', 'N_ele_orig', 'N_mu_orig', 'GenMET_met', 'GenMET_eta', 'GenMET_phi', 'GenMET_sig', 'MET_met', 'MET_eta', 'MET_phi', 'MET_sig', 'm_yy', 'm_HT', 'm_genHT', 'm_tttt', 'm_tt', 'm_bartt', 'm_ttbar1', 'm_ttbar2', 'dR_tt', 'dphi_tt', 'deta_tt', 'dR_anti_tt', 'dphi_anti_tt', 'deta_anti_tt', 'weight', 'CrossSection', 'Number']
+[?2004hroot@nid004896:~# python3 - <<'PY'
+[?2004l[?2004h> import uproot, awkward as ak
+[?2004l[?2004h> f=uproot.open('/root/data/ttbar.root'); t=next(v for v in f.values() if hasattr(v,'num_entries'))
+[?2004l[?2004h> for b in ['Number','N_genjet','genjet_pt','genjet_eta','genjet_phi','truth_triplet_0','truth_triplet_1','truth_triplet_2','truth_triplet_3']:
+[?2004l[?2004h>  a=t[b].array(entry_stop=5)
+[?2004l[?2004h>  print('\n',b, a.type, ak.to_list(a))
+[?2004l[?2004h> PY
+[?2004l
+ Number 5 * int32 [0, 1, 2, 3, 4]
+
+ N_genjet 5 * int32 [3, 2, 5, 4, 3]
+
+ genjet_pt 5 * var * float32 [[100.5848617553711, 76.45713806152344, 56.09891128540039], [157.77325439453125, 40.33494567871094], [124.62025451660156, 83.67607879638672, 57.740726470947266, 56.22129821777344, 52.84011459350586], [151.74095153808594, 75.117431640625, 45.269493103027344, 35.16099548339844], [62.84840393066406, 49.869483947753906, 39.701072692871094]]
+
+ genjet_eta 5 * var * float32 [[-1.045287847518921, 0.2782008647918701, 1.7937228679656982], [0.9108834266662598, 1.7292102575302124], [-0.6390594840049744, -0.5948313474655151, -0.9513063430786133, -1.526974081993103, -0.35628437995910645], [-0.6083120107650757, 0.051783014088869095, -0.7587239146232605, 2.199349880218506], [-2.022469997406006, -1.7319068908691406, -1.5696501731872559]]
+
+ genjet_phi 5 * var * float32 [[-0.07352030277252197, 1.8016408681869507, 3.0682318210601807], [2.8079073429107666, -0.44583413004875183], [0.8390192985534668, -2.4117331504821777, 2.490593910217285, -1.4704395532608032, -1.818248987197876], [-0.06711932271718979, 2.5405895709991455, 1.3650333881378174, -2.1684772968292236], [1.363220453262329, -1.6436750888824463, 2.3817672729492188]]
+
+ truth_triplet_0 5 * var * int32 [[-1, -1, -1], [-1, -1, -1], [2, 4, 3], [-1, -1, -1], [-1, -1, -1]]
+
+ truth_triplet_1 5 * var * int32 [[-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1]]
+
+ truth_triplet_2 5 * var * int32 [[-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1]]
+
+ truth_triplet_3 5 * var * int32 [[-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1], [-1, -1, -1]]
+[?2004hroot@nid004896:~# python3 - <<'PY'
+[?2004l[?2004h> import uproot, awkward as ak, numpy as np, math
+[?2004l[?2004h> T=uproot.open('/root/data/ttbar.root')['output']
+[?2004l[?2004h> a=T.arrays(['N_genjet','truth_triplet_0','truth_triplet_1','truth_triplet_2','truth_triplet_3'],library='ak')
+[?2004l[?2004h> n=np.asarray(a.N_genjet)
+[?2004l[?2004h> print('njet quantiles',np.quantile(n,[0,.5,.9,.95,.99,1]),'mean',n.mean())
+[?2004l[?2004h> print('total combinations',sum(math.comb(int(x),3) for x in n if x>=3))
+[?2004l[?2004h> counts=[]; valid=0; duplicate=0
+[?2004l[?2004h> for e in range(len(n)):
+[?2004l[?2004h>  s=[]
+[?2004l[?2004h>  for q in range(4):
+[?2004l[?2004h>   x=ak.to_list(a[f'truth_triplet_{q}'][e])
+[?2004l[?2004h>   if len(x)==3 and min(x)>=0 and max(x)<n[e] and len(set(x))==3:
+[?2004l[?2004h>    z=tuple(sorted(x)); valid+=1
+[?2004l[?2004h>    if z in s: duplicate+=1
+[?2004l[?2004h>    else:s.append(z)
+[?2004l[?2004h>  counts.append(len(s))
+[?2004l[?2004h> print('valid entries',valid,'duplicate labels',duplicate,'unique truths',sum(counts))
+[?2004l[?2004h> print('truths/event histogram',dict(zip(*np.unique(counts,return_counts=True))))
+[?2004l[?2004h> PY
+[?2004lnjet quantiles [ 0.  4.  6.  7.  8. 13.] mean 4.3458
+total combinations 105784
+valid entries 4500 duplicate labels 0 unique truths 4500
+truths/event histogram {np.int64(0): np.int64(5960), np.int64(1): np.int64(3580), np.int64(2): np.int64(460)}
+[?2004hroot@nid004896:~# cat > /root/build_pipeline.py <<'PY'
+[?2004l[?2004h> import os, json, math, itertools, shutil, time
+[?2004l[?2004h> from pathlib import Path
+[?2004l[?2004h> import numpy as np, pandas as pd, awkward as ak, uproot, xgboost as xgb
+[?2004l[?2004h> import matplotlib.pyplot as plt
+[?2004l[?2004h> 
+[?2004l[?2004h> ROOT=Path('/root/results')
+[?2004l[?2004h> for d in ['dataset_build','dataset_prepare','train','infer','select_triplets/plots','sanity_checks']:
+[?2004l[?2004h>  (ROOT/d).mkdir(parents=True,exist_ok=True)
+[?2004l[?2004h> 
+[?2004l[?2004h> def dphi(a,b): return abs((a-b+np.pi)%(2*np.pi)-np.pi)
+[?2004l[?2004h> def vec(pt,eta,phi,m):
+[?2004l[?2004h>  px=pt*np.cos(phi); py=pt*np.sin(phi); pz=pt*np.sinh(eta)
+[?2004l[?2004h>  return px,py,pz,np.sqrt(max(0,m*m+pt*pt*np.cosh(eta)**2))
+[?2004l[?2004h> def kin(indices,pt,eta,phi,m):
+[?2004l[?2004h>  vs=[vec(float(pt[q]),float(eta[q]),float(phi[q]),float(m[q])) for q in indices]
+[?2004l[?2004h>  px=sum(v[0] for v in vs); py=sum(v[1] for v in vs); pz=sum(v[2] for v in vs); E=sum(v[3] for v in vs)
+[?2004l[?2004h>  pT=np.hypot(px,py); mass=np.sqrt(max(0,E*E-px*px-py*py-pz*pz))
+[?2004l[?2004h>  et=np.arcsinh(pz/pT) if pT>0 else 0.; ph=np.arctan2(py,px)
+[?2004l[?2004h>  return pT,et,ph,mass
+[?2004l[?2004h> 
+[?2004l[?2004h> def auc(y,s):
+[?2004l[?2004h>  y=np.asarray(y,dtype=int); s=np.asarray(s)
+[?2004l[?2004h>  order=np.argsort(s,kind='mergesort'); ranks=np.empty(len(s),float); ranks[order]=np.arange(1,len(s)+1)
+[?2004l[?2004h>  # average tied ranks
+[?2004l[?2004h>  for lo in range(len(order)):
+[?2004l[?2004h>   if lo and s[order[lo]]==s[order[lo-1]]: continue
+[?2004l[?2004h>   hi=lo+1
+[?2004l[?2004h>   while hi<len(order) and s[order[hi]]==s[order[lo]]: hi+=1
+[?2004l[?2004h>   ranks[order[lo:hi]]=(lo+1+hi)/2
+[?2004l[?2004h>  n1=y.sum(); n0=len(y)-n1
+[?2004l[?2004h>  return float((ranks[y==1].sum()-n1*(n1+1)/2)/(n1*n0))
+[?2004l[?2004h> 
+[?2004l[?2004h> print('Reading ROOT and constructing candidates',flush=True)
+[?2004l[?2004h> T=uproot.open('/root/data/ttbar.root')['output']
+[?2004l[?2004h> branches=['Number','N_genjet','genjet_pt','genjet_eta','genjet_phi','genjet_m','genjet_btag']+[f'truth_triplet_{q}' for q in range(4)]
+[?2004l[?2004h> a=T.arrays(branches,library='ak')
+[?2004l[?2004h> rows=[]
+[?2004l[?2004h> for e in range(len(a)):
+[?2004l[?2004h>  eid=int(a.Number[e]); n=int(a.N_genjet[e]); pt=np.asarray(a.genjet_pt[e]); eta=np.asarray(a.genjet_eta[e]); phi=np.asarray(a.genjet_phi[e]); mass=np.asarray(a.genjet_m[e]); bt=np.asarray(a.genjet_btag[e])
+[?2004l[?2004h>  truths=set()
+[?2004l[?2004h>  for q in range(4):
+[?2004l[?2004h>   z=tuple(int(x) for x in ak.to_list(a[f'truth_triplet_{q}'][e]))
+[?2004l[?2004h>   if len(z)==3 and min(z)>=0 and max(z)<n and len(set(z))==3: truths.add(tuple(sorted(z)))
+[?2004l[?2004h>  for ii,jj,kk in itertools.combinations(range(n),3):
+[?2004l[?2004h>   inds=(ii,jj,kk); ds=[]
+[?2004l[?2004h>   for u,v in [(ii,jj),(ii,kk),(jj,kk)]: ds.append(float(np.hypot(eta[u]-eta[v],dphi(phi[u],phi[v]))))
+[?2004l[?2004h>   tpt,teta,tphi,tm=kin(inds,pt,eta,phi,mass)
+[?2004l[?2004h>   pms=[]
+[?2004l[?2004h>   for u,v in [(ii,jj),(ii,kk),(jj,kk)]: pms.append(kin((u,v),pt,eta,phi,mass)[3])
+[?2004l[?2004h>   pts=sorted([float(pt[x]) for x in inds],reverse=True); bts=sorted([float(bt[x]) for x in inds],reverse=True)
+[?2004l[?2004h>   rows.append((eid,ii,jj,kk,int(inds in truths),ds[0],ds[1],ds[2],pms[0]/tm if tm else 0,pms[1]/tm if tm else 0,pms[2]/tm if tm else 0,
+[?2004l[?2004h>                tm,tpt,teta,tphi,n,pts[0],pts[1],pts[2],sum(pts),bts[0],bts[1],bts[2],sum(bts),min(ds),max(ds),sum(ds),pms[0],pms[1],pms[2]))
+[?2004l[?2004h> cols=['event_id','i','j','k','is_truth','dr_ab','dr_ac','dr_bc','mij_over_m123_ab','mij_over_m123_ac','mij_over_m123_bc','triplet_mass','triplet_pt','triplet_eta','triplet_phi','n_genjet','pt_max','pt_mid','pt_min','pt_sum','btag_max','btag_mid','btag_min','btag_sum','dr_min','dr_max','dr_sum','mij_ab','mij_ac','mij_bc']
+[?2004l[?2004h> df=pd.DataFrame(rows,columns=cols)
+[?2004l[?2004h> df.to_parquet(ROOT/'dataset_build/triplets_raw.parquet',index=False)
+[?2004l[?2004h> print('candidates',len(df),'truth',int(df.is_truth.sum()),flush=True)
+[?2004l[?2004h> 
+[?2004l[?2004h> # deterministic event split 70/15/15
+[?2004l[?2004h> ids=np.asarray(sorted(df.event_id.unique())); rng=np.random.default_rng(2025); rng.shuffle(ids)
+[?2004l[?2004h> trainids=set(ids[:7000]); valids=set(ids[7000:8500]); testids=set(ids[8500:])
+[?2004l[?2004h> parts={n:df[df.event_id.isin(s)].reset_index(drop=True) for n,s in [('train',trainids),('val',valids),('test',testids)]}
+[?2004l[?2004h> for n,x in parts.items(): x.to_parquet(ROOT/f'dataset_prepare/{n}.parquet',index=False)
+[?2004l[?2004h> features=['dr_ab','dr_ac','dr_bc','mij_over_m123_ab','mij_over_m123_ac','mij_over_m123_bc','triplet_mass','triplet_pt','n_genjet','pt_max','pt_mid','pt_min','pt_sum','btag_max','btag_mid','btag_min','btag_sum','dr_min','dr_max','dr_sum','mij_ab','mij_ac','mij_bc']
+[?2004l[?2004h> dtrain=xgb.DMatrix(parts['train'][features],label=parts['train'].is_truth,feature_names=features)
+[?2004l[?2004h> dval=xgb.DMatrix(parts['val'][features],label=parts['val'].is_truth,feature_names=features)
+[?2004l[?2004h> 
+[?2004l[?2004h> # Event selector: exact maximization over singleton/pair; score^alpha emphasizes confidence.
+[?2004l[?2004h> def select(frame,scorecol='score',mode='exact',alpha=1.0):
+[?2004l[?2004h>  out=[]
+[?2004l[?2004h>  for eid,g0 in frame.groupby('event_id',sort=False):
+[?2004l[?2004h>   g=g0.sort_values(scorecol,ascending=False).head(120)
+[?2004l[?2004h>   rec=list(g.to_dict('records'))
+[?2004l[?2004h>   if not rec: continue
+[?2004l[?2004h>   if mode=='greedy':
+[?2004l[?2004h>    chosen=[rec[0]]; used={rec[0]['i'],rec[0]['j'],rec[0]['k']}
+[?2004l[?2004h>    for r in rec[1:]:
+[?2004l[?2004h>     if used.isdisjoint({r['i'],r['j'],r['k']}): chosen.append(r); break
+[?2004l[?2004h>   else:
+[?2004l[?2004h>    util=np.power(np.clip(np.array([r[scorecol] for r in rec]),1e-9,1),alpha)
+[?2004l[?2004h>    best=float(util[0]); pair=None
+[?2004l[?2004h>    for p in range(len(rec)):
+[?2004l[?2004h>     sp={rec[p]['i'],rec[p]['j'],rec[p]['k']}
+[?2004l[?2004h>     for q in range(p+1,len(rec)):
+[?2004l[?2004h>      if sp.isdisjoint({rec[q]['i'],rec[q]['j'],rec[q]['k']}):
+[?2004l[?2004h>       z=float(util[p]+util[q])
+[?2004l[?2004h>       if z>best: best=z; pair=(p,q)
+[?2004l[?2004h>    chosen=[rec[0]] if pair is None else [rec[pair[0]],rec[pair[1]]]
+[?2004l[?2004h>    chosen=sorted(chosen,key=lambda r:r[scorecol],reverse=True)
+[?2004l[?2004h>   out.extend(chosen)
+[?2004l[?2004h>  return pd.DataFrame(out)
+[?2004l[?2004h> 
+[?2004l[?2004h> def efficiency(sel,allframe): return float(sel.is_truth.sum()/allframe.is_truth.sum())
+[?2004l[?2004h> 
+[?2004l[?2004h> configs=[
+[?2004l[?2004h>  ('baseline_depth4',dict(max_depth=4,eta=.08,min_child_weight=2,subsample=.85,colsample_bytree=.9,lambda_=1.0),350,1.0),
+[?2004l[?2004h>  ('deeper_depth6',dict(max_depth=6,eta=.06,min_child_weight=2,subsample=.9,colsample_bytree=.9,lambda_=1.5),500,1.0),
+[?2004l[?2004h>  ('balanced_depth5',dict(max_depth=5,eta=.06,min_child_weight=1,subsample=.9,colsample_bytree=1.0,lambda_=1.0),600,8.0),
+[?2004l[?2004h>  ('ranking_depth5',dict(max_depth=5,eta=.05,min_child_weight=2,subsample=.9,colsample_bytree=.95,lambda_=2.0),700,2.5)]
+[?2004l[?2004h> iterations=[]; best=None
+[?2004l[?2004h> for name,p,nround,spw in configs:
+[?2004l[?2004h>  params={'objective':'binary:logistic','eval_metric':'auc','tree_method':'hist','seed':17,'nthread':8,'scale_pos_weight':spw,'verbosity':0}
+[?2004l[?2004h>  params.update(p); params['lambda']=params.pop('lambda_')
+[?2004l[?2004h>  ev={}; model=xgb.train(params,dtrain,num_boost_round=nround,evals=[(dval,'val')],evals_result=ev,verbose_eval=False)
+[?2004l[?2004h>  pred=model.predict(dval); va=parts['val'].copy(); va['score']=pred
+[?2004l[?2004h>  va_auc=auc(va.is_truth,pred)
+[?2004l[?2004h>  candidates=[]
+[?2004l[?2004h>  for mode,alpha in [('greedy',1),('exact',.5),('exact',1),('exact',2),('exact',4),('exact',8)]:
+[?2004l[?2004h>   ss=select(va,mode=mode,alpha=alpha); candidates.append((efficiency(ss,va),mode,alpha,len(ss),int(ss.is_truth.sum())))
+[?2004l[?2004h>  cb=max(candidates,key=lambda z:z[0])
+[?2004l[?2004h>  item={'name':name,'parameters':params,'rounds':nround,'validation_auc':va_auc,'best_validation_efficiency':cb[0],'best_selection_mode':cb[1],'best_alpha':cb[2],'n_selected':cb[3],'n_truth_selected':cb[4],
+[?2004l[?2004h>        'selection_scan':[{'efficiency':z[0],'mode':z[1],'alpha':z[2],'n_selected':z[3]} for z in candidates]}
+[?2004l[?2004h>  iterations.append(item); print(name,va_auc,cb,flush=True)
+[?2004l[?2004h>  key=(cb[0],va_auc)
+[?2004l[?2004h>  if best is None or key>best[0]: best=(key,model,item)
+[?2004l[?2004h> 
+[?2004l[?2004h> _,model,bestitem=best
+[?2004l[?2004h> model.save_model(ROOT/'train/model_xgb.json')
+[?2004l[?2004h> train_report={'model_type':'XGBoost binary triplet classifier','feature_columns':features,'split':{'seed':2025,'train_events':7000,'val_events':1500,'test_events':1500},'class_counts':{n:{'rows':len(x),'truth':int(x.is_truth.sum())} for n,x in parts.items()},'validation_auc':bestitem['validation_auc'],'selected_configuration':bestitem,'all_iterations':iterations}
+[?2004l[?2004h> json.dump(train_report,open(ROOT/'train/training_report_xgb.json','w'),indent=2)
+[?2004l[?2004h> 
+[?2004l[?2004h> # test inference
+[?2004l[?2004h> te=parts['test'].copy(); te['score_xgb']=model.predict(xgb.DMatrix(te[features],feature_names=features))
+[?2004l[?2004h> te.to_parquet(ROOT/'infer/inference_test_xgb.parquet',index=False)
+[?2004l[?2004h> test_auc=auc(te.is_truth,te.score_xgb)
+[?2004l[?2004h> json.dump({'n_candidates':len(te),'n_truth':int(te.is_truth.sum()),'test_auc':test_auc,'score_summary':te.score_xgb.describe().to_dict()},open(ROOT/'infer/inference_report_xgb.json','w'),indent=2)
+[?2004l[?2004h> 
+[?2004l[?2004h> work=te.rename(columns={'score_xgb':'score'})
+[?2004l[?2004h> sel=select(work,mode=bestitem['best_selection_mode'],alpha=float(bestitem['best_alpha']))
+[?2004l[?2004h> sel=sel.sort_values(['event_id','score'],ascending=[True,False]).copy(); sel['selected_rank']=sel.groupby('event_id').cumcount()+1
+[?2004l[?2004h> selected_cols=['event_id','selected_rank','i','j','k','score','triplet_pt','triplet_eta','triplet_phi','triplet_mass','is_truth']
+[?2004l[?2004h> sel[selected_cols].to_parquet(ROOT/'select_triplets/selected_triplets.parquet',index=False)
+[?2004l[?2004h> # Event rows for every held-out event, NaN if no candidate
+[?2004l[?2004h> events=[]
+[?2004l[?2004h> for eid in sorted(testids):
+[?2004l[?2004h>  z=sel[sel.event_id==eid].sort_values('selected_rank')
+[?2004l[?2004h>  if len(z): r=z.iloc[0]; events.append((eid,len(z),r.triplet_pt,r.triplet_eta,r.triplet_phi,r.triplet_mass))
+[?2004l[?2004h>  else: events.append((eid,0,np.nan,np.nan,np.nan,np.nan))
+[?2004l[?2004h> ev=pd.DataFrame(events,columns=['event_id','n_top_selected','top1_pt','top1_eta','top1_phi','top1_mass']); ev.to_parquet(ROOT/'select_triplets/event_selection.parquet',index=False)
+[?2004l[?2004h> eff=efficiency(sel,te)
+[?2004l[?2004h> mult={str(int(k)):int(v) for k,v in ev.n_top_selected.value_counts().sort_index().items()}
+[?2004l[?2004h> selection_report={'triplet_reconstruction_efficiency':eff,'numerator_selected_truth_triplets':int(sel.is_truth.sum()),'denominator_truth_triplets_in_inference':int(te.is_truth.sum()),'selection':{'strategy':bestitem['best_selection_mode'],'score_utility':f'score^{bestitem["best_alpha"]}','score_threshold':0.0,'max_candidates_per_event':2,'require_jet_disjoint':True,'candidate_search_top_n':120},'selected_rows':len(sel),'event_multiplicity':mult,'test_auc':test_auc}
+[?2004l[?2004h> json.dump(selection_report,open(ROOT/'select_triplets/selection_report.json','w'),indent=2)
+[?2004l[?2004h> 
+[?2004l[?2004h> # Plots: broad physical distributions and comparisons
+[?2004l[?2004h> plt.figure(figsize=(7,5)); bins=np.linspace(0,500,61)
+[?2004l[?2004h> plt.hist(parts['val'].loc[parts['val'].is_truth==0,'triplet_mass'],bins=bins,density=True,histtype='step',label='validation fake',color='gray')
+[?2004l[?2004h> plt.hist(parts['val'].loc[parts['val'].is_truth==1,'triplet_mass'],bins=bins,density=True,histtype='step',linewidth=2,label='validation truth',color='green')
+[?2004l[?2004h> plt.hist(sel.triplet_mass,bins=bins,density=True,histtype='step',linewidth=2,label='selected test',color='blue')
+[?2004l[?2004h> plt.xlabel('Triplet invariant mass [GeV]'); plt.ylabel('Normalized candidates'); plt.legend(); plt.tight_layout(); plt.savefig(ROOT/'select_triplets/plots/mass_comparison.png',dpi=150); plt.close()
+[?2004l[?2004h> fig,ax=plt.subplots(1,3,figsize=(13,4)); ax[0].hist(sel.triplet_pt,bins=40); ax[0].set_xlabel('selected triplet pT [GeV]'); ax[1].hist(sel.triplet_eta,bins=40); ax[1].set_xlabel('selected triplet eta'); ax[2].hist(sel.score,bins=40); ax[2].set_xlabel('classifier score'); fig.tight_layout(); fig.savefig(ROOT/'select_triplets/plots/selected_kinematics.png',dpi=150); plt.close(fig)
+[?2004l[?2004h> # tabular histogram
+[?2004l[?2004h> hist,edges=np.histogram(sel.triplet_mass,bins=np.linspace(0,600,61)); pd.DataFrame({'low':edges[:-1],'high':edges[1:],'count':hist}).to_csv(ROOT/'select_triplets/plots/selected_mass_histogram.csv',index=False)
+[?2004l[?2004h> 
+[?2004l[?2004h> def stats(x):
+[?2004l[?2004h>  x=np.asarray(x,float); return {'count':len(x),'mean':float(np.mean(x)),'std':float(np.std(x)),'median':float(np.median(x)),'q10':float(np.quantile(x,.1)),'q90':float(np.quantile(x,.9)),'fraction_130_220_GeV':float(np.mean((x>=130)&(x<=220)))}
+[?2004l[?2004h> san={'selected_test':stats(sel.triplet_mass),'validation_truth':stats(parts['val'].loc[parts['val'].is_truth==1,'triplet_mass']),'validation_fake':stats(parts['val'].loc[parts['val'].is_truth==0,'triplet_mass']),'interpretation':'Selected candidates show a broad top-like enhancement rather than a delta-function spike. Their distribution is pulled toward the truth-matched top mass region relative to generic combinatorial candidates; finite jet resolution, radiation, and remaining backgrounds naturally retain broad tails.'}
+[?2004l[?2004h> json.dump(san,open(ROOT/'sanity_checks/mass_sanity_summary.json','w'),indent=2)
+[?2004l[?2004h> open(ROOT/'sanity_checks/interpretation.md','w').write('# Invariant-mass sanity check\n\n'+san['interpretation']+' See `mass_sanity_summary.json` and `../select_triplets/plots/mass_comparison.png` for quantitative and graphical comparisons.\n')
+[?2004l[?2004h> 
+[?2004l[?2004h> lines=['# Hadronic top-triplet optimization report','', '## Workflow','All unordered GenJet index combinations were built from all 10,000 events. Truth labels were matched as unordered sets. Physics features include pairwise angular distances, pair/triplet mass ratios, invariant masses, ordered jet pT and b-tag values, and event jet multiplicity. Events were split 70/15/15, XGBoost models were trained on train events, and both model and constrained event selection were tuned only on validation events. Final inference uses the held-out 1,500-event test split.','', '## Final result',f'**Final held-out `triplet_reconstruction_efficiency`: {eff:.6f}** ({int(sel.is_truth.sum())}/{int(te.is_truth.sum())} truth triplets recovered).',f'Test AUC: {test_auc:.6f}. Selection uses `{bestitem["best_selection_mode"]}` disjoint optimization with utility `score^{bestitem["best_alpha"]}`, no threshold, and at most two candidates per event.','', '## Optimization iterations','','| Configuration | Validation AUC | Validation efficiency | Best selector |','|---|---:|---:|---|']
+[?2004l[?2004h> for z in iterations: lines.append(f'| {z["name"]} | {z["validation_auc"]:.6f} | {z["best_validation_efficiency"]:.6f} | {z["best_selection_mode"]}, score^{z["best_alpha"]} |')
+[?2004l[?2004h> lines += ['', 'For each model, greedy selection and exact disjoint-pair optimization with score powers 0.5, 1, 2, 4, and 8 were compared. The primary decision criterion was validation triplet recall, with AUC as tie-breaker. The selected mass distribution was then checked against validation truth and fake candidates; it is broad and physically plausible rather than artificially narrow.']
+[?2004l[?2004h> open(ROOT/'optimization_report.md','w').write('\n'.join(lines)+'\n')
+[?2004l[?2004h> json.dump({'final_test_efficiency':eff,'test_auc':test_auc,'chosen':bestitem,'iterations':iterations},open(ROOT/'optimization_summary.json','w'),indent=2)
+[?2004l[?2004h> print('FINAL efficiency',eff,'test AUC',test_auc,'selected',len(sel),flush=True)
+[?2004l[?2004h> PY
+[?2004l[?2004hroot@nid004896:~# python3 /root/build_pipeline.py
+[?2004lReading ROOT and constructing candidates
+candidates 105784 truth 4500
+baseline_depth4 0.9433481825357749 (0.7208994708994709, 'exact', 1, 1896, 545)
+deeper_depth6 0.9406221034286026 (0.7142857142857143, 'exact', 0.5, 1896, 540)
+balanced_depth5 0.9424078372527412 (0.7156084656084656, 'exact', 1, 1896, 541)
+ranking_depth5 0.9425092025978289 (0.7182539682539683, 'exact', 1, 1896, 543)
+FINAL efficiency 0.7619047619047619 test AUC 0.9469074986316366 selected 212
+[?2004hroot@nid004896:~# python3 - <<'PY'
+[?2004l[?2004h> p='/root/build_pipeline.py'
+[?2004l[?2004h> s=open(p).read()
+[?2004l[?2004h> s=s.replace("ids=np.asarray(sorted(df.event_id.unique())); rng=np.random.default_rng(2025); rng.shuffle(ids)","ids=np.asarray(a.Number, dtype=np.int64); assert len(ids)==10000 and len(np.unique(ids))==10000; rng=np.random.default_rng(2025); rng.shuffle(ids)")
+[?2004l[?2004h> open(p,'w').write(s)
+[?2004l[?2004h> PY
+[?2004l[?2004hroot@nid004896:~# rm -rf /root/results
+[?2004l[?2004hroot@nid004896:~# python3 /root/build_pipeline.py
+[?2004lReading ROOT and constructing candidates
+candidates 105784 truth 4500
+baseline_depth4 0.9457455039022735 (0.7357142857142858, 'exact', 1, 1652, 515)
+deeper_depth6 0.9449834698725096 (0.7314285714285714, 'exact', 0.5, 1652, 512)
+balanced_depth5 0.9449125987687237 (0.7142857142857143, 'exact', 0.5, 1652, 500)
+ranking_depth5 0.9449967521450385 (0.73, 'exact', 1, 1652, 511)
+FINAL efficiency 0.6948905109489051 test AUC 0.9498936586527827 selected 1649
+[?2004hroot@nid004896:~# python3 - <<'PY'
+[?2004l[?2004h> from pathlib import Path
+[?2004l[?2004h> import pandas as pd, json, itertools
+[?2004l[?2004h> R=Path('/root/results')
+[?2004l[?2004h> req=['dataset_build/triplets_raw.parquet','dataset_prepare/train.parquet','dataset_prepare/val.parquet','dataset_prepare/test.parquet','train/model_xgb.json','train/training_report_xgb.json','infer/inference_test_xgb.parquet','infer/inference_report_xgb.json','select_triplets/selected_triplets.parquet','select_triplets/event_selection.parquet','select_triplets/selection_report.json','optimization_report.md','sanity_checks/mass_sanity_summary.json','sanity_checks/interpretation.md']
+[?2004l[?2004h> for f in req:
+[?2004l[?2004h>  p=R/f; assert p.exists() and p.stat().st_size>0,f
+[?2004l[?2004h>  print(f,p.stat().st_size)
+[?2004l[?2004h> raw=pd.read_parquet(R/'dataset_build/triplets_raw.parquet'); inf=pd.read_parquet(R/'infer/inference_test_xgb.parquet'); sel=pd.read_parquet(R/'select_triplets/selected_triplets.parquet'); ev=pd.read_parquet(R/'select_triplets/event_selection.parquet')
+[?2004l[?2004h> assert {'event_id','i','j','k','is_truth','dr_ab','dr_ac','dr_bc','mij_over_m123_ab','mij_over_m123_ac','mij_over_m123_bc'}<=set(raw)
+[?2004l[?2004h> assert ((raw.i<raw.j)&(raw.j<raw.k)).all()
+[?2004l[?2004h> assert {'event_id','i','j','k','is_truth','score_xgb'}<=set(inf)
+[?2004l[?2004h> assert {'event_id','selected_rank','i','j','k','score','triplet_pt','triplet_eta','triplet_phi','triplet_mass'}<=set(sel)
+[?2004l[?2004h> assert {'event_id','n_top_selected','top1_pt','top1_eta','top1_phi','top1_mass'}<=set(ev)
+[?2004l[?2004h> assert len(ev)==1500 and ev.event_id.nunique()==1500
+[?2004l[?2004h> assert ev.n_top_selected.max()<=2 and sel.groupby('event_id').size().max()<=2
+[?2004l[?2004h> for eid,g in sel.groupby('event_id'):
+[?2004l[?2004h>  if len(g)==2:
+[?2004l[?2004h>   a=set(g.iloc[0][['i','j','k']].astype(int)); b=set(g.iloc[1][['i','j','k']].astype(int)); assert a.isdisjoint(b),eid
+[?2004l[?2004h> rep=json.load(open(R/'select_triplets/selection_report.json'))
+[?2004l[?2004h> calc=sel.is_truth.sum()/inf.is_truth.sum()
+[?2004l[?2004h> assert abs(calc-rep['triplet_reconstruction_efficiency'])<1e-12
+[?2004l[?2004h> tr=json.load(open(R/'train/training_report_xgb.json')); assert 'validation_auc' in tr
+[?2004l[?2004h> print('\nCHECKS PASS')
+[?2004l[?2004h> print('raw rows/truth',len(raw),raw.is_truth.sum())
+[?2004l[?2004h> print('split rows',*[len(pd.read_parquet(R/f'dataset_prepare/{x}.parquet')) for x in ['train','val','test']])
+[?2004l[?2004h> print('test truth/recovered/eff',int(inf.is_truth.sum()),int(sel.is_truth.sum()),calc)
+[?2004l[?2004h> print('selected event multiplicity',ev.n_top_selected.value_counts().sort_index().to_dict())
+[?2004l[?2004h> print('mass sanity',json.load(open(R/'sanity_checks/mass_sanity_summary.json')))
+[?2004l[?2004h> print('plots',sorted(p.name for p in (R/'select_triplets/plots').iterdir()))
+[?2004l[?2004h> PY
+[?2004ldataset_build/triplets_raw.parquet 14509787
+dataset_prepare/train.parquet 10175527
+dataset_prepare/val.parquet 2066733
+dataset_prepare/test.parquet 2135132
+train/model_xgb.json 639146
+train/training_report_xgb.json 8490
+infer/inference_test_xgb.parquet 2228439
+infer/inference_report_xgb.json 359
+select_triplets/selected_triplets.parquet 91144
+select_triplets/event_selection.parquet 62079
+select_triplets/selection_report.json 496
+optimization_report.md 1545
+sanity_checks/mass_sanity_summary.json 1073
+sanity_checks/interpretation.md 453
+
+CHECKS PASS
+raw rows/truth 105784 4500
+split rows 74220 15435 16129
+test truth/recovered/eff 685 476 0.6948905109489051
+selected event multiplicity {0: 207, 1: 937, 2: 356}
+mass sanity {'selected_test': {'count': 1649, 'mean': 211.1989906876429, 'std': 116.6019688288725, 'median': 172.33588636908473, 'q10': 142.14737347533784, 'q90': 312.63087302136586, 'fraction_130_220_GeV': 0.6913280776228017}, 'validation_truth': {'count': 700, 'mean': 171.32580199647663, 'std': 32.78732572913859, 'median': 166.44400846518766, 'q10': 144.255170281237, 'q90': 201.18964138776042, 'fraction_130_220_GeV': 0.8985714285714286}, 'validation_fake': {'count': 14735, 'mean': 269.70033402391886, 'std': 157.2978688644977, 'median': 228.4322080232565, 'q10': 134.26631370333484, 'q90': 447.17971348598604, 'fraction_130_220_GeV': 0.38588394977943674}, 'interpretation': 'Selected candidates show a broad top-like enhancement rather than a delta-function spike. Their distribution is pulled toward the truth-matched top mass region relative to generic combinatorial candidates; finite jet resolution, radiation, and remaining backgrounds naturally retain broad tails.'}
+plots ['mass_comparison.png', 'selected_kinematics.png', 'selected_mass_histogram.csv']
+[?2004hroot@nid004896:~# printf '\n--- optimization report ---\n'; cat /root/results/optimization_report.md
+[?2004l
+--- optimization report ---
+# Hadronic top-triplet optimization report
+
+## Workflow
+All unordered GenJet index combinations were built from all 10,000 events. Truth labels were matched as unordered sets. Physics features include pairwise angular distances, pair/triplet mass ratios, invariant masses, ordered jet pT and b-tag values, and event jet multiplicity. Events were split 70/15/15, XGBoost models were trained on train events, and both model and constrained event selection were tuned only on validation events. Final inference uses the held-out 1,500-event test split.
+
+## Final result
+**Final held-out `triplet_reconstruction_efficiency`: 0.694891** (476/685 truth triplets recovered).
+Test AUC: 0.949894. Selection uses `exact` disjoint optimization with utility `score^1`, no threshold, and at most two candidates per event.
+
+## Optimization iterations
+
+| Configuration | Validation AUC | Validation efficiency | Best selector |
+|---|---:|---:|---|
+| baseline_depth4 | 0.945746 | 0.735714 | exact, score^1 |
+| deeper_depth6 | 0.944983 | 0.731429 | exact, score^0.5 |
+| balanced_depth5 | 0.944913 | 0.714286 | exact, score^0.5 |
+| ranking_depth5 | 0.944997 | 0.730000 | exact, score^1 |
+
+For each model, greedy selection and exact disjoint-pair optimization with score powers 0.5, 1, 2, 4, and 8 were compared. The primary decision criterion was validation triplet recall, with AUC as tie-breaker. The selected mass distribution was then checked against validation truth and fake candidates; it is broad and physically plausible rather than artificially narrow.
+[?2004hroot@nid004896:~# 

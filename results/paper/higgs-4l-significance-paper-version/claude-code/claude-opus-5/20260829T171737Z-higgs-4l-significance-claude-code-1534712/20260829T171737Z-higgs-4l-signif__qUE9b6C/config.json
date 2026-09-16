@@ -1,0 +1,13 @@
+{
+    "task": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260829T171737Z-higgs-4l-significance-claude-code-1534712"
+    },
+    "trial_name": "20260829T171737Z-higgs-4l-signif__qUE9b6C",
+    "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260829T171737Z-higgs-4l-significance-claude-code-1534712",
+    "agent_setup_timeout_multiplier": 2.0,
+    "agent": {
+        "name": "harbor_agents.preinstalled:PreinstalledClaudeCode",
+        "model_name": "claude-opus-5"
+    },
+    "job_id": "0271dfac-a488-4751-902d-cc2b2f1bf085"
+}

@@ -1,0 +1,23 @@
+{
+  "category_order": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "ttH_had_BDT3",
+    "ttH_had_BDT4",
+    "tH_had_4j1b",
+    "tH_had_4j2b"
+  ],
+  "thresholds": [
+    0.8,
+    0.53,
+    0.35
+  ],
+  "hadronic_only": true,
+  "blinded_TI_data_signal_window": true,
+  "retained_categories": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "ttH_had_BDT3",
+    "tH_had_4j1b"
+  ]
+}

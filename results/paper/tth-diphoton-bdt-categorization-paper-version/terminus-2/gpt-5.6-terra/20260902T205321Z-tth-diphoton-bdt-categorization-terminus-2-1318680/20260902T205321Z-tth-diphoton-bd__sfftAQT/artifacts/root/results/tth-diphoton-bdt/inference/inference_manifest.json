@@ -1,0 +1,24 @@
+{
+  "selected_rows": 356084,
+  "hadronic_rows": 286845,
+  "scored_rows": 286845,
+  "unscored_rows": 0,
+  "score_range": [
+    0.09961802732249474,
+    0.8848141733051544
+  ],
+  "feature_list": [
+    "n_jets",
+    "n_bjets",
+    "leading_jet_pt",
+    "subleading_jet_pt",
+    "ht_jets"
+  ],
+  "model_path": "sklearn GradientBoostingClassifier in run metadata",
+  "preselection_flag_columns": [
+    "photon_preselection_passed",
+    "passes_hadronic_preselection",
+    "passes_leptonic_bookkeeping"
+  ],
+  "blinding": "TI observed data in 125 +/- 2 GeV are not used for training, optimization, yields, or reported observed metrics"
+}

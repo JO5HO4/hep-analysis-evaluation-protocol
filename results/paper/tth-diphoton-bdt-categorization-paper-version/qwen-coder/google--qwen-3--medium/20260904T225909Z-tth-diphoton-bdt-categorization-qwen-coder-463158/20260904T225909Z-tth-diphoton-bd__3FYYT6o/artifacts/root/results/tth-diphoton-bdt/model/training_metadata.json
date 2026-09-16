@@ -1,0 +1,14 @@
+{
+  "wall_time_seconds": 0.05684518814086914,
+  "model_type": "GradientBoostingClassifier",
+  "n_estimators": 100,
+  "learning_rate": 0.1,
+  "max_depth": 3,
+  "random_seed": 42,
+  "signal_weight_before_balancing": 1214.0,
+  "bkg_weight_before_balancing": 1188.0,
+  "signal_weight_after_balancing": 1214.0,
+  "bkg_weight_after_balancing": 1188.0,
+  "n_train_events": 2402,
+  "n_val_events": 801
+}

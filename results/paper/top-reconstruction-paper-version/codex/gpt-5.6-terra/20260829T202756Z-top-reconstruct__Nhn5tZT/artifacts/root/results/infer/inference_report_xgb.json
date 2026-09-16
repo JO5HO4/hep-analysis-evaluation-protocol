@@ -1,0 +1,7 @@
+{
+  "n_candidates": 8571,
+  "n_truth": 338,
+  "score_mean": 0.16792045533657074,
+  "test_auc_for_diagnostic": 0.9543513368411293,
+  "model": "iteration_3_deeper"
+}

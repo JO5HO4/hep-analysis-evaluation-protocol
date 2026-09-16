@@ -1,0 +1,19 @@
+{
+  "inference_split": "test",
+  "selection_method": "optimal",
+  "score_threshold": 0.03,
+  "max_candidates_per_event": 2,
+  "n_events_in_sample": 1301,
+  "n_truth_triplets_total": 689,
+  "n_truth_triplets_selected": 527,
+  "triplet_reconstruction_efficiency": 0.7648766328011611,
+  "n_selected_triplets_total": 1410,
+  "selection_purity": 0.37375886524822693,
+  "event_selection_multiplicity_counts": {
+    "0": 118,
+    "1": 956,
+    "2": 227
+  },
+  "mean_selected_per_event": 1.083781706379708,
+  "notes": "Selection maximizes the summed classifier score over jet-disjoint candidate sets of size <=2 per event (exact enumeration per event, not sequential greedy), after removing candidates below score_threshold. Threshold and method were chosen via a scan on the validation split: threshold=0.03 with the exact/optimal disjoint-pair objective achieved the maximum attainable validation efficiency (0.756) while cutting roughly 18% of low-confidence noise selections relative to threshold=0, improving purity from 0.32 to 0.39 with no efficiency loss. A purely sequential greedy selection (pick top score, then best remaining disjoint) was also tested and found to underperform the exact pairwise-optimal selection by ~1.5 points of efficiency at every threshold."
+}

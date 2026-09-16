@@ -1,0 +1,48 @@
+{
+  "artifact_contract": {
+    "errors": [
+      "'category_kept_for_analysis'"
+    ],
+    "score": 0.0
+  },
+  "bdt_training": {
+    "errors": [
+      "'str' object has no attribute 'get'"
+    ],
+    "score": 0.0
+  },
+  "input_scope": {
+    "errors": [
+      "'role'"
+    ],
+    "score": 0.0
+  },
+  "preselection_physics": {
+    "errors": [
+      "'passes_leptonic_preselection'"
+    ],
+    "score": 0.0
+  },
+  "provenance": {
+    "errors": [
+      "'Column not found: partition'"
+    ],
+    "score": 0.0
+  },
+  "reward": 0.0,
+  "selection_api": {
+    "errors": [
+      "BDT_FEATURES mismatch: ['n_central_jets', 'n_bjets', 'jet1_pt', 'jet_ht', 'diphoton_pt']"
+    ],
+    "score": 0.0
+  },
+  "total_score": 0.0,
+  "weighted_scores": {
+    "artifact_contract": 0.0,
+    "bdt_training": 0.0,
+    "input_scope": 0.0,
+    "preselection_physics": 0.0,
+    "provenance": 0.0,
+    "selection_api": 0.0
+  }
+}

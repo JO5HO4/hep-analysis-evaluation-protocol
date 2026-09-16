@@ -1,0 +1,78 @@
+{
+  "luminosity_fb": 36.0,
+  "weight_used_for_yields": "significance_model_weight_36fb",
+  "weight_definition": "TI MC events in 125 +/- 2 GeV normalised to 36 fb^-1 (xsec * k-factor * filter-eff / signed sum-of-weights * generator weight * scale factors * 36000 pb^-1) PLUS observed-data NTI sideband events weighted by SF1*SF2",
+  "classifier_fit_weight_used_for_yields": false,
+  "classifier_fit_weight_note": "bdt_fit_weight is class-balanced and is used ONLY to fit the classifier; it never enters yields or significances",
+  "observed_data_weight_column": "observed_data_weight",
+  "nti_continuum_weight_column": "nti_continuum_weight",
+  "category_order": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "ttH_had_BDT3",
+    "ttH_had_BDT4",
+    "tH_had_4j1b",
+    "tH_had_4j2b",
+    "unassigned"
+  ],
+  "hadronic_bdt_categories": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "ttH_had_BDT3",
+    "ttH_had_BDT4"
+  ],
+  "cut_based_hadronic_categories": {
+    "categories": [
+      "tH_had_4j1b",
+      "tH_had_4j2b"
+    ],
+    "priority": "evaluated only after the event fails every hadronic BDT category",
+    "requirements": {
+      "tH_had_4j1b": "N_leptons == 0 AND exactly 4 CENTRAL jets AND exactly 1 b-tag",
+      "tH_had_4j2b": "N_leptons == 0 AND exactly 4 CENTRAL jets AND >= 2 b-tags"
+    },
+    "jet_counter": "n_jets_central (central-jet count, NOT total jet multiplicity)"
+  },
+  "leptonic_categories": {
+    "in_scope": false,
+    "reason": "no reconstructed forward jets in the current open-data inputs",
+    "leptonic_rows": "retained as bookkeeping only; excluded from categorization, significance and the workspace"
+  },
+  "kept_categories": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "ttH_had_BDT3",
+    "tH_had_4j1b"
+  ],
+  "dropped_categories": [
+    "ttH_had_BDT4",
+    "tH_had_4j2b"
+  ],
+  "combined_expected_counting_significance": 1.7535990613959818,
+  "blinding": {
+    "observed_ti_signal_window_blinded": true,
+    "blinded_range_gev": [
+      120.0,
+      130.0
+    ],
+    "signal_window_gev": [
+      123.0,
+      127.0
+    ],
+    "statement": "Observed TI data in the 125 +/- 2 GeV signal window is never inspected, counted, plotted or reported.",
+    "nti_control_shapes_blinded": false,
+    "nti_policy": "NTI control-shape distributions retain 120-130 GeV entries; the removal policy applies only to observed TI data.",
+    "observed_significance": "blocked"
+  },
+  "expected_yield_model": "signal window model: TI MC events in 125 +/- 2 GeV plus observed data NTI sideband events scaled by SF1*SF2",
+  "bdt_boundaries": [
+    0.88,
+    0.73,
+    0.36
+  ],
+  "nti_scale_factors": {
+    "SF1": 0.032464650307526474,
+    "SF2": 0.0974573584427113,
+    "SF1xSF2": 0.0031639190617378855
+  }
+}

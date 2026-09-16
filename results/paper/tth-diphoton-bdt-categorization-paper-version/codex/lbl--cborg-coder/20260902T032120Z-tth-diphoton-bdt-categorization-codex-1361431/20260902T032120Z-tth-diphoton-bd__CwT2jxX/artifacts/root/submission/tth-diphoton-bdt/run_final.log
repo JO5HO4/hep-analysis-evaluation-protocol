@@ -1,0 +1,35 @@
+/root/submission/tth-diphoton-bdt/run_pipeline.py:61: UserWarning: Boolean Series key will be reindexed to match DataFrame index.
+  ti_sb_yield = ti_df[sb_mask].shape[0]
+/usr/local/lib/python3.13/dist-packages/xgboost/training.py:200: UserWarning: [03:44:46] WARNING: /__w/xgboost/xgboost/src/learner.cc:794: 
+Parameters: { "use_label_encoder" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+Loading data...
+Data loaded.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/pandas/core/indexes/base.py", line 3641, in get_loc
+    return self._engine.get_loc(casted_key)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 168, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 197, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7668, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7676, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'significance_weight'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/submission/tth-diphoton-bdt/run_pipeline.py", line 187, in <module>
+    main()
+    ~~~~^^
+  File "/root/submission/tth-diphoton-bdt/run_pipeline.py", line 130, in main
+    thresholds, improvements = optimize_thresholds(had_df, BDT_FEATURES, model)
+                               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/submission/tth-diphoton-bdt/utils/bdt_utils.py", line 40, in optimize_thresholds
+    weights = df["significance_weight"]
+              ~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/pandas/core/frame.py", line 4378, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/usr/local/lib/python3.13/dist-packages/pandas/core/indexes/base.py", line 3648, in get_loc
+    raise KeyError(key) from err
+KeyError: 'significance_weight'

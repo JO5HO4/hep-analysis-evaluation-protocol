@@ -1,0 +1,10 @@
+input: /data/GamGam
+output: /root/results/tth-diphoton-bdt
+luminosity_fb: 36
+bdt_features:
+- n_jets
+- n_bjets
+- jet_ht
+- lead_jet_pt
+- central_jet_fraction
+max_selected_per_sample: null

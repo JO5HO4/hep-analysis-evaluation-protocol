@@ -1,0 +1,21 @@
+{
+    "task": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260831T232319Z-top-reconstruction-full-chain-no-pipeline-terminus-2-822169"
+    },
+    "trial_name": "20260831T232319Z-top-reconstruct__GewouzN",
+    "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260831T232319Z-top-reconstruction-full-chain-no-pipeline-terminus-2-822169",
+    "agent": {
+        "name": "harbor_agents.preinstalled:PreinstalledTerminus2",
+        "model_name": "gpt-5.6-sol",
+        "kwargs": {
+            "model_info": {
+                "max_input_tokens": 1050000,
+                "max_output_tokens": 128000,
+                "input_cost_per_token": 0,
+                "output_cost_per_token": 0
+            },
+            "api_base": "https://api.cborg.lbl.gov/v1"
+        }
+    },
+    "job_id": "4f411134-6272-4d62-8848-d20d70595efb"
+}

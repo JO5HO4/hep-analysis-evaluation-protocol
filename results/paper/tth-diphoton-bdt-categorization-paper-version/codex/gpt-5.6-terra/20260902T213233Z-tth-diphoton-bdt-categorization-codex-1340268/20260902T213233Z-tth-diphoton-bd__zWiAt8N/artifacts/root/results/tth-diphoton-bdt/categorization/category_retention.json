@@ -1,0 +1,32 @@
+{
+  "ttH_had_BDT1": {
+    "total_expected_background_36fb": 2.874745807336113,
+    "kept": true,
+    "reason": "background >= 0.8"
+  },
+  "ttH_had_BDT2": {
+    "total_expected_background_36fb": 14.172008853625194,
+    "kept": true,
+    "reason": "background >= 0.8"
+  },
+  "ttH_had_BDT3": {
+    "total_expected_background_36fb": 18.812080636543246,
+    "kept": true,
+    "reason": "background >= 0.8"
+  },
+  "ttH_had_BDT4": {
+    "total_expected_background_36fb": 0.0,
+    "kept": false,
+    "reason": "merged into unassigned: background < 0.8"
+  },
+  "tH_had_4j1b": {
+    "total_expected_background_36fb": 3.6891560542454656,
+    "kept": true,
+    "reason": "background >= 0.8"
+  },
+  "tH_had_4j2b": {
+    "total_expected_background_36fb": 0.15685763989059537,
+    "kept": false,
+    "reason": "merged into unassigned: background < 0.8"
+  }
+}

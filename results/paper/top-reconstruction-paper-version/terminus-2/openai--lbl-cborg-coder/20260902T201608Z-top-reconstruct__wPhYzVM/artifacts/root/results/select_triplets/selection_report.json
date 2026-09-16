@@ -1,0 +1,6 @@
+{
+    "triplet_reconstruction_efficiency": 0.4541577825159915,
+    "total_truth_triplets": 938,
+    "recovered_truth_triplets": 426,
+    "selection_strategy": "greedy_disjoint_top2"
+}

@@ -1,0 +1,38 @@
+{
+  "workspace_name": "tth_hadronic_workspace",
+  "workspace_file": "fit/FIT1/workspace.root",
+  "categories": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "tH_had_4j1b",
+    "tH_had_4j2b"
+  ],
+  "fit_name": "FIT1",
+  "observable": "m_gammagamma [105,160] GeV, 55 bins",
+  "per_category_parameters": {
+    "ttH_had_BDT1": [
+      "mu_ttH_had_BDT1",
+      "n_bkg_ttH_had_BDT1",
+      "n_res_ttH_had_BDT1 (fixed)",
+      "n_sig0_ttH_had_BDT1 (fixed)"
+    ],
+    "ttH_had_BDT2": [
+      "mu_ttH_had_BDT2",
+      "n_bkg_ttH_had_BDT2",
+      "n_res_ttH_had_BDT2 (fixed)",
+      "n_sig0_ttH_had_BDT2 (fixed)"
+    ],
+    "tH_had_4j1b": [
+      "mu_tH_had_4j1b",
+      "n_bkg_tH_had_4j1b",
+      "n_res_tH_had_4j1b (fixed)",
+      "n_sig0_tH_had_4j1b (fixed)"
+    ],
+    "tH_had_4j2b": [
+      "mu_tH_had_4j2b",
+      "n_bkg_tH_had_4j2b",
+      "n_res_tH_had_4j2b (fixed)",
+      "n_sig0_tH_had_4j2b (fixed)"
+    ]
+  }
+}

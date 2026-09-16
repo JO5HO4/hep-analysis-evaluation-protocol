@@ -1,0 +1,114 @@
+{
+  "channel_rows": "hadronic only",
+  "hadronic_selection": "zero selected e/mu, at least three selected jets, at least one b-tagged selected jet",
+  "leptonic_bookkeeping_selection": "not retained in this run (if retained: >=1 selected e/mu and >=1 selected b-jet; bookkeeping only)",
+  "mass_bookkeeping_range_GeV": [
+    105.0,
+    160.0
+  ],
+  "overall_input_entries": 356084,
+  "overall_observed_unit_weight": 33655.0,
+  "overall_rows_written": 101471,
+  "overall_signed_mc_yield_36fb": 29.578367229774777,
+  "overall_two_kinematic_photon_rows_in_mass_range": 152600,
+  "photon_selection": "at least two photons with pT > 25 GeV, |eta| < 2.37, excluding 1.37 < |eta| < 1.52; no tight-ID or isolation requirement",
+  "raw_and_weighted_counts_by_process": {
+    "VBF": {
+      "absolute_weight_sum_36fb": 0.19822363012328548,
+      "cap_applied": false,
+      "hadronic_preselection_unblinded_analysis_rows_before_optional_cap": 52,
+      "input_entries": 59,
+      "negative_weight_rows": 2,
+      "observed_unit_weight_sum": 0.0,
+      "process": "VBF",
+      "rows_written": 52,
+      "signed_weight_sum_36fb": 0.18203187534661963,
+      "two_kinematic_photons": 58
+    },
+    "WH": {
+      "absolute_weight_sum_36fb": 0.2225533807557848,
+      "cap_applied": false,
+      "hadronic_preselection_unblinded_analysis_rows_before_optional_cap": 691,
+      "input_entries": 912,
+      "negative_weight_rows": 11,
+      "observed_unit_weight_sum": 0.0,
+      "process": "WH",
+      "rows_written": 691,
+      "signed_weight_sum_36fb": 0.21377436218702844,
+      "two_kinematic_photons": 891
+    },
+    "ZH": {
+      "absolute_weight_sum_36fb": 1.4418461296412193,
+      "cap_applied": false,
+      "hadronic_preselection_unblinded_analysis_rows_before_optional_cap": 804,
+      "input_entries": 1012,
+      "negative_weight_rows": 13,
+      "observed_unit_weight_sum": 0.0,
+      "process": "ZH",
+      "rows_written": 804,
+      "signed_weight_sum_36fb": 1.3365070064384716,
+      "two_kinematic_photons": 983
+    },
+    "data": {
+      "absolute_weight_sum_36fb": 0.0,
+      "cap_applied": false,
+      "hadronic_preselection_unblinded_analysis_rows_before_optional_cap": 33655,
+      "input_entries": 235202,
+      "negative_weight_rows": 0,
+      "observed_unit_weight_sum": 33655.0,
+      "process": "data",
+      "rows_written": 33655,
+      "signed_weight_sum_36fb": 0.0,
+      "two_kinematic_photons": 36375
+    },
+    "ggH": {
+      "absolute_weight_sum_36fb": 8.21013716444888,
+      "cap_applied": false,
+      "hadronic_preselection_unblinded_analysis_rows_before_optional_cap": 2397,
+      "input_entries": 2551,
+      "negative_weight_rows": 31,
+      "observed_unit_weight_sum": 0.0,
+      "process": "ggH",
+      "rows_written": 2397,
+      "signed_weight_sum_36fb": 7.9416759465832225,
+      "two_kinematic_photons": 2511
+    },
+    "ggZH": {
+      "absolute_weight_sum_36fb": 0.2018536624713189,
+      "cap_applied": false,
+      "hadronic_preselection_unblinded_analysis_rows_before_optional_cap": 839,
+      "input_entries": 962,
+      "negative_weight_rows": 10,
+      "observed_unit_weight_sum": 0.0,
+      "process": "ggZH",
+      "rows_written": 839,
+      "signed_weight_sum_36fb": 0.19724294834507117,
+      "two_kinematic_photons": 937
+    },
+    "tH": {
+      "absolute_weight_sum_36fb": 0.46119902304549765,
+      "cap_applied": false,
+      "hadronic_preselection_unblinded_analysis_rows_before_optional_cap": 7332,
+      "input_entries": 12594,
+      "negative_weight_rows": 2512,
+      "observed_unit_weight_sum": 0.0,
+      "process": "tH",
+      "rows_written": 7332,
+      "signed_weight_sum_36fb": 0.14993115553757208,
+      "two_kinematic_photons": 12121
+    },
+    "ttH": {
+      "absolute_weight_sum_36fb": 27.3257766941895,
+      "cap_applied": false,
+      "hadronic_preselection_unblinded_analysis_rows_before_optional_cap": 55701,
+      "input_entries": 102792,
+      "negative_weight_rows": 4959,
+      "observed_unit_weight_sum": 0.0,
+      "process": "ttH",
+      "rows_written": 55701,
+      "signed_weight_sum_36fb": 19.55720393533679,
+      "two_kinematic_photons": 98724
+    }
+  },
+  "signed_weight_bookkeeping": true
+}

@@ -1,0 +1,7 @@
+{
+  "analysis_name": "Higgs-to-diphoton",
+  "category_count": 1,
+  "inclusive": true,
+  "mass_window": [105, 160],
+  "blinding_window": [120, 130]
+}

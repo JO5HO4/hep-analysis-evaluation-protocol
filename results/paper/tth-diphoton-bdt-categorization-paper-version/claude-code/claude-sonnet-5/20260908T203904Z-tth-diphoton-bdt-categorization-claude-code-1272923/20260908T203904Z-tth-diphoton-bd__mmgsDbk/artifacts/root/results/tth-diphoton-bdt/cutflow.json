@@ -1,0 +1,85 @@
+{
+  "per_process": {
+    "VBF": {
+      "n_input_rows": 59,
+      "n_photon_kinematic_diphoton": 59,
+      "n_lepton_pt10_ge1": 6,
+      "n_jet_pt25_ge3": 54,
+      "n_bjet_ge1": 59,
+      "n_hadronic_channel": 53,
+      "n_leptonic_channel_bookkeeping": 6
+    },
+    "WH": {
+      "n_input_rows": 912,
+      "n_photon_kinematic_diphoton": 909,
+      "n_lepton_pt10_ge1": 203,
+      "n_jet_pt25_ge3": 754,
+      "n_bjet_ge1": 912,
+      "n_hadronic_channel": 709,
+      "n_leptonic_channel_bookkeeping": 203
+    },
+    "ZH": {
+      "n_input_rows": 1012,
+      "n_photon_kinematic_diphoton": 1008,
+      "n_lepton_pt10_ge1": 188,
+      "n_jet_pt25_ge3": 868,
+      "n_bjet_ge1": 1012,
+      "n_hadronic_channel": 824,
+      "n_leptonic_channel_bookkeeping": 188
+    },
+    "ggH": {
+      "n_input_rows": 2551,
+      "n_photon_kinematic_diphoton": 2532,
+      "n_lepton_pt10_ge1": 122,
+      "n_jet_pt25_ge3": 2461,
+      "n_bjet_ge1": 2551,
+      "n_hadronic_channel": 2429,
+      "n_leptonic_channel_bookkeeping": 122
+    },
+    "ggZH": {
+      "n_input_rows": 962,
+      "n_photon_kinematic_diphoton": 954,
+      "n_lepton_pt10_ge1": 102,
+      "n_jet_pt25_ge3": 892,
+      "n_bjet_ge1": 962,
+      "n_hadronic_channel": 860,
+      "n_leptonic_channel_bookkeeping": 102
+    },
+    "tH": {
+      "n_input_rows": 12594,
+      "n_photon_kinematic_diphoton": 12512,
+      "n_lepton_pt10_ge1": 4981,
+      "n_jet_pt25_ge3": 9863,
+      "n_bjet_ge1": 12594,
+      "n_hadronic_channel": 7613,
+      "n_leptonic_channel_bookkeeping": 4981
+    },
+    "ttH": {
+      "n_input_rows": 102792,
+      "n_photon_kinematic_diphoton": 102190,
+      "n_lepton_pt10_ge1": 44783,
+      "n_jet_pt25_ge3": 85907,
+      "n_bjet_ge1": 102792,
+      "n_hadronic_channel": 58009,
+      "n_leptonic_channel_bookkeeping": 44783
+    },
+    "data": {
+      "n_input_rows": 235202,
+      "n_photon_kinematic_diphoton": 219854,
+      "n_lepton_pt10_ge1": 18854,
+      "n_jet_pt25_ge3": 222967,
+      "n_bjet_ge1": 235202,
+      "n_hadronic_channel": 216348,
+      "n_leptonic_channel_bookkeeping": 18854
+    }
+  },
+  "totals": {
+    "n_input_rows": 356084,
+    "n_photon_kinematic_diphoton": 340018,
+    "n_lepton_pt10_ge1": 69239,
+    "n_jet_pt25_ge3": 323766,
+    "n_bjet_ge1": 356084,
+    "n_hadronic_channel": 286845,
+    "n_leptonic_channel_bookkeeping": 69239
+  }
+}

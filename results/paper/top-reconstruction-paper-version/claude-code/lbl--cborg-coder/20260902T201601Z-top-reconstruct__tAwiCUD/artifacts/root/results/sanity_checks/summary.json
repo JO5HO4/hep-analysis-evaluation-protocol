@@ -1,0 +1,8 @@
+{
+    "selected_truth_mean": 166.33270263671875,
+    "selected_truth_std": 20.051145553588867,
+    "selected_fake_mean": 225.60205078125,
+    "selected_fake_std": 158.88133239746094,
+    "all_truth_mean": 170.45912170410156,
+    "all_truth_std": 35.90088653564453
+}

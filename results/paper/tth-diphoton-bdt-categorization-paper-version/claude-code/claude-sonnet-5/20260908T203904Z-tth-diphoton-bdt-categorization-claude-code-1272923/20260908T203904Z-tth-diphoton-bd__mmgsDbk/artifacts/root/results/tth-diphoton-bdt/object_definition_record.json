@@ -1,0 +1,36 @@
+{
+  "photon": {
+    "pt_min_gev": 25.0,
+    "abs_eta_max": 2.37,
+    "crack_veto_abs_eta": [
+      1.37,
+      1.52
+    ],
+    "tight_id_required_for_preselection": false,
+    "tight_isolation_required_for_preselection": false,
+    "note": "Photon tight-ID and photon isolation are explicitly NOT required to build the diphoton candidate for this preselection sample; TI/NTI are recorded as bookkeeping/control-region labels only.",
+    "diphoton_candidate": "leading two photons (by pT) passing kinematic acceptance",
+    "TI_definition": "both selected photons pass tight ID AND tight isolation",
+    "NTI_definition": "at least one selected photon fails tight ID or tight isolation"
+  },
+  "lepton": {
+    "pt_min_gev": 10.0,
+    "id_required": false,
+    "isolation_required": false,
+    "types": [
+      "electron (lep_type==11)",
+      "muon (lep_type==13)"
+    ]
+  },
+  "jet": {
+    "pt_min_gev": 25.0,
+    "central_abs_eta_max": 2.5,
+    "forward_abs_eta_min": 2.5,
+    "btag_definition": "jet_btag_quantile >= 4",
+    "note": "This open-data sample contains no reconstructed forward jets (max |eta| observed ~2.5), so forward-jet-dependent leptonic top-associated categories are out of scope by construction."
+  },
+  "channels": {
+    "hadronic": "n_leptons==0 AND n_jets>=3 AND n_bjets>=1 (REQUIRED categorization channel)",
+    "leptonic_bookkeeping": "n_leptons>=1 AND n_bjets>=1 (legacy provenance rows only, excluded from BDT training/optimization/categorization metrics)"
+  }
+}

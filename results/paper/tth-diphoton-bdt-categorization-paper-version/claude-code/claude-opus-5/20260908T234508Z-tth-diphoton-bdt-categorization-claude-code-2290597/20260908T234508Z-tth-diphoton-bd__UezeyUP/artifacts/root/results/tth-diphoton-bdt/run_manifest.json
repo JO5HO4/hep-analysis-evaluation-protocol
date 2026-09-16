@@ -1,0 +1,227 @@
+{
+  "run_name": "tth-diphoton-bdt",
+  "generated_utc": "2026-09-09T00:19:55.452170+00:00",
+  "total_wall_time_seconds": 40.404745111998636,
+  "stage_durations_seconds": {
+    "resolve_inputs": 0.26714478799840435,
+    "preselection": 17.176087879983243,
+    "preselection_plots": 1.3968761129654013,
+    "training_sample": 1.283886794000864,
+    "bdt_training": 1.6277519789873622,
+    "inference": 2.2849364340072498,
+    "boundary_optimization": 0.14978346700081602,
+    "categorization": 0.6097855370026082,
+    "event_tables": 9.317988077993505,
+    "histograms_and_plots": 2.00620478001656,
+    "workspace_fit": 2.1422349920030683,
+    "workspace_fit_plots": 1.9524192160461098
+  },
+  "bdt_training_wall_time_seconds": 0.9657317370292731,
+  "config_path": "/root/submission/tth-diphoton-bdt/config/config.yaml",
+  "results_dir": "/root/results/tth-diphoton-bdt",
+  "submission_dir": "/root/submission/tth-diphoton-bdt",
+  "deterministic": true,
+  "seed": 20240917,
+  "row_cap": {
+    "max_selected_per_sample": null,
+    "source": "unset (uncapped)",
+    "uncapped": true,
+    "env_var": "TTH_MAX_SELECTED_PER_SAMPLE"
+  },
+  "input_scope": {
+    "statement": "This run processes ONLY nominal Higgs H->gamma gamma signal MC (ggH, VBF, WH, ZH, ggZH, ttH, tH) and observed GamGam data. Sherpa yy / prompt-diphoton continuum MC and every other non-Higgs MC sample (ttbar, single top, V+jets, ...) are explicitly EXCLUDED: they are neither opened nor read. The continuum background is instead modelled data-driven, from the NTI diphoton control sample (BDT training and categorization control estimates) and from the observed TI data sidebands (statistical workspace).",
+    "nominal_higgs_signal_mc_only": true,
+    "mc_samples_processed": [
+      "VBF",
+      "WH",
+      "ZH",
+      "ggH",
+      "ggZH",
+      "tH",
+      "ttH"
+    ],
+    "data_samples_processed": [
+      "data"
+    ],
+    "sherpa_yy_processed": false,
+    "prompt_diphoton_continuum_mc_processed": false,
+    "non_higgs_mc_processed": false,
+    "inputs_copied_into_submission": false,
+    "input_root": "/data/GamGam",
+    "input_env_var": "TB_HYY_INPUTS"
+  },
+  "categorization": {
+    "required_categories": [
+      "ttH_had_BDT1",
+      "ttH_had_BDT2",
+      "ttH_had_BDT3",
+      "ttH_had_BDT4",
+      "tH_had_4j1b",
+      "tH_had_4j2b"
+    ],
+    "kept_categories": [
+      "ttH_had_BDT1",
+      "ttH_had_BDT2",
+      "ttH_had_BDT3",
+      "tH_had_4j1b"
+    ],
+    "dropped_categories": [
+      "ttH_had_BDT4",
+      "tH_had_4j2b"
+    ],
+    "hadronic_only": true,
+    "leptonic_in_scope": false
+  },
+  "blinding": {
+    "observed_ti_signal_window_blinded": true,
+    "blinded_range_gev": [
+      120.0,
+      130.0
+    ],
+    "signal_window_gev": [
+      123.0,
+      127.0
+    ],
+    "statement": "Observed TI data in the 125 +/- 2 GeV signal window is never inspected, counted, plotted or reported.",
+    "nti_control_shapes_blinded": false,
+    "nti_policy": "NTI control-shape distributions retain 120-130 GeV entries; the removal policy applies only to observed TI data.",
+    "observed_significance": "blocked"
+  },
+  "expected_significance": {
+    "combined_counting": 1.7535990613959818,
+    "asimov_roofit_expected_Z": 1.6836784831999643,
+    "observed": "blocked (blinded)"
+  },
+  "environment": {
+    "python": "3.13.7 (main, Nov 24 2025, 20:51:28) [GCC 15.2.0]",
+    "platform": "Linux-6.4.0-150600.23.125_15.0.28-cray_shasta_c-x86_64-with-glibc2.42",
+    "packages": {
+      "numpy": "2.2.4",
+      "pandas": "3.0.5",
+      "sklearn": "1.9.0",
+      "uproot": "5.7.6",
+      "awkward": "2.13.0",
+      "matplotlib": "3.11.1",
+      "scipy": "1.18.1",
+      "yaml": "6.0.2",
+      "ROOT": "6.38.00"
+    },
+    "threading": {
+      "OMP_NUM_THREADS": "1",
+      "note": "single-threaded numeric backends are forced by run_analysis.py for bit-level reproducibility"
+    }
+  },
+  "artifacts": [
+    "categorization/categorization_manifest.json",
+    "categorization/category_component_yields.json",
+    "categorization/category_retention.json",
+    "categorization/category_summary.csv",
+    "categorization/histograms/bdt_score_model_component_histograms.json",
+    "categorization/histograms/category_mgg_control_histograms.json",
+    "categorization/plots/bdt_score_model_components_36fb_v1.pdf",
+    "categorization/plots/bdt_score_model_components_36fb_v1.png",
+    "categorization/plots/bdt_score_model_components_with_boundaries_36fb_v1.pdf",
+    "categorization/plots/bdt_score_model_components_with_boundaries_36fb_v1.png",
+    "categorization/plots/category_expected_counting_z_36fb_v1.pdf",
+    "categorization/plots/category_expected_counting_z_36fb_v1.png",
+    "categorization/plots/category_expected_yields_36fb_v1.pdf",
+    "categorization/plots/category_expected_yields_36fb_v1.png",
+    "categorization/plots/category_mgg_control_shapes_36fb_v1.pdf",
+    "categorization/plots/category_mgg_control_shapes_36fb_v1.png",
+    "category_yields_36fb.json",
+    "config_resolved.yaml",
+    "cutflow.json",
+    "fit/FIT1/backend.json",
+    "fit/FIT1/background_pdf_choice.json",
+    "fit/FIT1/background_pdf_scan.json",
+    "fit/FIT1/background_template_selection.json",
+    "fit/FIT1/plots/asimov_sb_fit.pdf",
+    "fit/FIT1/plots/asimov_sb_fit.png",
+    "fit/FIT1/plots/sidebands_background_fit.pdf",
+    "fit/FIT1/plots/sidebands_background_fit.png",
+    "fit/FIT1/plots/sidebands_background_fit_tH_had_4j1b.pdf",
+    "fit/FIT1/plots/sidebands_background_fit_tH_had_4j1b.png",
+    "fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT1.pdf",
+    "fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT1.png",
+    "fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT2.pdf",
+    "fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT2.png",
+    "fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT3.pdf",
+    "fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT3.png",
+    "fit/FIT1/resonant_higgs_pdf.json",
+    "fit/FIT1/results.json",
+    "fit/FIT1/sideband_fit_plots.json",
+    "fit/FIT1/signal_pdf.json",
+    "fit/FIT1/significance.json",
+    "fit/FIT1/significance_asimov.json",
+    "fit/FIT1/significance_asimov_construction.json",
+    "fit/FIT1/significance_asimov_plot_payload.json",
+    "fit/FIT1/workspace.root",
+    "fit/workspace.json",
+    "hadronic_features.csv",
+    "inference/events_with_bdt_scores.csv",
+    "inference/inference_manifest.json",
+    "input_data_contract.json",
+    "metrics.json",
+    "model/background_mixture_and_normalization.json",
+    "model/bdt_model.pkl",
+    "model/class_balance_check.json",
+    "model/training_metadata.json",
+    "model/training_sample.csv",
+    "object_definition_record.json",
+    "optimization/accepted_splits.json",
+    "optimization/thresholds.json",
+    "plots/preselection_channels.pdf",
+    "plots/preselection_channels.png",
+    "plots/preselection_mass.pdf",
+    "plots/preselection_mass.png",
+    "plots/preselection_processes.pdf",
+    "plots/preselection_processes.png",
+    "plots/score_by_component_histograms.json",
+    "plots/score_by_component_shape_bdt_v1.pdf",
+    "plots/score_by_component_shape_bdt_v1.png",
+    "predictions.csv",
+    "preselected_events.csv",
+    "preselection_summary.json",
+    "workspace_manifest.json"
+  ],
+  "plots": {
+    "preselection": [
+      "/root/results/tth-diphoton-bdt/plots/preselection_mass.png",
+      "/root/results/tth-diphoton-bdt/plots/preselection_mass.pdf",
+      "/root/results/tth-diphoton-bdt/plots/preselection_channels.png",
+      "/root/results/tth-diphoton-bdt/plots/preselection_channels.pdf",
+      "/root/results/tth-diphoton-bdt/plots/preselection_processes.png",
+      "/root/results/tth-diphoton-bdt/plots/preselection_processes.pdf"
+    ],
+    "score_shape": [
+      "/root/results/tth-diphoton-bdt/plots/score_by_component_shape_bdt_v1.png",
+      "/root/results/tth-diphoton-bdt/plots/score_by_component_shape_bdt_v1.pdf"
+    ],
+    "categorization": [
+      "/root/results/tth-diphoton-bdt/categorization/plots/category_expected_yields_36fb_v1.png",
+      "/root/results/tth-diphoton-bdt/categorization/plots/category_expected_yields_36fb_v1.pdf",
+      "/root/results/tth-diphoton-bdt/categorization/plots/category_expected_counting_z_36fb_v1.png",
+      "/root/results/tth-diphoton-bdt/categorization/plots/category_expected_counting_z_36fb_v1.pdf",
+      "/root/results/tth-diphoton-bdt/categorization/plots/bdt_score_model_components_36fb_v1.png",
+      "/root/results/tth-diphoton-bdt/categorization/plots/bdt_score_model_components_36fb_v1.pdf",
+      "/root/results/tth-diphoton-bdt/categorization/plots/bdt_score_model_components_with_boundaries_36fb_v1.png",
+      "/root/results/tth-diphoton-bdt/categorization/plots/bdt_score_model_components_with_boundaries_36fb_v1.pdf",
+      "/root/results/tth-diphoton-bdt/categorization/plots/category_mgg_control_shapes_36fb_v1.png",
+      "/root/results/tth-diphoton-bdt/categorization/plots/category_mgg_control_shapes_36fb_v1.pdf"
+    ],
+    "fit": [
+      "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT1.png",
+      "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT1.pdf",
+      "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT2.png",
+      "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT2.pdf",
+      "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT3.png",
+      "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT3.pdf",
+      "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_tH_had_4j1b.png",
+      "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_tH_had_4j1b.pdf",
+      "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit.png",
+      "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit.pdf",
+      "/root/results/tth-diphoton-bdt/fit/FIT1/plots/asimov_sb_fit.png",
+      "/root/results/tth-diphoton-bdt/fit/FIT1/plots/asimov_sb_fit.pdf"
+    ]
+  }
+}

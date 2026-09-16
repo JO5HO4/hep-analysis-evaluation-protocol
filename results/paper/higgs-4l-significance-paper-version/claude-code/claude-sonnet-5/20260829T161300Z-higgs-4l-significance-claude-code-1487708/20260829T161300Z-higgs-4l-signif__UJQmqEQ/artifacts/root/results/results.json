@@ -1,0 +1,36 @@
+{
+  "channels": [
+    "4mu",
+    "2e2mu",
+    "4e"
+  ],
+  "observed": [
+    6.0,
+    5.0,
+    2.0
+  ],
+  "background": [
+    1.25,
+    2.07,
+    1.53
+  ],
+  "signal": [
+    2.09,
+    2.29,
+    0.9
+  ],
+  "logL_b": -11.082750320271758,
+  "logL_sb": -5.8159224919108095,
+  "test_statistic": -10.533655656721898,
+  "n_toys": 5000000,
+  "n_toys_as_extreme": 1288,
+  "p_value": 0.0002576,
+  "p_value_is_upper_bound": false,
+  "significance": 3.472726542288019,
+  "reaches_3sigma_evidence": true,
+  "mu_hat": 1.623886560797882,
+  "mu_lo": 1.0089693335410492,
+  "mu_hi": 2.366643166595182,
+  "mu_err_minus": 0.6149172272568328,
+  "mu_err_plus": 0.7427566057972999
+}

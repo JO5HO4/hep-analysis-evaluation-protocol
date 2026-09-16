@@ -1,0 +1,12 @@
+{
+  "aggregated": {
+    "mass_window": {
+      "data_unweighted": 1
+    },
+    "categorized": {
+      "data_unweighted": {
+        "inclusive": 1
+      }
+    }
+  }
+}

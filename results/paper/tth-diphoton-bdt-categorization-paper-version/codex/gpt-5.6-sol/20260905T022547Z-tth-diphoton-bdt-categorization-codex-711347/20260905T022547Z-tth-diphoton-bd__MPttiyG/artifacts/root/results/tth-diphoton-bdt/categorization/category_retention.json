@@ -1,0 +1,41 @@
+{
+  "categories": {
+    "tH_had_4j1b": {
+      "action": "kept",
+      "background_36fb": 13.798635214459313,
+      "kept": true,
+      "minimum_required": 0.8
+    },
+    "tH_had_4j2b": {
+      "action": "kept",
+      "background_36fb": 1.272685440114919,
+      "kept": true,
+      "minimum_required": 0.8
+    },
+    "ttH_had_BDT1": {
+      "action": "kept",
+      "background_36fb": 1.074845179861745,
+      "kept": true,
+      "minimum_required": 0.8
+    },
+    "ttH_had_BDT2": {
+      "action": "kept",
+      "background_36fb": 8.424345860133714,
+      "kept": true,
+      "minimum_required": 0.8
+    },
+    "ttH_had_BDT3": {
+      "action": "merged_into_unassigned",
+      "background_36fb": 0.0,
+      "kept": false,
+      "minimum_required": 0.8
+    },
+    "ttH_had_BDT4": {
+      "action": "merged_into_unassigned",
+      "background_36fb": 0.0,
+      "kept": false,
+      "minimum_required": 0.8
+    }
+  },
+  "rule": "retain non-catch-all physics category only if expected background >= 0.8 in 123-127 GeV"
+}

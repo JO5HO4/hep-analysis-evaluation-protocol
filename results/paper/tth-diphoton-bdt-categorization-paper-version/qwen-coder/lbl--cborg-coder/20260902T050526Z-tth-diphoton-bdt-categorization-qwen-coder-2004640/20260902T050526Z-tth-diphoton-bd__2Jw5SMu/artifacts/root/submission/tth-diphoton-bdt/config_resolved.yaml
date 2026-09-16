@@ -1,0 +1,45 @@
+bdt:
+  background_processes:
+  - ggH
+  - NTI
+  features:
+  - n_jets
+  - n_btags
+  - ht
+  - pt_gammagamma
+  - m_jjj
+  mass_window:
+  - 123
+  - 127
+  sidebands:
+    high:
+    - 130
+    - 160
+    low:
+    - 105
+    - 120
+  signal_processes:
+  - ttH
+  - tH
+input:
+  env_var: TB_HYY_INPUTS
+  layout:
+    data: data/
+    mc: MC/
+normalization:
+  lumi: 36.0
+selection:
+  hadronic_channel:
+    n_btags_min: 1
+    n_jets_min: 3
+    n_leptons: 0
+  jet:
+    btag_quantile_min: 4
+    central_eta: 2.5
+    pt_min: 25
+  lepton:
+    pt_min: 10
+  photon:
+    pt_min:
+    - 20
+    - 15

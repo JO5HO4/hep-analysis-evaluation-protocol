@@ -1,0 +1,20 @@
+{
+    "val_auc": 0.9067104979643679,
+    "scale_pos_weight": 22.75914861837192,
+    "n_estimators": 200,
+    "max_depth": 6,
+    "features": [
+        "dr_min",
+        "dr_mid",
+        "dr_max",
+        "ratio_min",
+        "ratio_mid",
+        "ratio_max",
+        "m123",
+        "pt123",
+        "pt_min",
+        "pt_mid",
+        "pt_max",
+        "sum_pt"
+    ]
+}

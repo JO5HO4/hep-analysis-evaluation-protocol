@@ -1,0 +1,43 @@
+{
+  "channels": [
+    "4mu",
+    "2e2mu",
+    "4e"
+  ],
+  "observed": [
+    6,
+    5,
+    2
+  ],
+  "background": [
+    1.25,
+    2.07,
+    1.53
+  ],
+  "signal": [
+    2.09,
+    2.29,
+    0.9
+  ],
+  "logL_b": -11.082750320271758,
+  "logL_sb": -5.8159224919108095,
+  "test_statistic": -10.533655656721898,
+  "p_value": 0.000259,
+  "significance": 3.471271488167002,
+  "mu_hat": 1.6238865884773688,
+  "mu_lo": 1.0089693335395613,
+  "mu_hi": 2.3666431665951775,
+  "mu_err_up": 0.7427565781178087,
+  "mu_err_down": 0.6149172549378075,
+  "evidence_3sigma": true,
+  "discovery_5sigma": false,
+  "n_toys": 10000000,
+  "n_toys_passing": 2590,
+  "p_value_uncertainty": 5.088545165368978e-06,
+  "p_value_exact": 0.0002540121641680092,
+  "p_value_used_for_Z": 0.000259,
+  "p_value_source": "toys",
+  "significance_from_toys_only": 3.471271488167002,
+  "q_min": -11.56636659298318,
+  "seed": 20260829
+}

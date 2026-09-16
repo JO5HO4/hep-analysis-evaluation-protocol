@@ -1,0 +1,11 @@
+{
+  "resonant": [
+    "ggH"
+  ],
+  "continuum": "data NTI sidebands",
+  "nti_scale_factors": {
+    "SF1": 1.1,
+    "SF2": 0.9,
+    "SF1_SF2": 0.99
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "before": {
+    "0": 43.505438105369784,
+    "1": 6.561247943082638
+  },
+  "after": {
+    "0": 0.49999999999999983,
+    "1": 0.5000000000000001
+  },
+  "factors": {
+    "0": 0.011492816111608954,
+    "1": 0.07620501531680993
+  },
+  "note": "balancing after physical signal and mixture weights; yields never use bdt_fit_weight"
+}

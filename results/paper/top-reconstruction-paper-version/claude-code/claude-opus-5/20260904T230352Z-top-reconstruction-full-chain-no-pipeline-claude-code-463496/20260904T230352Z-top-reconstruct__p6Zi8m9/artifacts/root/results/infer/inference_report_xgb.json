@@ -1,0 +1,24 @@
+{
+  "tag": "xgb",
+  "split": "test",
+  "model": "/root/results/train/model_xgb.json",
+  "source_parquet": "/root/results/dataset_prepare/test.parquet",
+  "n_features": 103,
+  "n_trees_used": 225,
+  "n_events": 1733,
+  "n_triplets": 22021,
+  "n_truth_triplets": 931,
+  "truth_fraction": 0.04227782571182054,
+  "auc": 0.9658135890427145,
+  "average_precision": 0.6602492888438038,
+  "score_quantiles": {
+    "0.01": 1.0255805500491988e-05,
+    "0.1": 1.7095815564971417e-05,
+    "0.5": 0.0016299280105158687,
+    "0.9": 0.06673205643892288,
+    "0.99": 0.7626204252243041
+  },
+  "score_mean_truth": 0.4699594966074898,
+  "score_mean_fake": 0.02187696292805903,
+  "inference_seconds": 0.071
+}

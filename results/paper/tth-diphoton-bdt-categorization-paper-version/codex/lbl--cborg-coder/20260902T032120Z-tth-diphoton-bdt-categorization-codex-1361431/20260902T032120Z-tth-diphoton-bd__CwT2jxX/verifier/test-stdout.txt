@@ -1,0 +1,48 @@
+{
+  "artifact_contract": {
+    "errors": [
+      "missing JSON artifact: /root/results/tth-diphoton-bdt/categorization/histograms/category_mgg_control_histograms.json"
+    ],
+    "score": 0.0
+  },
+  "bdt_training": {
+    "errors": [
+      "missing JSON artifact: /root/results/tth-diphoton-bdt/model/class_balance_check.json"
+    ],
+    "score": 0.0
+  },
+  "input_scope": {
+    "errors": [
+      "'process'"
+    ],
+    "score": 0.0
+  },
+  "preselection_physics": {
+    "errors": [
+      "'passes_leptonic_preselection'"
+    ],
+    "score": 0.0
+  },
+  "provenance": {
+    "errors": [
+      "'Column not found: partition'"
+    ],
+    "score": 0.0
+  },
+  "reward": 0.0,
+  "selection_api": {
+    "errors": [
+      "BDT_FEATURES mismatch: ['n_jets', 'n_btags', 'ht', 'met', 'n_central_jets']"
+    ],
+    "score": 0.0
+  },
+  "total_score": 0.0,
+  "weighted_scores": {
+    "artifact_contract": 0.0,
+    "bdt_training": 0.0,
+    "input_scope": 0.0,
+    "preselection_physics": 0.0,
+    "provenance": 0.0,
+    "selection_api": 0.0
+  }
+}

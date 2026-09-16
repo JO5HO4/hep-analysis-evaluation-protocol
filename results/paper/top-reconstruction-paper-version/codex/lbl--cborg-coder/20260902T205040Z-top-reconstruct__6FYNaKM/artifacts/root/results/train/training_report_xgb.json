@@ -1,0 +1,14 @@
+{
+    "validation_auc": 0.901738238983468,
+    "validation_pr_auc": 0.38801597487534645,
+    "scale_pos_weight": 22.237745098039216,
+    "features": [
+        "dr_ab",
+        "dr_ac",
+        "dr_bc",
+        "mij_over_m123_ab",
+        "mij_over_m123_ac",
+        "mij_over_m123_bc",
+        "triplet_mass"
+    ]
+}

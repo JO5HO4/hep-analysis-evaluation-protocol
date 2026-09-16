@@ -1,0 +1,35 @@
+{
+  "diagnostics": {
+    "files": [],
+    "score": 0.0
+  },
+  "framework": {
+    "errors": [
+      "missing /root/submission/run.sh; missing /root/results/results.json"
+    ],
+    "functional": false,
+    "readme": false,
+    "score": 0.0
+  },
+  "reward": 0.0,
+  "score_units": "points out of 100; Harbor reward is total_score / 100",
+  "signal_strength": {
+    "errors": [
+      "[Errno 2] No such file or directory: '/root/submission/run.sh'"
+    ],
+    "score": 0.0
+  },
+  "significance": {
+    "errors": [
+      "[Errno 2] No such file or directory: '/root/submission/run.sh'"
+    ],
+    "score": 0.0
+  },
+  "test_statistic": {
+    "errors": [
+      "[Errno 2] No such file or directory: '/root/submission/run.sh'"
+    ],
+    "score": 0.0
+  },
+  "total_score": 0.0
+}

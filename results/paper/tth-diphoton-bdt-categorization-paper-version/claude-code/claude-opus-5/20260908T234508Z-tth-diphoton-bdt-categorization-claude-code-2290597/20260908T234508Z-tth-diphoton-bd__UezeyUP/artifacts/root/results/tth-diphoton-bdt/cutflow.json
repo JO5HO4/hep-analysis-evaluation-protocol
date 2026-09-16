@@ -1,0 +1,524 @@
+{
+  "stage_order": [
+    "input_rows",
+    "photons_in_kinematic_acceptance>=2",
+    "mgg_in_105_160",
+    "relative_pt_cuts",
+    "hadronic_or_leptonic_channel",
+    "hadronic_channel",
+    "leptonic_bookkeeping_only"
+  ],
+  "weighted_column": "weight_mc_36fb (MC only; data rows are unweighted)",
+  "signed_weight_bookkeeping": "each stage records the sum of positive weights, the sum of negative weights and the number of negative-weight events",
+  "row_cap_policy": "uncapped by default; TTH_MAX_SELECTED_PER_SAMPLE limits selected rows per sample only when explicitly set for development throttling",
+  "per_sample": [
+    {
+      "sample": "ggH",
+      "role": "resonant_higgs",
+      "stages": [
+        {
+          "stage": "input_rows",
+          "raw_events": 2551,
+          "weighted_events_36fb": 8.270699971243353,
+          "sum_positive_weights": 8.40771801579319,
+          "sum_negative_weights": -0.13701804454983624,
+          "n_negative_weight_events": 32
+        },
+        {
+          "stage": "photons_in_kinematic_acceptance>=2",
+          "raw_events": 2532,
+          "weighted_events_36fb": 8.234285665184727,
+          "sum_positive_weights": 8.371303709734564,
+          "sum_negative_weights": -0.13701804454983624,
+          "n_negative_weight_events": 32
+        },
+        {
+          "stage": "mgg_in_105_160",
+          "raw_events": 2511,
+          "weighted_events_36fb": 8.113558180632538,
+          "sum_positive_weights": 8.250576225182375,
+          "sum_negative_weights": -0.13701804454983624,
+          "n_negative_weight_events": 32
+        },
+        {
+          "stage": "relative_pt_cuts",
+          "raw_events": 2252,
+          "weighted_events_36fb": 7.262467430280797,
+          "sum_positive_weights": 7.399485474830632,
+          "sum_negative_weights": -0.13701804454983624,
+          "n_negative_weight_events": 32
+        },
+        {
+          "stage": "hadronic_or_leptonic_channel",
+          "raw_events": 2252,
+          "weighted_events_36fb": 7.262467430280797,
+          "sum_positive_weights": 7.399485474830632,
+          "sum_negative_weights": -0.13701804454983624,
+          "n_negative_weight_events": 32
+        },
+        {
+          "stage": "hadronic_channel",
+          "raw_events": 2147,
+          "weighted_events_36fb": 6.876405480478127,
+          "sum_positive_weights": 7.011369686890604,
+          "sum_negative_weights": -0.13496420641247706,
+          "n_negative_weight_events": 31
+        },
+        {
+          "stage": "leptonic_bookkeeping_only",
+          "raw_events": 105,
+          "weighted_events_36fb": 0.3860619498026693,
+          "sum_positive_weights": 0.38811578794002843,
+          "sum_negative_weights": -0.002053838137359188,
+          "n_negative_weight_events": 1
+        }
+      ],
+      "row_cap_applied": false,
+      "rows_before_cap": 2252,
+      "rows_written": 2252,
+      "selected_hadronic": 2147,
+      "selected_leptonic_bookkeeping": 105
+    },
+    {
+      "sample": "VBF",
+      "role": "resonant_higgs",
+      "stages": [
+        {
+          "stage": "input_rows",
+          "raw_events": 59,
+          "weighted_events_36fb": 0.20531980043181064,
+          "sum_positive_weights": 0.21880428713778735,
+          "sum_negative_weights": -0.013484486705976718,
+          "n_negative_weight_events": 3
+        },
+        {
+          "stage": "photons_in_kinematic_acceptance>=2",
+          "raw_events": 59,
+          "weighted_events_36fb": 0.20531980043181064,
+          "sum_positive_weights": 0.21880428713778735,
+          "sum_negative_weights": -0.013484486705976718,
+          "n_negative_weight_events": 3
+        },
+        {
+          "stage": "mgg_in_105_160",
+          "raw_events": 58,
+          "weighted_events_36fb": 0.20037495341038247,
+          "sum_positive_weights": 0.2138594401163592,
+          "sum_negative_weights": -0.013484486705976718,
+          "n_negative_weight_events": 3
+        },
+        {
+          "stage": "relative_pt_cuts",
+          "raw_events": 49,
+          "weighted_events_36fb": 0.16551808785455832,
+          "sum_positive_weights": 0.17900257456053503,
+          "sum_negative_weights": -0.013484486705976718,
+          "n_negative_weight_events": 3
+        },
+        {
+          "stage": "hadronic_or_leptonic_channel",
+          "raw_events": 49,
+          "weighted_events_36fb": 0.16551808785455832,
+          "sum_positive_weights": 0.17900257456053503,
+          "sum_negative_weights": -0.013484486705976718,
+          "n_negative_weight_events": 3
+        },
+        {
+          "stage": "hadronic_channel",
+          "raw_events": 43,
+          "weighted_events_36fb": 0.14847994535639852,
+          "sum_positive_weights": 0.15682935854624308,
+          "sum_negative_weights": -0.008349413189844515,
+          "n_negative_weight_events": 2
+        },
+        {
+          "stage": "leptonic_bookkeeping_only",
+          "raw_events": 6,
+          "weighted_events_36fb": 0.01703814249815977,
+          "sum_positive_weights": 0.022173216014291973,
+          "sum_negative_weights": -0.005135073516132204,
+          "n_negative_weight_events": 1
+        }
+      ],
+      "row_cap_applied": false,
+      "rows_before_cap": 49,
+      "rows_written": 49,
+      "selected_hadronic": 43,
+      "selected_leptonic_bookkeeping": 6
+    },
+    {
+      "sample": "WH",
+      "role": "resonant_higgs",
+      "stages": [
+        {
+          "stage": "input_rows",
+          "raw_events": 912,
+          "weighted_events_36fb": 0.28011868253324196,
+          "sum_positive_weights": 0.2855861021250978,
+          "sum_negative_weights": -0.005467419591855796,
+          "n_negative_weight_events": 16
+        },
+        {
+          "stage": "photons_in_kinematic_acceptance>=2",
+          "raw_events": 909,
+          "weighted_events_36fb": 0.27916091044046343,
+          "sum_positive_weights": 0.28462833003231924,
+          "sum_negative_weights": -0.005467419591855796,
+          "n_negative_weight_events": 16
+        },
+        {
+          "stage": "mgg_in_105_160",
+          "raw_events": 891,
+          "weighted_events_36fb": 0.2730012286555041,
+          "sum_positive_weights": 0.2784686482473599,
+          "sum_negative_weights": -0.005467419591855796,
+          "n_negative_weight_events": 16
+        },
+        {
+          "stage": "relative_pt_cuts",
+          "raw_events": 791,
+          "weighted_events_36fb": 0.24015654009594922,
+          "sum_positive_weights": 0.245623959687805,
+          "sum_negative_weights": -0.005467419591855796,
+          "n_negative_weight_events": 16
+        },
+        {
+          "stage": "hadronic_or_leptonic_channel",
+          "raw_events": 791,
+          "weighted_events_36fb": 0.24015654009594922,
+          "sum_positive_weights": 0.245623959687805,
+          "sum_negative_weights": -0.005467419591855796,
+          "n_negative_weight_events": 16
+        },
+        {
+          "stage": "hadronic_channel",
+          "raw_events": 617,
+          "weighted_events_36fb": 0.18940759939098795,
+          "sum_positive_weights": 0.19389389945470523,
+          "sum_negative_weights": -0.004486300063717273,
+          "n_negative_weight_events": 11
+        },
+        {
+          "stage": "leptonic_bookkeeping_only",
+          "raw_events": 174,
+          "weighted_events_36fb": 0.050748940704961255,
+          "sum_positive_weights": 0.05173006023309977,
+          "sum_negative_weights": -0.000981119528138523,
+          "n_negative_weight_events": 5
+        }
+      ],
+      "row_cap_applied": false,
+      "rows_before_cap": 791,
+      "rows_written": 791,
+      "selected_hadronic": 617,
+      "selected_leptonic_bookkeeping": 174
+    },
+    {
+      "sample": "ZH",
+      "role": "resonant_higgs",
+      "stages": [
+        {
+          "stage": "input_rows",
+          "raw_events": 1012,
+          "weighted_events_36fb": 2.51217779017951,
+          "sum_positive_weights": 2.6421821147059146,
+          "sum_negative_weights": -0.13000432452640454,
+          "n_negative_weight_events": 19
+        },
+        {
+          "stage": "photons_in_kinematic_acceptance>=2",
+          "raw_events": 1008,
+          "weighted_events_36fb": 2.509032573652794,
+          "sum_positive_weights": 2.639036898179199,
+          "sum_negative_weights": -0.13000432452640454,
+          "n_negative_weight_events": 19
+        },
+        {
+          "stage": "mgg_in_105_160",
+          "raw_events": 983,
+          "weighted_events_36fb": 2.4349565395989963,
+          "sum_positive_weights": 2.5649608641254007,
+          "sum_negative_weights": -0.13000432452640454,
+          "n_negative_weight_events": 19
+        },
+        {
+          "stage": "relative_pt_cuts",
+          "raw_events": 860,
+          "weighted_events_36fb": 2.1749377323708243,
+          "sum_positive_weights": 2.2686192107655168,
+          "sum_negative_weights": -0.093681478394692,
+          "n_negative_weight_events": 16
+        },
+        {
+          "stage": "hadronic_or_leptonic_channel",
+          "raw_events": 860,
+          "weighted_events_36fb": 2.1749377323708243,
+          "sum_positive_weights": 2.2686192107655168,
+          "sum_negative_weights": -0.093681478394692,
+          "n_negative_weight_events": 16
+        },
+        {
+          "stage": "hadronic_channel",
+          "raw_events": 704,
+          "weighted_events_36fb": 1.1643175787963702,
+          "sum_positive_weights": 1.2018280500057004,
+          "sum_negative_weights": -0.03751047120933004,
+          "n_negative_weight_events": 11
+        },
+        {
+          "stage": "leptonic_bookkeeping_only",
+          "raw_events": 156,
+          "weighted_events_36fb": 1.0106201535744548,
+          "sum_positive_weights": 1.0667911607598168,
+          "sum_negative_weights": -0.056171007185361964,
+          "n_negative_weight_events": 5
+        }
+      ],
+      "row_cap_applied": false,
+      "rows_before_cap": 860,
+      "rows_written": 860,
+      "selected_hadronic": 704,
+      "selected_leptonic_bookkeeping": 156
+    },
+    {
+      "sample": "ggZH",
+      "role": "resonant_higgs",
+      "stages": [
+        {
+          "stage": "input_rows",
+          "raw_events": 962,
+          "weighted_events_36fb": 0.2306033551149576,
+          "sum_positive_weights": 0.23298567844449214,
+          "sum_negative_weights": -0.002382323329534495,
+          "n_negative_weight_events": 10
+        },
+        {
+          "stage": "photons_in_kinematic_acceptance>=2",
+          "raw_events": 954,
+          "weighted_events_36fb": 0.22864887839556602,
+          "sum_positive_weights": 0.2310312017251005,
+          "sum_negative_weights": -0.002382323329534495,
+          "n_negative_weight_events": 10
+        },
+        {
+          "stage": "mgg_in_105_160",
+          "raw_events": 937,
+          "weighted_events_36fb": 0.22432024974595127,
+          "sum_positive_weights": 0.22670257307548575,
+          "sum_negative_weights": -0.002382323329534495,
+          "n_negative_weight_events": 10
+        },
+        {
+          "stage": "relative_pt_cuts",
+          "raw_events": 846,
+          "weighted_events_36fb": 0.20225864784421715,
+          "sum_positive_weights": 0.20464097117375163,
+          "sum_negative_weights": -0.002382323329534495,
+          "n_negative_weight_events": 10
+        },
+        {
+          "stage": "hadronic_or_leptonic_channel",
+          "raw_events": 846,
+          "weighted_events_36fb": 0.20225864784421715,
+          "sum_positive_weights": 0.20464097117375163,
+          "sum_negative_weights": -0.002382323329534495,
+          "n_negative_weight_events": 10
+        },
+        {
+          "stage": "hadronic_channel",
+          "raw_events": 758,
+          "weighted_events_36fb": 0.18006561014719938,
+          "sum_positive_weights": 0.18244793347673385,
+          "sum_negative_weights": -0.002382323329534495,
+          "n_negative_weight_events": 10
+        },
+        {
+          "stage": "leptonic_bookkeeping_only",
+          "raw_events": 88,
+          "weighted_events_36fb": 0.022193037697017755,
+          "sum_positive_weights": 0.022193037697017755,
+          "sum_negative_weights": 0.0,
+          "n_negative_weight_events": 0
+        }
+      ],
+      "row_cap_applied": false,
+      "rows_before_cap": 846,
+      "rows_written": 846,
+      "selected_hadronic": 758,
+      "selected_leptonic_bookkeeping": 88
+    },
+    {
+      "sample": "ttH",
+      "role": "signal_top",
+      "stages": [
+        {
+          "stage": "input_rows",
+          "raw_events": 102792,
+          "weighted_events_36fb": 36.013262885788855,
+          "sum_positive_weights": 43.180338582797766,
+          "sum_negative_weights": -7.167075697008917,
+          "n_negative_weight_events": 9218
+        },
+        {
+          "stage": "photons_in_kinematic_acceptance>=2",
+          "raw_events": 102190,
+          "weighted_events_36fb": 35.79930614874459,
+          "sum_positive_weights": 42.9256048776692,
+          "sum_negative_weights": -7.126298728924597,
+          "n_negative_weight_events": 9168
+        },
+        {
+          "stage": "mgg_in_105_160",
+          "raw_events": 98724,
+          "weighted_events_36fb": 34.550295235965734,
+          "sum_positive_weights": 41.4568939832261,
+          "sum_negative_weights": -6.906598747260373,
+          "n_negative_weight_events": 8866
+        },
+        {
+          "stage": "relative_pt_cuts",
+          "raw_events": 87735,
+          "weighted_events_36fb": 30.702919186358926,
+          "sum_positive_weights": 36.857784389486426,
+          "sum_negative_weights": -6.154865203127497,
+          "n_negative_weight_events": 7912
+        },
+        {
+          "stage": "hadronic_or_leptonic_channel",
+          "raw_events": 87735,
+          "weighted_events_36fb": 30.702919186358926,
+          "sum_positive_weights": 36.857784389486426,
+          "sum_negative_weights": -6.154865203127497,
+          "n_negative_weight_events": 7912
+        },
+        {
+          "stage": "hadronic_channel",
+          "raw_events": 49347,
+          "weighted_events_36fb": 17.25085677466581,
+          "sum_positive_weights": 20.685740007173095,
+          "sum_negative_weights": -3.434883232507283,
+          "n_negative_weight_events": 4401
+        },
+        {
+          "stage": "leptonic_bookkeeping_only",
+          "raw_events": 38388,
+          "weighted_events_36fb": 13.452062411693127,
+          "sum_positive_weights": 16.172044382313338,
+          "sum_negative_weights": -2.7199819706202137,
+          "n_negative_weight_events": 3511
+        }
+      ],
+      "row_cap_applied": false,
+      "rows_before_cap": 87735,
+      "rows_written": 87735,
+      "selected_hadronic": 49347,
+      "selected_leptonic_bookkeeping": 38388
+    },
+    {
+      "sample": "tH",
+      "role": "signal_top",
+      "stages": [
+        {
+          "stage": "input_rows",
+          "raw_events": 12594,
+          "weighted_events_36fb": 0.2776590786472405,
+          "sum_positive_weights": 0.5699644768313321,
+          "sum_negative_weights": -0.2923053981840916,
+          "n_negative_weight_events": 4333
+        },
+        {
+          "stage": "photons_in_kinematic_acceptance>=2",
+          "raw_events": 12512,
+          "weighted_events_36fb": 0.2756292453650267,
+          "sum_positive_weights": 0.5665114861154169,
+          "sum_negative_weights": -0.29088224075039015,
+          "n_negative_weight_events": 4312
+        },
+        {
+          "stage": "mgg_in_105_160",
+          "raw_events": 12121,
+          "weighted_events_36fb": 0.26691395173378163,
+          "sum_positive_weights": 0.5471633342893817,
+          "sum_negative_weights": -0.28024938255560006,
+          "n_negative_weight_events": 4176
+        },
+        {
+          "stage": "relative_pt_cuts",
+          "raw_events": 10819,
+          "weighted_events_36fb": 0.23532668969990084,
+          "sum_positive_weights": 0.48594798071718237,
+          "sum_negative_weights": -0.25062129101728153,
+          "n_negative_weight_events": 3760
+        },
+        {
+          "stage": "hadronic_or_leptonic_channel",
+          "raw_events": 10819,
+          "weighted_events_36fb": 0.23532668969990084,
+          "sum_positive_weights": 0.48594798071718237,
+          "sum_negative_weights": -0.25062129101728153,
+          "n_negative_weight_events": 3760
+        },
+        {
+          "stage": "hadronic_channel",
+          "raw_events": 6541,
+          "weighted_events_36fb": 0.13281918869911002,
+          "sum_positive_weights": 0.2721836269717455,
+          "sum_negative_weights": -0.13936443827263542,
+          "n_negative_weight_events": 2265
+        },
+        {
+          "stage": "leptonic_bookkeeping_only",
+          "raw_events": 4278,
+          "weighted_events_36fb": 0.1025075010007908,
+          "sum_positive_weights": 0.21376435374543695,
+          "sum_negative_weights": -0.11125685274464614,
+          "n_negative_weight_events": 1495
+        }
+      ],
+      "row_cap_applied": false,
+      "rows_before_cap": 10819,
+      "rows_written": 10819,
+      "selected_hadronic": 6541,
+      "selected_leptonic_bookkeeping": 4278
+    },
+    {
+      "sample": "data",
+      "role": "observed_data",
+      "stages": [
+        {
+          "stage": "input_rows",
+          "raw_events": 235202
+        },
+        {
+          "stage": "photons_in_kinematic_acceptance>=2",
+          "raw_events": 219854
+        },
+        {
+          "stage": "mgg_in_105_160",
+          "raw_events": 36375
+        },
+        {
+          "stage": "relative_pt_cuts",
+          "raw_events": 22029
+        },
+        {
+          "stage": "hadronic_or_leptonic_channel",
+          "raw_events": 22029
+        },
+        {
+          "stage": "hadronic_channel",
+          "raw_events": 20428
+        },
+        {
+          "stage": "leptonic_bookkeeping_only",
+          "raw_events": 1601
+        }
+      ],
+      "row_cap_applied": false,
+      "rows_before_cap": 22029,
+      "rows_written": 22029,
+      "selected_hadronic": 20428,
+      "selected_leptonic_bookkeeping": 1601
+    }
+  ]
+}

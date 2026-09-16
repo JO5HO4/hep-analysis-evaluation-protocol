@@ -1,0 +1,57 @@
+{
+  "feature_columns": [
+    "n_genjet",
+    "triplet_pt",
+    "triplet_eta",
+    "triplet_mass",
+    "pt1",
+    "pt2",
+    "pt3",
+    "pt_ratio_31",
+    "pt_ratio_21",
+    "dr_ab",
+    "dr_ac",
+    "dr_bc",
+    "dr_min",
+    "dr_max",
+    "dr_mean",
+    "mij_over_m123_ab",
+    "mij_over_m123_ac",
+    "mij_over_m123_bc",
+    "pair_mass_min",
+    "pair_mass_max",
+    "pair_mass_mean",
+    "btag_max",
+    "btag_min",
+    "btag_sum",
+    "abs_eta_max"
+  ],
+  "random_seed": 20260829,
+  "split": "event-level random permutation, 60%/20%/20% train/validation/test",
+  "n_train_candidates": 73991,
+  "n_val_candidates": 23222,
+  "n_test_candidates": 8571,
+  "n_train_truth": 3170,
+  "n_val_truth": 992,
+  "n_test_truth": 338,
+  "validation_auc": 0.9434007371613483,
+  "train_auc": 0.9729507149962693,
+  "final_model": {
+    "name": "iteration_3_deeper",
+    "params": {
+      "n_estimators": 110,
+      "max_depth": 6,
+      "learning_rate": 0.08,
+      "min_child_weight": 4
+    },
+    "validation_auc": 0.9434007371613483,
+    "validation_efficiency": 0.7056451612903226,
+    "selection_mode": "pair_logit",
+    "threshold": 0.0
+  },
+  "final_selection": {
+    "strategy": "score-ordered greedy jet-disjoint",
+    "score_threshold": 0.0,
+    "validation_efficiency": 0.7096774193548387
+  }
+}

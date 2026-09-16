@@ -1,0 +1,56 @@
+inputs:
+  gamgam_root_dir: ${TB_HYY_INPUTS}
+photon:
+  pt_min: 20.0
+lepton:
+  pt_min: 10.0
+jet:
+  pt_min: 25.0
+  central_eta_max: 2.5
+  btag_quantile_min: 4
+channels:
+  hadronic:
+    n_leptons: 0
+    n_jets_min: 3
+    n_bjets_min: 1
+  leptonic_bookkeeping:
+    n_leptons_min: 1
+    n_bjets_min: 1
+bdt_features:
+- jet_pt_sum
+- jet_eta_max
+- bjet_pt_max
+- bjet_eta_max
+- diphoton_pt
+signal_processes:
+- ttH
+- tH
+bdt_background:
+  resonant:
+  - ggH
+  continuum:
+    source: data
+    control_region: NTI
+    sidebands:
+      low:
+      - 105
+      - 120
+      high:
+      - 130
+      - 160
+    mass_window:
+    - 123
+    - 127
+nti_scale_factors:
+  compute_during_training: true
+balance_classes: true
+training:
+  model_type: XGBoost
+  random_seed: 42
+  test_size: 0.2
+  validation_size: 0.2
+boundary_optimization:
+  min_improvement: 0.05
+  max_boundaries: 10
+output_dir: /root/results/tth-diphoton-bdt
+max_selected_per_sample: 0

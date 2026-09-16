@@ -1,0 +1,149 @@
+{
+  "contract_name": "tb-hyy GamGam open-data input contract",
+  "environment_variable": "TB_HYY_INPUTS",
+  "environment_variable_value": "/data/GamGam",
+  "resolved_from_environment": true,
+  "input_root": "/data/GamGam",
+  "expected_layout": {
+    "MC": "/data/GamGam/MC",
+    "data": "/data/GamGam/data"
+  },
+  "layout_present": {
+    "MC": true,
+    "data": true
+  },
+  "tree_name": "analysis",
+  "tree_format": "ROOT RNTuple (read with uproot)",
+  "inputs_copied_into_submission": false,
+  "inputs_read_in_place": true,
+  "scope": {
+    "nominal_higgs_signal_mc_only": true,
+    "observed_data_included": true,
+    "sherpa_yy_excluded": true,
+    "prompt_diphoton_continuum_mc_excluded": true,
+    "other_non_higgs_mc_excluded": true,
+    "statement": "This run processes ONLY nominal Higgs H->gamma gamma signal MC (ggH, VBF, WH, ZH, ggZH, ttH, tH) and observed GamGam data. Sherpa yy / prompt-diphoton continuum MC and every other non-Higgs MC sample (ttbar, single top, V+jets, ...) are explicitly EXCLUDED: they are neither opened nor read. The continuum background is instead modelled data-driven, from the NTI diphoton control sample (BDT training and categorization control estimates) and from the observed TI data sidebands (statistical workspace)."
+  },
+  "requested_mc_samples": [
+    "ggH",
+    "VBF",
+    "WH",
+    "ZH",
+    "ggZH",
+    "ttH",
+    "tH"
+  ],
+  "requested_data_samples": [
+    "data"
+  ],
+  "excluded_sample_classes": [
+    "Sherpa yy / prompt-diphoton continuum MC",
+    "any other non-Higgs MC (single top, ttbar, V+jets, ...)"
+  ],
+  "files_present_in_input_root": {
+    "MC": [
+      "VBF_preselection.root",
+      "WH_preselection.root",
+      "ZH_preselection.root",
+      "ggH_preselection.root",
+      "ggZH_preselection.root",
+      "tH_preselection.root",
+      "ttH_preselection.root"
+    ],
+    "data": [
+      "data_preselection.root"
+    ]
+  },
+  "files_present_but_not_read": [],
+  "resolved_samples": [
+    {
+      "sample": "ggH",
+      "role": "resonant_higgs",
+      "kind": "mc",
+      "label": "ggH (H->yy)",
+      "path": "/data/GamGam/MC/ggH_preselection.root",
+      "tree": "analysis",
+      "size_bytes": 1104620,
+      "sha256_first_bytes": "c5c98f542a539f9ffbc86f7c6e2981e6c7206a1042685ebe9b4ec44fa2f8b6c5",
+      "hashed_bytes": 1104620
+    },
+    {
+      "sample": "VBF",
+      "role": "resonant_higgs",
+      "kind": "mc",
+      "label": "VBF (H->yy)",
+      "path": "/data/GamGam/MC/VBF_preselection.root",
+      "tree": "analysis",
+      "size_bytes": 57878,
+      "sha256_first_bytes": "29d8042ab2db72d7c5b4a5f97dc45a6f62a9515399741f613cb2672ae922289c",
+      "hashed_bytes": 57878
+    },
+    {
+      "sample": "WH",
+      "role": "resonant_higgs",
+      "kind": "mc",
+      "label": "WH (H->yy)",
+      "path": "/data/GamGam/MC/WH_preselection.root",
+      "tree": "analysis",
+      "size_bytes": 394820,
+      "sha256_first_bytes": "8c66b17655412d77cecc662bade05108af89f0f0276d824d70e06b0aa98031e3",
+      "hashed_bytes": 394820
+    },
+    {
+      "sample": "ZH",
+      "role": "resonant_higgs",
+      "kind": "mc",
+      "label": "ZH (H->yy)",
+      "path": "/data/GamGam/MC/ZH_preselection.root",
+      "tree": "analysis",
+      "size_bytes": 429446,
+      "sha256_first_bytes": "fd91e69ae72abbf81bc651ce18d0accf2646f2787c7a642cd52b7a28a49753c5",
+      "hashed_bytes": 429446
+    },
+    {
+      "sample": "ggZH",
+      "role": "resonant_higgs",
+      "kind": "mc",
+      "label": "ggZH (H->yy)",
+      "path": "/data/GamGam/MC/ggZH_preselection.root",
+      "tree": "analysis",
+      "size_bytes": 386714,
+      "sha256_first_bytes": "705d2576bf6546e6497d742b15501ca5b1a736e808f1fb942c72eb9238b48229",
+      "hashed_bytes": 386714
+    },
+    {
+      "sample": "ttH",
+      "role": "signal_top",
+      "kind": "mc",
+      "label": "ttH (H->yy)",
+      "path": "/data/GamGam/MC/ttH_preselection.root",
+      "tree": "analysis",
+      "size_bytes": 47280046,
+      "sha256_first_bytes": "994e7f246afd45b9cdbcf0b87cd4d762b394b27f17a216334eac4d98c5b14776",
+      "hashed_bytes": 8388608
+    },
+    {
+      "sample": "tH",
+      "role": "signal_top",
+      "kind": "mc",
+      "label": "tH (H->yy)",
+      "path": "/data/GamGam/MC/tH_preselection.root",
+      "tree": "analysis",
+      "size_bytes": 5396953,
+      "sha256_first_bytes": "59e3604ed5eae6513b6c20f54494936117add052a109280e76400823f88683e5",
+      "hashed_bytes": 5396953
+    },
+    {
+      "sample": "data",
+      "role": "observed_data",
+      "kind": "data",
+      "label": "observed GamGam data",
+      "path": "/data/GamGam/data/data_preselection.root",
+      "tree": "analysis",
+      "size_bytes": 51755822,
+      "sha256_first_bytes": "536a7006573d9c76bb9c0fad8ca10c64473058c9d9fea567d47b19a8984109e3",
+      "hashed_bytes": 8388608
+    }
+  ],
+  "missing_files": []
+}

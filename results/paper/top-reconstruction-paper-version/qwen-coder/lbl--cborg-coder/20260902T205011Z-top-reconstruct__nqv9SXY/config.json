@@ -1,0 +1,12 @@
+{
+    "task": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260902T205011Z-top-reconstruction-full-chain-no-pipeline-qwen-coder-1251723"
+    },
+    "trial_name": "20260902T205011Z-top-reconstruct__nqv9SXY",
+    "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260902T205011Z-top-reconstruction-full-chain-no-pipeline-qwen-coder-1251723",
+    "agent": {
+        "name": "harbor_agents.preinstalled:PreinstalledQwenCode",
+        "model_name": "lbl/cborg-coder"
+    },
+    "job_id": "31f1ce75-d688-4c80-9273-eebbfae1b218"
+}

@@ -1,0 +1,125 @@
+{
+    "id": "93b3d624-d8df-4bb9-9e73-f6e230bade03",
+    "task_name": "haichenwangberkeley/tth-diphoton-bdt-categorization",
+    "trial_name": "20260902T050526Z-tth-diphoton-bd__2Jw5SMu",
+    "trial_uri": "file:///tmp/terminal-bench-harbor-jobs/20260902T050526Z-tth-diphoton-bdt-categorization-qwen-coder-2004640/20260902T050526Z-tth-diphoton-bd__2Jw5SMu",
+    "task_id": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260902T050526Z-tth-diphoton-bdt-categorization-qwen-coder-2004640"
+    },
+    "source": null,
+    "task_checksum": "31ad0448cc9391819b3faa67428ce00606878660e3e38bbbc9ac23e57ff507f0",
+    "config": {
+        "task": {
+            "path": "/tmp/terminal-bench-staged-tasks/20260902T050526Z-tth-diphoton-bdt-categorization-qwen-coder-2004640",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "20260902T050526Z-tth-diphoton-bd__2Jw5SMu",
+        "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260902T050526Z-tth-diphoton-bdt-categorization-qwen-coder-2004640",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "harbor_agents.preinstalled:PreinstalledQwenCode",
+            "import_path": null,
+            "model_name": "lbl/cborg-coder",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "env": {
+                "TB_HYY_INPUTS": "/data/GamGam"
+            },
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": [
+                {
+                    "type": "bind",
+                    "source": "<source-repository>/data/GamGam",
+                    "target": "/data/GamGam",
+                    "read_only": true
+                }
+            ],
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "7c613754-f3c8-4c73-ad3e-39131ab63094",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "qwen-coder",
+        "version": "bash: line 1: /root/.nvm/nvm.sh: No such file or directory\r\n0.21.15",
+        "model_info": {
+            "name": "cborg-coder",
+            "provider": "lbl"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 682220,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 17441,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-09-02T05:06:28.414656Z",
+    "finished_at": "2026-09-02T05:18:38.079095Z",
+    "environment_setup": {
+        "started_at": "2026-09-02T05:06:28.668807Z",
+        "finished_at": "2026-09-02T05:06:41.762366Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-02T05:06:41.762416Z",
+        "finished_at": "2026-09-02T05:06:46.481570Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-02T05:06:46.481673Z",
+        "finished_at": "2026-09-02T05:16:55.514867Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-02T05:17:27.331137Z",
+        "finished_at": "2026-09-02T05:18:38.079085Z"
+    },
+    "step_results": null
+}

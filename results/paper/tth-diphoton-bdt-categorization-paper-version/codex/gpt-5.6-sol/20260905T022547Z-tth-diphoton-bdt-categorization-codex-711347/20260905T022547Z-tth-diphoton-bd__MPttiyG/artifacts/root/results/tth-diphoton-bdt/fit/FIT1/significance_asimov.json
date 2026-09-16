@@ -1,0 +1,20 @@
+{
+  "asimov_mu_gen": 1.0,
+  "expected_Z": 1.43840636125547,
+  "free_mu_fit": {
+    "covariance_quality": 3,
+    "min_nll": 475.8301298768321,
+    "mu_hat": 0.9938810500128229,
+    "mu_uncertainty": 0.7650664490096862,
+    "status": 0
+  },
+  "kind": "expected_discovery_significance",
+  "mu0_fit": {
+    "covariance_quality": 3,
+    "min_nll": 476.8646363068822,
+    "mu": 0.0,
+    "status": 0
+  },
+  "observed_significance": "BLOCKED_BLINDED",
+  "q0": 2.0690128601002016
+}

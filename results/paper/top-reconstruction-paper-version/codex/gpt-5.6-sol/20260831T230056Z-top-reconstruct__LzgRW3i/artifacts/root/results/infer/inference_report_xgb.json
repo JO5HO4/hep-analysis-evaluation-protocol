@@ -1,0 +1,13 @@
+{
+  "classifier_metrics": {
+    "auc": 0.9510764574839224,
+    "logloss": 0.09139546751976013,
+    "n_candidates": 15443,
+    "n_truth": 643,
+    "score_fake_mean": 0.02854631096124649,
+    "score_truth_mean": 0.3717259466648102
+  },
+  "model": "/root/results/train/model_xgb.json",
+  "score_column": "score_xgb",
+  "split": "held-out test events"
+}

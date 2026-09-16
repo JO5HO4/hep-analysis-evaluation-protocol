@@ -1,0 +1,7 @@
+{
+  "candidates": [
+    "exponential",
+    "linear"
+  ],
+  "selected": "exponential"
+}

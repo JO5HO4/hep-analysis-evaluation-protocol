@@ -1,0 +1,125 @@
+{
+    "id": "04565df4-6f80-46ad-bd3b-5cb76b0a137f",
+    "task_name": "haichenwangberkeley/tth-diphoton-bdt-categorization",
+    "trial_name": "20260904T210145Z-tth-diphoton-bd__MqqLxno",
+    "trial_uri": "file:///tmp/terminal-bench-harbor-jobs/20260904T210145Z-tth-diphoton-bdt-categorization-claude-code-461040/20260904T210145Z-tth-diphoton-bd__MqqLxno",
+    "task_id": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260904T210145Z-tth-diphoton-bdt-categorization-claude-code-461040"
+    },
+    "source": null,
+    "task_checksum": "31ad0448cc9391819b3faa67428ce00606878660e3e38bbbc9ac23e57ff507f0",
+    "config": {
+        "task": {
+            "path": "/tmp/terminal-bench-staged-tasks/20260904T210145Z-tth-diphoton-bdt-categorization-claude-code-461040",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "20260904T210145Z-tth-diphoton-bd__MqqLxno",
+        "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260904T210145Z-tth-diphoton-bdt-categorization-claude-code-461040",
+        "install_only": false,
+        "timeout_multiplier": 2.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": 2.0,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "harbor_agents.preinstalled:PreinstalledClaudeCode",
+            "import_path": null,
+            "model_name": "lbl/cborg-coder",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "env": {
+                "TB_HYY_INPUTS": "/data/GamGam"
+            },
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": [
+                {
+                    "type": "bind",
+                    "source": "<source-repository>/data/GamGam",
+                    "target": "/data/GamGam",
+                    "read_only": true
+                }
+            ],
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "8899b3a6-7cba-4b9d-814e-2313ea336e89",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.238",
+        "model_info": {
+            "name": "cborg-coder",
+            "provider": "anthropic"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 221792,
+        "n_cache_tokens": 42336,
+        "n_output_tokens": 4553,
+        "cost_usd": 1.0322730000000002,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-09-04T21:02:28.286801Z",
+    "finished_at": "2026-09-04T21:06:30.664259Z",
+    "environment_setup": {
+        "started_at": "2026-09-04T21:02:28.539346Z",
+        "finished_at": "2026-09-04T21:02:41.440344Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-04T21:02:41.440392Z",
+        "finished_at": "2026-09-04T21:02:46.151207Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-04T21:02:46.151355Z",
+        "finished_at": "2026-09-04T21:04:50.792422Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-04T21:05:25.372203Z",
+        "finished_at": "2026-09-04T21:06:30.664234Z"
+    },
+    "step_results": null
+}

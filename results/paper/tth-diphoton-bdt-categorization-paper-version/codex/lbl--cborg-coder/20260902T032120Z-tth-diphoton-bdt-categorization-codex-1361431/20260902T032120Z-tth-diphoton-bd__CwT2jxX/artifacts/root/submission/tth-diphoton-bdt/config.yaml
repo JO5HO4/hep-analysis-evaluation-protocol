@@ -1,0 +1,12 @@
+input_path: /data/GamGam
+output_path: /root/results/tth-diphoton-bdt
+luminosity: 36.0
+signal_window: [123.0, 127.0]
+sideband_low: [105.0, 120.0]
+sideband_high: [130.0, 160.0]
+bdt_features: ["n_jets", "n_btags", "ht", "met", "n_central_jets"]
+bdt_params:
+  max_depth: 3
+  learning_rate: 0.1
+  n_estimators: 100
+  random_state: 42

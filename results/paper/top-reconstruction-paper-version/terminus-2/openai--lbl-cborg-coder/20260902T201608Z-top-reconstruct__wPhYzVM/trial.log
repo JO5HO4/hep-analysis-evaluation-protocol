@@ -1,0 +1,48 @@
+Skipping image OS validation for hb__a6e0f77a30e3444e81f5ee637e02c112: container inspect returned 125
+container copy failed; retrying upload with tar stream: podman cp failed. Return code: 125. Stdout: . Stderr: Error: 1 error occurred:
+	* copying from host: copier: get: "<source-repository>/harbor/src/harbor/agents/terminus_2/get-asciinema-timestamp.sh": getting extended attributes for "<source-repository>/harbor/src/harbor/agents/terminus_2/get-asciinema-timestamp.sh": listing extended attributes of "<source-repository>/harbor/src/harbor/agents/terminus_2/get-asciinema-timestamp.sh": protocol error
+.
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260902T201608Z-top-reconstruction-full-chain-no-pipeline-terminus-2-1258835/20260902T201608Z-top-reconstruct__wPhYzVM/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260902T201608Z-top-reconstruction-full-chain-no-pipeline-terminus-2-1258835/20260902T201608Z-top-reconstruct__wPhYzVM/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260902T201608Z-top-reconstruction-full-chain-no-pipeline-terminus-2-1258835/20260902T201608Z-top-reconstruct__wPhYzVM/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260902T201608Z-top-reconstruction-full-chain-no-pipeline-terminus-2-1258835/20260902T201608Z-top-reconstruct__wPhYzVM/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260902T201608Z-top-reconstruction-full-chain-no-pipeline-terminus-2-1258835/20260902T201608Z-top-reconstruct__wPhYzVM/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260902T201608Z-top-reconstruction-full-chain-no-pipeline-terminus-2-1258835/20260902T201608Z-top-reconstruct__wPhYzVM/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260902T201608Z-top-reconstruction-full-chain-no-pipeline-terminus-2-1258835/20260902T201608Z-top-reconstruct__wPhYzVM/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260902T201608Z-top-reconstruction-full-chain-no-pipeline-terminus-2-1258835/20260902T201608Z-top-reconstruct__wPhYzVM/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260902T201608Z-top-reconstruction-full-chain-no-pipeline-terminus-2-1258835/20260902T201608Z-top-reconstruct__wPhYzVM/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260902T201608Z-top-reconstruction-full-chain-no-pipeline-terminus-2-1258835/20260902T201608Z-top-reconstruct__wPhYzVM/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260902T201608Z-top-reconstruction-full-chain-no-pipeline-terminus-2-1258835/20260902T201608Z-top-reconstruct__wPhYzVM/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260902T201608Z-top-reconstruction-full-chain-no-pipeline-terminus-2-1258835/20260902T201608Z-top-reconstruct__wPhYzVM/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260902T201608Z-top-reconstruction-full-chain-no-pipeline-terminus-2-1258835/20260902T201608Z-top-reconstruct__wPhYzVM/agent/trajectory.json
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260902T201608Z-top-reconstruction-full-chain-no-pipeline-terminus-2-1258835/20260902T201608Z-top-reconstruct__wPhYzVM/agent/trajectory.json
+Collecting main service artifacts
+Skipping image OS validation for hb__0849f2f0e0395aeddabacab5b454928a: container inspect returned 125

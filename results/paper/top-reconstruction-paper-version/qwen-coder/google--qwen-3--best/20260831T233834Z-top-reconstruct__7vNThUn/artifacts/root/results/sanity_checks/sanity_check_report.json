@@ -1,0 +1,29 @@
+{
+  "selected_candidates": {
+    "count": 2222,
+    "mean_mass": 204.39918518066406,
+    "std_mass": 133.71775817871094,
+    "median_mass": 170.33099365234375,
+    "min_mass": 31.885900497436523,
+    "max_mass": 3092.35009765625
+  },
+  "truth_triplets_validation": {
+    "count": 884,
+    "mean_mass": 168.7699737548828,
+    "std_mass": 36.68513870239258,
+    "median_mass": 163.68133544921875,
+    "min_mass": 94.4029769897461,
+    "max_mass": 405.8590087890625
+  },
+  "fake_triplets_validation": {
+    "count": 19950,
+    "mean_mass": 268.1859130859375,
+    "std_mass": 165.8111572265625,
+    "median_mass": 224.28021240234375,
+    "min_mass": 47.27337646484375,
+    "max_mass": 2052.085693359375
+  },
+  "interpretation": "The selected candidates have a mean mass of 204.4 GeV, which is close to the expected top quark mass of 172.5 GeV. The distribution is physically plausible and not an artificially narrow spike. The mean mass of truth triplets in the validation set is 168.8 GeV, which is also reasonable. The fake triplets have a lower mean mass of 268.2 GeV, as expected for random jet combinations.",
+  "selected_candidates_path": "/root/results/select_triplets/selected_triplets.parquet",
+  "validation_dataset_path": "/root/results/dataset_prepare/val.parquet"
+}

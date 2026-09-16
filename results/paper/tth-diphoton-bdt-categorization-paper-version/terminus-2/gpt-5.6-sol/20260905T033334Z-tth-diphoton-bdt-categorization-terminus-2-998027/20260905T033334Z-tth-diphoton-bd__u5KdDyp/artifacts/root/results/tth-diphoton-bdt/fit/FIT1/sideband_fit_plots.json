@@ -1,0 +1,79 @@
+{
+  "combined": "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit.png",
+  "per_category": {
+    "ttH_had_BDT1": {
+      "png": "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT1.png",
+      "pdf": "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT1.pdf"
+    },
+    "tH_had_4j1b": {
+      "png": "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_tH_had_4j1b.png",
+      "pdf": "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_tH_had_4j1b.pdf"
+    },
+    "tH_had_4j2b": {
+      "png": "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_tH_had_4j2b.png",
+      "pdf": "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_tH_had_4j2b.pdf"
+    }
+  },
+  "explicit_binning_GeV": [
+    105.0,
+    106.0,
+    107.0,
+    108.0,
+    109.0,
+    110.0,
+    111.0,
+    112.0,
+    113.0,
+    114.0,
+    115.0,
+    116.0,
+    117.0,
+    118.0,
+    119.0,
+    120.0,
+    121.0,
+    122.0,
+    123.0,
+    124.0,
+    125.0,
+    126.0,
+    127.0,
+    128.0,
+    129.0,
+    130.0,
+    131.0,
+    132.0,
+    133.0,
+    134.0,
+    135.0,
+    136.0,
+    137.0,
+    138.0,
+    139.0,
+    140.0,
+    141.0,
+    142.0,
+    143.0,
+    144.0,
+    145.0,
+    146.0,
+    147.0,
+    148.0,
+    149.0,
+    150.0,
+    151.0,
+    152.0,
+    153.0,
+    154.0,
+    155.0,
+    156.0,
+    157.0,
+    158.0,
+    159.0,
+    160.0
+  ],
+  "blinded_window": [
+    123,
+    127
+  ]
+}

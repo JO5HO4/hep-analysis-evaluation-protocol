@@ -1,0 +1,115 @@
+{
+    "id": "5fbc9dde-57d1-42a1-925a-480ba4e9521b",
+    "task_name": "haichenwangberkeley/top-reconstruction-full-chain-no-pipeline",
+    "trial_name": "20260902T201601Z-top-reconstruct__tAwiCUD",
+    "trial_uri": "file:///tmp/terminal-bench-harbor-jobs/20260902T201601Z-top-reconstruction-full-chain-no-pipeline-claude-code-1237600/20260902T201601Z-top-reconstruct__tAwiCUD",
+    "task_id": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260902T201601Z-top-reconstruction-full-chain-no-pipeline-claude-code-1237600"
+    },
+    "source": null,
+    "task_checksum": "e9ea6e6ba87ee7c40adbdeaa1e90741908c6b1ba370f62ba848a2cc341614498",
+    "config": {
+        "task": {
+            "path": "/tmp/terminal-bench-staged-tasks/20260902T201601Z-top-reconstruction-full-chain-no-pipeline-claude-code-1237600",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "20260902T201601Z-top-reconstruct__tAwiCUD",
+        "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260902T201601Z-top-reconstruction-full-chain-no-pipeline-claude-code-1237600",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": 2.0,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "harbor_agents.preinstalled:PreinstalledClaudeCode",
+            "import_path": null,
+            "model_name": "lbl/cborg-coder",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "edcd2e9a-8f2a-4035-b005-8bcd89069dc5",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "claude-code",
+        "version": "2.1.238",
+        "model_info": {
+            "name": "cborg-coder",
+            "provider": "anthropic"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 791799,
+        "n_cache_tokens": 509664,
+        "n_output_tokens": 29208,
+        "cost_usd": 2.395707,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.916667
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-09-02T20:16:35.136266Z",
+    "finished_at": "2026-09-02T20:29:03.522880Z",
+    "environment_setup": {
+        "started_at": "2026-09-02T20:16:35.346075Z",
+        "finished_at": "2026-09-02T20:16:48.723077Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-02T20:16:48.723130Z",
+        "finished_at": "2026-09-02T20:16:53.796801Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-02T20:16:53.796966Z",
+        "finished_at": "2026-09-02T20:27:31.380849Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-02T20:28:00.807335Z",
+        "finished_at": "2026-09-02T20:29:03.522863Z"
+    },
+    "step_results": null
+}

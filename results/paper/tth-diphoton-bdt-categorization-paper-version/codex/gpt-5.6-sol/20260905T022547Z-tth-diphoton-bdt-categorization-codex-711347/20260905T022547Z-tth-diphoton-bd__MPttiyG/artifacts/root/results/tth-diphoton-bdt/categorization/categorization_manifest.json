@@ -1,0 +1,34 @@
+{
+  "classifier_fit_weight_used_for_yields": false,
+  "final_category_order": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "ttH_had_BDT3",
+    "ttH_had_BDT4",
+    "tH_had_4j1b",
+    "tH_had_4j2b",
+    "unassigned"
+  ],
+  "integrated_luminosity_fb": 36.0,
+  "kept_workspace_categories": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "tH_had_4j1b",
+    "tH_had_4j2b"
+  ],
+  "priority_order": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "ttH_had_BDT3",
+    "ttH_had_BDT4",
+    "tH_had_4j1b",
+    "tH_had_4j2b"
+  ],
+  "signal_window_GeV": [
+    123.0,
+    127.0
+  ],
+  "th_categories_evaluated_after_bdt_failure": true,
+  "th_cut": "N_leptons=0, exactly 4 central jets, exactly 1 or >=2 b-tags",
+  "unassigned_is_catch_all": true
+}

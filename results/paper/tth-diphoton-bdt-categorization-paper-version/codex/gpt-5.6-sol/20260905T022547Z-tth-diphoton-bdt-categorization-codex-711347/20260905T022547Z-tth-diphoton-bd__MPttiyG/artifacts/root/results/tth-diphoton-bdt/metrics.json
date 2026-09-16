@@ -1,0 +1,100 @@
+{
+  "all_hadronic_scores_finite": true,
+  "combined_counting_Z": 1.6295035000423839,
+  "hadronic_rows": 101471,
+  "nti_scale_factors": {
+    "NTI_125_plusminus_2_yield": 2615.0,
+    "NTI_sideband_yield": 26367.0,
+    "SF1": 0.026207001175712064,
+    "SF1_times_SF2": 0.0025991317963548013,
+    "SF2": 0.09917700155497403,
+    "TI_sideband_yield": 691.0
+  },
+  "observed_significance": "BLOCKED_BLINDED",
+  "optimization": {
+    "accepted_splits": [
+      {
+        "background": 7.36853864266586,
+        "boundary": 0.6806094727554415,
+        "combined_expected_z": 3.339805926630191,
+        "iteration": 1,
+        "kind": "minimum_score",
+        "relative_improvement": null,
+        "signal": 10.778437774751229
+      },
+      {
+        "bin_yields_low_to_high": [
+          {
+            "background": 6.471838172923456,
+            "signal": 7.755704632787547
+          },
+          {
+            "background": 0.8967004697424064,
+            "signal": 3.0227331419636814
+          }
+        ],
+        "boundary": 0.8685461532604246,
+        "combined_expected_z": 3.524191858552434,
+        "iteration": 2,
+        "kind": "split",
+        "relative_improvement": 0.055208576777479264
+      }
+    ],
+    "final_combined_expected_z": 3.524191858552434,
+    "maximum_categories": 4,
+    "minimum": 0.6806094727554415,
+    "minimum_relative_improvement": 0.05,
+    "split_boundaries_desc": [
+      0.8685461532604246
+    ],
+    "stop_reason": "best_relative_improvement_below_5_percent"
+  },
+  "roofit_expected_Z": 1.43840636125547,
+  "roofit_q0": 2.0690128601002016,
+  "rows": 101471,
+  "score_max": 0.9302472024831369,
+  "score_min": 0.0680750654994694,
+  "signed_weight_bookkeeping": true,
+  "training": {
+    "classifier": "sklearn.ensemble.HistGradientBoostingClassifier",
+    "deterministic_seed": 240513,
+    "evaluation_partition": "test",
+    "features": [
+      "n_central_jets",
+      "n_bjets",
+      "jet1_pt",
+      "jet_ht",
+      "diphoton_pt"
+    ],
+    "hyperparameters": {
+      "categorical_features": "from_dtype",
+      "class_weight": null,
+      "early_stopping": "auto",
+      "interaction_cst": null,
+      "l2_regularization": 1.0,
+      "learning_rate": 0.055,
+      "loss": "log_loss",
+      "max_bins": 255,
+      "max_depth": 4,
+      "max_features": 1.0,
+      "max_iter": 180,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "monotonic_cst": null,
+      "n_iter_no_change": 10,
+      "random_state": 240513,
+      "scoring": "loss",
+      "tol": 1e-07,
+      "validation_fraction": 0.1,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "mass_used_as_input": false,
+    "model_path": "model/bdt_model.pkl",
+    "negative_weight_policy_for_fit": "nonpositive signed physical weights get zero bdt_fit_weight; signed values are retained for yields",
+    "test_weighted_roc_auc": 0.8176052139123798,
+    "training_partition": "train",
+    "training_rows_with_positive_fit_weight": 48784,
+    "training_stage_duration_seconds": 1.236968405006337
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "photon": "Kinematic acceptance only. Tight-ID and Tight-Isolation NOT required.",
+    "electron_muon": "pT > 10 GeV, no ID/iso required.",
+    "jet": "pT > 25 GeV, central if |eta| <= 2.5, forward otherwise.",
+    "btag": "jet_btag_quantile >= 4"
+}

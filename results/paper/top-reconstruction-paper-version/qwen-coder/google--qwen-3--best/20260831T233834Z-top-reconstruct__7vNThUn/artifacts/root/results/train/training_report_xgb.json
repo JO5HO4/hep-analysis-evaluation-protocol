@@ -1,0 +1,37 @@
+{
+  "validation_auc": 0.8429165107338482,
+  "training_auc": 0.9071571867570178,
+  "num_boost_round": 63,
+  "early_stopping_rounds": 50,
+  "feature_importance": {
+    "dr_ab": 749.0,
+    "dr_ac": 655.0,
+    "dr_bc": 802.0,
+    "mij_over_m123_ab": 685.0,
+    "mij_over_m123_ac": 647.0,
+    "mij_over_m123_bc": 739.0
+  },
+  "parameters": {
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "max_depth": 6,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 1,
+    "gamma": 0,
+    "reg_alpha": 0,
+    "reg_lambda": 1,
+    "random_state": 42,
+    "tree_method": "hist"
+  },
+  "dataset_stats": {
+    "n_train": 63627,
+    "n_val": 20834,
+    "n_test": 21323,
+    "n_train_truth": 2678,
+    "n_val_truth": 884,
+    "train_truth_fraction": 0.042089050245964765,
+    "val_truth_fraction": 0.04243064221944898
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "per_category_choice": {
+    "ttH_had_BDT1": "exponential",
+    "ttH_had_BDT2": "power_law",
+    "ttH_had_BDT3": "power_law",
+    "tH_had_4j1b": "power_law"
+  },
+  "criterion": "minimum AIC",
+  "source_of_continuum": "observed TI data sidebands only",
+  "normalisation": "sideband count / PDF sideband fraction, extrapolated to the full 105-160 GeV range; the yield floats in the fit"
+}

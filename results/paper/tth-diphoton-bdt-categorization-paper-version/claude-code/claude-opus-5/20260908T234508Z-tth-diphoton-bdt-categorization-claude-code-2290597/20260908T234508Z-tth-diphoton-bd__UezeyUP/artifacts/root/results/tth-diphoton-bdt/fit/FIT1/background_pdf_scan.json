@@ -1,0 +1,328 @@
+{
+  "criterion": "minimum AIC = 2k + 2*NLL among converged candidates",
+  "candidates": [
+    "exponential",
+    "power_law",
+    "expo_poly1",
+    "bernstein2"
+  ],
+  "fit_ranges": "SBLO (105-120 GeV) + SBHI (130-160 GeV), observed TI data only",
+  "per_category": {
+    "ttH_had_BDT1": {
+      "candidates": [
+        {
+          "pdf": "exponential",
+          "formula": "exp(a0 * m)",
+          "n_params": 1,
+          "min_nll": 15.225214684132657,
+          "aic": 32.45042936826532,
+          "fit_status": 0,
+          "cov_quality": 3,
+          "parameters": {
+            "bkg_a0_exponential_ttH_had_BDT1": [
+              -0.002025189077464121,
+              0.029139474493787135
+            ]
+          }
+        },
+        {
+          "pdf": "power_law",
+          "formula": "(m/100)^a0",
+          "n_params": 1,
+          "min_nll": 15.226743989968385,
+          "aic": 32.45348797993677,
+          "fit_status": 0,
+          "cov_quality": 3,
+          "parameters": {
+            "bkg_p0_power_law_ttH_had_BDT1": [
+              -0.03095827339749093,
+              3.723103060105566
+            ]
+          }
+        },
+        {
+          "pdf": "expo_poly1",
+          "formula": "exp(a0*m + a1*m*m)",
+          "n_params": 2,
+          "min_nll": 14.844847695238183,
+          "aic": 33.689695390476366,
+          "fit_status": 0,
+          "cov_quality": 3,
+          "parameters": {
+            "bkg_e0_expo_poly1_ttH_had_BDT1": [
+              0.1999495915507007,
+              0.4612510266674992
+            ],
+            "bkg_e1_expo_poly1_ttH_had_BDT1": [
+              -0.000773138861741815,
+              0.00012095449392253481
+            ]
+          }
+        },
+        {
+          "pdf": "bernstein2",
+          "formula": "Bernstein order 2",
+          "n_params": 2,
+          "min_nll": 14.261890264655102,
+          "aic": 32.5237805293102,
+          "fit_status": 0,
+          "cov_quality": 2,
+          "parameters": {
+            "bkg_b0_bernstein2_ttH_had_BDT1": [
+              0.0001444469372400588,
+              8.332891315536424
+            ],
+            "bkg_b1_bernstein2_ttH_had_BDT1": [
+              2.5065068148125538,
+              5.447199767809734
+            ],
+            "bkg_b2_bernstein2_ttH_had_BDT1": [
+              1.6120158226919632e-05,
+              9.343467707348378
+            ]
+          }
+        }
+      ],
+      "selected": "exponential",
+      "criterion": "minimum AIC = 2k + 2*NLL",
+      "n_ti_sideband_events": 4
+    },
+    "ttH_had_BDT2": {
+      "candidates": [
+        {
+          "pdf": "exponential",
+          "formula": "exp(a0 * m)",
+          "n_params": 1,
+          "min_nll": 137.03103811243687,
+          "aic": 276.06207622487375,
+          "fit_status": 0,
+          "cov_quality": 3,
+          "parameters": {
+            "bkg_a0_exponential_ttH_had_BDT2": [
+              0.0012990143767430621,
+              0.009799643520201403
+            ]
+          }
+        },
+        {
+          "pdf": "power_law",
+          "formula": "(m/100)^a0",
+          "n_params": 1,
+          "min_nll": 137.0265764271273,
+          "aic": 276.0531528542546,
+          "fit_status": 0,
+          "cov_quality": 3,
+          "parameters": {
+            "bkg_p0_power_law_ttH_had_BDT2": [
+              0.20812604790039735,
+              1.2786448978388976
+            ]
+          }
+        },
+        {
+          "pdf": "expo_poly1",
+          "formula": "exp(a0*m + a1*m*m)",
+          "n_params": 2,
+          "min_nll": 136.86358856595038,
+          "aic": 277.72717713190076,
+          "fit_status": 0,
+          "cov_quality": 3,
+          "parameters": {
+            "bkg_e0_expo_poly1_ttH_had_BDT2": [
+              0.10877064418567942,
+              0.17515993616450365
+            ],
+            "bkg_e1_expo_poly1_ttH_had_BDT2": [
+              -0.0004068806838064642,
+              0.0006665698306505114
+            ]
+          }
+        },
+        {
+          "pdf": "bernstein2",
+          "formula": "Bernstein order 2",
+          "n_params": 2,
+          "min_nll": 136.8472431176715,
+          "aic": 277.694486235343,
+          "fit_status": 1,
+          "cov_quality": 2,
+          "parameters": {
+            "bkg_b0_bernstein2_ttH_had_BDT2": [
+              0.2547592928747166,
+              6.445265517529786
+            ],
+            "bkg_b1_bernstein2_ttH_had_BDT2": [
+              0.49157937670080404,
+              7.538402813735534
+            ],
+            "bkg_b2_bernstein2_ttH_had_BDT2": [
+              0.27297362951270965,
+              6.534707084703628
+            ]
+          }
+        }
+      ],
+      "selected": "power_law",
+      "criterion": "minimum AIC = 2k + 2*NLL",
+      "n_ti_sideband_events": 36
+    },
+    "ttH_had_BDT3": {
+      "candidates": [
+        {
+          "pdf": "exponential",
+          "formula": "exp(a0 * m)",
+          "n_params": 1,
+          "min_nll": 534.7625887189514,
+          "aic": 1071.5251774379028,
+          "fit_status": 0,
+          "cov_quality": 3,
+          "parameters": {
+            "bkg_a0_exponential_ttH_had_BDT3": [
+              -0.025150008889790982,
+              0.0049320580540827535
+            ]
+          }
+        },
+        {
+          "pdf": "power_law",
+          "formula": "(m/100)^a0",
+          "n_params": 1,
+          "min_nll": 534.6362194332223,
+          "aic": 1071.2724388664446,
+          "fit_status": 0,
+          "cov_quality": 3,
+          "parameters": {
+            "bkg_p0_power_law_ttH_had_BDT3": [
+              -3.2520062072305014,
+              0.6292405047896108
+            ]
+          }
+        },
+        {
+          "pdf": "expo_poly1",
+          "formula": "exp(a0*m + a1*m*m)",
+          "n_params": 2,
+          "min_nll": 534.4866448948491,
+          "aic": 1072.9732897896981,
+          "fit_status": 0,
+          "cov_quality": 3,
+          "parameters": {
+            "bkg_e0_expo_poly1_ttH_had_BDT3": [
+              -0.10038301144787128,
+              0.10302839144914483
+            ],
+            "bkg_e1_expo_poly1_ttH_had_BDT3": [
+              0.0002893984346075879,
+              0.0003901702450474192
+            ]
+          }
+        },
+        {
+          "pdf": "bernstein2",
+          "formula": "Bernstein order 2",
+          "n_params": 2,
+          "min_nll": 534.1574447183734,
+          "aic": 1072.3148894367469,
+          "fit_status": 0,
+          "cov_quality": 3,
+          "parameters": {
+            "bkg_b0_bernstein2_ttH_had_BDT3": [
+              0.5755018373289361,
+              8.57603617071091
+            ],
+            "bkg_b1_bernstein2_ttH_had_BDT3": [
+              0.09340307828524651,
+              7.66169887533807
+            ],
+            "bkg_b2_bernstein2_ttH_had_BDT3": [
+              0.1906306351425243,
+              9.110093881036839
+            ]
+          }
+        }
+      ],
+      "selected": "power_law",
+      "criterion": "minimum AIC = 2k + 2*NLL",
+      "n_ti_sideband_events": 144
+    },
+    "tH_had_4j1b": {
+      "candidates": [
+        {
+          "pdf": "exponential",
+          "formula": "exp(a0 * m)",
+          "n_params": 1,
+          "min_nll": 158.46007070953772,
+          "aic": 318.92014141907543,
+          "fit_status": 0,
+          "cov_quality": 3,
+          "parameters": {
+            "bkg_a0_exponential_tH_had_4j1b": [
+              -0.028843556007237484,
+              0.009140201577966127
+            ]
+          }
+        },
+        {
+          "pdf": "power_law",
+          "formula": "(m/100)^a0",
+          "n_params": 1,
+          "min_nll": 158.35880663774697,
+          "aic": 318.71761327549393,
+          "fit_status": 0,
+          "cov_quality": 3,
+          "parameters": {
+            "bkg_p0_power_law_tH_had_4j1b": [
+              -3.7617329223994913,
+              1.162346106195214
+            ]
+          }
+        },
+        {
+          "pdf": "expo_poly1",
+          "formula": "exp(a0*m + a1*m*m)",
+          "n_params": 2,
+          "min_nll": 158.1400909743993,
+          "aic": 320.2801819487986,
+          "fit_status": 0,
+          "cov_quality": 3,
+          "parameters": {
+            "bkg_e0_expo_poly1_tH_had_4j1b": [
+              -0.17585219187551823,
+              0.18331583543218427
+            ],
+            "bkg_e1_expo_poly1_tH_had_4j1b": [
+              0.0005663106342689504,
+              0.0006456642217063115
+            ]
+          }
+        },
+        {
+          "pdf": "bernstein2",
+          "formula": "Bernstein order 2",
+          "n_params": 2,
+          "min_nll": 157.8897663412102,
+          "aic": 319.7795326824204,
+          "fit_status": 0,
+          "cov_quality": 3,
+          "parameters": {
+            "bkg_b0_bernstein2_tH_had_4j1b": [
+              0.6059803902538121,
+              9.508077985905643
+            ],
+            "bkg_b1_bernstein2_tH_had_4j1b": [
+              3.7570286543240966e-05,
+              0.8359406091947855
+            ],
+            "bkg_b2_bernstein2_tH_had_4j1b": [
+              0.1954337647916913,
+              8.344499101739508
+            ]
+          }
+        }
+      ],
+      "selected": "power_law",
+      "criterion": "minimum AIC = 2k + 2*NLL",
+      "n_ti_sideband_events": 43
+    }
+  }
+}

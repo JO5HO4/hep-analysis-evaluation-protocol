@@ -1,0 +1,28 @@
+{
+  "mass_units": "GeV",
+  "selected_test": {
+    "n": 2194,
+    "mean": 212.60221772201686,
+    "median": 173.06322487369653,
+    "std": 127.59362819632032,
+    "q05": 131.81863941406738,
+    "q95": 412.3570393495769
+  },
+  "validation_truth": {
+    "n": 947,
+    "mean": 173.6316130577942,
+    "median": 166.26659973830806,
+    "std": 41.16571724247339,
+    "q05": 133.64569247392424,
+    "q95": 252.16683443014804
+  },
+  "validation_fake": {
+    "n": 20322,
+    "mean": 274.52732945838125,
+    "median": 231.7386673861229,
+    "std": 163.76327006755628,
+    "q05": 115.88459879478795,
+    "q95": 578.7340448658689
+  },
+  "interpretation": "Selected candidates are compared with independent validation truth and combinatorial populations. The distribution is retained as a broad reconstructed mass shape rather than imposing a narrow mass-window selection; classifier and disjoint score selection use multiple kinematic observables."
+}

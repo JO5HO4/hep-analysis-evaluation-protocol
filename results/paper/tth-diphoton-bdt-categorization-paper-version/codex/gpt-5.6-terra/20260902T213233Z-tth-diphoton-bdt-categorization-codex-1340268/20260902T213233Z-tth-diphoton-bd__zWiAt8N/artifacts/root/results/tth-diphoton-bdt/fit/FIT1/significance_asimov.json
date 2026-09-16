@@ -1,0 +1,11 @@
+{
+  "backend": "ROOT/PyROOT/RooFit",
+  "mu_hat": 1.0,
+  "mu_uncertainty": 0.696821428267208,
+  "fit_status_free_mu": 0,
+  "fit_status_mu0": 0,
+  "covariance_quality": 3,
+  "q0": 2.059477280038593,
+  "expected_Z": 1.435087899760357,
+  "observed_significance_blocked": true
+}

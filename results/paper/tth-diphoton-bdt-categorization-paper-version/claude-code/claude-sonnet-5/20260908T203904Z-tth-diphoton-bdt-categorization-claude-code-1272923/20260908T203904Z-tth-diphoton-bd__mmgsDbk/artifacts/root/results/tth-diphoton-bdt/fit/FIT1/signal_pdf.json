@@ -1,0 +1,58 @@
+{
+  "ttH_had_BDT1": {
+    "fit_status": "ok",
+    "shape": "gaussian",
+    "mean_gev": 125.1349299048688,
+    "sigma_gev": 1.5331992741460114,
+    "amplitude_hist_units": 0.47715984375167353,
+    "yield_full_range": 1.9167439267347606,
+    "n_events_input": 5493,
+    "fit_range_gev": [
+      105.0,
+      160.0
+    ],
+    "n_bins_used": 55
+  },
+  "ttH_had_BDT2": {
+    "fit_status": "ok",
+    "shape": "gaussian",
+    "mean_gev": 125.10966071005836,
+    "sigma_gev": 1.4935301018565685,
+    "amplitude_hist_units": 1.000596405926546,
+    "yield_full_range": 3.9563156864182627,
+    "n_events_input": 11679,
+    "fit_range_gev": [
+      105.0,
+      160.0
+    ],
+    "n_bins_used": 55
+  },
+  "tH_had_4j1b": {
+    "fit_status": "ok",
+    "shape": "gaussian",
+    "mean_gev": 125.07928433163418,
+    "sigma_gev": 1.4563833855239745,
+    "amplitude_hist_units": 0.37041447771253005,
+    "yield_full_range": 1.4294549039838973,
+    "n_events_input": 4723,
+    "fit_range_gev": [
+      105.0,
+      160.0
+    ],
+    "n_bins_used": 55
+  },
+  "tH_had_4j2b": {
+    "fit_status": "ok",
+    "shape": "gaussian",
+    "mean_gev": 124.91306422636355,
+    "sigma_gev": 1.5521404932783476,
+    "amplitude_hist_units": 0.027277418838097763,
+    "yield_full_range": 0.11109315326735181,
+    "n_events_input": 376,
+    "fit_range_gev": [
+      105.0,
+      160.0
+    ],
+    "n_bins_used": 55
+  }
+}

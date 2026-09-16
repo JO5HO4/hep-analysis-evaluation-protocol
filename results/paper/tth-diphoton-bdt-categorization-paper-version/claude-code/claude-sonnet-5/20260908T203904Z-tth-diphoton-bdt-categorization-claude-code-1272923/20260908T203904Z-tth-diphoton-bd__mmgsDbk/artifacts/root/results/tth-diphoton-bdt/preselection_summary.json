@@ -1,0 +1,270 @@
+{
+  "definitions": {
+    "photon_kinematic_acceptance": "pT>25 GeV, |eta|<2.37 excluding 1.37-1.52 crack, no tight-ID/iso requirement",
+    "hadronic_selection": "0 selected e/mu, >=3 selected jets (pT>25 GeV), >=1 b-tagged jet (jet_btag_quantile>=4)",
+    "leptonic_bookkeeping_selection": ">=1 selected e/mu (pT>10 GeV, no ID/iso) AND >=1 b-tagged jet; bookkeeping only, not part of the required hadronic categorization"
+  },
+  "overall": {
+    "all_preselected": {
+      "n_raw": 340018,
+      "n_raw_mc": 120164,
+      "n_raw_data": 219854,
+      "sum_signed_mc_event_weight": 1.3649494142953844,
+      "sum_abs_mc_event_weight": 1.7271780806056116,
+      "sum_observed_data_unit_weight": 219854.0,
+      "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+    },
+    "hadronic": {
+      "n_raw": 272376,
+      "n_raw_mc": 70089,
+      "n_raw_data": 202287,
+      "sum_signed_mc_event_weight": 0.87327494149479,
+      "sum_abs_mc_event_weight": 1.0789869981003342,
+      "sum_observed_data_unit_weight": 202287.0,
+      "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+    },
+    "leptonic_bookkeeping": {
+      "n_raw": 67642,
+      "n_raw_mc": 50075,
+      "n_raw_data": 17567,
+      "sum_signed_mc_event_weight": 0.49167447280059406,
+      "sum_abs_mc_event_weight": 0.6481910825052778,
+      "sum_observed_data_unit_weight": 17567.0,
+      "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+    }
+  },
+  "by_process": {
+    "VBF": {
+      "all_preselected": {
+        "n_raw": 59,
+        "n_raw_mc": 59,
+        "n_raw_data": 0,
+        "sum_signed_mc_event_weight": 0.006452465940104557,
+        "sum_abs_mc_event_weight": 0.006452465940104557,
+        "sum_observed_data_unit_weight": 0.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      },
+      "hadronic": {
+        "n_raw": 53,
+        "n_raw_mc": 53,
+        "n_raw_data": 0,
+        "sum_signed_mc_event_weight": 0.005693902342037219,
+        "sum_abs_mc_event_weight": 0.005693902342037219,
+        "sum_observed_data_unit_weight": 0.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      },
+      "leptonic_bookkeeping": {
+        "n_raw": 6,
+        "n_raw_mc": 6,
+        "n_raw_data": 0,
+        "sum_signed_mc_event_weight": 0.0007585635980673381,
+        "sum_abs_mc_event_weight": 0.0007585635980673381,
+        "sum_observed_data_unit_weight": 0.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      }
+    },
+    "WH": {
+      "all_preselected": {
+        "n_raw": 909,
+        "n_raw_mc": 909,
+        "n_raw_data": 0,
+        "sum_signed_mc_event_weight": 0.00801034469104236,
+        "sum_abs_mc_event_weight": 0.008021923534905972,
+        "sum_observed_data_unit_weight": 0.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      },
+      "hadronic": {
+        "n_raw": 706,
+        "n_raw_mc": 706,
+        "n_raw_data": 0,
+        "sum_signed_mc_event_weight": 0.006364852603034512,
+        "sum_abs_mc_event_weight": 0.006364852603034512,
+        "sum_observed_data_unit_weight": 0.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      },
+      "leptonic_bookkeeping": {
+        "n_raw": 203,
+        "n_raw_mc": 203,
+        "n_raw_data": 0,
+        "sum_signed_mc_event_weight": 0.0016454920880078485,
+        "sum_abs_mc_event_weight": 0.0016570709318714607,
+        "sum_observed_data_unit_weight": 0.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      }
+    },
+    "ZH": {
+      "all_preselected": {
+        "n_raw": 1008,
+        "n_raw_mc": 1008,
+        "n_raw_data": 0,
+        "sum_signed_mc_event_weight": 0.07515574773931881,
+        "sum_abs_mc_event_weight": 0.075296176979686,
+        "sum_observed_data_unit_weight": 0.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      },
+      "hadronic": {
+        "n_raw": 821,
+        "n_raw_mc": 821,
+        "n_raw_data": 0,
+        "sum_signed_mc_event_weight": 0.04120915509248481,
+        "sum_abs_mc_event_weight": 0.04134958433285199,
+        "sum_observed_data_unit_weight": 0.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      },
+      "leptonic_bookkeeping": {
+        "n_raw": 187,
+        "n_raw_mc": 187,
+        "n_raw_data": 0,
+        "sum_signed_mc_event_weight": 0.03394659264683402,
+        "sum_abs_mc_event_weight": 0.03394659264683402,
+        "sum_observed_data_unit_weight": 0.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      }
+    },
+    "data": {
+      "all_preselected": {
+        "n_raw": 219854,
+        "n_raw_mc": 0,
+        "n_raw_data": 219854,
+        "sum_signed_mc_event_weight": 0.0,
+        "sum_abs_mc_event_weight": 0.0,
+        "sum_observed_data_unit_weight": 219854.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      },
+      "hadronic": {
+        "n_raw": 202287,
+        "n_raw_mc": 0,
+        "n_raw_data": 202287,
+        "sum_signed_mc_event_weight": 0.0,
+        "sum_abs_mc_event_weight": 0.0,
+        "sum_observed_data_unit_weight": 202287.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      },
+      "leptonic_bookkeeping": {
+        "n_raw": 17567,
+        "n_raw_mc": 0,
+        "n_raw_data": 17567,
+        "sum_signed_mc_event_weight": 0.0,
+        "sum_abs_mc_event_weight": 0.0,
+        "sum_observed_data_unit_weight": 17567.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      }
+    },
+    "ggH": {
+      "all_preselected": {
+        "n_raw": 2532,
+        "n_raw_mc": 2532,
+        "n_raw_data": 0,
+        "sum_signed_mc_event_weight": 0.23621795959789055,
+        "sum_abs_mc_event_weight": 0.23632002118644768,
+        "sum_observed_data_unit_weight": 0.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      },
+      "hadronic": {
+        "n_raw": 2413,
+        "n_raw_mc": 2413,
+        "n_raw_data": 0,
+        "sum_signed_mc_event_weight": 0.22413408973679974,
+        "sum_abs_mc_event_weight": 0.22423615132535687,
+        "sum_observed_data_unit_weight": 0.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      },
+      "leptonic_bookkeeping": {
+        "n_raw": 119,
+        "n_raw_mc": 119,
+        "n_raw_data": 0,
+        "sum_signed_mc_event_weight": 0.012083869861090809,
+        "sum_abs_mc_event_weight": 0.012083869861090809,
+        "sum_observed_data_unit_weight": 0.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      }
+    },
+    "ggZH": {
+      "all_preselected": {
+        "n_raw": 954,
+        "n_raw_mc": 954,
+        "n_raw_data": 0,
+        "sum_signed_mc_event_weight": 0.006471979528533535,
+        "sum_abs_mc_event_weight": 0.006471979528533535,
+        "sum_observed_data_unit_weight": 0.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      },
+      "hadronic": {
+        "n_raw": 853,
+        "n_raw_mc": 853,
+        "n_raw_data": 0,
+        "sum_signed_mc_event_weight": 0.005779255002488163,
+        "sum_abs_mc_event_weight": 0.005779255002488163,
+        "sum_observed_data_unit_weight": 0.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      },
+      "leptonic_bookkeeping": {
+        "n_raw": 101,
+        "n_raw_mc": 101,
+        "n_raw_data": 0,
+        "sum_signed_mc_event_weight": 0.0006927245260453725,
+        "sum_abs_mc_event_weight": 0.0006927245260453725,
+        "sum_observed_data_unit_weight": 0.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      }
+    },
+    "tH": {
+      "all_preselected": {
+        "n_raw": 12512,
+        "n_raw_mc": 12512,
+        "n_raw_data": 0,
+        "sum_signed_mc_event_weight": 0.00774695437405194,
+        "sum_abs_mc_event_weight": 0.02350924631819429,
+        "sum_observed_data_unit_weight": 0.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      },
+      "hadronic": {
+        "n_raw": 7566,
+        "n_raw_mc": 7566,
+        "n_raw_data": 0,
+        "sum_signed_mc_event_weight": 0.00439741333767101,
+        "sum_abs_mc_event_weight": 0.013299975015053143,
+        "sum_observed_data_unit_weight": 0.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      },
+      "leptonic_bookkeeping": {
+        "n_raw": 4946,
+        "n_raw_mc": 4946,
+        "n_raw_data": 0,
+        "sum_signed_mc_event_weight": 0.003349541036380929,
+        "sum_abs_mc_event_weight": 0.010209271303141145,
+        "sum_observed_data_unit_weight": 0.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      }
+    },
+    "ttH": {
+      "all_preselected": {
+        "n_raw": 102190,
+        "n_raw_mc": 102190,
+        "n_raw_data": 0,
+        "sum_signed_mc_event_weight": 1.0248939624244424,
+        "sum_abs_mc_event_weight": 1.37110626711774,
+        "sum_observed_data_unit_weight": 0.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      },
+      "hadronic": {
+        "n_raw": 57677,
+        "n_raw_mc": 57677,
+        "n_raw_data": 0,
+        "sum_signed_mc_event_weight": 0.5856962733802746,
+        "sum_abs_mc_event_weight": 0.7822632774795124,
+        "sum_observed_data_unit_weight": 0.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      },
+      "leptonic_bookkeeping": {
+        "n_raw": 44513,
+        "n_raw_mc": 44513,
+        "n_raw_data": 0,
+        "sum_signed_mc_event_weight": 0.4391976890441677,
+        "sum_abs_mc_event_weight": 0.5888429896382275,
+        "sum_observed_data_unit_weight": 0.0,
+        "note": "MC weight is the SM-normalized (per 1 fb^-1) signed event weight; observed data always carries unit weight."
+      }
+    }
+  }
+}

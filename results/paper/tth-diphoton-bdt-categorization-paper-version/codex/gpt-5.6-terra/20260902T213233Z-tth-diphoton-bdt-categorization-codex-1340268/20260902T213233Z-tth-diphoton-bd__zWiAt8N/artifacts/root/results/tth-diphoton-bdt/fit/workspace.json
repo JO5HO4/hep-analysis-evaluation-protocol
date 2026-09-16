@@ -1,0 +1,4 @@
+{
+  "workspace": "fit/FIT1/workspace.root",
+  "backend": "ROOT/PyROOT/RooFit"
+}

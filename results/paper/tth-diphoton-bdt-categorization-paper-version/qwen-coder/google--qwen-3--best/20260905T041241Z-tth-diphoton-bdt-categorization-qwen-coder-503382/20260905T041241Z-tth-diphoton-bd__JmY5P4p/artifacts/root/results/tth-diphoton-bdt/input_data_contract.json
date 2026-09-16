@@ -1,0 +1,21 @@
+{
+  "input_source": "TB_HYY_INPUTS environment variable",
+  "input_layout": "MC/ and data/ directories",
+  "included_samples": [
+    "ggH",
+    "VBF",
+    "WH",
+    "ZH",
+    "ggZH",
+    "ttH",
+    "tH",
+    "data"
+  ],
+  "excluded_samples": [
+    "Sherpa_yy",
+    "prompt-diphoton",
+    "other_non-Higgs_MC"
+  ],
+  "data_scope": "Nominal Higgs H -> gamma gamma MC and observed GamGam data only",
+  "throttling": "TTH_MAX_SELECTED_PER_SAMPLE limits rows per sample when set"
+}

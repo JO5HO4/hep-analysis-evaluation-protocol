@@ -1,0 +1,48 @@
+{
+  "results": {
+    "summary": {
+      "failed": 5,
+      "other": 0,
+      "passed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "tests": 5
+    },
+    "tests": [
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [\"missing /root/submission/run.sh; missing /root/results/results.json\"], \"functional\": false, \"readme\": false, \"score\": 0.0}",
+        "name": "higgs_4l_significance::framework",
+        "status": "failed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [\"[Errno 2] No such file or directory: '/root/submission/run.sh'\"], \"score\": 0.0}",
+        "name": "higgs_4l_significance::test_statistic",
+        "status": "failed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [\"[Errno 2] No such file or directory: '/root/submission/run.sh'\"], \"score\": 0.0}",
+        "name": "higgs_4l_significance::significance",
+        "status": "failed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [\"[Errno 2] No such file or directory: '/root/submission/run.sh'\"], \"score\": 0.0}",
+        "name": "higgs_4l_significance::signal_strength",
+        "status": "failed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"files\": [], \"score\": 0.0}",
+        "name": "higgs_4l_significance::diagnostics",
+        "status": "failed"
+      }
+    ],
+    "tool": {
+      "name": "custom-higgs-4l-significance-scorer",
+      "version": "1"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+Skipping image OS validation for hb__fcdd892034152b93d112f73774ab0e7e: container inspect returned 125
+container copy failed; retrying upload with tar stream: podman cp failed. Return code: 125. Stdout: . Stderr: Error: 1 error occurred:
+	* copying from host: copier: get: "<host-path>": getting extended attributes for "<host-path>": listing extended attributes of "<host-path>": protocol error
+.
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260831T232319Z-top-reconstruction-full-chain-no-pipeline-terminus-2-822169/20260831T232319Z-top-reconstruct__GewouzN/agent/trajectory.json
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260831T232319Z-top-reconstruction-full-chain-no-pipeline-terminus-2-822169/20260831T232319Z-top-reconstruct__GewouzN/agent/trajectory.json
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260831T232319Z-top-reconstruction-full-chain-no-pipeline-terminus-2-822169/20260831T232319Z-top-reconstruct__GewouzN/agent/trajectory.json
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260831T232319Z-top-reconstruction-full-chain-no-pipeline-terminus-2-822169/20260831T232319Z-top-reconstruct__GewouzN/agent/trajectory.json
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260831T232319Z-top-reconstruction-full-chain-no-pipeline-terminus-2-822169/20260831T232319Z-top-reconstruct__GewouzN/agent/trajectory.json
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260831T232319Z-top-reconstruction-full-chain-no-pipeline-terminus-2-822169/20260831T232319Z-top-reconstruct__GewouzN/agent/trajectory.json
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260831T232319Z-top-reconstruction-full-chain-no-pipeline-terminus-2-822169/20260831T232319Z-top-reconstruct__GewouzN/agent/trajectory.json
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260831T232319Z-top-reconstruction-full-chain-no-pipeline-terminus-2-822169/20260831T232319Z-top-reconstruct__GewouzN/agent/trajectory.json
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260831T232319Z-top-reconstruction-full-chain-no-pipeline-terminus-2-822169/20260831T232319Z-top-reconstruct__GewouzN/agent/trajectory.json
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260831T232319Z-top-reconstruction-full-chain-no-pipeline-terminus-2-822169/20260831T232319Z-top-reconstruct__GewouzN/agent/trajectory.json
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260831T232319Z-top-reconstruction-full-chain-no-pipeline-terminus-2-822169/20260831T232319Z-top-reconstruct__GewouzN/agent/trajectory.json
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260831T232319Z-top-reconstruction-full-chain-no-pipeline-terminus-2-822169/20260831T232319Z-top-reconstruct__GewouzN/agent/trajectory.json
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260831T232319Z-top-reconstruction-full-chain-no-pipeline-terminus-2-822169/20260831T232319Z-top-reconstruct__GewouzN/agent/trajectory.json
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260831T232319Z-top-reconstruction-full-chain-no-pipeline-terminus-2-822169/20260831T232319Z-top-reconstruct__GewouzN/agent/trajectory.json
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260831T232319Z-top-reconstruction-full-chain-no-pipeline-terminus-2-822169/20260831T232319Z-top-reconstruct__GewouzN/agent/trajectory.json
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260831T232319Z-top-reconstruction-full-chain-no-pipeline-terminus-2-822169/20260831T232319Z-top-reconstruct__GewouzN/agent/trajectory.json
+Collecting main service artifacts
+Skipping image OS validation for hb__46241e8483a2763c67c8e6e7c4c0e732: container inspect returned 125

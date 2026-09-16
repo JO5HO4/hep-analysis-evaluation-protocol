@@ -1,0 +1,115 @@
+{
+    "id": "0a670f08-8201-40c4-86d3-9b3ef325b426",
+    "task_name": "haichenwangberkeley/higgs-4l-significance",
+    "trial_name": "20260829T173916Z-higgs-4l-signif__eNaET5b",
+    "trial_uri": "file:///tmp/terminal-bench-harbor-jobs/20260829T173916Z-higgs-4l-significance-qwen-coder-1554570/20260829T173916Z-higgs-4l-signif__eNaET5b",
+    "task_id": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260829T173916Z-higgs-4l-significance-qwen-coder-1554570"
+    },
+    "source": null,
+    "task_checksum": "280e71d50b78ecedaa485bfa3bb392a54437de83f9ae5fd67c53ad58119a900b",
+    "config": {
+        "task": {
+            "path": "/tmp/terminal-bench-staged-tasks/20260829T173916Z-higgs-4l-significance-qwen-coder-1554570",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "20260829T173916Z-higgs-4l-signif__eNaET5b",
+        "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260829T173916Z-higgs-4l-significance-qwen-coder-1554570",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "harbor_agents.preinstalled:PreinstalledQwenCode",
+            "import_path": null,
+            "model_name": "google/qwen-3",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "39c608f2-a713-43f7-8988-f95ef5a18b6e",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "qwen-coder",
+        "version": "bash: line 1: /root/.nvm/nvm.sh: No such file or directory\r\n0.21.15",
+        "model_info": {
+            "name": "qwen-3",
+            "provider": "google"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 687302,
+        "n_cache_tokens": 641549,
+        "n_output_tokens": 10004,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.5875
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-08-29T17:40:00.631301Z",
+    "finished_at": "2026-08-29T17:47:21.987618Z",
+    "environment_setup": {
+        "started_at": "2026-08-29T17:40:02.786980Z",
+        "finished_at": "2026-08-29T17:40:26.191572Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-08-29T17:40:26.191654Z",
+        "finished_at": "2026-08-29T17:40:34.881746Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-08-29T17:40:34.881871Z",
+        "finished_at": "2026-08-29T17:44:00.855067Z"
+    },
+    "verifier": {
+        "started_at": "2026-08-29T17:44:47.350082Z",
+        "finished_at": "2026-08-29T17:47:21.987604Z"
+    },
+    "step_results": null
+}

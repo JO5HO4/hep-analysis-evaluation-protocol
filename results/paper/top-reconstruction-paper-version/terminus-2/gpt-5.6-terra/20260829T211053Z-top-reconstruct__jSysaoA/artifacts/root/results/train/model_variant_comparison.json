@@ -1,0 +1,26 @@
+[
+  {
+    "name": "baseline",
+    "max_depth": 5,
+    "eta": 0.07,
+    "best_iteration": 127,
+    "validation_pairmax_efficiency": 0.7138331573389651,
+    "validation_auc_xgb": 0.9354693552079731
+  },
+  {
+    "name": "shallow",
+    "max_depth": 4,
+    "eta": 0.07,
+    "best_iteration": 200,
+    "validation_pairmax_efficiency": 0.706441393875396,
+    "validation_auc_xgb": 0.9354893604727353
+  },
+  {
+    "name": "deep_slow",
+    "max_depth": 6,
+    "eta": 0.045,
+    "best_iteration": 144,
+    "validation_pairmax_efficiency": 0.7074973600844773,
+    "validation_auc_xgb": 0.935316847540241
+  }
+]

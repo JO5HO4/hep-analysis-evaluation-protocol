@@ -1,0 +1,39 @@
+{
+  "model": "XGBoost binary:logistic blended ensemble (mean of member probabilities)",
+  "ensemble_size": 6,
+  "feature_sets_blended": [
+    "kin_btag_compl",
+    "full_rank_compl",
+    "kin_btag"
+  ],
+  "inference_sample": "held-out test split (event-level, 20% of events)",
+  "n_rows": 22021,
+  "n_events": 1733,
+  "n_truth": 931,
+  "signal_fraction": 0.04227782571182054,
+  "test_auc": 0.9671862546021628,
+  "test_average_precision": 0.6671437088092429,
+  "score_summary": {
+    "min": 0.0002835134800989181,
+    "max": 0.9545906186103821,
+    "mean": 0.042655956000089645,
+    "mean_truth": 0.4555822014808655,
+    "mean_fake": 0.02442767657339573,
+    "quantiles": {
+      "0.5": 0.003340107388794422,
+      "0.9": 0.08226476609706879,
+      "0.99": 0.7252097725868225
+    }
+  },
+  "at_thr_0.5": {
+    "threshold": 0.5,
+    "tp": 453,
+    "fp": 152,
+    "fn": 478,
+    "tn": 20938,
+    "accuracy": 0.9713909450070387,
+    "precision": 0.7487603305785124,
+    "recall": 0.4865735767991407,
+    "f1": 0.5898437499999999
+  }
+}

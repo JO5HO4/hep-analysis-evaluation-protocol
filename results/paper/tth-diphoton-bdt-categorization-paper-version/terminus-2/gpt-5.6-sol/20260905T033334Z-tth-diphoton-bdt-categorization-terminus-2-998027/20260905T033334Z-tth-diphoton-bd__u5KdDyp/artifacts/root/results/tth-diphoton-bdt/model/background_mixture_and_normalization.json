@@ -1,0 +1,11 @@
+{
+  "SF1": 0.026218933788654905,
+  "SF2": 0.09926010244735345,
+  "SF1_times_SF2": 0.002602494053922263,
+  "TI_sideband_yield": 691.0,
+  "NTI_sideband_yield": 26355.0,
+  "NTI_window_yield": 2616.0,
+  "signal": "ttH+tH TI MC, 125+/-2 GeV",
+  "background": "ggH TI MC 125+/-2 GeV plus data NTI sidebands",
+  "nominal_TI_data_window_used": false
+}

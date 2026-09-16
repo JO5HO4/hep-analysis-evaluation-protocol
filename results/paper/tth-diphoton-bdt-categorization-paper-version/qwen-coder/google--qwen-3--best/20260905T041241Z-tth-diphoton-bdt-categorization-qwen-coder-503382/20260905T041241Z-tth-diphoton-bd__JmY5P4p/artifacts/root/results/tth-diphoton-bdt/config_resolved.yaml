@@ -1,0 +1,34 @@
+input_dir: /data/GamGam
+output_dir: /root/results/tth-diphoton-bdt
+max_selected_per_sample: 0
+luminosity: 36.0
+random_seed: 42
+photon_pt_min: 20.0
+lepton_pt_min: 10.0
+jet_pt_min: 25.0
+jet_eta_central: 2.5
+btag_quantile_min: 4
+signal_window:
+- 123
+- 127
+nti_sidebands:
+- !!python/tuple
+  - 105
+  - 120
+- !!python/tuple
+  - 130
+  - 160
+bdt_features:
+- jet_pt_max
+- jet_eta_max
+- bjet_multiplicity
+- diphoton_pt_jet_feature
+- centrality_measure
+category_order:
+- ttH_had_BDT1
+- ttH_had_BDT2
+- ttH_had_BDT3
+- ttH_had_BDT4
+- tH_had_4j1b
+- tH_had_4j2b
+- unassigned

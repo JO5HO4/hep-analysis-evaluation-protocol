@@ -1,0 +1,122 @@
+{
+    "id": "930bebfb-76e6-4773-abd3-2647445f8ff8",
+    "task_name": "haichenwangberkeley/top-reconstruction-full-chain-no-pipeline",
+    "trial_name": "20260831T235352Z-top-reconstruct__DRCvkJN",
+    "trial_uri": "file:///tmp/terminal-bench-harbor-jobs/20260831T235352Z-top-reconstruction-full-chain-no-pipeline-openhands-1728027/20260831T235352Z-top-reconstruct__DRCvkJN",
+    "task_id": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260831T235352Z-top-reconstruction-full-chain-no-pipeline-openhands-1728027"
+    },
+    "source": null,
+    "task_checksum": "12e961254d7d853902812f1fa8108416b2a842284531cee0c369a9c67fbea602",
+    "config": {
+        "task": {
+            "path": "/tmp/terminal-bench-staged-tasks/20260831T235352Z-top-reconstruction-full-chain-no-pipeline-openhands-1728027",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "20260831T235352Z-top-reconstruct__DRCvkJN",
+        "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260831T235352Z-top-reconstruction-full-chain-no-pipeline-openhands-1728027",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "harbor_agents.preinstalled:PreinstalledOpenHands",
+            "import_path": null,
+            "model_name": "gpt-5.6-sol",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "model_info": {
+                    "max_input_tokens": 1050000,
+                    "max_output_tokens": 128000,
+                    "input_cost_per_token": 0,
+                    "output_cost_per_token": 0
+                }
+            },
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "1da7983e-26a9-4505-b00e-eac90ccca693",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "openhands",
+        "version": "/opt/openhands-venv/lib/python3.13/site-packages/fastmcp/server/auth/providers/jwt.py:10: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.\r\nIt will be compatible before version 2.0.0.\r\n  from authlib.jose import JsonWebKey, JsonWebToken\r\nOpenHands version: 0.62.0\r\n/opt/openhands-venv/lib/python3.13/site-packages/litellm/llms/custom_httpx/async_client_cleanup.py:66: DeprecationWarning: There is no current event loop\r\n  loop = asyncio.get_event_loop()",
+        "model_info": {
+            "name": "gpt-5.6-sol",
+            "provider": "openai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-08-31T23:54:31.168657Z",
+    "finished_at": "2026-08-31T23:57:43.945907Z",
+    "environment_setup": {
+        "started_at": "2026-08-31T23:54:33.974321Z",
+        "finished_at": "2026-08-31T23:54:56.292461Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-08-31T23:54:56.292562Z",
+        "finished_at": "2026-08-31T23:55:15.230700Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-08-31T23:55:15.230929Z",
+        "finished_at": "2026-08-31T23:55:40.788450Z"
+    },
+    "verifier": {
+        "started_at": "2026-08-31T23:56:22.699019Z",
+        "finished_at": "2026-08-31T23:57:43.945892Z"
+    },
+    "step_results": null
+}

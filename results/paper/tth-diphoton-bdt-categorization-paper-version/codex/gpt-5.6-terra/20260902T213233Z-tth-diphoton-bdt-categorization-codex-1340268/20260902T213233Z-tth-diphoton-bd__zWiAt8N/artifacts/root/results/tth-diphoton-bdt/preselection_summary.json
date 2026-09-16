@@ -1,0 +1,107 @@
+{
+  "selection_definitions": {
+    "photons": "two photons pT>25 GeV, |eta|<2.37 excluding crack; tight-ID and isolation NOT required",
+    "hadronic": "zero pT>10 GeV e/mu, >=3 pT>25 GeV jets, >=1 jet_btag_quantile>=4",
+    "leptonic_bookkeeping": "at least one lepton plus b jet; excluded from BDT and categorization"
+  },
+  "raw_and_signed_weighted_counts": [
+    {
+      "process": "VBF",
+      "channel": "hadronic",
+      "raw_count": 53,
+      "signed_weight": 5.230046053712523e-06
+    },
+    {
+      "process": "VBF",
+      "channel": "leptonic_bookkeeping",
+      "raw_count": 6,
+      "signed_weight": 4.7328173605999355e-07
+    },
+    {
+      "process": "WH",
+      "channel": "hadronic",
+      "raw_count": 706,
+      "signed_weight": 6.115613710605775e-06
+    },
+    {
+      "process": "WH",
+      "channel": "leptonic_bookkeeping",
+      "raw_count": 203,
+      "signed_weight": 1.6350579094829897e-06
+    },
+    {
+      "process": "ZH",
+      "channel": "hadronic",
+      "raw_count": 821,
+      "signed_weight": 3.824813129467133e-05
+    },
+    {
+      "process": "ZH",
+      "channel": "leptonic_bookkeeping",
+      "raw_count": 187,
+      "signed_weight": 3.130300342535087e-05
+    },
+    {
+      "process": "data",
+      "channel": "hadronic",
+      "raw_count": 202229,
+      "signed_weight": 202229.0
+    },
+    {
+      "process": "data",
+      "channel": "leptonic_bookkeeping",
+      "raw_count": 17555,
+      "signed_weight": 17555.0
+    },
+    {
+      "process": "ggH",
+      "channel": "hadronic",
+      "raw_count": 2413,
+      "signed_weight": 0.00021673813985799705
+    },
+    {
+      "process": "ggH",
+      "channel": "leptonic_bookkeeping",
+      "raw_count": 119,
+      "signed_weight": 1.1997960448473342e-05
+    },
+    {
+      "process": "ggZH",
+      "channel": "hadronic",
+      "raw_count": 853,
+      "signed_weight": 5.646903706402915e-06
+    },
+    {
+      "process": "ggZH",
+      "channel": "leptonic_bookkeeping",
+      "raw_count": 101,
+      "signed_weight": 7.035840776179519e-07
+    },
+    {
+      "process": "tH",
+      "channel": "hadronic",
+      "raw_count": 7566,
+      "signed_weight": 4.337238373359852e-06
+    },
+    {
+      "process": "tH",
+      "channel": "leptonic_bookkeeping",
+      "raw_count": 4946,
+      "signed_weight": 3.310093567073707e-06
+    },
+    {
+      "process": "ttH",
+      "channel": "hadronic",
+      "raw_count": 57677,
+      "signed_weight": 0.0005606222341313025
+    },
+    {
+      "process": "ttH",
+      "channel": "leptonic_bookkeeping",
+      "raw_count": 44513,
+      "signed_weight": 0.00043276215215862224
+    }
+  ],
+  "overall_raw_count_visible_under_blinding": 339948,
+  "observed_TI_signal_window_blinded": true
+}

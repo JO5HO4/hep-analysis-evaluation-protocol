@@ -1,0 +1,54 @@
+{
+  "results": {
+    "summary": {
+      "failed": 6,
+      "other": 0,
+      "passed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "tests": 6
+    },
+    "tests": [
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [\"BDT_FEATURES mismatch: ['n_jets', 'n_bjets', 'H_pT', 'm_jjj', 'central_jet_multiplicity']\"], \"score\": 0.0}",
+        "name": "tth_preselection_score::selection_api",
+        "status": "failed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [\"missing table artifact for hadronic_features: expected parquet, csv, or jsonl\"], \"score\": 0.0}",
+        "name": "tth_preselection_score::artifact_contract",
+        "status": "failed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [\"missing JSON artifact: /root/results/tth-diphoton-bdt/object_definition_record.json\"], \"score\": 0.0}",
+        "name": "tth_preselection_score::preselection_physics",
+        "status": "failed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [\"missing JSON artifact: /root/results/tth-diphoton-bdt/input_data_contract.json\"], \"score\": 0.0}",
+        "name": "tth_preselection_score::input_scope",
+        "status": "failed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [\"missing JSON artifact: /root/results/tth-diphoton-bdt/model/training_metadata.json\"], \"score\": 0.0}",
+        "name": "tth_preselection_score::bdt_training",
+        "status": "failed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [\"missing JSON artifact: /root/results/tth-diphoton-bdt/run_manifest.json\"], \"score\": 0.0}",
+        "name": "tth_preselection_score::provenance",
+        "status": "failed"
+      }
+    ],
+    "tool": {
+      "name": "custom-tth-diphoton-preselection-scorer",
+      "version": "1"
+    }
+  }
+}

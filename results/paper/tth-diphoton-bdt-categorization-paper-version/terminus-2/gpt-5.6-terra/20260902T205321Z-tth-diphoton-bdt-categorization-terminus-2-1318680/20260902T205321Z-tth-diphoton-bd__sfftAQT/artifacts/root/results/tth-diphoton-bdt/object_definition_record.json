@@ -1,0 +1,6 @@
+{
+  "photons": "kinematic pT>25 GeV, |eta|<2.37; no tight-ID and no isolation requirement in preselection",
+  "leptons": "pT>10 GeV no ID/isolation",
+  "jets": "pT>25 GeV; central |eta|<=2.5; forward |eta|>2.5",
+  "btag": "jet_btag_quantile >= 4"
+}

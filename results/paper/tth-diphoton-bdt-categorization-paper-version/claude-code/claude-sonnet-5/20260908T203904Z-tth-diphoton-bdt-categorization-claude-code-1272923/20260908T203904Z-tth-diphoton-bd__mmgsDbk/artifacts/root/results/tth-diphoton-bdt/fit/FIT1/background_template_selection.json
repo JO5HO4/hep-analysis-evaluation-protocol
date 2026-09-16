@@ -1,0 +1,10 @@
+{
+  "strategy": "data-driven analytic sideband template (no simulated continuum template available)",
+  "reason": "Event-level continuum MC (Sherpa gamma-gamma and any other non-nominal-Higgs MC) is excluded from this analysis (see input_data_contract.json), so no simulated background template exists; the continuum background is instead estimated purely from observed TI sideband data (105-120, 130-160 GeV) using the AIC-selected analytic shape recorded per category in background_pdf_choice.json.",
+  "per_category_chosen_template": {
+    "ttH_had_BDT1": "chebychev1",
+    "ttH_had_BDT2": "chebychev1",
+    "tH_had_4j1b": "exponential",
+    "tH_had_4j2b": "chebychev1"
+  }
+}

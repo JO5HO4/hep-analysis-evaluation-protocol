@@ -1,0 +1,19 @@
+{
+  "pdf": "RooGaussian",
+  "source": "non-top Higgs TI MC",
+  "normalization": "fixed",
+  "categories": {
+    "ttH_had_BDT1": {
+      "mean": 124.59698797077569,
+      "sigma": 1.922942257806937
+    },
+    "tH_had_4j1b": {
+      "mean": 125.09478990436806,
+      "sigma": 1.6669663939142092
+    },
+    "tH_had_4j2b": {
+      "mean": 125.13526182111336,
+      "sigma": 1.4756041022755013
+    }
+  }
+}

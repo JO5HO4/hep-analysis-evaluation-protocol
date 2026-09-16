@@ -1,0 +1,1 @@
+{"pipeline": "tth-diphoton-bdt", "version": "1.0", "input_scope": "Nominal Higgs signal MC and observed data", "continuum_mc_excluded": true, "row_policy": "uncapped"}

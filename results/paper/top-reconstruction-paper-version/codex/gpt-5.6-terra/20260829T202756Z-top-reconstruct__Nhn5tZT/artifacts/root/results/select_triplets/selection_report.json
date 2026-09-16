@@ -1,0 +1,25 @@
+{
+  "triplet_reconstruction_efficiency": 0.7248520710059172,
+  "definition": "selected triplets with is_truth=1 divided by all truth triplets in inference test sample",
+  "n_inference_truth_triplets": 338,
+  "n_selected_candidates": 847,
+  "n_selected_truth_triplets": 245,
+  "selection": {
+    "strategy": "score-ordered greedy selection: accept the highest-scoring qualified triplet then the highest-scoring remaining jet-disjoint triplet",
+    "utility": "score ordering",
+    "score_threshold": 0.0,
+    "maximum_candidates_per_event": 2,
+    "jet_disjoint": true
+  },
+  "selected_multiplicity": {
+    "events": 665,
+    "zero": 0,
+    "one": 483,
+    "two": 182
+  },
+  "validation_choice": {
+    "validation_triplet_reconstruction_efficiency": 0.7096774193548387,
+    "selection_strategy": "score-ordered greedy",
+    "score_threshold": 0.0
+  }
+}

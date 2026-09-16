@@ -1,0 +1,21 @@
+{
+  "inputs": [
+    "TB_HYY_INPUTS"
+  ],
+  "input_layout": "MC/ and data/",
+  "included_processes": [
+    "ggH",
+    "ttH",
+    "tH",
+    "ZH",
+    "WH",
+    "VBF",
+    "ggZH",
+    "data"
+  ],
+  "excluded_processes": [
+    "yy",
+    "prompt-diphoton",
+    "non-Higgs MC"
+  ]
+}

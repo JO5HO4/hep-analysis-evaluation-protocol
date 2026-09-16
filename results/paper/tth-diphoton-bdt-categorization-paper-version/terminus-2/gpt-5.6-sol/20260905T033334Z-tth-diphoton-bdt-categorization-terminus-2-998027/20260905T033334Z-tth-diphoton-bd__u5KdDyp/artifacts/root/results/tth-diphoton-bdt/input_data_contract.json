@@ -1,0 +1,21 @@
+{
+  "input_root": "/data/GamGam",
+  "source": "TB_HYY_INPUTS",
+  "files": [
+    "/data/GamGam/MC/VBF_preselection.root",
+    "/data/GamGam/MC/WH_preselection.root",
+    "/data/GamGam/MC/ZH_preselection.root",
+    "/data/GamGam/MC/ggH_preselection.root",
+    "/data/GamGam/MC/ggZH_preselection.root",
+    "/data/GamGam/MC/tH_preselection.root",
+    "/data/GamGam/MC/ttH_preselection.root",
+    "/data/GamGam/data/data_preselection.root"
+  ],
+  "included": "nominal Higgs MC and observed GamGam data only",
+  "excluded": [
+    "Sherpa yy",
+    "prompt diphoton MC",
+    "all non-Higgs MC"
+  ],
+  "root_inputs_copied": false
+}

@@ -1,0 +1,8 @@
+Skipping image OS validation for hb__a6e0f77a30e3444e81f5ee637e02c112: container inspect returned 125
+Running command: mkdir -p $CLAUDE_CONFIG_DIR/debug $CLAUDE_CONFIG_DIR/projects/-app $CLAUDE_CONFIG_DIR/shell-snapshots $CLAUDE_CONFIG_DIR/statsig $CLAUDE_CONFIG_DIR/todos $CLAUDE_CONFIG_DIR/skills && if [ -d ~/.claude/skills ]; then cp -r ~/.claude/skills/. $CLAUDE_CONFIG_DIR/skills/ 2>/dev/null || true; fi
+Command outputs captured
+Running command: export PATH="$HOME/.local/bin:$PATH"; harbor_claude_code_instruction_9124de1babbf43deb96b707aa5e74752="$HARBOR_CLAUDE_CODE_INSTRUCTION_9124DE1BABBF43DEB96B707AA5E74752"; unset HARBOR_CLAUDE_CODE_INSTRUCTION_9124DE1BABBF43DEB96B707AA5E74752; printf "%s" "$harbor_claude_code_instruction_9124de1babbf43deb96b707aa5e74752" | claude --verbose --output-format=stream-json --permission-mode=bypassPermissions --print 2>&1 | tee /logs/agent/claude-code.txt
+Command outputs captured
+Wrote Claude Code trajectory to /tmp/terminal-bench-harbor-jobs/20260902T201601Z-top-reconstruction-full-chain-no-pipeline-claude-code-1237600/20260902T201601Z-top-reconstruct__tAwiCUD/agent/trajectory.json
+Collecting main service artifacts
+Skipping image OS validation for hb__0849f2f0e0395aeddabacab5b454928a: container inspect returned 125

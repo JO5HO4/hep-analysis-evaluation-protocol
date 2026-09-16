@@ -1,0 +1,27 @@
+{
+  "b_tag": "jet_btag_quantile >= 4",
+  "electrons_and_muons": {
+    "ID_required": false,
+    "isolation_required": false,
+    "pt_min": 10
+  },
+  "forward_jet_note": "No reconstructed forward jets are available in the current open-data inputs; no forward-jet-dependent leptonic categorization is performed.",
+  "hadronic_channel": "N_leptons=0, N_jets>=3, N_bjets>=1",
+  "jets": {
+    "central": "|eta| <= 2.5",
+    "forward": "|eta| > 2.5",
+    "pt_min": 25
+  },
+  "photons": {
+    "abs_eta_max": 2.37,
+    "excluded_crack": [
+      1.37,
+      1.52
+    ],
+    "explicit_statement": "Photon tight-ID and photon isolation are not required for this preselection sample.",
+    "isolation_required_for_preselection": false,
+    "pt_min": 25,
+    "tight_ID_required_for_preselection": false
+  },
+  "units": "GeV"
+}

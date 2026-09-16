@@ -1,0 +1,20 @@
+{
+    "task": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260905T023203Z-top-reconstruction-full-chain-no-pipeline-openhands-566489"
+    },
+    "trial_name": "20260905T023203Z-top-reconstruct__vQ8QaVm",
+    "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260905T023203Z-top-reconstruction-full-chain-no-pipeline-openhands-566489",
+    "agent": {
+        "name": "harbor_agents.preinstalled:PreinstalledOpenHands",
+        "model_name": "gpt-5.6-sol",
+        "kwargs": {
+            "model_info": {
+                "max_input_tokens": 1050000,
+                "max_output_tokens": 128000,
+                "input_cost_per_token": 0,
+                "output_cost_per_token": 0
+            }
+        }
+    },
+    "job_id": "fe40494a-20ee-45c1-a59e-c4215a52a70f"
+}

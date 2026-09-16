@@ -1,0 +1,23 @@
+{
+  "blinding": {
+    "no_blinded_count_reported": true,
+    "observed_TI_125_plusminus_2": true,
+    "observed_significance_blocked": true
+  },
+  "deterministic_seed": 240513,
+  "duration_seconds": 27.17570400238037,
+  "finished_unix": 1788575779.691265,
+  "input_files_external": true,
+  "input_scope": "nominal Higgs MC and observed data only; Sherpa yy and other continuum/non-Higgs MC excluded",
+  "missing_required_artifacts": [],
+  "required_artifacts_checked": 60,
+  "row_policy": "uncapped (default)",
+  "software": {
+    "numpy": "2.2.4",
+    "pandas": "3.0.5",
+    "python": "3.13.7",
+    "uproot": "5.7.6"
+  },
+  "started_unix": 1788575752.5155616,
+  "status": "complete"
+}

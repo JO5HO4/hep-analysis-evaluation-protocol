@@ -1,0 +1,125 @@
+{
+    "id": "ffb3cfbc-ffa1-4e31-9a6d-c555d6705ac5",
+    "task_name": "haichenwangberkeley/tth-diphoton-bdt-categorization",
+    "trial_name": "20260905T022547Z-tth-diphoton-bd__MPttiyG",
+    "trial_uri": "file:///tmp/terminal-bench-harbor-jobs/20260905T022547Z-tth-diphoton-bdt-categorization-codex-711347/20260905T022547Z-tth-diphoton-bd__MPttiyG",
+    "task_id": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260905T022547Z-tth-diphoton-bdt-categorization-codex-711347"
+    },
+    "source": null,
+    "task_checksum": "31ad0448cc9391819b3faa67428ce00606878660e3e38bbbc9ac23e57ff507f0",
+    "config": {
+        "task": {
+            "path": "/tmp/terminal-bench-staged-tasks/20260905T022547Z-tth-diphoton-bdt-categorization-codex-711347",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "20260905T022547Z-tth-diphoton-bd__MPttiyG",
+        "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260905T022547Z-tth-diphoton-bdt-categorization-codex-711347",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "harbor_agents.preinstalled:PreinstalledCodex",
+            "import_path": null,
+            "model_name": "gpt-5.6-sol",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "env": {
+                "TB_HYY_INPUTS": "/data/GamGam"
+            },
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": [
+                {
+                    "type": "bind",
+                    "source": "<source-repository>/data/GamGam",
+                    "target": "/data/GamGam",
+                    "read_only": true
+                }
+            ],
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "57481bda-fa57-46e7-9f25-b3e73b6b94f6",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "codex",
+        "version": "0.149.0",
+        "model_info": {
+            "name": "gpt-5.6-sol",
+            "provider": null
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 1913836,
+        "n_cache_tokens": 1834634,
+        "n_output_tokens": 42568,
+        "cost_usd": 1.9020216,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-09-05T02:26:37.056870Z",
+    "finished_at": "2026-09-05T02:38:51.285568Z",
+    "environment_setup": {
+        "started_at": "2026-09-05T02:26:37.274794Z",
+        "finished_at": "2026-09-05T02:26:49.702254Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-05T02:26:49.702326Z",
+        "finished_at": "2026-09-05T02:26:54.109698Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-05T02:26:54.109875Z",
+        "finished_at": "2026-09-05T02:37:07.827727Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-05T02:37:39.540895Z",
+        "finished_at": "2026-09-05T02:38:51.285533Z"
+    },
+    "step_results": null
+}

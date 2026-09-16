@@ -1,0 +1,107 @@
+{
+  "categories": {
+    "tH_had_4j1b": {
+      "continuum_tau": -0.020456377138432076,
+      "continuum_tau_error": 0.005012804243097421,
+      "fitted_full_range_continuum_yield": 170.32731254111025,
+      "observed_TI_sideband_entries": 136,
+      "observed_TI_signal_window_entries": "BLINDED_NOT_COUNTED",
+      "resonant_higgs_yield_36fb_in_105_160": 0.7083358708636183,
+      "resonant_shape": {
+        "mean": 124.97167140604694,
+        "pdf": "Gaussian",
+        "sigma": 1.798157343675633
+      },
+      "sideband_fit_covariance_quality": 3,
+      "sideband_fit_status": 0,
+      "sideband_fraction_of_full_range": 0.7984626656231366,
+      "signal_shape": {
+        "mean": 125.05668486595825,
+        "pdf": "Gaussian",
+        "sigma": 2.2380494841794762
+      },
+      "signal_yield_36fb_in_105_160": 1.2593426484276606
+    },
+    "tH_had_4j2b": {
+      "continuum_tau": -0.027427414490107185,
+      "continuum_tau_error": 0.01714422044169791,
+      "fitted_full_range_continuum_yield": 15.0778682065167,
+      "observed_TI_sideband_entries": 12,
+      "observed_TI_signal_window_entries": "BLINDED_NOT_COUNTED",
+      "resonant_higgs_yield_36fb_in_105_160": 0.061076560001985296,
+      "resonant_shape": {
+        "mean": 124.61591396654873,
+        "pdf": "Gaussian",
+        "sigma": 1.7302360210514485
+      },
+      "sideband_fit_covariance_quality": 3,
+      "sideband_fit_status": 0,
+      "sideband_fraction_of_full_range": 0.7958684766068962,
+      "signal_shape": {
+        "mean": 124.88591960757566,
+        "pdf": "Gaussian",
+        "sigma": 2.008992158400589
+      },
+      "signal_yield_36fb_in_105_160": 0.16611576680179047
+    },
+    "ttH_had_BDT1": {
+      "continuum_tau": -0.004318000925612347,
+      "continuum_tau_error": 0.01829478718479327,
+      "fitted_full_range_continuum_yield": 12.305824543549218,
+      "observed_TI_sideband_entries": 10,
+      "observed_TI_signal_window_entries": "BLINDED_NOT_COUNTED",
+      "resonant_higgs_yield_36fb_in_105_160": 0.3233723302025883,
+      "resonant_shape": {
+        "mean": 124.78007955388911,
+        "pdf": "Gaussian",
+        "sigma": 1.8156893416282254
+      },
+      "sideband_fit_covariance_quality": 3,
+      "sideband_fit_status": 0,
+      "sideband_fraction_of_full_range": 0.8126233203318388,
+      "signal_shape": {
+        "mean": 125.08038067390476,
+        "pdf": "Gaussian",
+        "sigma": 1.9801562185663477
+      },
+      "signal_yield_36fb_in_105_160": 1.812334104037862
+    },
+    "ttH_had_BDT2": {
+      "continuum_tau": -0.005084147131102795,
+      "continuum_tau_error": 0.007314102060243793,
+      "fitted_full_range_continuum_yield": 77.61404837387471,
+      "observed_TI_sideband_entries": 63,
+      "observed_TI_signal_window_entries": "BLINDED_NOT_COUNTED",
+      "resonant_higgs_yield_36fb_in_105_160": 1.839804203355073,
+      "resonant_shape": {
+        "mean": 124.98308643814926,
+        "pdf": "Gaussian",
+        "sigma": 1.72511977279965
+      },
+      "sideband_fit_covariance_quality": 3,
+      "sideband_fit_status": 0,
+      "sideband_fraction_of_full_range": 0.8117087218092611,
+      "signal_shape": {
+        "mean": 125.06622239456539,
+        "pdf": "Gaussian",
+        "sigma": 2.0937072654146562
+      },
+      "signal_yield_36fb_in_105_160": 4.142613367263063
+    }
+  },
+  "fits": {
+    "free_mu": {
+      "covariance_quality": 3,
+      "min_nll": 475.8301298768321,
+      "mu_hat": 0.9938810500128229,
+      "mu_uncertainty": 0.7650664490096862,
+      "status": 0
+    },
+    "mu0": {
+      "covariance_quality": 3,
+      "min_nll": 476.8646363068822,
+      "mu": 0.0,
+      "status": 0
+    }
+  }
+}

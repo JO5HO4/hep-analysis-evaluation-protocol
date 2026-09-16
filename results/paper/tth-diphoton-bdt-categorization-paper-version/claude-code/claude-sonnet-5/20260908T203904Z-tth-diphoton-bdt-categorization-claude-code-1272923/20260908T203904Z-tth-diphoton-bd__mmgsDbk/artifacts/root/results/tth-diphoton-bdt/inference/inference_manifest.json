@@ -1,0 +1,59 @@
+{
+  "n_selected_rows": 340018,
+  "n_hadronic_rows": 272376,
+  "n_hadronic_scored": 272376,
+  "n_hadronic_unscored": 0,
+  "n_leptonic_bookkeeping_rows": 67642,
+  "n_leptonic_bookkeeping_scored": 55628,
+  "score_min": 0.03305545800935102,
+  "score_max": 0.9672792409900571,
+  "features": [
+    "n_jets_central",
+    "n_bjets",
+    "jet_ht",
+    "leading_jet_pt",
+    "dijet_mass_leading"
+  ],
+  "model_path": "/root/results/tth-diphoton-bdt/model/bdt_model.joblib",
+  "bdt_boundaries_descending": [
+    0.87,
+    0.68
+  ],
+  "code_maps": {
+    "category": {
+      "ttH_had_BDT1": 0,
+      "ttH_had_BDT2": 1,
+      "ttH_had_BDT3": 2,
+      "ttH_had_BDT4": 3,
+      "tH_had_4j1b": 4,
+      "tH_had_4j2b": 5,
+      "unassigned": 6,
+      "leptonic_bookkeeping": 7
+    },
+    "process": {
+      "VBF": 0,
+      "WH": 1,
+      "ZH": 2,
+      "data": 3,
+      "ggH": 4,
+      "ggZH": 5,
+      "tH": 6,
+      "ttH": 7
+    },
+    "channel": {
+      "hadronic": 0,
+      "leptonic": 1
+    },
+    "partition": {
+      "test": 0,
+      "train": 1,
+      "val": 2
+    },
+    "diphoton_class": {
+      "NTI": 0,
+      "TI": 1
+    }
+  },
+  "predictions_table": "/root/results/tth-diphoton-bdt/predictions.parquet",
+  "inference_table": "/root/results/tth-diphoton-bdt/inference/events_with_bdt_scores.parquet"
+}

@@ -1,0 +1,11 @@
+{
+  "SF1": 0.026207001175712064,
+  "SF2": 0.09917700155497403,
+  "SF1_times_SF2": 0.0025991317963548013,
+  "TI_sideband_yield": 691.0,
+  "NTI_sideband_yield": 26367.0,
+  "NTI_window_yield": 2615.0,
+  "signal": "ttH+tH",
+  "background": "ggH + scaled NTI sidebands",
+  "blinded_TI_data_window": true
+}

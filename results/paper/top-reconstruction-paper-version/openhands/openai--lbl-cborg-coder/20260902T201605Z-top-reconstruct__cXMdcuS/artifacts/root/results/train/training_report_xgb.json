@@ -1,0 +1,6 @@
+{
+    "validation_auc": 0.8429022093125604,
+    "train_size": 75996,
+    "val_size": 8465,
+    "scale_pos_weight": 22.66002490660025
+}

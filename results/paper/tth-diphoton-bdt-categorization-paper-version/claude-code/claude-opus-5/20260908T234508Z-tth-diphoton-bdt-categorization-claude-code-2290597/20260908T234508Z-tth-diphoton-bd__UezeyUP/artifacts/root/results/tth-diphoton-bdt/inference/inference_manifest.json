@@ -1,0 +1,120 @@
+{
+  "model_path": "/root/results/tth-diphoton-bdt/model/bdt_model.pkl",
+  "model_kind": "sklearn.HistGradientBoostingClassifier",
+  "feature_list": [
+    "n_jets_central",
+    "n_bjets",
+    "ht_jets",
+    "met",
+    "pt_gg"
+  ],
+  "m_gammagamma_used_as_input": false,
+  "n_selected_rows": 125381,
+  "n_selected_hadronic_rows": 80585,
+  "n_selected_leptonic_bookkeeping_rows": 44796,
+  "n_scored_rows": 125381,
+  "n_unscored_rows": 0,
+  "n_hadronic_scored_rows": 80585,
+  "n_hadronic_unscored_rows": 0,
+  "all_hadronic_rows_with_finite_features_scored": true,
+  "score_range": [
+    0.03985353426666798,
+    0.9658413502684374
+  ],
+  "score_in_unit_interval": true,
+  "score_all_finite": true,
+  "leptonic_rows_scored": true,
+  "leptonic_rows_note": "optional bookkeeping rows are also scored, but they are excluded from categorization, significance and the workspace",
+  "preserved_columns": [
+    "event_id",
+    "sample",
+    "process",
+    "process_role",
+    "is_mc",
+    "is_data",
+    "channel_number",
+    "run_number",
+    "event_number",
+    "m_gammagamma",
+    "pt_gg",
+    "photon_ti",
+    "photon_nti",
+    "mgg_region",
+    "in_signal_window",
+    "in_sideband",
+    "passes_hadronic_preselection",
+    "passes_leptonic_preselection",
+    "preselection_channel",
+    "partition",
+    "training_role",
+    "used_in_bdt_training",
+    "n_jets_central",
+    "n_bjets",
+    "ht_jets",
+    "met",
+    "bdt_score",
+    "bdt_inputs_finite",
+    "category",
+    "category_is_kept",
+    "weight_mc_36fb",
+    "significance_model_weight_36fb",
+    "nti_continuum_weight",
+    "observed_data_weight",
+    "model_component",
+    "delta_r_gg",
+    "lead_photon_pt",
+    "sublead_photon_pt",
+    "n_leptons",
+    "n_jets",
+    "n_jets_forward",
+    "n_bjets_central",
+    "lead_jet_pt",
+    "sublead_jet_pt",
+    "mc_generator_weight",
+    "weight_sm_per_pb",
+    "mc_model_weight_36fb"
+  ],
+  "categorical_code_maps": {
+    "category": {
+      "ttH_had_BDT1": 0,
+      "ttH_had_BDT2": 1,
+      "ttH_had_BDT3": 2,
+      "ttH_had_BDT4": 3,
+      "tH_had_4j1b": 4,
+      "tH_had_4j2b": 5,
+      "unassigned": 6
+    },
+    "preselection_channel": {
+      "hadronic": 0,
+      "leptonic_bookkeeping": 1
+    },
+    "process": {
+      "VBF": 0,
+      "WH": 1,
+      "ZH": 2,
+      "data": 3,
+      "ggH": 4,
+      "ggZH": 5,
+      "tH": 6,
+      "ttH": 7
+    },
+    "process_role": {
+      "observed_data": 0,
+      "resonant_higgs": 1,
+      "signal_top": 2
+    },
+    "partition": {
+      "train": 0,
+      "val": 1,
+      "test": 2
+    },
+    "model_component": {
+      "not_in_model": 0,
+      "nti_continuum_bkg": 1,
+      "resonant_higgs_bkg": 2,
+      "signal_ttH_tH": 3
+    }
+  },
+  "code_map_note": "a ROOT inference tree may encode the string columns above as integer codes using these maps",
+  "csv_path": "/root/results/tth-diphoton-bdt/inference/events_with_bdt_scores.csv"
+}

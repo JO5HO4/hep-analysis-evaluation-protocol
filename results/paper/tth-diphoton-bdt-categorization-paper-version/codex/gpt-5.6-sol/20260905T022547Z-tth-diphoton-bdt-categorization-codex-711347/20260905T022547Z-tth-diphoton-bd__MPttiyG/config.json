@@ -1,0 +1,26 @@
+{
+    "task": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260905T022547Z-tth-diphoton-bdt-categorization-codex-711347"
+    },
+    "trial_name": "20260905T022547Z-tth-diphoton-bd__MPttiyG",
+    "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260905T022547Z-tth-diphoton-bdt-categorization-codex-711347",
+    "agent": {
+        "name": "harbor_agents.preinstalled:PreinstalledCodex",
+        "model_name": "gpt-5.6-sol",
+        "env": {
+            "TB_HYY_INPUTS": "/data/GamGam"
+        }
+    },
+    "environment": {
+        "type": "docker",
+        "mounts": [
+            {
+                "type": "bind",
+                "source": "<source-repository>/data/GamGam",
+                "target": "/data/GamGam",
+                "read_only": true
+            }
+        ]
+    },
+    "job_id": "57481bda-fa57-46e7-9f25-b3e73b6b94f6"
+}

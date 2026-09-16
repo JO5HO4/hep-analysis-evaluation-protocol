@@ -1,0 +1,11 @@
+input_data: /data/GamGam
+output_dir: /root/results/tth-diphoton-bdt
+luminosity_36fb: 36.0
+signal_mass_window: [123, 127]
+sideband_low: [105, 120]
+sideband_high: [130, 160]
+btag_threshold: 4
+photon_pt_min: 20
+lepton_pt_min: 10
+jet_pt_min: 25
+central_eta_max: 2.5

@@ -1,0 +1,6 @@
+{
+    "triplet_reconstruction_efficiency": 0.411635565312843,
+    "score_threshold": 0.4,
+    "total_selected": 1633,
+    "total_truth_in_test": 911
+}

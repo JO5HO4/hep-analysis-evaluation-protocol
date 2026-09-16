@@ -1,0 +1,19 @@
+{
+  "status": "complete",
+  "deterministic": true,
+  "uncapped": true,
+  "development_cap": null,
+  "input_scope": "nominal Higgs MC and observed GamGam data only",
+  "excluded": [
+    "Sherpa yy",
+    "prompt diphoton continuum MC",
+    "other non-Higgs MC"
+  ],
+  "selected_rows": 272376,
+  "blinding_enforced": true,
+  "observed_significance": "blocked",
+  "root_inputs_copied": false,
+  "workspace_backend": "ROOT/PyROOT/RooFit",
+  "expected_Z": 1.3783130039091942,
+  "mu_hat": 1.000027279961694
+}

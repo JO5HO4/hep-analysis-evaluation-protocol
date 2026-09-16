@@ -1,0 +1,23 @@
+{
+  "backend": "ROOT/PyROOT/RooFit",
+  "root_version": "6.38.00",
+  "categories": [
+    "ttH_had_BDT1",
+    "tH_had_4j1b",
+    "tH_had_4j2b"
+  ],
+  "shared_signal_strength": true,
+  "mu_gen": 1.0,
+  "mu_hat": 1.000027279961694,
+  "mu_uncertainty": 0.8031936420055918,
+  "free_mu_fit_status": 0,
+  "free_mu_covariance_quality": 3,
+  "mu0_fit_status": 0,
+  "mu0_covariance_quality": 3,
+  "nll_free_mu": 43.54162482687035,
+  "nll_mu0": 44.49149819524294,
+  "q0": 1.8997467367451861,
+  "expected_Z": 1.3783130039091942,
+  "observed_significance": "blocked",
+  "observed_TI_signal_window_blinded": true
+}

@@ -1,0 +1,1 @@
+{"photons": {"selection": "kinematic acceptance", "tight_id_required": false, "isolation_required": false}, "leptons": {"pt_min": 10, "id_required": false, "isolation_required": false}, "jets": {"pt_min": 25, "central_eta": 2.5, "btag_definition": "jet_btag_quantile >= 4"}}

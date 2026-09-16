@@ -1,0 +1,60 @@
+CAMPAIGN_ROUTE row=6 agent=claude-code lane=cborg-claude-code model=claude-opus-5
+PASS repository-root          <source-repository>
+PASS git                      git version 2.51.0
+PASS jq                       jq-1.6
+PASS operations-config        schema version 1
+PASS agent-registry           role-aware schema version 1
+PASS container-cli            <host-path> available
+PASS container-runtime        <host-path> is available
+PASS docker-credentials       no known Colima/Desktop conflict
+PASS harbor-cli               <host-path> version 0.21.0
+PASS task-catalog             10 tasks discovered
+PASS selected-task            tasks/physical-sciences/physics/top-reconstruction-full-chain-no-pipeline
+SKIP task-data                selected task has no configured external-data requirement
+PASS image-architecture       not pinned
+PASS script-permissions       operational scripts are executable
+PASS jobs-directory           /tmp/terminal-bench-harbor-jobs is writable
+PASS disk-space               337 GiB available
+PASS authentication           CBORG_API_KEY present; endpoint not tested
+PASS auth-conflicts           no known Claude token conflict
+WARN claude-cborg-compatibility credential presence is checked; Claude Code endpoint/model compatibility requires a live authorized run
+PASS lane-agent               claude-code with cborg-claude-code
+
+Summary: PASS=18 WARN=1 FAIL=0
+Credential presence is not proof that an endpoint request succeeds.
+Run ID: 20260902T223106Z-top-reconstruction-full-chain-no-pipeline-claude-code-1356357
+Manifest: <source-repository>/runs/manifests/20260902T223106Z-top-reconstruction-full-chain-no-pipeline-claude-code-1356357.json
+Harbor output: /tmp/terminal-bench-harbor-jobs/20260902T223106Z-top-reconstruction-full-chain-no-pipeline-claude-code-1356357
+Command (credential values are inherited, not displayed):
+  harbor run --path /tmp/terminal-bench-staged-tasks/20260902T223106Z-top-reconstruction-full-chain-no-pipeline-claude-code-1356357 --agent harbor_agents.preinstalled:PreinstalledClaudeCode --n-concurrent 1 --timeout-multiplier 1.0 --jobs-dir /tmp/terminal-bench-harbor-jobs --job-name 20260902T223106Z-top-reconstruction-full-chain-no-pipeline-claude-code-1356357 --yes --model claude-opus-5 --agent-setup-timeout-multiplier 2.0 
+  1/1 Mean: 0.917 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:59:05 0:00:00
+adhoc • claude-code • claude-opus-5
+┏━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┓
+┃ Trials ┃ Exceptions ┃  Mean ┃
+┡━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━┩
+│      1 │          0 │ 0.917 │
+└────────┴────────────┴───────┘
+
+┏━━━━━━━━━━┳━━━━━━━┓
+┃ Reward   ┃ Count ┃
+┡━━━━━━━━━━╇━━━━━━━┩
+│ 0.916667 │     1 │
+└──────────┴───────┘
+
+Job Info
+Total runtime: 59m 6s
+Results written to 
+/tmp/terminal-bench-harbor-jobs/20260902T223106Z-top-reconstruction-full-chain-n
+o-pipeline-claude-code-1356357/result.json
+Inspect results by running `harbor view /tmp/terminal-bench-harbor-jobs`
+Share results by running `harbor upload 
+/tmp/terminal-bench-harbor-jobs/20260902T223106Z-top-reconstruction-full-chain-n
+o-pipeline-claude-code-1356357`
+
+
+Run summary
+  status: completed
+  harbor_exit_code: 0
+  verifier_reward: 0.916667
+  manifest: <source-repository>/runs/manifests/20260902T223106Z-top-reconstruction-full-chain-no-pipeline-claude-code-1356357.json
+PREBUILT_CAMPAIGN_ROW_PASS row=6 manifest=<source-repository>/runs/manifests/20260902T223106Z-top-reconstruction-full-chain-no-pipeline-claude-code-1356357.json

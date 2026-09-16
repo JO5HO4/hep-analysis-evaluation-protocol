@@ -1,0 +1,12 @@
+{
+    "task": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260902T205040Z-top-reconstruction-full-chain-no-pipeline-codex-1297923"
+    },
+    "trial_name": "20260902T205040Z-top-reconstruct__6FYNaKM",
+    "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260902T205040Z-top-reconstruction-full-chain-no-pipeline-codex-1297923",
+    "agent": {
+        "name": "harbor_agents.preinstalled:PreinstalledCodex",
+        "model_name": "lbl/cborg-coder"
+    },
+    "job_id": "ae726f2e-a281-4625-967b-e1f5e060ec99"
+}

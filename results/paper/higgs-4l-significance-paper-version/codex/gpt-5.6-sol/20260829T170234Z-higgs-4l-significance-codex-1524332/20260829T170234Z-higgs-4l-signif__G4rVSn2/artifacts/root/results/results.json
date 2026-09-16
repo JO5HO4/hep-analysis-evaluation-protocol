@@ -1,0 +1,20 @@
+{
+  "logL_b": -11.082750320271758,
+  "logL_sb": -5.8159224919108095,
+  "test_statistic": -10.533655656721898,
+  "p_value": 0.0002715,
+  "significance": 3.4585953664663798,
+  "p_value_mc_se": 1.1649598442650288e-05,
+  "mu_hat": 1.623886561275243,
+  "mu_lo": 1.0089693335395642,
+  "mu_hi": 2.366643166594907,
+  "n_toys": 2000000,
+  "tail_toys": 543,
+  "random_seed": 20260829,
+  "tail_definition": "q_toy <= q_observed",
+  "channels": [
+    "4mu",
+    "2e2mu",
+    "4e"
+  ]
+}

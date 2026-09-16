@@ -1,0 +1,48 @@
+{
+  "artifact_contract": {
+    "errors": [
+      "missing table artifact for preselected_events: expected parquet, csv, or jsonl"
+    ],
+    "score": 0.0
+  },
+  "bdt_training": {
+    "errors": [
+      "missing JSON artifact: /root/results/tth-diphoton-bdt/model/training_metadata.json"
+    ],
+    "score": 0.0
+  },
+  "input_scope": {
+    "errors": [
+      "missing table artifact for preselected_events: expected parquet, csv, or jsonl"
+    ],
+    "score": 0.0
+  },
+  "preselection_physics": {
+    "errors": [
+      "missing table artifact for preselected_events: expected parquet, csv, or jsonl"
+    ],
+    "score": 0.0
+  },
+  "provenance": {
+    "errors": [
+      "missing table artifact for preselected_events: expected parquet, csv, or jsonl"
+    ],
+    "score": 0.0
+  },
+  "reward": 0.0,
+  "selection_api": {
+    "errors": [
+      "BDT_FEATURES mismatch: ['jet_pt_max', 'jet_eta_max', 'bjet_multiplicity', 'diphoton_pt_jet_feature', 'centrality_measure']"
+    ],
+    "score": 0.0
+  },
+  "total_score": 0.0,
+  "weighted_scores": {
+    "artifact_contract": 0.0,
+    "bdt_training": 0.0,
+    "input_scope": 0.0,
+    "preselection_physics": 0.0,
+    "provenance": 0.0,
+    "selection_api": 0.0
+  }
+}

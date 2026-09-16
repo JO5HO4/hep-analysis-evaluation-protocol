@@ -1,0 +1,92 @@
+{
+  "model": {
+    "kind": "sklearn.HistGradientBoostingClassifier",
+    "library": "scikit-learn",
+    "hyperparameters": {
+      "loss": "log_loss",
+      "learning_rate": 0.06,
+      "max_iter": 400,
+      "max_leaf_nodes": 16,
+      "min_samples_leaf": 60,
+      "l2_regularization": 1.0,
+      "max_bins": 128,
+      "early_stopping": false,
+      "random_state": 20240917
+    },
+    "deterministic": true,
+    "determinism_note": "fixed random_state, early_stopping disabled, single-threaded numeric backends (OMP_NUM_THREADS=1)",
+    "n_iter_": 400,
+    "artifact_path": "/root/results/tth-diphoton-bdt/model/bdt_model.pkl"
+  },
+  "features": [
+    "n_jets_central",
+    "n_bjets",
+    "ht_jets",
+    "met",
+    "pt_gg"
+  ],
+  "feature_count": 5,
+  "m_gammagamma_used_as_input": false,
+  "signal_class": {
+    "definition": "ttH + tH TI MC in 125 +/- 2 GeV, hadronic preselection",
+    "samples": [
+      "ttH",
+      "tH"
+    ]
+  },
+  "background_class": {
+    "definition": "ggH TI MC in 125 +/- 2 GeV  +  NTI observed-data sidebands scaled by SF1*SF2",
+    "resonant_samples": [
+      "ggH"
+    ],
+    "continuum": "NTI data sidebands"
+  },
+  "rows": {
+    "total": 39719,
+    "with_finite_features": 39719,
+    "dropped_non_finite_features": 0,
+    "train": 23727,
+    "val": 8034,
+    "test": 7958,
+    "train_signal": 13743,
+    "train_background": 9984
+  },
+  "partitioning": {
+    "identifier": "event_id (stable)",
+    "seed": 20240917,
+    "fractions": {
+      "train": 0.6,
+      "val": 0.2,
+      "test": 0.2
+    },
+    "fit_partition": "train"
+  },
+  "performance": {
+    "weighted_auc_train": 0.8440580072144884,
+    "weighted_auc_val": 0.8360173621777544,
+    "weighted_auc_test": 0.8382538606833598
+  },
+  "timing": {
+    "training_wall_time_seconds": 0.9657317370292731,
+    "stage": "bdt_training"
+  },
+  "nti_scale_factors": {
+    "SF1": 0.032464650307526474,
+    "SF2": 0.0974573584427113,
+    "SF1xSF2": 0.0031639190617378855
+  },
+  "class_balance": {
+    "before": {
+      "signal_class_weight_sum": 9.846831657602182,
+      "background_class_weight_sum": 53.67338901545409,
+      "signal_raw_rows": 22898,
+      "background_raw_rows": 16821,
+      "ratio_signal_over_background": 0.18345835502891386
+    },
+    "after": {
+      "signal_class_weight_sum": 31.760110336528136,
+      "background_class_weight_sum": 31.760110336528136,
+      "ratio_signal_over_background": 1.0
+    }
+  }
+}

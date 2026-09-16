@@ -1,0 +1,184 @@
+Skipping image OS validation for hb__918749cd6af81bbf1fca25bd9fcd8234: container inspect returned 125
+Running command: . ~/.nvm/nvm.sh; qwen --yolo --prompt='Repair the supplied H -> gamma gamma analysis pipeline under `/root/submission/tth-diphoton-bdt`, then run it and write an end-to-end top-associated diphoton BDT categorization result to `/root/results/tth-diphoton-bdt`.
+
+Use the same external input contract as `tb-hyy`: read the ATLAS open-data `GamGam` ROOT directory from `TB_HYY_INPUTS` when it is set. The expected layout is `MC/` and `data/`. Do not copy ROOT inputs into the submission directory.
+
+This task is a preselection and hadronic-BDT categorization starting point. The required categorization is hadronic-only. The current open-data ROOT inputs do not contain reconstructed forward jets, so leptonic top-associated categories are out of scope for the BDT optimization, category assignment requirements, significance summaries, and final plots. If a pipeline keeps leptonic preselection rows for provenance, clearly label them and exclude them from the hadronic BDT training, boundary optimization, and categorization metrics.
+
+Process only:
+
+- nominal Higgs `H -> gamma gamma` MC samples, such as `ggH`, `VBF`, `WH`, `ZH`, `ggZH`, `ttH`, and `tH`;
+- observed `GamGam` data samples.
+
+Do not process Sherpa `yy`, prompt-diphoton continuum MC, or other non-Higgs MC samples.
+
+Required event selection:
+
+- Build the Higgs candidate from two photons passing kinematic acceptance, but do not require photon tight ID and do not require photon isolation.
+- Retain `m_gammagamma` for bookkeeping and later validation.
+- Select electrons and muons with `pT > 10 GeV`; no lepton ID or isolation requirement is needed for this preselection sample.
+- Select jets with `pT > 25 GeV`; define central jets by `|eta| <= 2.5` and forward jets by `|eta| > 2.5`.
+- Use a documented b-tag definition, such as `jet_btag_quantile >= 4`.
+- The required analysis channel is hadronic: zero selected electrons or muons, at least three selected jets, and at least one selected b-jet.
+- It is acceptable to also retain legacy leptonic preselection rows, defined as at least one selected electron or muon plus at least one selected b-jet, but they are bookkeeping rows only and are not part of the required categorization.
+- Record which channel selected each event.
+- Partition selected events by a stable event identifier, not row order, into training, validation, and test partitions.
+- Record raw counts and weighted yields. Keep signed event-weight bookkeeping explicit.
+
+Required hadronic BDT training:
+
+- Train a deterministic binary classifier on hadronic-preselection events using exactly the five variables in `BDT_FEATURES`; do not use `m_gammagamma` as a classifier input.
+- Treat `ttH` and `tH` MC events as the signal class. Their event weights must first use the SM-normalized MC weight, based on cross section, filter efficiency, k-factor, signed generator-weight sum, generator weight, and available per-event scale factors.
+- Treat the background class as the mixture of resonant `ggH` MC in the `125 +/- 2 GeV` mass window and continuum background represented by the NTI data control sample.
+- Define TI diphotons as two kinematic photons where both photons pass tight ID and tight isolation. Define NTI diphotons as two kinematic photons where at least one photon fails tight ID or tight isolation.
+- Build the NTI continuum proxy from the data sidebands `105-120 GeV` and `130-160 GeV`, and record the normalization factors `SF1`, `SF2`, and `SF1*SF2`, where `SF1 = TI_sideband_yield / NTI_sideband_yield` and `SF2 = NTI_(125 +/- 2 GeV)_yield / NTI_sideband_yield`.
+- Apply class balancing only after the SM-normalized signal weights and the `ggH + NTI` background mixture weights have been constructed. Record the signal and background class-weight sums before and after balancing.
+- Do not use nominal TI observed data in the `125 +/- 2 GeV` window for BDT training or threshold optimization.
+- Optimize BDT category boundaries iteratively: add a boundary only while the relative improvement in expected significance with respect to the previous iteration is at least `5%`; stop once the best available additional boundary improves the previous iteration by less than `5%`. Record the accepted boundary sequence and the relative improvement per accepted split.
+- Record the BDT training wall time or stage duration.
+
+Required BDT score plots:
+
+- Produce a BDT-score shape comparison separating `ttH+tH` signal, resonant `ggH` background, and NTI continuum background.
+- Normalize each component histogram in that shape comparison to the same area.
+- Use explicit BDT-score binning over `[0, 1]`, and save both PNG/PDF plot files plus a machine-readable histogram JSON that records bin edges, normalized bin contents, and component totals before shape normalization.
+
+Required inference output:
+
+- After training, run BDT inference for every hadronic-preselection event with finite BDT input variables. Optional leptonic bookkeeping rows may also be scored, but this is not required.
+- Record a finite `bdt_score` in `[0, 1]` for every hadronic row in `predictions` and in a dedicated inference table.
+- Preserve the event identifiers, sample/process labels, event weights, diphoton bookkeeping variables, preselection flags, channel labels, stable partition labels, BDT input variables, BDT score, training-role bookkeeping, and assigned category in the inference table.
+- Record an inference manifest with the number of selected rows, scored rows, unscored rows, score range, feature list, model path, and any categorical code maps needed by non-CSV outputs.
+- If a ROOT inference tree is written, it may encode string categories as integer codes, provided the manifest records the code maps.
+
+Required categorization normalization:
+
+- Keep the BDT classifier fit weights separate from yield/significance weights. Do not use class-balanced `bdt_fit_weight` for category yields or significance estimates.
+- For expected category yields and significance, use the same physical-normalization strategy used for BDT construction, but set the absolute MC integrated luminosity to `36 fb^-1`.
+- Record a dedicated model-yield weight, for example `significance_model_weight_36fb`, that contains MC events normalized to `36 fb^-1` plus the scaled NTI continuum proxy contribution.
+- Keep observed-data unit weights separate from the expected-yield model weight, for example in an `observed_data_weight` column.
+- Record the NTI continuum proxy weight separately, using the same `SF1*SF2` sideband-to-signal-window scale factor recorded for training.
+- Write a machine-readable category-yield summary using the `36 fb^-1` significance model weight.
+
+Required categorization outputs:
+
+- Assign and report the six hadronic categories only: `ttH_had_BDT1`, `ttH_had_BDT2`, `ttH_had_BDT3`, `ttH_had_BDT4`, `tH_had_4j1b`, and `tH_had_4j2b`, plus `unassigned`.
+- The `tH_had_4j1b` and `tH_had_4j2b` categories are cut-based lower-priority hadronic categories. Evaluate them only after an event fails all hadronic BDT categories. Require `N_leptons = 0`, exactly four central jets, and either exactly one b-tag for `tH_had_4j1b` or at least two b-tags for `tH_had_4j2b`. Use the central-jet count, not total jet multiplicity, for these cuts.
+- Produce a categorization summary for the assigned categories, including `ttH+tH` signal yield, resonant Higgs background yield, NTI continuum proxy yield, total background, total model yield, `S/B`, `S/sqrt(B)`, and a simple expected counting significance per category.
+- Use the signal-window model for expected yields: TI MC events in `125 +/- 2 GeV` plus data NTI sideband events scaled by `SF1*SF2` for the continuum proxy.
+- Keep a non-catch-all physics category only if its total expected background yield in the `125 +/- 2 GeV` signal window is at least `0.8` events after applying the resonant Higgs and scaled NTI continuum normalization. Categories below this threshold must be merged into `unassigned` or explicitly marked as not kept before final yields, significances, and plots are written.
+- Do not inspect, count, plot, or otherwise report observed TI data in the `125 +/- 2 GeV` signal window. Record an explicit blinding flag for that region.
+- Keep observed TI data sideband counts separate from expected model yields.
+- For NTI control-shape distributions, do not remove entries in `120-130 GeV`; NTI data are not the signal-enriched TI data sample. The `120-130 GeV` blinding/removal policy applies only to observed TI data.
+- Record the combined expected counting significance over all categories.
+- Produce machine-readable histograms for BDT-score and `m_gammagamma` component distributions with explicit binning, bin contents, and `sumw2`.
+- Save PNG and PDF plots for category expected yields, category expected counting significance, BDT-score model components, BDT-score model components with vertical category-boundary lines, and per-category `m_gammagamma` control shapes.
+
+Required combined hadronic workspace and expected significance:
+
+- Build a combined ROOT/RooFit workspace over the hadronic categories used in the final categorization. Exclude leptonic bookkeeping rows from this workspace.
+- Follow the same expected-significance strategy as `tb-hyy`: construct signal-plus-background Asimov pseudo-data with `mu_gen = 1`, perform a free-`mu` fit and a `mu = 0` fit, and report the expected discovery significance from the likelihood-ratio test statistic.
+- Use one shared signal-strength parameter `mu` multiplying the `ttH+tH` signal component across all hadronic categories.
+- Model the expected mass spectrum as `mu*(ttH+tH signal) + fixed resonant-Higgs background + floating smooth continuum background` in each category.
+- Use `ttH+tH` TI MC for the signal mass shape and normalization, and non-top Higgs TI MC for the fixed resonant-Higgs background.
+- For the statistical workspace, determine the smooth continuum background from observed TI data sidebands only. Fit the TI data sidebands `105-120 GeV` and `130-160 GeV`, use the fitted background PDF and fitted sideband normalization to extrapolate into the full `105-160 GeV` fit range, and use that fitted PDF to generate the continuum part of the S+B Asimov data. This workspace-level statistical interpretation is distinct from the NTI proxy used for BDT training and categorization control estimates.
+- Keep observed TI data in `125 +/- 2 GeV` blinded; observed significance should remain blocked unless an explicit unblinding step is added.
+- Record the workspace backend as ROOT/PyROOT/RooFit, the fitted `mu_hat`, `mu_uncertainty`, fit statuses, covariance qualities, `q0`, and expected `Z`.
+- Save diagnostic plots for the TI sideband background fit in each individual workspace category. Each category plot should show the observed TI sideband data, the fitted continuum PDF, the blinded signal window, and explicit `m_gammagamma` binning. A combined summary plot may also be written, but it is not a substitute for the per-category sideband plots.
+- Save the full-range Asimov S+B fit plot.
+
+The output should be deterministic and uncapped by default. Support `TTH_MAX_SELECTED_PER_SAMPLE` as an optional environment variable limiting selected rows per sample only when explicit development throttling is requested.
+
+Required final report:
+
+- Write `report.md` at the result-directory root.
+- Include the sections `Introduction`, `Data and Monte Carlo Samples`, `Object Definition and Event Selection`, `Overview of the Analysis Strategy`, `Signal and Control Regions`, `Cut Flow`, `Distributions in Signal and Control Regions`, `Categorization`, `Systematic Uncertainties`, `Statistical Interpretation`, `Artifact Checklist`, and `Summary`.
+- Document the input scope, uncapped/capped row policy, object definitions, preselection counts, BDT features and hyperparameters, `ttH+tH` signal definition, `ggH+NTI` background definition, NTI scale factors, class balancing, 36 fb^-1 yield normalization, category retention, blinding policy, and ROOT/RooFit Asimov expected-significance strategy.
+- Embed or link the produced preselection, BDT-score, category mass-control, sideband-fit, and Asimov-fit plots using Markdown image syntax.
+- Keep observed TI signal-window data blinded in the report; observed significance should be described as blocked unless an explicit unblinding step is added.
+
+Required callable API under `/root/submission/tth-diphoton-bdt/analysis/top_categorization.py`:
+
+- `CATEGORY_ORDER`, containing the hadronic category priority order; legacy leptonic category names may appear but are not required
+- `BDT_FEATURES`
+- `build_jet_features(jets, ...)`
+- `invariant_mass(objects)`
+- `assign_top_category(event, score=None, thresholds=None)`
+- `stable_partition(event_id, seed=..., fractions=...)`
+- `optimize_bdt_boundaries(rows, config=None)`
+
+Required output artifacts under `/root/results/tth-diphoton-bdt`:
+
+- `config_resolved.yaml`
+- `input_data_contract.json`
+- `object_definition_record.json`
+- `preselection_summary.json`
+- `cutflow.json`
+- `metrics.json`
+- `preselected_events.csv` or `preselected_events.parquet`
+- `predictions.csv` or `predictions.parquet`
+- `hadronic_features.csv` or `hadronic_features.parquet`
+- `inference/inference_manifest.json`
+- `inference/events_with_bdt_scores.csv` or `inference/events_with_bdt_scores.parquet`
+- `category_yields_36fb.json`
+- `categorization/categorization_manifest.json`
+- `categorization/category_summary.csv`
+- `categorization/category_component_yields.json`
+- `categorization/category_retention.json`
+- `categorization/histograms/category_mgg_control_histograms.json`
+- `categorization/histograms/bdt_score_model_component_histograms.json`
+- `categorization/plots/category_expected_yields_36fb_v1.png`
+- `categorization/plots/category_expected_yields_36fb_v1.pdf`
+- `categorization/plots/category_expected_counting_z_36fb_v1.png`
+- `categorization/plots/category_expected_counting_z_36fb_v1.pdf`
+- `categorization/plots/bdt_score_model_components_36fb_v1.png`
+- `categorization/plots/bdt_score_model_components_36fb_v1.pdf`
+- `categorization/plots/bdt_score_model_components_with_boundaries_36fb_v1.png`
+- `categorization/plots/bdt_score_model_components_with_boundaries_36fb_v1.pdf`
+- `categorization/plots/category_mgg_control_shapes_36fb_v1.png`
+- `categorization/plots/category_mgg_control_shapes_36fb_v1.pdf`
+- `workspace_manifest.json`
+- `fit/workspace.json`
+- `fit/FIT1/workspace.root`
+- `fit/FIT1/results.json`
+- `fit/FIT1/significance_asimov.json`
+- `fit/FIT1/significance_asimov_construction.json`
+- `fit/FIT1/significance_asimov_plot_payload.json`
+- `fit/FIT1/sideband_fit_plots.json`
+- `fit/FIT1/significance.json`
+- `fit/FIT1/backend.json`
+- `fit/FIT1/background_pdf_choice.json`
+- `fit/FIT1/background_pdf_scan.json`
+- `fit/FIT1/background_template_selection.json`
+- `fit/FIT1/signal_pdf.json`
+- `fit/FIT1/resonant_higgs_pdf.json`
+- `fit/FIT1/plots/sidebands_background_fit.png`
+- `fit/FIT1/plots/sidebands_background_fit.pdf`
+- `fit/FIT1/plots/asimov_sb_fit.png`
+- `fit/FIT1/plots/asimov_sb_fit.pdf`
+- `model/training_metadata.json`
+- `model/background_mixture_and_normalization.json`
+- `model/class_balance_check.json`
+- `model/training_sample.csv` or `model/training_sample.parquet`
+- `optimization/thresholds.json`
+- `optimization/accepted_splits.json`
+- `plots/score_by_component_shape_bdt_v1.png`
+- `plots/score_by_component_shape_bdt_v1.pdf`
+- `plots/score_by_component_histograms.json`
+- `plots/preselection_mass.png`
+- `plots/preselection_channels.png`
+- `plots/preselection_processes.png`
+- `report.md`
+- `run_manifest.json`
+
+`preselection_summary.json` must state the photon and hadronic event-selection definitions, plus the optional leptonic bookkeeping definition if leptonic rows are retained, and report raw and weighted counts overall and by process.
+
+`object_definition_record.json` must explicitly document that photon tight-ID and photon isolation are not required for this preselection sample.
+
+`input_data_contract.json` and `run_manifest.json` must make clear that the run uses only nominal Higgs signal MC and data, with Sherpa `yy` and other continuum-background MC excluded.
+' 2>&1 | stdbuf -oL tee /logs/agent/qwen-code.txt
+Command outputs captured
+Running command: cp -r ~/.qwen/projects/ /logs/agent/qwen-sessions/ 2>/dev/null || true
+Command outputs captured
+Collecting main service artifacts
+Skipping image OS validation for hb__cb69f969744d01ff96f07fbfbd8ce14c: container inspect returned 125

@@ -1,0 +1,21 @@
+{
+  "inputs_root": "/data/GamGam",
+  "layout": "MC/ and data/",
+  "included_mc": [
+    "ggH",
+    "VBF",
+    "WH",
+    "ZH",
+    "ggZH",
+    "ttH",
+    "tH"
+  ],
+  "included_data": [
+    "GamGam data"
+  ],
+  "excluded": [
+    "Sherpa yy",
+    "prompt-diphoton continuum MC",
+    "other non-Higgs MC"
+  ]
+}

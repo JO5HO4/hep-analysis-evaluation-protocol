@@ -1,0 +1,17 @@
+{
+  "channel": "hadronic only",
+  "categories": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "ttH_had_BDT3",
+    "ttH_had_BDT4",
+    "tH_had_4j1b",
+    "tH_had_4j2b",
+    "unassigned"
+  ],
+  "blinded_observed_TI_signal_window": true,
+  "thresholds": [
+    0.791617494542065,
+    0.7425552204482903
+  ]
+}

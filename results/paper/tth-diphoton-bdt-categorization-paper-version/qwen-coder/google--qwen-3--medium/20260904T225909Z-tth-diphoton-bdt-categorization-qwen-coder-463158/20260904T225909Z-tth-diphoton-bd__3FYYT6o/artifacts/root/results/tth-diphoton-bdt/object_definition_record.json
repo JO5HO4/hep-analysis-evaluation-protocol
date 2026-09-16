@@ -1,0 +1,8 @@
+{
+  "photon_selection": "pt > 20 GeV, no tight ID or isolation",
+  "lepton_selection": "pt > 10 GeV, no ID or isolation",
+  "jet_selection": "pt > 25 GeV",
+  "btag_definition": "jet_btag_quantile >= 4",
+  "central_jets": "|eta| <= 2.5",
+  "forward_jets": "|eta| > 2.5"
+}

@@ -1,0 +1,21 @@
+{
+  "threshold_min_background_yield_36fb": 0.8,
+  "total_background_yield_36fb_before_retention": {
+    "tH_had_4j1b": 13.431900879097745,
+    "tH_had_4j2b": 1.0351298775483957,
+    "ttH_had_BDT1": 1.2768097693564369,
+    "ttH_had_BDT2": 8.983529539128675,
+    "unassigned": 49.00447285304303
+  },
+  "kept_categories": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "tH_had_4j1b",
+    "tH_had_4j2b"
+  ],
+  "merged_to_unassigned": [
+    "ttH_had_BDT3",
+    "ttH_had_BDT4"
+  ],
+  "note": "Categories with total (resonant-Higgs + NTI-continuum) expected background below threshold in the 125+/-2 GeV window are merged into 'unassigned' before any yields, significances or plots are produced."
+}

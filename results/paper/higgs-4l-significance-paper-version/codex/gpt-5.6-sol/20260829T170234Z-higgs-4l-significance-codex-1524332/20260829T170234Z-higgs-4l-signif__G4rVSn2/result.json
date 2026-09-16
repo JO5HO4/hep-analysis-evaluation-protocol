@@ -1,0 +1,115 @@
+{
+    "id": "38dd7a8b-726b-4557-896c-7c70173695df",
+    "task_name": "haichenwangberkeley/higgs-4l-significance",
+    "trial_name": "20260829T170234Z-higgs-4l-signif__G4rVSn2",
+    "trial_uri": "file:///tmp/terminal-bench-harbor-jobs/20260829T170234Z-higgs-4l-significance-codex-1524332/20260829T170234Z-higgs-4l-signif__G4rVSn2",
+    "task_id": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260829T170234Z-higgs-4l-significance-codex-1524332"
+    },
+    "source": null,
+    "task_checksum": "280e71d50b78ecedaa485bfa3bb392a54437de83f9ae5fd67c53ad58119a900b",
+    "config": {
+        "task": {
+            "path": "/tmp/terminal-bench-staged-tasks/20260829T170234Z-higgs-4l-significance-codex-1524332",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "20260829T170234Z-higgs-4l-signif__G4rVSn2",
+        "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260829T170234Z-higgs-4l-significance-codex-1524332",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "harbor_agents.preinstalled:PreinstalledCodex",
+            "import_path": null,
+            "model_name": "gpt-5.6-sol",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "cb003390-eb4e-40a6-8dee-51bba64138e8",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "codex",
+        "version": "0.149.0",
+        "model_info": {
+            "name": "gpt-5.6-sol",
+            "provider": null
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 191125,
+        "n_cache_tokens": 167230,
+        "n_output_tokens": 8167,
+        "cost_usd": 0.325812,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-08-29T17:03:59.169394Z",
+    "finished_at": "2026-08-29T17:08:51.586359Z",
+    "environment_setup": {
+        "started_at": "2026-08-29T17:04:01.332391Z",
+        "finished_at": "2026-08-29T17:04:21.045360Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-08-29T17:04:21.045477Z",
+        "finished_at": "2026-08-29T17:04:28.816174Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-08-29T17:04:28.816299Z",
+        "finished_at": "2026-08-29T17:06:31.353378Z"
+    },
+    "verifier": {
+        "started_at": "2026-08-29T17:07:31.640786Z",
+        "finished_at": "2026-08-29T17:08:51.586340Z"
+    },
+    "step_results": null
+}

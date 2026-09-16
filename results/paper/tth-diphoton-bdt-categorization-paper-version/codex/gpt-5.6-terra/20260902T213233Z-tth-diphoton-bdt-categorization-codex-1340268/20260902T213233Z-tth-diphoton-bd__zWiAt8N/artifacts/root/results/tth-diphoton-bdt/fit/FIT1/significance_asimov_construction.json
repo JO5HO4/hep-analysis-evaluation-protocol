@@ -1,0 +1,10 @@
+{
+  "mu_gen": 1,
+  "method": "S+B Asimov likelihood-ratio counting approximation",
+  "categories": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "ttH_had_BDT3",
+    "tH_had_4j1b"
+  ]
+}

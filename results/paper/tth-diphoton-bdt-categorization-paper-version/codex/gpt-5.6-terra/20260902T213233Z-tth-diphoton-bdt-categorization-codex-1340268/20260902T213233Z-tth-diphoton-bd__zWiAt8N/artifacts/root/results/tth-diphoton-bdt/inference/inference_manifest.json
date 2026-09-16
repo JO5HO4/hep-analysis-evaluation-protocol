@@ -1,0 +1,18 @@
+{
+  "selected_rows": 272376,
+  "scored_rows": 272376,
+  "unscored_rows": 0,
+  "score_range": [
+    0.08342543188784046,
+    0.9154253432158128
+  ],
+  "feature_list": [
+    "n_jets",
+    "n_bjets",
+    "jet_ht",
+    "lead_jet_pt",
+    "central_jet_fraction"
+  ],
+  "model_path": "deterministic in-memory HGB; metadata recorded",
+  "categorical_code_maps": {}
+}

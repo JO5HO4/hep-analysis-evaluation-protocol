@@ -1,0 +1,16 @@
+{
+    "job_name": "20260902T205040Z-top-reconstruction-full-chain-no-pipeline-codex-1297923",
+    "jobs_dir": "/tmp/terminal-bench-harbor-jobs",
+    "n_concurrent_trials": 1,
+    "agents": [
+        {
+            "name": "harbor_agents.preinstalled:PreinstalledCodex",
+            "model_name": "lbl/cborg-coder"
+        }
+    ],
+    "tasks": [
+        {
+            "path": "/tmp/terminal-bench-staged-tasks/20260902T205040Z-top-reconstruction-full-chain-no-pipeline-codex-1297923"
+        }
+    ]
+}

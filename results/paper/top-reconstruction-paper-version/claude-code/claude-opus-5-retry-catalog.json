@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "campaign_id": "free-tier-physics-20260902-rerun",
+  "tier": "free",
+  "purpose": "Rerun only the ten 2026-09-01 rows blocked before Harbor by the removed campaign-wide external-data gate.",
+  "agent_runtime_archive": "<source-repository>/.project/prebuilt-agent-images/preinstalled-agents-20260821.tar",
+  "results_dir": "<source-repository>/results/free-tier-physics-20260902-rerun",
+  "durable_jobs_dir": "results/top-reconstruction-paper-version/claude-code",
+  "model_routes": {
+    "codex": "lbl/cborg-coder",
+    "claude-code": "claude-opus-5",
+    "terminus-2": "openai/lbl/cborg-coder",
+    "qwen-coder": "lbl/cborg-coder",
+    "openhands": "openai/lbl/cborg-coder"
+  },
+  "rows": [
+    {
+      "task": "higgs-4l-significance",
+      "agent": "codex",
+      "lane": "cborg-codex",
+      "model": "lbl/cborg-coder",
+      "task_archive": "<source-repository>/results/dongwon/private-runs/free-tier-preparation/task-images/higgs-4l-significance.tar",
+      "task_image": "localhost/collider-ta<redacted-secret>:a7294f8bea5e17d4",
+      "verifier_image": "localhost/collider-ta<redacted-secret>:a7294f8bea5e17d4"
+    },
+    {
+      "task": "higgs-4l-significance",
+      "agent": "claude-code",
+      "lane": "cborg-claude-code",
+      "model": "lbl/cborg-coder",
+      "task_archive": "<source-repository>/results/dongwon/private-runs/free-tier-preparation/task-images/higgs-4l-significance.tar",
+      "task_image": "localhost/collider-ta<redacted-secret>:a7294f8bea5e17d4",
+      "verifier_image": "localhost/collider-ta<redacted-secret>:a7294f8bea5e17d4"
+    },
+    {
+      "task": "higgs-4l-significance",
+      "agent": "terminus-2",
+      "lane": "cborg-terminus-2",
+      "model": "openai/lbl/cborg-coder",
+      "task_archive": "<source-repository>/results/dongwon/private-runs/free-tier-preparation/task-images/higgs-4l-significance.tar",
+      "task_image": "localhost/collider-ta<redacted-secret>:a7294f8bea5e17d4",
+      "verifier_image": "localhost/collider-ta<redacted-secret>:a7294f8bea5e17d4"
+    },
+    {
+      "task": "higgs-4l-significance",
+      "agent": "qwen-coder",
+      "lane": "cborg-qwen-coder",
+      "model": "lbl/cborg-coder",
+      "task_archive": "<source-repository>/results/dongwon/private-runs/free-tier-preparation/task-images/higgs-4l-significance.tar",
+      "task_image": "localhost/collider-ta<redacted-secret>:a7294f8bea5e17d4",
+      "verifier_image": "localhost/collider-ta<redacted-secret>:a7294f8bea5e17d4"
+    },
+    {
+      "task": "higgs-4l-significance",
+      "agent": "openhands",
+      "lane": "cborg-openhands",
+      "model": "openai/lbl/cborg-coder",
+      "task_archive": "<source-repository>/results/dongwon/private-runs/free-tier-preparation/task-images/higgs-4l-significance.tar",
+      "task_image": "localhost/collider-ta<redacted-secret>:a7294f8bea5e17d4",
+      "verifier_image": "localhost/collider-ta<redacted-secret>:a7294f8bea5e17d4"
+    },
+    {
+      "task": "top-reconstruction-full-chain-no-pipeline",
+      "agent": "codex",
+      "lane": "cborg-codex",
+      "model": "lbl/cborg-coder",
+      "task_archive": "<source-repository>/results/dongwon/private-runs/free-tier-preparation/task-images/top-reconstruction-full-chain-no-pipeline.tar",
+      "task_image": "localhost/collider-ta<redacted-secret>:6538bba690984568",
+      "verifier_image": "localhost/collider-ta<redacted-secret>:6538bba690984568"
+    },
+    {
+      "task": "top-reconstruction-full-chain-no-pipeline",
+      "agent": "claude-code",
+      "lane": "cborg-claude-code",
+      "model": "lbl/cborg-coder",
+      "task_archive": "<source-repository>/results/dongwon/private-runs/free-tier-preparation/task-images/top-reconstruction-full-chain-no-pipeline.tar",
+      "task_image": "localhost/collider-ta<redacted-secret>:6538bba690984568",
+      "verifier_image": "localhost/collider-ta<redacted-secret>:6538bba690984568"
+    },
+    {
+      "task": "top-reconstruction-full-chain-no-pipeline",
+      "agent": "terminus-2",
+      "lane": "cborg-terminus-2",
+      "model": "openai/lbl/cborg-coder",
+      "task_archive": "<source-repository>/results/dongwon/private-runs/free-tier-preparation/task-images/top-reconstruction-full-chain-no-pipeline.tar",
+      "task_image": "localhost/collider-ta<redacted-secret>:6538bba690984568",
+      "verifier_image": "localhost/collider-ta<redacted-secret>:6538bba690984568"
+    },
+    {
+      "task": "top-reconstruction-full-chain-no-pipeline",
+      "agent": "qwen-coder",
+      "lane": "cborg-qwen-coder",
+      "model": "lbl/cborg-coder",
+      "task_archive": "<source-repository>/results/dongwon/private-runs/free-tier-preparation/task-images/top-reconstruction-full-chain-no-pipeline.tar",
+      "task_image": "localhost/collider-ta<redacted-secret>:6538bba690984568",
+      "verifier_image": "localhost/collider-ta<redacted-secret>:6538bba690984568"
+    },
+    {
+      "task": "top-reconstruction-full-chain-no-pipeline",
+      "agent": "openhands",
+      "lane": "cborg-openhands",
+      "model": "openai/lbl/cborg-coder",
+      "task_archive": "<source-repository>/results/dongwon/private-runs/free-tier-preparation/task-images/top-reconstruction-full-chain-no-pipeline.tar",
+      "task_image": "localhost/collider-ta<redacted-secret>:6538bba690984568",
+      "verifier_image": "localhost/collider-ta<redacted-secret>:6538bba690984568"
+    }
+  ]
+}

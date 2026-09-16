@@ -1,0 +1,54 @@
+{
+  "final_config": {
+    "classifier": {
+      "type": "xgboost",
+      "max_depth": 5,
+      "eta": 0.08,
+      "scale_pos_weight": 11.0,
+      "best_iteration": 187
+    },
+    "selection_method": "optimal",
+    "score_threshold": 0.03,
+    "max_candidates_per_event": 2
+  },
+  "final_test_metrics": {
+    "triplet_reconstruction_efficiency": 0.7648766328011611,
+    "n_truth_triplets_selected": 527,
+    "n_truth_triplets_total": 689,
+    "selection_purity": 0.37375886524822693,
+    "n_selected_triplets_total": 1410,
+    "mean_selected_per_event": 1.083781706379708,
+    "test_auc": 0.9576390891995648
+  },
+  "iterations": [
+    {
+      "stage": "classifier_hyperparams",
+      "metric": "val_auc",
+      "trials": [
+        {"config": "default_depth6_spw_auto", "val_auc": 0.9577},
+        {"config": "depth7_spw_auto", "val_auc": 0.9586},
+        {"config": "depth3_spw_auto", "val_auc": 0.9553},
+        {"config": "depth5_spw1", "val_auc": 0.9586},
+        {"config": "depth5_spw11", "val_auc": 0.9588, "chosen": true}
+      ]
+    },
+    {
+      "stage": "selection_method",
+      "metric": "val_efficiency",
+      "trials": [
+        {"method": "greedy", "best_efficiency": 0.7418, "best_threshold_range": [0.0, 0.01]},
+        {"method": "optimal", "best_efficiency": 0.7561, "best_threshold_range": [0.0, 0.03], "chosen": true}
+      ]
+    },
+    {
+      "stage": "score_threshold",
+      "metric": "val_efficiency_and_purity",
+      "trials": [
+        {"threshold": 0.0, "efficiency": 0.7561, "purity_relative": "baseline"},
+        {"threshold": 0.03, "efficiency": 0.7561, "purity_improvement": "0.32 -> 0.39", "chosen": true},
+        {"threshold": 0.032, "efficiency": 0.7547},
+        {"threshold": 0.9, "efficiency": 0.3529}
+      ]
+    }
+  ]
+}

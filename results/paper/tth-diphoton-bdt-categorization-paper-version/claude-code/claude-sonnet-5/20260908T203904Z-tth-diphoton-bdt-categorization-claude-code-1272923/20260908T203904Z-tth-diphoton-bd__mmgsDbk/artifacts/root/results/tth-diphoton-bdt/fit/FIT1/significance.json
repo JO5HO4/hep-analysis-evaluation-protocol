@@ -1,0 +1,11 @@
+{
+  "method": "q0 = 2*(NLL(mu=0) - NLL(mu_hat)), Z = sqrt(max(q0,0)); combined Z = sqrt(sum(Z_i^2)) across independent hadronic categories",
+  "lumi_ifb": 36.0,
+  "per_category_Z": {
+    "ttH_had_BDT1": 1.372768078108373,
+    "ttH_had_BDT2": 1.1721539617761019,
+    "tH_had_4j1b": 0.2975777517031278,
+    "tH_had_4j2b": 0.07945305289315664
+  },
+  "combined_expected_significance_asimov": 1.8312024498409505
+}

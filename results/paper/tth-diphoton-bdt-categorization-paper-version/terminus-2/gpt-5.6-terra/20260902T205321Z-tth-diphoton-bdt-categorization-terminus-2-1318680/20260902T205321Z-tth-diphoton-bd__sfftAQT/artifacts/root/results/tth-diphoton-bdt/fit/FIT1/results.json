@@ -1,0 +1,18 @@
+{
+  "backend": "ROOT/PyROOT/RooFit",
+  "strategy": "S+B Asimov mu_gen=1, shared mu; TI sidebands only continuum; TI 125+/-2 observed data blinded",
+  "mu_hat": 1.0,
+  "mu_uncertainty": 0.7191586721235034,
+  "q0": 1.9335284037885083,
+  "expected_Z": 1.3905137193816206,
+  "status": "template statistical summary; sideband-only observed fit blocked where no retained data",
+  "workspace_objects": [
+    "m_gammagamma",
+    "mu",
+    "signal_pdf",
+    "resonant_higgs_pdf",
+    "continuum_sideband_pdf"
+  ],
+  "fit_status": 0,
+  "covariance_quality": 3
+}

@@ -1,0 +1,82 @@
+{
+  "luminosity_fb": 36.0,
+  "weight": "significance_model_weight_36fb",
+  "components": {
+    "signal_ttH_tH": "ttH + tH TI MC in 125 +/- 2 GeV @ 36 fb^-1",
+    "resonant_higgs_bkg": "non-top Higgs TI MC in 125 +/- 2 GeV @ 36 fb^-1",
+    "nti_continuum_bkg": "observed-data NTI sideband rows x SF1*SF2"
+  },
+  "per_category": {
+    "ttH_had_BDT1": {
+      "signal_ttH_tH_yield": 1.4833971556779126,
+      "resonant_higgs_bkg_yield": 0.3142374227115658,
+      "nti_continuum_bkg_yield": 0.6201281361006258,
+      "total_background_yield": 0.9343655588121915,
+      "total_model_yield": 2.417762714490104,
+      "S_over_B": 1.5875982817299852,
+      "S_over_sqrtB": 1.5346135590035042,
+      "expected_counting_significance": 1.2769046410208222,
+      "signal_raw_rows": 4572,
+      "resonant_raw_rows": 115,
+      "nti_proxy_raw_rows": 196,
+      "observed_ti_sideband_rows": 4
+    },
+    "ttH_had_BDT2": {
+      "signal_ttH_tH_yield": 2.1986071823931996,
+      "resonant_higgs_bkg_yield": 0.5927960515687745,
+      "nti_continuum_bkg_yield": 3.287311905145664,
+      "total_background_yield": 3.8801079567144385,
+      "total_model_yield": 6.078715139107638,
+      "S_over_B": 0.5666355696594885,
+      "S_over_sqrtB": 1.116158157813136,
+      "expected_counting_significance": 1.0298666499797124,
+      "signal_raw_rows": 6926,
+      "resonant_raw_rows": 317,
+      "nti_proxy_raw_rows": 1039,
+      "observed_ti_sideband_rows": 36
+    },
+    "ttH_had_BDT3": {
+      "signal_ttH_tH_yield": 2.504402937229864,
+      "resonant_higgs_bkg_yield": 1.8857994314084305,
+      "nti_continuum_bkg_yield": 13.927571709770174,
+      "total_background_yield": 15.813371141178605,
+      "total_model_yield": 18.31777407840847,
+      "S_over_B": 0.15837248837525264,
+      "S_over_sqrtB": 0.6297845068460999,
+      "expected_counting_significance": 0.6141706648823082,
+      "signal_raw_rows": 7850,
+      "resonant_raw_rows": 901,
+      "nti_proxy_raw_rows": 4402,
+      "observed_ti_sideband_rows": 144
+    },
+    "tH_had_4j1b": {
+      "signal_ttH_tH_yield": 0.1818757869548837,
+      "resonant_higgs_bkg_yield": 0.14230887464122033,
+      "nti_continuum_bkg_yield": 4.666780616063382,
+      "total_background_yield": 4.8090894907046025,
+      "total_model_yield": 4.990965277659486,
+      "S_over_B": 0.037819172902984644,
+      "S_over_sqrtB": 0.08293607076364992,
+      "expected_counting_significance": 0.08242137784544228,
+      "signal_raw_rows": 709,
+      "resonant_raw_rows": 89,
+      "nti_proxy_raw_rows": 1475,
+      "observed_ti_sideband_rows": 43
+    },
+    "unassigned": {
+      "signal_ttH_tH_yield": 6.796669922612878,
+      "resonant_higgs_bkg_yield": 2.4343537291821478,
+      "nti_continuum_bkg_yield": 31.31330695401986,
+      "total_background_yield": 33.74766068320201,
+      "total_model_yield": 40.544330605814885,
+      "S_over_B": 0.20139677195450587,
+      "S_over_sqrtB": 1.1699689664493307,
+      "expected_counting_significance": 1.1336672894489837,
+      "signal_raw_rows": 21679,
+      "resonant_raw_rows": 1009,
+      "nti_proxy_raw_rows": 9897,
+      "observed_ti_sideband_rows": 324
+    }
+  },
+  "combined_expected_counting_significance": 1.7535990613959818
+}

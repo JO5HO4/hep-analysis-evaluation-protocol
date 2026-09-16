@@ -1,0 +1,32 @@
+{
+  "blinding": "observed TI data in 120-130 GeV are omitted before analysis-row construction and are not counted",
+  "categorical_code_maps": {},
+  "event_identifier": "process:channelNumber:runNumber:eventNumber",
+  "features": [
+    "n_central_jets",
+    "n_bjets",
+    "jet1_pt",
+    "jet_ht",
+    "diphoton_pt"
+  ],
+  "hadronic_selected_rows": 101471,
+  "model_path": "model/bdt_model.pkl",
+  "score_contract": "finite [0,1] for every exported hadronic row",
+  "score_range": [
+    0.0680750654994694,
+    0.9302472024831369
+  ],
+  "scored_rows": 101471,
+  "selected_rows": 101471,
+  "stable_partition": {
+    "algorithm": "SHA-256",
+    "fractions": {
+      "test": 0.2,
+      "train": 0.6,
+      "validation": 0.2
+    },
+    "seed": 240513
+  },
+  "table": "inference/events_with_bdt_scores.csv",
+  "unscored_rows": 0
+}

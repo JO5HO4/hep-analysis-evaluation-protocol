@@ -1,0 +1,27 @@
+{
+  "NTI_125_plusminus_2_yield": 2615.0,
+  "NTI_sideband_yield": 26367.0,
+  "SF1": 0.026207001175712064,
+  "SF1_times_SF2": 0.0025991317963548013,
+  "SF2": 0.09917700155497403,
+  "TI_sideband_yield": 691.0,
+  "background": "TI ggH MC in 123-127 GeV plus NTI observed-data sidebands",
+  "nti_definition": "at least one of the two kinematic photons fails tight ID or tight isolation",
+  "nti_sideband_per_event_proxy_weight": 0.0025991317963548013,
+  "sidebands_GeV": [
+    [
+      105,
+      120
+    ],
+    [
+      130,
+      160
+    ]
+  ],
+  "signal": "ttH+tH hadronic MC, SM-normalized per event",
+  "signal_window_GeV": [
+    123,
+    127
+  ],
+  "ti_definition": "both kinematic photons pass tight ID and tight isolation"
+}

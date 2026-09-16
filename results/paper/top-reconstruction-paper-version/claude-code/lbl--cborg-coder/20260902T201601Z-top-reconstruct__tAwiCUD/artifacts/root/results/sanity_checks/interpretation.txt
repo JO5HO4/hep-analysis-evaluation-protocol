@@ -1,0 +1,1 @@
+The selected top candidates show a mass peak around the top quark mass (~172.5 GeV). The selected truth candidates closely follow the original truth mass distribution. The selected fakes are broader and generally shifted, but the overall selection is physically plausible.

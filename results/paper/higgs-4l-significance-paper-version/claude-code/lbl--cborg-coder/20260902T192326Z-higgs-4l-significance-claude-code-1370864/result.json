@@ -1,0 +1,39 @@
+{
+    "id": "96f50d98-c5bf-4fe5-b1f3-fdb3e2e4a9c4",
+    "started_at": "2026-09-02T12:23:42.527441",
+    "updated_at": "2026-09-02T12:29:27.730207",
+    "finished_at": "2026-09-02T12:29:27.730207",
+    "n_total_trials": 1,
+    "stats": {
+        "n_completed_trials": 1,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "claude-code__cborg-coder__adhoc": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.95
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "0.95": [
+                            "20260902T192326Z-higgs-4l-signif__GJtrrcd"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": 178016,
+        "n_cache_tokens": 56896,
+        "n_output_tokens": 11217,
+        "cost_usd": 0.914473
+    }
+}

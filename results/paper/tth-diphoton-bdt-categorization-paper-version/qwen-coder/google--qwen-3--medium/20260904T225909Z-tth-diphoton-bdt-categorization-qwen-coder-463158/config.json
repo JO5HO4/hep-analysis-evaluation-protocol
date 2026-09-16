@@ -1,0 +1,30 @@
+{
+    "job_name": "20260904T225909Z-tth-diphoton-bdt-categorization-qwen-coder-463158",
+    "jobs_dir": "/tmp/terminal-bench-harbor-jobs",
+    "n_concurrent_trials": 1,
+    "environment": {
+        "type": "docker",
+        "mounts": [
+            {
+                "type": "bind",
+                "source": "<source-repository>/data/GamGam",
+                "target": "/data/GamGam",
+                "read_only": true
+            }
+        ]
+    },
+    "agents": [
+        {
+            "name": "harbor_agents.preinstalled:PreinstalledQwenCode",
+            "model_name": "google/qwen-3",
+            "env": {
+                "TB_HYY_INPUTS": "/data/GamGam"
+            }
+        }
+    ],
+    "tasks": [
+        {
+            "path": "/tmp/terminal-bench-staged-tasks/20260904T225909Z-tth-diphoton-bdt-categorization-qwen-coder-463158"
+        }
+    ]
+}

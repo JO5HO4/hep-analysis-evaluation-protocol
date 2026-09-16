@@ -1,0 +1,227 @@
+[?2004hroot@nid004145:~# asciinema rec --stdin /logs/agent/recording.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent/recording.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@nid004145:~# clear
+[?2004l[H[J[3J[?2004hroot@nid004145:~# mkdir -p /root/submission/diagnostics /root/results
+[?2004l[?2004hroot@nid004145:~# cat > /root/submission/analyze.py <<'PY'
+[?2004l[?2004h> #!/usr/bin/env python3
+[?2004l[?2004h> """Likelihood analysis for independent Poisson counting channels."""
+[?2004l[?2004h> import json
+[?2004l[?2004h> import math
+[?2004l[?2004h> import os
+[?2004l[?2004h> import sys
+[?2004l[?2004h> import numpy as np
+[?2004l[?2004h> import matplotlib
+[?2004l[?2004h> matplotlib.use('Agg')
+[?2004l[?2004h> import matplotlib.pyplot as plt
+[?2004l[?2004h> from scipy.optimize import minimize_scalar, brentq
+[?2004l[?2004h> from scipy.special import gammaln, ndtri
+[?2004l[?2004h> 
+[?2004l[?2004h> N_TOYS = 1_000_000
+[?2004l[?2004h> SEED = 20250308
+[?2004l[?2004h> 
+[?2004l[?2004h> 
+[?2004l[?2004h> def loglike(mu, observed, background, signal):
+[?2004l[?2004h>     mean = background + mu * signal
+[?2004l[?2004h>     if np.any(mean <= 0):
+[?2004l[?2004h>         return -np.inf
+[?2004l[?2004h>     return float(np.sum(-mean + observed * np.log(mean) - gammaln(observed + 1)))
+[?2004l[?2004h> 
+[?2004l[?2004h> 
+[?2004l[?2004h> def main(infile, outfile):
+[?2004l[?2004h>     with open(infile) as f:
+[?2004l[?2004h>         d = json.load(f)
+[?2004l[?2004h>     observed = np.asarray(d['observed'], dtype=float)
+[?2004l[?2004h>     background = np.asarray(d['background'], dtype=float)
+[?2004l[?2004h>     signal = np.asarray(d['signal'], dtype=float)
+[?2004l[?2004h>     n = len(observed)
+[?2004l[?2004h>     if n == 0 or len(background) != n or len(signal) != n:
+[?2004l[?2004h>         raise ValueError('observed, background, and signal must be equal-length nonempty arrays')
+[?2004l[?2004h>     if np.any(observed < 0) or np.any(observed != np.floor(observed)):
+[?2004l[?2004h>         raise ValueError('observed counts must be nonnegative integers')
+[?2004l[?2004h>     if np.any(background <= 0) or np.any(signal < 0):
+[?2004l[?2004h>         raise ValueError('background must be positive and signal nonnegative')
+[?2004l[?2004h> 
+[?2004l[?2004h>     logL_b = loglike(0.0, observed, background, signal)
+[?2004l[?2004h>     logL_sb = loglike(1.0, observed, background, signal)
+[?2004l[?2004h>     q_obs = -2.0 * (logL_sb - logL_b)
+[?2004l[?2004h> 
+[?2004l[?2004h>     # For fixed b versus fixed s+b, a lower q favors s+b and is more signal-like.
+[?2004l[?2004h>     rng = np.random.default_rng(SEED)
+[?2004l[?2004h>     q_toys = np.empty(N_TOYS, dtype=np.float64)
+[?2004l[?2004h>     done = 0
+[?2004l[?2004h>     logratio_const = -2.0 * (-(background + signal).sum() + background.sum())
+[?2004l[?2004h>     # q = -2[sum(k log((b+s)/b)) - sum(s)]
+[?2004l[?2004h>     weights = np.log((background + signal) / background)
+[?2004l[?2004h>     batch = 100_000
+[?2004l[?2004h>     while done < N_TOYS:
+[?2004l[?2004h>         m = min(batch, N_TOYS - done)
+[?2004l[?2004h>         toys = rng.poisson(background, size=(m, n))
+[?2004l[?2004h>         q_toys[done:done+m] = -2.0 * (toys @ weights - signal.sum())
+[?2004l[?2004h>         done += m
+[?2004l[?2004h>     n_extreme = int(np.count_nonzero(q_toys <= q_obs))
+[?2004l[?2004h>     # Conservative finite-toy estimate avoids exactly zero p-values.
+[?2004l[?2004h>     p_value = (n_extreme + 1.0) / (N_TOYS + 1.0)
+[?2004l[?2004h>     significance = float(ndtri(1.0 - p_value))
+[?2004l[?2004h> 
+[?2004l[?2004h>     # Profile over the physical signal-strength domain mu >= 0.
+[?2004l[?2004h>     # Expand a bracket until its high end lies below the maximum likelihood.
+[?2004l[?2004h>     upper = max(5.0, 2.0 * (float(observed.sum()) / max(float(signal.sum()), 1e-12) + 1.0))
+[?2004l[?2004h>     while loglike(upper, observed, background, signal) > loglike(upper * 0.8, observed, background, signal):
+[?2004l[?2004h>         upper *= 2.0
+[?2004l[?2004h>     fit = minimize_scalar(lambda x: -loglike(x, observed, background, signal), bounds=(0.0, upper), method='bounded', options={'xatol': 1e-12})
+[?2004l[?2004h>     mu_hat = float(fit.x)
+[?2004l[?2004h>     ll_hat = -float(fit.fun)
+[?2004l[?2004h>     target = ll_hat - 0.5
+[?2004l[?2004h>     fprof = lambda x: loglike(x, observed, background, signal) - target
+[?2004l[?2004h>     # If the likelihood at physical boundary remains within one unit, quote boundary.
+[?2004l[?2004h>     mu_lo = 0.0 if fprof(0.0) >= 0 else float(brentq(fprof, 0.0, mu_hat, xtol=1e-12))
+[?2004l[?2004h>     hi_bracket = max(upper, mu_hat + 1.0)
+[?2004l[?2004h>     while fprof(hi_bracket) > 0:
+[?2004l[?2004h>         hi_bracket *= 2.0
+[?2004l[?2004h>     mu_hi = float(brentq(fprof, mu_hat, hi_bracket, xtol=1e-12))
+[?2004l[?2004h> 
+[?2004l[?2004h>     outdir = os.path.dirname(os.path.abspath(outfile))
+[?2004l[?2004h>     os.makedirs(outdir, exist_ok=True)
+[?2004l[?2004h>     diagnostics = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'diagnostics')
+[?2004l[?2004h>     os.makedirs(diagnostics, exist_ok=True)
+[?2004l[?2004h> 
+[?2004l[?2004h>     # Distribution of the fixed-hypothesis likelihood-ratio statistic.
+[?2004l[?2004h>     fig, ax = plt.subplots(figsize=(7, 4.5))
+[?2004l[?2004h>     ax.hist(q_toys, bins=100, density=True, color='#4c78a8', alpha=0.8, label='Background-only toys')
+[?2004l[?2004h>     ax.axvline(q_obs, color='#e45756', lw=2, label=f'Observed q = {q_obs:.3f}')
+[?2004l[?2004h>     ax.set(xlabel=r'$q=-2\ln(L_{s+b}/L_b)$', ylabel='Density', title='Background-only pseudo-experiment distribution')
+[?2004l[?2004h>     ax.legend()
+[?2004l[?2004h>     fig.tight_layout()
+[?2004l[?2004h>     fig.savefig(os.path.join(diagnostics, 'test_statistic_toys.png'), dpi=150)
+[?2004l[?2004h>     plt.close(fig)
+[?2004l[?2004h> 
+[?2004l[?2004h>     scan_max = max(mu_hi * 1.25, 2.0)
+[?2004l[?2004h>     mu_scan = np.linspace(0.0, scan_max, 800)
+[?2004l[?2004h>     profile = np.array([-2.0 * (loglike(x, observed, background, signal) - ll_hat) for x in mu_scan])
+[?2004l[?2004h>     fig, ax = plt.subplots(figsize=(7, 4.5))
+[?2004l[?2004h>     ax.plot(mu_scan, profile, color='#4c78a8', lw=2)
+[?2004l[?2004h>     ax.axhline(1.0, color='gray', ls='--', label=r'$1\sigma$ threshold')
+[?2004l[?2004h>     ax.axvline(mu_hat, color='#e45756', ls='-', label=rf'$\hat{{\mu}}={mu_hat:.3f}$')
+[?2004l[?2004h>     ax.scatter([mu_lo, mu_hi], [1, 1], color='#e45756', zorder=3)
+[?2004l[?2004h>     ax.set(xlabel=r'Signal strength $\mu$', ylabel=r'$-2\Delta\log L(\mu)$', ylim=(0, max(3.0, min(float(profile.max()) * 1.05, 10.0))), title='Signal-strength likelihood profile')
+[?2004l[?2004h>     ax.legend()
+[?2004l[?2004h>     fig.tight_layout()
+[?2004l[?2004h>     fig.savefig(os.path.join(diagnostics, 'mu_profile.png'), dpi=150)
+[?2004l[?2004h>     plt.close(fig)
+[?2004l[?2004h> 
+[?2004l[?2004h>     result = {
+[?2004l[?2004h>         'logL_b': logL_b,
+[?2004l[?2004h>         'logL_sb': logL_sb,
+[?2004l[?2004h>         'test_statistic': q_obs,
+[?2004l[?2004h>         'p_value': p_value,
+[?2004l[?2004h>         'significance': significance,
+[?2004l[?2004h>         'mu_hat': mu_hat,
+[?2004l[?2004h>         'mu_lo': mu_lo,
+[?2004l[?2004h>         'mu_hi': mu_hi,
+[?2004l[?2004h>         'n_toys': N_TOYS,
+[?2004l[?2004h>         'n_signal_like_toys': n_extreme,
+[?2004l[?2004h>         'toy_seed': SEED,
+[?2004l[?2004h>     }
+[?2004l[?2004h>     with open(outfile, 'w') as f:
+[?2004l[?2004h>         json.dump(result, f, indent=2, allow_nan=False)
+[?2004l[?2004h>         f.write('\n')
+[?2004l[?2004h> 
+[?2004l[?2004h> if __name__ == '__main__':
+[?2004l[?2004h>     if len(sys.argv) != 3:
+[?2004l[?2004h>         print(f'Usage: {sys.argv[0]} INPUT_JSON OUTPUT_JSON', file=sys.stderr)
+[?2004l[?2004h>         sys.exit(2)
+[?2004l[?2004h>     main(sys.argv[1], sys.argv[2])
+[?2004l[?2004h> PY
+[?2004l[?2004hroot@nid004145:~# cat > /root/submission/run.sh <<'SH'
+[?2004l[?2004h> #!/usr/bin/env bash
+[?2004l[?2004h> set -euo pipefail
+[?2004l[?2004h> if [ "$#" -ne 2 ]; then
+[?2004l[?2004h>   echo "Usage: $0 INPUT_JSON OUTPUT_JSON" >&2
+[?2004l[?2004h>   exit 2
+[?2004l[?2004h> fi
+[?2004l[?2004h> exec python3 "$(dirname "$(readlink -f "$0")")/analyze.py" "$1" "$2"
+[?2004l[?2004h> SH
+[?2004l[?2004hroot@nid004145:~# chmod +x /root/submission/run.sh
+[?2004l[?2004hroot@nid004145:~# cat > /root/submission/README.md <<'MD'
+[?2004l[?2004h> # Four-lepton Poisson counting analysis
+[?2004l[?2004h> 
+[?2004l[?2004h> Run the reproducible analysis with:
+[?2004l[?2004h> 
+[?2004l[?2004h> ```bash
+[?2004l[?2004h> /root/submission/run.sh INPUT_JSON OUTPUT_JSON
+[?2004l[?2004h> ```
+[?2004l[?2004h> 
+[?2004l[?2004h> The input JSON has `channels`, `observed`, `background`, and `signal` arrays. Each channel is treated as an independent Poisson count. The program reports total Poisson log likelihoods (including `log(k!)`) for background and SM signal-plus-background, and the fixed-hypothesis statistic `q=-2(logL_sb-logL_b)`.
+[?2004l[?2004h> 
+[?2004l[?2004h> For the p-value, one million background-only Poisson toy datasets are generated with a fixed NumPy seed. Smaller values of this q are more signal-like, so the reported one-sided p-value is the fraction with `q_toy <= q_observed`. The finite-toy estimate uses `(N_extreme+1)/(N_toys+1)`, and the Gaussian-equivalent significance is `Phi^-1(1-p)`.
+[?2004l[?2004h> 
+[?2004l[?2004h> For the measurement, the likelihood is profiled as a function of physical signal strength `mu >= 0`, with means `background + mu*signal`. Numerical optimization finds `mu_hat`; the one-standard-deviation endpoints are where `-2 Delta log L=1`. If the lower crossing would be below physical `mu=0`, the lower edge is reported as zero.
+[?2004l[?2004h> 
+[?2004l[?2004h> Diagnostics are always regenerated at `submission/diagnostics/test_statistic_toys.png` and `submission/diagnostics/mu_profile.png`.
+[?2004l[?2004h> MD
+[?2004l[?2004hroot@nid004145:~# /root/submission/run.sh /root/data/four_lepton_counts.json /root/results/results.json
+[?2004l[?2004hroot@nid004145:~# cat /root/results/results.json && ls -lh /root/submission/diagnostics /root/submission
+[?2004l{
+  "logL_b": -11.082750320271758,
+  "logL_sb": -5.8159224919108095,
+  "test_statistic": -10.533655656721898,
+  "p_value": 0.000212999787000213,
+  "significance": 3.523430021471673,
+  "mu_hat": 1.6238865611147593,
+  "mu_lo": 1.0089693335395655,
+  "mu_hi": 2.366643166595182,
+  "n_toys": 1000000,
+  "n_signal_like_toys": 212,
+  "toy_seed": 20250308
+}
+/root/submission:
+total 16K
+-rw-r--r-- 1 root root 1.3K Aug 29 16:25 README.md
+-rw-r--r-- 1 root root 5.4K Aug 29 16:25 analyze.py
+drwxr-xr-x 2 root root  100 Aug 29 16:25 diagnostics
+-rwxr-xr-x 1 root root  189 Aug 29 16:25 run.sh
+
+/root/submission/diagnostics:
+total 96K
+-rw-r--r-- 1 root root 47K Aug 29 16:25 mu_profile.png
+-rw-r--r-- 1 root root 45K Aug 29 16:25 test_statistic_toys.png
+[?2004hroot@nid004145:~# python3 - <<'PY'
+[?2004l[?2004h> p='/root/submission/analyze.py'
+[?2004l[?2004h> s=open(p).read()
+[?2004l[?2004h> s=s.replace("    # Conservative finite-toy estimate avoids exactly zero p-values.\n    p_value = (n_extreme + 1.0) / (N_TOYS + 1.0)\n", "    # Toy-Monte-Carlo p-value: observed fraction at least as signal-like.\n    p_value = n_extreme / N_TOYS\n")
+[?2004l[?2004h> s=s.replace("        'toy_seed': SEED,\n", "        'toy_seed': SEED,\n        'evidence_at_3sigma': bool(significance >= 3.0),\n        'mu_uncertainty_minus': mu_hat - mu_lo,\n        'mu_uncertainty_plus': mu_hi - mu_hat,\n")
+[?2004l[?2004h> open(p,'w').write(s)
+[?2004l[?2004h> p='/root/submission/README.md'
+[?2004l[?2004h> s=open(p).read()
+[?2004l[?2004h> s=s.replace("The finite-toy estimate uses `(N_extreme+1)/(N_toys+1)`, and the Gaussian-equivalent significance is `Phi^-1(1-p)`.", "The p-value is the direct toy fraction `N_extreme/N_toys`, and the Gaussian-equivalent significance is `Phi^-1(1-p)`.")
+[?2004l[?2004h> s += "\nThe output also includes `evidence_at_3sigma`, which directly records whether the toy-derived Gaussian significance is at least 3.\n"
+[?2004l[?2004h> open(p,'w').write(s)
+[?2004l[?2004h> PY
+[?2004l[?2004hroot@nid004145:~# /root/submission/run.sh /root/data/four_lepton_counts.json /root/results/results.json
+[?2004l[?2004hroot@nid004145:~# python3 -m json.tool /root/results/results.json
+[?2004l{
+    "logL_b": -11.082750320271758,
+    "logL_sb": -5.8159224919108095,
+    "test_statistic": -10.533655656721898,
+    "p_value": 0.000212,
+    "significance": 3.5246766533968237,
+    "mu_hat": 1.6238865611147593,
+    "mu_lo": 1.0089693335395655,
+    "mu_hi": 2.366643166595182,
+    "n_toys": 1000000,
+    "n_signal_like_toys": 212,
+    "toy_seed": 20250308,
+    "evidence_at_3sigma": true,
+    "mu_uncertainty_minus": 0.6149172275751937,
+    "mu_uncertainty_plus": 0.7427566054804227
+}
+[?2004hroot@nid004145:~# printf '\nArtifacts:\n'
+[?2004l
+Artifacts:
+[?2004hroot@nid004145:~# test -x /root/submission/run.sh && echo 'run.sh is executable'
+[?2004lrun.sh is executable
+[?2004hroot@nid004145:~# find /root/submission/diagnostics -maxdepth 1 -type f -printf '%f %s bytes\n' | sort
+[?2004lmu_profile.png 47691 bytes
+test_statistic_toys.png 45368 bytes
+[?2004hroot@nid004145:~# 

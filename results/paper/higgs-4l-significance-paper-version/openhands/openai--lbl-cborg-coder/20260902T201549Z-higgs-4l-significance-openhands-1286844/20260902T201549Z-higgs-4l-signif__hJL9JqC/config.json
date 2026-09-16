@@ -1,0 +1,20 @@
+{
+    "task": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260902T201549Z-higgs-4l-significance-openhands-1286844"
+    },
+    "trial_name": "20260902T201549Z-higgs-4l-signif__hJL9JqC",
+    "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260902T201549Z-higgs-4l-significance-openhands-1286844",
+    "agent": {
+        "name": "harbor_agents.preinstalled:PreinstalledOpenHands",
+        "model_name": "openai/lbl/cborg-coder",
+        "kwargs": {
+            "model_info": {
+                "max_input_tokens": 114688,
+                "max_output_tokens": 16384,
+                "input_cost_per_token": 0,
+                "output_cost_per_token": 0
+            }
+        }
+    },
+    "job_id": "67d5bec0-5974-4324-a7a8-4c253064f4ba"
+}

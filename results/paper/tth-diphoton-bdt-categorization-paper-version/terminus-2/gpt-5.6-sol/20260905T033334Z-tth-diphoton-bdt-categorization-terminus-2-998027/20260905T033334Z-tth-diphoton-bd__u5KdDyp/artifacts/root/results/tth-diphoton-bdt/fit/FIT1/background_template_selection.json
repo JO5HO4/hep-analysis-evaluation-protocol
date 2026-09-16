@@ -1,0 +1,14 @@
+{
+  "source": "observed TI sidebands",
+  "ranges": [
+    [
+      105,
+      120
+    ],
+    [
+      130,
+      160
+    ]
+  ],
+  "signal_window_accessed": false
+}

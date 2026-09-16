@@ -1,0 +1,9 @@
+{
+  "backend": "ROOT/PyROOT/RooFit",
+  "strategy": "S+B Asimov mu_gen=1, shared mu; TI sidebands only continuum; TI 125+/-2 observed data blinded",
+  "mu_hat": 1.0,
+  "mu_uncertainty": null,
+  "q0": null,
+  "expected_Z": 1.3905137193816206,
+  "status": "template statistical summary; sideband-only observed fit blocked where no retained data"
+}

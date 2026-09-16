@@ -1,0 +1,19 @@
+{
+  "mass_sanity_check": {
+    "truth_triplets": {
+      "count": 627,
+      "mean_mass": 166.0991891742323,
+      "std_mass": 30.71516996268843,
+      "min_mass": 103.31636810302734,
+      "max_mass": 508.1385803222656
+    },
+    "fake_triplets": {
+      "count": 6238,
+      "mean_mass": 236.58217537192894,
+      "std_mass": 138.90125586010893,
+      "min_mass": 38.2203483581543,
+      "max_mass": 1870.0777587890625
+    },
+    "interpretation": "The mean invariant mass of truth-matched triplets (166.10 GeV) is close to the expected top quark mass (172.5 GeV), with a reasonable width (30.72 GeV) that accounts for detector resolution and physical effects. The fake triplets have a higher mean mass (236.58 GeV) and much larger width (138.90 GeV), which is expected as they represent random jet combinations. The mass distribution for truth triplets is physically plausible for reconstructed hadronic top candidates."
+  }
+}

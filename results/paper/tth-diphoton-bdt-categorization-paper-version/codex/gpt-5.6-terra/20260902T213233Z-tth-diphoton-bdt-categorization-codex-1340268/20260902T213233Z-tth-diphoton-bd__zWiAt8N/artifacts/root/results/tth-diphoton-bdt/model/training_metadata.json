@@ -1,0 +1,18 @@
+{
+  "algorithm": "HistGradientBoostingClassifier",
+  "features": [
+    "n_jets",
+    "n_bjets",
+    "jet_ht",
+    "lead_jet_pt",
+    "central_jet_fraction"
+  ],
+  "hyperparameters": {
+    "max_iter": 220,
+    "learning_rate": 0.055,
+    "max_leaf_nodes": 15,
+    "l2_regularization": 1,
+    "random_state": 314159
+  },
+  "wall_time_s": 1.6965007781982422
+}

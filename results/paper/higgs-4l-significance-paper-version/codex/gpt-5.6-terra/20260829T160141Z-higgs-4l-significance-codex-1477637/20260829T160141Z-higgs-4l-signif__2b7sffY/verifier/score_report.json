@@ -1,0 +1,47 @@
+{
+  "diagnostics": {
+    "files": [
+      "/root/submission/diagnostics/test_statistic_toys.png",
+      "/root/submission/diagnostics/mu_profile_scan.png"
+    ],
+    "score": 100.0
+  },
+  "framework": {
+    "errors": [],
+    "functional": true,
+    "readme": true,
+    "runtime_sec": 1.6870558909722604,
+    "score": 100.0
+  },
+  "reward": 1.0,
+  "score_units": "points out of 100; Harbor reward is total_score / 100",
+  "signal_strength": {
+    "errors": [],
+    "mu_hat": 1.0339912796986344,
+    "mu_hi": 1.770225692068617,
+    "mu_lo": 0.42089084229781826,
+    "ref_mu_hat": 1.034,
+    "ref_mu_hi": 1.77,
+    "ref_mu_lo": 0.421,
+    "score": 100.0
+  },
+  "significance": {
+    "errors": [],
+    "p_value": 0.0303555,
+    "ref_p_value": 0.0303385,
+    "ref_significance": 1.8758418459887942,
+    "score": 100.0,
+    "significance": 1.8755943706138867
+  },
+  "test_statistic": {
+    "errors": [],
+    "logL_b": -7.951245680204405,
+    "logL_sb": -6.278607590251635,
+    "ref_logL_b": -7.951245680204405,
+    "ref_logL_sb": -6.278607590251635,
+    "ref_test_statistic": -3.3452761799055395,
+    "score": 100.0,
+    "test_statistic": -3.3452761799055395
+  },
+  "total_score": 100.0
+}

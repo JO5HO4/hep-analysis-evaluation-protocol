@@ -1,0 +1,26 @@
+{
+  "n_selected_rows": 4000,
+  "n_scored_rows": 4000,
+  "n_unscored_rows": 0,
+  "score_range": [
+    2.2126096926863702e-05,
+    0.50562265163496
+  ],
+  "features": [
+    "jet_pt_sum",
+    "jet_eta_max",
+    "bjet_pt_max",
+    "bjet_eta_max",
+    "diphoton_pt"
+  ],
+  "model_path": "/root/results/tth-diphoton-bdt/model/model.pkl",
+  "category_order": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "ttH_had_BDT3",
+    "ttH_had_BDT4",
+    "tH_had_4j1b",
+    "tH_had_4j2b",
+    "unassigned"
+  ]
+}

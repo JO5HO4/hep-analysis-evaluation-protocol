@@ -1,0 +1,15 @@
+Warning: running headless with --yolo / approval-mode=yolo and no sandbox. All tool calls (shell, write, edit) auto-execute at this process's privilege level. Enable a sandbox via --sandbox / QWEN_SANDBOX, or set QWEN_CODE_SUPPRESS_YOLO_WARNING=1 to silence this notice.
+I've successfully completed the end-to-end hadronic top-quark reconstruction pipeline. All required artifacts have been created and saved to the appropriate locations under `/root/results/`.
+
+The pipeline achieved a triplet reconstruction efficiency of 0.6967 (69.67%), meaning it successfully recovered 627 out of 900 truth-matched triplet candidates in the test sample. The mass distribution of selected truth triplets has a mean of 166.10 GeV with a standard deviation of 30.72 GeV, which is physically plausible for reconstructed hadronic top candidates.
+
+All required artifacts have been created:
+- `/root/results/dataset_build/triplets_raw.parquet`
+- `/root/results/dataset_prepare/train.parquet`, `val.parquet`, `test.parquet`
+- `/root/results/train/model_xgb.json` and `training_report_xgb.json`
+- `/root/results/infer/inference_test_xgb.parquet` and `inference_report_xgb.json`
+- `/root/results/select_triplets/selected_triplets.parquet`, `event_selection.parquet`, `selection_report.json`, and plots
+- `/root/results/optimization_report.md`
+- `/root/results/sanity_checks/` with the sanity check report and interpretation note
+
+The pipeline successfully meets all the requirements, including the event-level constraints of at most two top candidates per event and no shared jets between selected candidates within the same event.

@@ -1,0 +1,16 @@
+{
+    "job_name": "20260829T160141Z-higgs-4l-significance-codex-1477637",
+    "jobs_dir": "/tmp/terminal-bench-harbor-jobs",
+    "n_concurrent_trials": 1,
+    "agents": [
+        {
+            "name": "harbor_agents.preinstalled:PreinstalledCodex",
+            "model_name": "gpt-5.6-terra"
+        }
+    ],
+    "tasks": [
+        {
+            "path": "/tmp/terminal-bench-staged-tasks/20260829T160141Z-higgs-4l-significance-codex-1477637"
+        }
+    ]
+}

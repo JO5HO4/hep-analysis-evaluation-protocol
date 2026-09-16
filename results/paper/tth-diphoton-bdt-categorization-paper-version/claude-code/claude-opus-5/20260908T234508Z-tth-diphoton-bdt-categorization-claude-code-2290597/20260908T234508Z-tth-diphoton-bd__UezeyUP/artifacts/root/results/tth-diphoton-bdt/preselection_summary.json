@@ -1,0 +1,507 @@
+{
+  "definitions": {
+    "photon_selection": {
+      "collection": "photon_*",
+      "pt_min_gev": 25.0,
+      "pt_operator": ">",
+      "abs_eta_max": 2.37,
+      "crack_veto_abs_eta": [
+        1.37,
+        1.52
+      ],
+      "require_tight_id": false,
+      "require_isolation": false,
+      "photon_tight_id_required": false,
+      "photon_isolation_required": false,
+      "explicit_statement": "Photon tight ID (photon_isTightID) is NOT required and photon isolation (photon_isTightIso) is NOT required for this preselection sample. Both flags are read and stored, but only to define the TI / NTI diphoton control categories used for the data-driven continuum estimate; neither is applied as an event selection cut at preselection.",
+      "higgs_candidate": "two leading-pT photons passing kinematic acceptance; relative-pT cuts lead pT/m_yy > 0.35 and sublead pT/m_yy > 0.25",
+      "ti_definition": "TI diphoton: BOTH photons pass tight ID AND tight isolation.",
+      "nti_definition": "NTI diphoton: at least one of the two photons FAILS tight ID or FAILS tight isolation.",
+      "m_gammagamma": "retained for bookkeeping and later validation; never a BDT input"
+    },
+    "hadronic_event_selection": {
+      "statement": "n_leptons == 0 AND n_jets >= 3 AND n_bjets >= 1",
+      "n_leptons": 0,
+      "min_n_jets": 3,
+      "min_n_bjets": 1,
+      "required_channel": true
+    },
+    "leptonic_bookkeeping_selection": {
+      "retained": true,
+      "statement": "n_leptons >= 1 AND n_bjets >= 1 (provenance only; excluded from BDT training, boundary optimisation, categorization metrics and the workspace)",
+      "min_n_leptons": 1,
+      "min_n_bjets": 1,
+      "role": "bookkeeping / provenance only",
+      "excluded_from": [
+        "hadronic BDT training",
+        "BDT boundary optimisation",
+        "categorization metrics and category yields",
+        "RooFit statistical workspace"
+      ],
+      "reason": "The current open-data ROOT inputs contain no reconstructed forward jets, so leptonic top-associated categories are out of scope for this analysis."
+    },
+    "lepton_selection": {
+      "collection": "lep_*",
+      "pt_min_gev": 10.0,
+      "pt_operator": ">",
+      "flavours": {
+        "electron": "lep_type == 11",
+        "muon": "lep_type == 13"
+      },
+      "require_id": false,
+      "require_isolation": false,
+      "explicit_statement": "No lepton ID and no lepton isolation requirement is applied for this preselection sample."
+    },
+    "jet_selection": {
+      "collection": "jet_*",
+      "pt_min_gev": 25.0,
+      "pt_operator": ">",
+      "central_definition": "|eta| <= 2.5",
+      "forward_definition": "|eta| > 2.5",
+      "btag_definition": "jet_btag_quantile >= 4",
+      "btag_definition_note": "Documented b-tag working point: the per-jet b-tagging quantile stored in the open-data ntuple, jet_btag_quantile >= 4.",
+      "forward_jet_availability": "The current ATLAS open-data GamGam ntuples contain no reconstructed jets with |eta| > 2.5, so n_jets_forward is identically 0 in this run. Leptonic top-associated categories that rely on forward jets are therefore out of scope."
+    },
+    "mass_windows_gev": {
+      "fit_range_gev": [
+        105.0,
+        160.0
+      ],
+      "signal_window_gev": [
+        123.0,
+        127.0
+      ],
+      "sideband_low_gev": [
+        105.0,
+        120.0
+      ],
+      "sideband_high_gev": [
+        130.0,
+        160.0
+      ],
+      "blinded_observed_ti_gev": [
+        120.0,
+        130.0
+      ]
+    }
+  },
+  "row_policy": {
+    "max_selected_per_sample": null,
+    "source": "unset (uncapped)",
+    "uncapped": true
+  },
+  "partition": {
+    "identifier": "event_id = sample|channelNumber|runNumber|eventNumber",
+    "method": "BLAKE2b(seed:event_id) -> uniform [0,1) -> bucket",
+    "order_independent": true,
+    "seed": 20240917,
+    "fractions": {
+      "train": 0.6,
+      "val": 0.2,
+      "test": 0.2
+    },
+    "counts": {
+      "train": 75175,
+      "test": 25161,
+      "val": 25045
+    },
+    "hadronic_counts": {
+      "train": 48192,
+      "val": 16258,
+      "test": 16135
+    }
+  },
+  "overall": {
+    "raw_events": 125381,
+    "weighted_events_36fb": 40.98358431450518,
+    "sum_positive_weights_36fb": 47.64110456122185,
+    "sum_negative_weights_36fb": -6.657520246716674,
+    "n_negative_weight_events": 11749,
+    "n_positive_weight_events": 90655,
+    "observed_data_rows": 22029,
+    "raw_ti": 56132,
+    "raw_nti": 69249
+  },
+  "hadronic": {
+    "raw_events": 80585,
+    "weighted_events_36fb": 25.942352177534,
+    "sum_positive_weights_36fb": 29.704292562518823,
+    "sum_negative_weights_36fb": -3.7619403849848214,
+    "n_negative_weight_events": 6731,
+    "n_positive_weight_events": 52855,
+    "observed_data_rows": 20428,
+    "raw_ti": 32152,
+    "raw_nti": 48433
+  },
+  "leptonic_bookkeeping_only": {
+    "raw_events": 44796,
+    "weighted_events_36fb": 15.041232136971178,
+    "sum_positive_weights_36fb": 17.936811998703032,
+    "sum_negative_weights_36fb": -2.895579861731852,
+    "n_negative_weight_events": 5018,
+    "n_positive_weight_events": 37800,
+    "observed_data_rows": 1601,
+    "raw_ti": 23980,
+    "raw_nti": 20816
+  },
+  "by_process": {
+    "VBF": {
+      "role": "resonant_higgs",
+      "all_selected": {
+        "raw_events": 49,
+        "weighted_events_36fb": 0.16551808785455832,
+        "sum_positive_weights_36fb": 0.17900257456053503,
+        "sum_negative_weights_36fb": -0.013484486705976718,
+        "n_negative_weight_events": 3,
+        "n_positive_weight_events": 45,
+        "observed_data_rows": 0,
+        "raw_ti": 31,
+        "raw_nti": 18
+      },
+      "hadronic": {
+        "raw_events": 43,
+        "weighted_events_36fb": 0.14847994535639852,
+        "sum_positive_weights_36fb": 0.15682935854624308,
+        "sum_negative_weights_36fb": -0.008349413189844515,
+        "n_negative_weight_events": 2,
+        "n_positive_weight_events": 40,
+        "observed_data_rows": 0,
+        "raw_ti": 27,
+        "raw_nti": 16
+      },
+      "leptonic_bookkeeping_only": {
+        "raw_events": 6,
+        "weighted_events_36fb": 0.01703814249815977,
+        "sum_positive_weights_36fb": 0.022173216014291973,
+        "sum_negative_weights_36fb": -0.005135073516132204,
+        "n_negative_weight_events": 1,
+        "n_positive_weight_events": 5,
+        "observed_data_rows": 0,
+        "raw_ti": 4,
+        "raw_nti": 2
+      }
+    },
+    "WH": {
+      "role": "resonant_higgs",
+      "all_selected": {
+        "raw_events": 791,
+        "weighted_events_36fb": 0.24015654009594922,
+        "sum_positive_weights_36fb": 0.245623959687805,
+        "sum_negative_weights_36fb": -0.005467419591855796,
+        "n_negative_weight_events": 16,
+        "n_positive_weight_events": 768,
+        "observed_data_rows": 0,
+        "raw_ti": 480,
+        "raw_nti": 311
+      },
+      "hadronic": {
+        "raw_events": 617,
+        "weighted_events_36fb": 0.18940759939098795,
+        "sum_positive_weights_36fb": 0.19389389945470523,
+        "sum_negative_weights_36fb": -0.004486300063717273,
+        "n_negative_weight_events": 11,
+        "n_positive_weight_events": 601,
+        "observed_data_rows": 0,
+        "raw_ti": 363,
+        "raw_nti": 254
+      },
+      "leptonic_bookkeeping_only": {
+        "raw_events": 174,
+        "weighted_events_36fb": 0.050748940704961255,
+        "sum_positive_weights_36fb": 0.05173006023309977,
+        "sum_negative_weights_36fb": -0.000981119528138523,
+        "n_negative_weight_events": 5,
+        "n_positive_weight_events": 167,
+        "observed_data_rows": 0,
+        "raw_ti": 117,
+        "raw_nti": 57
+      }
+    },
+    "ZH": {
+      "role": "resonant_higgs",
+      "all_selected": {
+        "raw_events": 860,
+        "weighted_events_36fb": 2.1749377323708243,
+        "sum_positive_weights_36fb": 2.2686192107655168,
+        "sum_negative_weights_36fb": -0.093681478394692,
+        "n_negative_weight_events": 16,
+        "n_positive_weight_events": 836,
+        "observed_data_rows": 0,
+        "raw_ti": 546,
+        "raw_nti": 314
+      },
+      "hadronic": {
+        "raw_events": 704,
+        "weighted_events_36fb": 1.1643175787963702,
+        "sum_positive_weights_36fb": 1.2018280500057004,
+        "sum_negative_weights_36fb": -0.03751047120933004,
+        "n_negative_weight_events": 11,
+        "n_positive_weight_events": 687,
+        "observed_data_rows": 0,
+        "raw_ti": 442,
+        "raw_nti": 262
+      },
+      "leptonic_bookkeeping_only": {
+        "raw_events": 156,
+        "weighted_events_36fb": 1.0106201535744548,
+        "sum_positive_weights_36fb": 1.0667911607598168,
+        "sum_negative_weights_36fb": -0.056171007185361964,
+        "n_negative_weight_events": 5,
+        "n_positive_weight_events": 149,
+        "observed_data_rows": 0,
+        "raw_ti": 104,
+        "raw_nti": 52
+      }
+    },
+    "data": {
+      "role": "observed_data",
+      "all_selected": {
+        "raw_events": 22029,
+        "weighted_events_36fb": 0.0,
+        "sum_positive_weights_36fb": 0.0,
+        "sum_negative_weights_36fb": 0.0,
+        "n_negative_weight_events": 0,
+        "n_positive_weight_events": 0,
+        "observed_data_rows": 22029,
+        "raw_ti": 672,
+        "raw_nti": 21357
+      },
+      "hadronic": {
+        "raw_events": 20428,
+        "weighted_events_36fb": 0.0,
+        "sum_positive_weights_36fb": 0.0,
+        "sum_negative_weights_36fb": 0.0,
+        "n_negative_weight_events": 0,
+        "n_positive_weight_events": 0,
+        "observed_data_rows": 20428,
+        "raw_ti": 615,
+        "raw_nti": 19813
+      },
+      "leptonic_bookkeeping_only": {
+        "raw_events": 1601,
+        "weighted_events_36fb": 0.0,
+        "sum_positive_weights_36fb": 0.0,
+        "sum_negative_weights_36fb": 0.0,
+        "n_negative_weight_events": 0,
+        "n_positive_weight_events": 0,
+        "observed_data_rows": 1601,
+        "raw_ti": 57,
+        "raw_nti": 1544
+      }
+    },
+    "ggH": {
+      "role": "resonant_higgs",
+      "all_selected": {
+        "raw_events": 2252,
+        "weighted_events_36fb": 7.262467430280797,
+        "sum_positive_weights_36fb": 7.399485474830632,
+        "sum_negative_weights_36fb": -0.13701804454983624,
+        "n_negative_weight_events": 32,
+        "n_positive_weight_events": 2199,
+        "observed_data_rows": 0,
+        "raw_ti": 1402,
+        "raw_nti": 850
+      },
+      "hadronic": {
+        "raw_events": 2147,
+        "weighted_events_36fb": 6.876405480478127,
+        "sum_positive_weights_36fb": 7.011369686890604,
+        "sum_negative_weights_36fb": -0.13496420641247706,
+        "n_negative_weight_events": 31,
+        "n_positive_weight_events": 2096,
+        "observed_data_rows": 0,
+        "raw_ti": 1339,
+        "raw_nti": 808
+      },
+      "leptonic_bookkeeping_only": {
+        "raw_events": 105,
+        "weighted_events_36fb": 0.3860619498026693,
+        "sum_positive_weights_36fb": 0.38811578794002843,
+        "sum_negative_weights_36fb": -0.002053838137359188,
+        "n_negative_weight_events": 1,
+        "n_positive_weight_events": 103,
+        "observed_data_rows": 0,
+        "raw_ti": 63,
+        "raw_nti": 42
+      }
+    },
+    "ggZH": {
+      "role": "resonant_higgs",
+      "all_selected": {
+        "raw_events": 846,
+        "weighted_events_36fb": 0.20225864784421715,
+        "sum_positive_weights_36fb": 0.20464097117375163,
+        "sum_negative_weights_36fb": -0.002382323329534495,
+        "n_negative_weight_events": 10,
+        "n_positive_weight_events": 826,
+        "observed_data_rows": 0,
+        "raw_ti": 575,
+        "raw_nti": 271
+      },
+      "hadronic": {
+        "raw_events": 758,
+        "weighted_events_36fb": 0.18006561014719938,
+        "sum_positive_weights_36fb": 0.18244793347673385,
+        "sum_negative_weights_36fb": -0.002382323329534495,
+        "n_negative_weight_events": 10,
+        "n_positive_weight_events": 739,
+        "observed_data_rows": 0,
+        "raw_ti": 521,
+        "raw_nti": 237
+      },
+      "leptonic_bookkeeping_only": {
+        "raw_events": 88,
+        "weighted_events_36fb": 0.022193037697017755,
+        "sum_positive_weights_36fb": 0.022193037697017755,
+        "sum_negative_weights_36fb": 0.0,
+        "n_negative_weight_events": 0,
+        "n_positive_weight_events": 87,
+        "observed_data_rows": 0,
+        "raw_ti": 54,
+        "raw_nti": 34
+      }
+    },
+    "tH": {
+      "role": "signal_top",
+      "all_selected": {
+        "raw_events": 10819,
+        "weighted_events_36fb": 0.23532668969990084,
+        "sum_positive_weights_36fb": 0.48594798071718237,
+        "sum_negative_weights_36fb": -0.25062129101728153,
+        "n_negative_weight_events": 3760,
+        "n_positive_weight_events": 6956,
+        "observed_data_rows": 0,
+        "raw_ti": 6388,
+        "raw_nti": 4431
+      },
+      "hadronic": {
+        "raw_events": 6541,
+        "weighted_events_36fb": 0.13281918869911002,
+        "sum_positive_weights_36fb": 0.2721836269717455,
+        "sum_negative_weights_36fb": -0.13936443827263542,
+        "n_negative_weight_events": 2265,
+        "n_positive_weight_events": 4209,
+        "observed_data_rows": 0,
+        "raw_ti": 3870,
+        "raw_nti": 2671
+      },
+      "leptonic_bookkeeping_only": {
+        "raw_events": 4278,
+        "weighted_events_36fb": 0.1025075010007908,
+        "sum_positive_weights_36fb": 0.21376435374543695,
+        "sum_negative_weights_36fb": -0.11125685274464614,
+        "n_negative_weight_events": 1495,
+        "n_positive_weight_events": 2747,
+        "observed_data_rows": 0,
+        "raw_ti": 2518,
+        "raw_nti": 1760
+      }
+    },
+    "ttH": {
+      "role": "signal_top",
+      "all_selected": {
+        "raw_events": 87735,
+        "weighted_events_36fb": 30.702919186358926,
+        "sum_positive_weights_36fb": 36.857784389486426,
+        "sum_negative_weights_36fb": -6.154865203127497,
+        "n_negative_weight_events": 7912,
+        "n_positive_weight_events": 79025,
+        "observed_data_rows": 0,
+        "raw_ti": 46038,
+        "raw_nti": 41697
+      },
+      "hadronic": {
+        "raw_events": 49347,
+        "weighted_events_36fb": 17.25085677466581,
+        "sum_positive_weights_36fb": 20.685740007173095,
+        "sum_negative_weights_36fb": -3.434883232507283,
+        "n_negative_weight_events": 4401,
+        "n_positive_weight_events": 44483,
+        "observed_data_rows": 0,
+        "raw_ti": 24975,
+        "raw_nti": 24372
+      },
+      "leptonic_bookkeeping_only": {
+        "raw_events": 38388,
+        "weighted_events_36fb": 13.452062411693127,
+        "sum_positive_weights_36fb": 16.172044382313338,
+        "sum_negative_weights_36fb": -2.7199819706202137,
+        "n_negative_weight_events": 3511,
+        "n_positive_weight_events": 34542,
+        "observed_data_rows": 0,
+        "raw_ti": 21063,
+        "raw_nti": 17325
+      }
+    }
+  },
+  "by_channel": {
+    "hadronic": 80585,
+    "leptonic_bookkeeping_only": 44796
+  },
+  "bdt_features": [
+    "n_jets_central",
+    "n_bjets",
+    "ht_jets",
+    "met",
+    "pt_gg"
+  ],
+  "m_gammagamma_retained_for_bookkeeping": true,
+  "scalar_vs_vectorised_crosscheck": [
+    {
+      "sample": "ggH",
+      "n_checked": 150,
+      "n_mismatches": 0,
+      "mismatches": [],
+      "status": "ok"
+    },
+    {
+      "sample": "VBF",
+      "n_checked": 49,
+      "n_mismatches": 0,
+      "mismatches": [],
+      "status": "ok"
+    },
+    {
+      "sample": "WH",
+      "n_checked": 150,
+      "n_mismatches": 0,
+      "mismatches": [],
+      "status": "ok"
+    },
+    {
+      "sample": "ZH",
+      "n_checked": 150,
+      "n_mismatches": 0,
+      "mismatches": [],
+      "status": "ok"
+    },
+    {
+      "sample": "ggZH",
+      "n_checked": 150,
+      "n_mismatches": 0,
+      "mismatches": [],
+      "status": "ok"
+    },
+    {
+      "sample": "ttH",
+      "n_checked": 150,
+      "n_mismatches": 0,
+      "mismatches": [],
+      "status": "ok"
+    },
+    {
+      "sample": "tH",
+      "n_checked": 150,
+      "n_mismatches": 0,
+      "mismatches": [],
+      "status": "ok"
+    },
+    {
+      "sample": "data",
+      "n_checked": 150,
+      "n_mismatches": 0,
+      "mismatches": [],
+      "status": "ok"
+    }
+  ]
+}

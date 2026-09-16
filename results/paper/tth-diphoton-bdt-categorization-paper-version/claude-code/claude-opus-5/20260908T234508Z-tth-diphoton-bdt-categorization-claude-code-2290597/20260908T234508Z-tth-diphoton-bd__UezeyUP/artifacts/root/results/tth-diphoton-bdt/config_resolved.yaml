@@ -1,0 +1,159 @@
+run:
+  name: tth-diphoton-bdt
+  seed: 20240917
+  results_dir: /root/results/tth-diphoton-bdt
+  max_selected_per_sample: null
+  max_selected_per_sample_env: TTH_MAX_SELECTED_PER_SAMPLE
+  max_selected_per_sample_source: unset (uncapped)
+  row_cap_policy: uncapped by default; TTH_MAX_SELECTED_PER_SAMPLE limits selected
+    rows per sample only when explicitly set for development throttling
+inputs:
+  env_var: TB_HYY_INPUTS
+  default_root: /data/GamGam
+  mc_subdir: MC
+  data_subdir: data
+  tree: analysis
+  file_suffix: _preselection.root
+  mc_samples:
+  - ggH
+  - VBF
+  - WH
+  - ZH
+  - ggZH
+  - ttH
+  - tH
+  data_samples:
+  - data
+  excluded_samples:
+  - Sherpa yy / prompt-diphoton continuum MC
+  - any other non-Higgs MC (single top, ttbar, V+jets, ...)
+  resolved_root: /data/GamGam
+  resolved_from_env: true
+  env_var_value: /data/GamGam
+objects:
+  photons:
+    pt_min_gev: 25.0
+    abs_eta_max: 2.37
+    crack_veto:
+    - 1.37
+    - 1.52
+    lead_pt_over_mgg_min: 0.35
+    sublead_pt_over_mgg_min: 0.25
+    require_tight_id: false
+    require_isolation: false
+  leptons:
+    pt_min_gev: 10.0
+    require_id: false
+    require_isolation: false
+  jets:
+    pt_min_gev: 25.0
+    central_abs_eta_max: 2.5
+    btag_variable: jet_btag_quantile
+    btag_min_quantile: 4
+selection:
+  mgg_fit_range_gev:
+  - 105.0
+  - 160.0
+  signal_window_gev:
+  - 123.0
+  - 127.0
+  sideband_low_gev:
+  - 105.0
+  - 120.0
+  sideband_high_gev:
+  - 130.0
+  - 160.0
+  blinded_observed_ti_gev:
+  - 120.0
+  - 130.0
+  hadronic:
+    n_leptons: 0
+    min_n_jets: 3
+    min_n_bjets: 1
+  leptonic_bookkeeping:
+    enabled: true
+    min_n_leptons: 1
+    min_n_bjets: 1
+    note: Provenance-only rows.  Excluded from BDT training, boundary optimisation,
+      categorization metrics and the statistical workspace.
+partition:
+  seed: 20240917
+  fractions:
+    train: 0.6
+    val: 0.2
+    test: 0.2
+  identifier: event_id
+normalization:
+  luminosity_fb: 36.0
+  scale_factors:
+  - ScaleFactor_PILEUP
+  - ScaleFactor_PHOTON
+  - ScaleFactor_BTAG
+  - ScaleFactor_JVT
+bdt:
+  features:
+  - n_jets_central
+  - n_bjets
+  - ht_jets
+  - met
+  - pt_gg
+  signal_samples:
+  - ttH
+  - tH
+  resonant_background_samples:
+  - ggH
+  continuum_proxy: nti_data_sidebands
+  class_balance: true
+  model:
+    kind: sklearn.HistGradientBoostingClassifier
+    params:
+      loss: log_loss
+      learning_rate: 0.06
+      max_iter: 400
+      max_leaf_nodes: 16
+      min_samples_leaf: 60
+      l2_regularization: 1.0
+      max_bins: 128
+      early_stopping: false
+      random_state: 20240917
+  score_bins:
+    n: 20
+    low: 0.0
+    high: 1.0
+optimization:
+  grid_min: 0.05
+  grid_max: 0.98
+  grid_step: 0.01
+  max_boundaries: 4
+  min_relative_improvement: 0.05
+  min_background_yield: 0.8
+categorization:
+  min_background_yield_signal_window: 0.8
+  mgg_hist:
+    n: 22
+    low: 105.0
+    high: 160.0
+blinding:
+  observed_ti_signal_window_blinded: true
+  blinded_range_gev:
+  - 120.0
+  - 130.0
+  applies_to: observed TI data only (NTI control shapes are NOT blinded)
+  observed_significance: blocked
+fit:
+  backend: ROOT/PyROOT/RooFit
+  label: FIT1
+  mgg_range_gev:
+  - 105.0
+  - 160.0
+  n_bins: 55
+  mu_gen: 1.0
+  background_pdf_candidates:
+  - exponential
+  - power_law
+  - expo_poly1
+  - bernstein2
+  signal_pdf: gaussian
+  resonant_higgs_pdf: gaussian
+  min_raw_entries_for_per_category_shape: 100
+_config_path: /root/submission/tth-diphoton-bdt/config/config.yaml

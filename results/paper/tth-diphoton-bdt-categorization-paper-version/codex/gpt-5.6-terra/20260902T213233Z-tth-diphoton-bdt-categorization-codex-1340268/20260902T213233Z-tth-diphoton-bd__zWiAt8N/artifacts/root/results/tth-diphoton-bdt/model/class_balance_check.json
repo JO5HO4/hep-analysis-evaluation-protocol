@@ -1,0 +1,15 @@
+{
+  "signed_class_weight_sums_before_balancing": {
+    "0": 72.50760558613261,
+    "1": 7.825577614815005
+  },
+  "absolute_class_weight_sums_before_balancing": {
+    "0": 72.65941855819709,
+    "1": 10.81704774518162
+  },
+  "fit_weight_sums_after_balancing": {
+    "0": 41.73823315168935,
+    "1": 41.73823315168936
+  },
+  "method": "balance absolute physical weights only after SM-normalized mixture construction"
+}

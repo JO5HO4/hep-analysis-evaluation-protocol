@@ -1,0 +1,12 @@
+{
+    "task": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260829T170234Z-higgs-4l-significance-codex-1524332"
+    },
+    "trial_name": "20260829T170234Z-higgs-4l-signif__G4rVSn2",
+    "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260829T170234Z-higgs-4l-significance-codex-1524332",
+    "agent": {
+        "name": "harbor_agents.preinstalled:PreinstalledCodex",
+        "model_name": "gpt-5.6-sol"
+    },
+    "job_id": "cb003390-eb4e-40a6-8dee-51bba64138e8"
+}

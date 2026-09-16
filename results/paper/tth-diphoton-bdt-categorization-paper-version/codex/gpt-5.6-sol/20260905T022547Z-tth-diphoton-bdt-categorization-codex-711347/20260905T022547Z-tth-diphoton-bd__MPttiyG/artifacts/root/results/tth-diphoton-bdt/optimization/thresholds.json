@@ -1,0 +1,38 @@
+{
+  "accepted_splits": [
+    {
+      "background": 7.36853864266586,
+      "boundary": 0.6806094727554415,
+      "combined_expected_z": 3.339805926630191,
+      "iteration": 1,
+      "kind": "minimum_score",
+      "relative_improvement": null,
+      "signal": 10.778437774751229
+    },
+    {
+      "bin_yields_low_to_high": [
+        {
+          "background": 6.471838172923456,
+          "signal": 7.755704632787547
+        },
+        {
+          "background": 0.8967004697424064,
+          "signal": 3.0227331419636814
+        }
+      ],
+      "boundary": 0.8685461532604246,
+      "combined_expected_z": 3.524191858552434,
+      "iteration": 2,
+      "kind": "split",
+      "relative_improvement": 0.055208576777479264
+    }
+  ],
+  "final_combined_expected_z": 3.524191858552434,
+  "maximum_categories": 4,
+  "minimum": 0.6806094727554415,
+  "minimum_relative_improvement": 0.05,
+  "split_boundaries_desc": [
+    0.8685461532604246
+  ],
+  "stop_reason": "best_relative_improvement_below_5_percent"
+}

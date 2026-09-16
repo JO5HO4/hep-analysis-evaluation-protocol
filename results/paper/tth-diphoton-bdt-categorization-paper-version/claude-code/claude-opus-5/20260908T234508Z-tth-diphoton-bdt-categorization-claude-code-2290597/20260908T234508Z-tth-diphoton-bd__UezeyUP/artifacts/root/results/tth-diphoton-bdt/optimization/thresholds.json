@@ -1,0 +1,37 @@
+{
+  "thresholds_descending": [
+    0.88,
+    0.73,
+    0.36
+  ],
+  "n_boundaries": 3,
+  "category_mapping": {
+    "ttH_had_BDT1": {
+      "score_low": 0.88,
+      "score_high": 1.0
+    },
+    "ttH_had_BDT2": {
+      "score_low": 0.73,
+      "score_high": 0.88
+    },
+    "ttH_had_BDT3": {
+      "score_low": 0.36,
+      "score_high": 0.73
+    }
+  },
+  "stopping_rule": "add a boundary only while the relative improvement in expected significance w.r.t. the previous iteration is >= 5%",
+  "min_relative_improvement": 0.05,
+  "status": "relative-improvement-below-threshold",
+  "best_combined_significance": 1.7516610358750713,
+  "weights_used": "significance_model_weight_36fb (physical 36 fb^-1 yields); the class-balanced bdt_fit_weight is NEVER used for yields or significance",
+  "observed_ti_signal_window_used": false,
+  "test_partition_crosscheck": {
+    "thresholds": [
+      0.88,
+      0.66
+    ],
+    "best_significance": 1.6392010203449188,
+    "status": "relative-improvement-below-threshold",
+    "note": "test-partition-only optimisation with weights scaled by 1/test-fraction; diagnostic only, not used for the final boundaries"
+  }
+}

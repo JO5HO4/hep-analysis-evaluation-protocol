@@ -1,0 +1,77 @@
+{
+  "per_category": {
+    "ttH_had_BDT1": {
+      "plot_png": "fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT1.png",
+      "plot_pdf": "fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT1.pdf",
+      "fit_region": "105-120 and 130-160 GeV only",
+      "observed_TI_signal_window_blinded": true
+    },
+    "ttH_had_BDT2": {
+      "plot_png": "fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT2.png",
+      "plot_pdf": "fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT2.pdf",
+      "fit_region": "105-120 and 130-160 GeV only",
+      "observed_TI_signal_window_blinded": true
+    },
+    "ttH_had_BDT3": {
+      "plot_png": "fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT3.png",
+      "plot_pdf": "fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT3.pdf",
+      "fit_region": "105-120 and 130-160 GeV only",
+      "observed_TI_signal_window_blinded": true
+    },
+    "ttH_had_BDT4": {
+      "plot_png": "fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT4.png",
+      "plot_pdf": "fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT4.pdf",
+      "fit_region": "105-120 and 130-160 GeV only",
+      "observed_TI_signal_window_blinded": true
+    },
+    "tH_had_4j1b": {
+      "plot_png": "fit/FIT1/plots/sidebands_background_fit_tH_had_4j1b.png",
+      "plot_pdf": "fit/FIT1/plots/sidebands_background_fit_tH_had_4j1b.pdf",
+      "fit_region": "105-120 and 130-160 GeV only",
+      "observed_TI_signal_window_blinded": true
+    },
+    "tH_had_4j2b": {
+      "plot_png": "fit/FIT1/plots/sidebands_background_fit_tH_had_4j2b.png",
+      "plot_pdf": "fit/FIT1/plots/sidebands_background_fit_tH_had_4j2b.pdf",
+      "fit_region": "105-120 and 130-160 GeV only",
+      "observed_TI_signal_window_blinded": true
+    },
+    "unassigned": {
+      "plot_png": "fit/FIT1/plots/sidebands_background_fit_unassigned.png",
+      "plot_pdf": "fit/FIT1/plots/sidebands_background_fit_unassigned.pdf",
+      "fit_region": "105-120 and 130-160 GeV only",
+      "observed_TI_signal_window_blinded": true
+    }
+  },
+  "explicit_binning": [
+    105.0,
+    107.03703703703704,
+    109.07407407407408,
+    111.11111111111111,
+    113.14814814814815,
+    115.18518518518519,
+    117.22222222222223,
+    119.25925925925927,
+    121.2962962962963,
+    123.33333333333334,
+    125.37037037037038,
+    127.4074074074074,
+    129.44444444444446,
+    131.4814814814815,
+    133.51851851851853,
+    135.55555555555554,
+    137.5925925925926,
+    139.62962962962962,
+    141.66666666666669,
+    143.7037037037037,
+    145.74074074074076,
+    147.77777777777777,
+    149.8148148148148,
+    151.85185185185185,
+    153.88888888888889,
+    155.92592592592592,
+    157.96296296296296,
+    160.0
+  ],
+  "observed_TI_signal_window_blinded": true
+}

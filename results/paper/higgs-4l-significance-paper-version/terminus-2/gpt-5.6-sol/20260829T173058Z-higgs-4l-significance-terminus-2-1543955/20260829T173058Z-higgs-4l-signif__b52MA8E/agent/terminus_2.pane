@@ -1,0 +1,254 @@
+[?2004hroot@nid004145:~# asciinema rec --stdin /logs/agent/recording.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent/recording.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@nid004145:~# clear
+[?2004l[H[J[3J[?2004hroot@nid004145:~# cat /root/data/four_lepton_counts.json && python3 - <<'PY'
+[?2004l[?2004h> import numpy, scipy, matplotlib
+[?2004l[?2004h> print('numpy', numpy.__version__, 'scipy', scipy.__version__, 'matplotlib', matplotlib.__version__)
+[?2004l[?2004h> PY
+[?2004l{
+  "description": "Four-lepton (H->ZZ*->4l) event counts in three final-state channels.",
+  "channels": ["4mu", "2e2mu", "4e"],
+  "observed": [6, 5, 2],
+  "background": [1.25, 2.07, 1.53],
+  "signal": [2.09, 2.29, 0.9]
+}
+numpy 2.1.3 scipy 1.14.1 matplotlib 3.9.2
+[?2004hroot@nid004145:~# mkdir -p /root/submission/diagnostics /root/results
+[?2004l[?2004hroot@nid004145:~# cat > /root/submission/analyze.py <<'PY'
+[?2004l[?2004h> #!/usr/bin/env python3
+[?2004l[?2004h> import json
+[?2004l[?2004h> import math
+[?2004l[?2004h> import os
+[?2004l[?2004h> import sys
+[?2004l[?2004h> import numpy as np
+[?2004l[?2004h> from scipy.optimize import minimize_scalar, brentq
+[?2004l[?2004h> from scipy.special import gammaln
+[?2004l[?2004h> from scipy.stats import norm
+[?2004l[?2004h> import matplotlib
+[?2004l[?2004h> matplotlib.use('Agg')
+[?2004l[?2004h> import matplotlib.pyplot as plt
+[?2004l[?2004h> 
+[?2004l[?2004h> N_TOYS = 1_000_000
+[?2004l[?2004h> SEED = 123456789
+[?2004l[?2004h> 
+[?2004l[?2004h> def validate(data):
+[?2004l[?2004h>     for key in ('channels', 'observed', 'background', 'signal'):
+[?2004l[?2004h>         if key not in data:
+[?2004l[?2004h>             raise ValueError(f'missing required field: {key}')
+[?2004l[?2004h>     n = len(data['channels'])
+[?2004l[?2004h>     if n == 0 or any(len(data[k]) != n for k in ('observed','background','signal')):
+[?2004l[?2004h>         raise ValueError('channel arrays must be nonempty and have equal lengths')
+[?2004l[?2004h>     obs = np.asarray(data['observed'], dtype=float)
+[?2004l[?2004h>     bkg = np.asarray(data['background'], dtype=float)
+[?2004l[?2004h>     sig = np.asarray(data['signal'], dtype=float)
+[?2004l[?2004h>     if np.any(~np.isfinite(obs)) or np.any(obs < 0) or np.any(obs != np.floor(obs)):
+[?2004l[?2004h>         raise ValueError('observed counts must be finite nonnegative integers')
+[?2004l[?2004h>     if np.any(~np.isfinite(bkg)) or np.any(bkg <= 0):
+[?2004l[?2004h>         raise ValueError('background expectations must be finite and strictly positive')
+[?2004l[?2004h>     if np.any(~np.isfinite(sig)) or np.any(sig < 0) or not np.any(sig > 0):
+[?2004l[?2004h>         raise ValueError('signal expectations must be finite, nonnegative, and not all zero')
+[?2004l[?2004h>     return obs.astype(np.int64), bkg, sig
+[?2004l[?2004h> 
+[?2004l[?2004h> def loglike(counts, means):
+[?2004l[?2004h>     return float(np.sum(-means + counts*np.log(means) - gammaln(counts+1)))
+[?2004l[?2004h> 
+[?2004l[?2004h> def main(inp, out):
+[?2004l[?2004h>     with open(inp) as f:
+[?2004l[?2004h>         data = json.load(f)
+[?2004l[?2004h>     obs, bkg, sig = validate(data)
+[?2004l[?2004h> 
+[?2004l[?2004h>     logL_b = loglike(obs, bkg)
+[?2004l[?2004h>     logL_sb = loglike(obs, bkg + sig)
+[?2004l[?2004h>     q_obs = -2.0*(logL_sb - logL_b)
+[?2004l[?2004h> 
+[?2004l[?2004h>     # For fixed hypotheses q = 2 sum[s_i - n_i log((b_i+s_i)/b_i)].
+[?2004l[?2004h>     # Thus smaller q is more signal-like.
+[?2004l[?2004h>     weights = np.log1p(sig/bkg)
+[?2004l[?2004h>     rng = np.random.default_rng(SEED)
+[?2004l[?2004h>     toy_q_parts = []
+[?2004l[?2004h>     batch = 100_000
+[?2004l[?2004h>     n_extreme = 0
+[?2004l[?2004h>     for start in range(0, N_TOYS, batch):
+[?2004l[?2004h>         m = min(batch, N_TOYS-start)
+[?2004l[?2004h>         counts = rng.poisson(bkg, size=(m, len(bkg)))
+[?2004l[?2004h>         qvals = 2.0*(np.sum(sig) - counts @ weights)
+[?2004l[?2004h>         n_extreme += int(np.count_nonzero(qvals <= q_obs + 1e-12))
+[?2004l[?2004h>         toy_q_parts.append(qvals)
+[?2004l[?2004h>     toy_q = np.concatenate(toy_q_parts)
+[?2004l[?2004h>     p_value = n_extreme/N_TOYS
+[?2004l[?2004h>     significance = float(norm.isf(p_value)) if p_value > 0 else float(norm.isf(0.5/N_TOYS))
+[?2004l[?2004h> 
+[?2004l[?2004h>     def nll2(mu):
+[?2004l[?2004h>         means = bkg + mu*sig
+[?2004l[?2004h>         return -2.0*loglike(obs, means)
+[?2004l[?2004h> 
+[?2004l[?2004h>     # Physical signal strength constraint mu >= 0.
+[?2004l[?2004h>     upper = max(5.0, 2.0*(np.sum(obs)/np.sum(sig)))
+[?2004l[?2004h>     fit = minimize_scalar(nll2, bounds=(0.0, upper), method='bounded',
+[?2004l[?2004h>                           options={'xatol': 1e-12})
+[?2004l[?2004h>     mu_hat = float(fit.x)
+[?2004l[?2004h>     # Explicitly compare the boundary in case the numerical optimizer sits nearby.
+[?2004l[?2004h>     if nll2(0.0) <= nll2(mu_hat):
+[?2004l[?2004h>         mu_hat = 0.0
+[?2004l[?2004h>     min_nll2 = nll2(mu_hat)
+[?2004l[?2004h>     def delta(mu):
+[?2004l[?2004h>         return nll2(mu) - min_nll2 - 1.0
+[?2004l[?2004h> 
+[?2004l[?2004h>     if mu_hat > 0 and delta(0.0) >= 0:
+[?2004l[?2004h>         mu_lo = float(brentq(delta, 0.0, mu_hat, xtol=1e-12))
+[?2004l[?2004h>     else:
+[?2004l[?2004h>         # If no lower unit crossing exists in the physical region, report boundary.
+[?2004l[?2004h>         mu_lo = 0.0
+[?2004l[?2004h>     hi = max(1.0, mu_hat*1.5 + 0.5)
+[?2004l[?2004h>     while delta(hi) < 0:
+[?2004l[?2004h>         hi *= 2.0
+[?2004l[?2004h>         if hi > 1e7:
+[?2004l[?2004h>             raise RuntimeError('failed to bracket upper likelihood crossing')
+[?2004l[?2004h>     mu_hi = float(brentq(delta, mu_hat, hi, xtol=1e-12))
+[?2004l[?2004h> 
+[?2004l[?2004h>     result = {
+[?2004l[?2004h>         'logL_b': logL_b,
+[?2004l[?2004h>         'logL_sb': logL_sb,
+[?2004l[?2004h>         'test_statistic': q_obs,
+[?2004l[?2004h>         'p_value': p_value,
+[?2004l[?2004h>         'significance': significance,
+[?2004l[?2004h>         'mu_hat': mu_hat,
+[?2004l[?2004h>         'mu_lo': mu_lo,
+[?2004l[?2004h>         'mu_hi': mu_hi,
+[?2004l[?2004h>         'mu_err_minus': mu_hat-mu_lo,
+[?2004l[?2004h>         'mu_err_plus': mu_hi-mu_hat,
+[?2004l[?2004h>         'n_toys': N_TOYS,
+[?2004l[?2004h>         'n_extreme_toys': n_extreme,
+[?2004l[?2004h>         'toy_seed': SEED,
+[?2004l[?2004h>         'reaches_3sigma_evidence': bool(significance >= 3.0)
+[?2004l[?2004h>     }
+[?2004l[?2004h>     os.makedirs(os.path.dirname(os.path.abspath(out)), exist_ok=True)
+[?2004l[?2004h>     with open(out, 'w') as f:
+[?2004l[?2004h>         json.dump(result, f, indent=2, allow_nan=False)
+[?2004l[?2004h>         f.write('\n')
+[?2004l[?2004h> 
+[?2004l[?2004h>     diag = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'diagnostics')
+[?2004l[?2004h>     os.makedirs(diag, exist_ok=True)
+[?2004l[?2004h>     fig, ax = plt.subplots(figsize=(7,5))
+[?2004l[?2004h>     ax.hist(toy_q, bins=100, histtype='stepfilled', alpha=.7, color='steelblue')
+[?2004l[?2004h>     ax.axvline(q_obs, color='crimson', lw=2, label=f'observed q = {q_obs:.3f}')
+[?2004l[?2004h>     ax.set_xlabel(r'$q=-2\log(L_{s+b}/L_b)$')
+[?2004l[?2004h>     ax.set_ylabel('Background-only toys / bin')
+[?2004l[?2004h>     ax.set_title(f'Background-only toy distribution ({N_TOYS:,} toys)')
+[?2004l[?2004h>     ax.legend()
+[?2004l[?2004h>     fig.tight_layout()
+[?2004l[?2004h>     fig.savefig(os.path.join(diag, 'test_statistic_distribution.png'), dpi=160)
+[?2004l[?2004h>     plt.close(fig)
+[?2004l[?2004h> 
+[?2004l[?2004h>     scan_hi = max(mu_hi*1.35, mu_hat+1.0)
+[?2004l[?2004h>     mus = np.linspace(0, scan_hi, 600)
+[?2004l[?2004h>     ds = np.array([nll2(x)-min_nll2 for x in mus])
+[?2004l[?2004h>     fig, ax = plt.subplots(figsize=(7,5))
+[?2004l[?2004h>     ax.plot(mus, ds, color='navy', lw=2)
+[?2004l[?2004h>     ax.axhline(1, color='gray', ls='--', label=r'$-2\Delta\log L=1$')
+[?2004l[?2004h>     ax.axvline(mu_hat, color='crimson', ls='-', label=rf'$\hat\mu={mu_hat:.3f}$')
+[?2004l[?2004h>     ax.axvline(mu_lo, color='crimson', ls=':')
+[?2004l[?2004h>     ax.axvline(mu_hi, color='crimson', ls=':')
+[?2004l[?2004h>     ax.set_ylim(0, max(4, min(12, float(ds[-1])*1.05)))
+[?2004l[?2004h>     ax.set_xlim(0, scan_hi)
+[?2004l[?2004h>     ax.set_xlabel(r'Signal strength $\mu$')
+[?2004l[?2004h>     ax.set_ylabel(r'$-2\Delta\log L(\mu)$')
+[?2004l[?2004h>     ax.set_title('Signal-strength profile likelihood')
+[?2004l[?2004h>     ax.legend()
+[?2004l[?2004h>     fig.tight_layout()
+[?2004l[?2004h>     fig.savefig(os.path.join(diag, 'mu_profile_likelihood.png'), dpi=160)
+[?2004l[?2004h>     plt.close(fig)
+[?2004l[?2004h> 
+[?2004l[?2004h> if __name__ == '__main__':
+[?2004l[?2004h>     if len(sys.argv) != 3:
+[?2004l[?2004h>         print(f'Usage: {sys.argv[0]} INPUT_JSON OUTPUT_JSON', file=sys.stderr)
+[?2004l[?2004h>         sys.exit(2)
+[?2004l[?2004h>     main(sys.argv[1], sys.argv[2])
+[?2004l[?2004h> PY
+[?2004l[?2004hroot@nid004145:~# cat > /root/submission/run.sh <<'SH'
+[?2004l[?2004h> #!/usr/bin/env bash
+[?2004l[?2004h> set -euo pipefail
+[?2004l[?2004h> if [[ $# -ne 2 ]]; then
+[?2004l[?2004h>   echo "Usage: $0 INPUT_JSON OUTPUT_JSON" >&2
+[?2004l[?2004h>   exit 2
+[?2004l[?2004h> fi
+[?2004l[?2004h> SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+[?2004l[?2004h> exec python3 "$SCRIPT_DIR/analyze.py" "$1" "$2"
+[?2004l[?2004h> SH
+[?2004l[?2004hroot@nid004145:~# chmod +x /root/submission/run.sh /root/submission/analyze.py
+[?2004l[?2004hroot@nid004145:~# cat > /root/submission/README.md <<'MD'
+[?2004l[?2004h> # Four-lepton counting analysis
+[?2004l[?2004h> 
+[?2004l[?2004h> Run with:
+[?2004l[?2004h> 
+[?2004l[?2004h> ```bash
+[?2004l[?2004h> /root/submission/run.sh INPUT_JSON OUTPUT_JSON
+[?2004l[?2004h> ```
+[?2004l[?2004h> 
+[?2004l[?2004h> The program validates the channel arrays and computes summed Poisson log-likelihoods including the `log(k!)` terms. The fixed-hypothesis statistic is
+[?2004l[?2004h> 
+[?2004l[?2004h> `q = -2 [log L(s+b) - log L(b)]`.
+[?2004l[?2004h> 
+[?2004l[?2004h> One million background-only pseudo-experiments are generated with NumPy's `default_rng` using seed 123456789. With this sign convention, signal-like outcomes have **smaller** q, so the reported empirical p-value is the fraction `q_toy <= q_observed`; Z is `norm.isf(p)`. If no toy enters the tail, a half-toy convention is used only to keep the reported Z finite (the p-value itself remains zero).
+[?2004l[?2004h> 
+[?2004l[?2004h> For signal strength, the Poisson likelihood with means `b_i + mu*s_i` is optimized over the physical region `mu >= 0`. Brent root finding locates the two `-2 delta log L = 1` crossings; if a lower crossing does not occur in the physical region, `mu_lo=0` is used. The output also includes uncertainty differences, toy metadata, and a 3-sigma evidence boolean beyond the required fields.
+[?2004l[?2004h> 
+[?2004l[?2004h> Each run writes diagnostic PNGs to `diagnostics/test_statistic_distribution.png` and `diagnostics/mu_profile_likelihood.png` beside this code. Scientific dependencies are NumPy, SciPy, and Matplotlib.
+[?2004l[?2004h> MD
+[?2004l[?2004hroot@nid004145:~# /root/submission/run.sh /root/data/four_lepton_counts.json /root/results/results.json
+[?2004l[?2004hroot@nid004145:~# cat /root/results/results.json
+[?2004l{
+  "logL_b": -11.082750320271758,
+  "logL_sb": -5.8159224919108095,
+  "test_statistic": -10.533655656721898,
+  "p_value": 0.000258,
+  "significance": 3.4723100618884772,
+  "mu_hat": 1.6238865854853561,
+  "mu_lo": 1.008969333539566,
+  "mu_hi": 2.3666431665951246,
+  "mu_err_minus": 0.6149172519457902,
+  "mu_err_plus": 0.7427565811097685,
+  "n_toys": 1000000,
+  "n_extreme_toys": 258,
+  "toy_seed": 123456789,
+  "reaches_3sigma_evidence": true
+}
+[?2004hroot@nid004145:~# ls -lh /root/submission/diagnostics
+[?2004ltotal 116K
+-rw-r--r-- 1 root root 66K Aug 29 17:34 mu_profile_likelihood.png
+-rw-r--r-- 1 root root 48K Aug 29 17:34 test_statistic_distribution.png
+[?2004hroot@nid004145:~# python3 -m py_compile /root/submission/analyze.py && bash -n /root/submission/run.sh && test -x /root/submission/run.sh && python3 - <<'PY'
+[?2004l[?2004h> import json, math
+[?2004l[?2004h> from pathlib import Path
+[?2004l[?2004h> from scipy.special import gammaln
+[?2004l[?2004h> with open('/root/data/four_lepton_counts.json') as f: d=json.load(f)
+[?2004l[?2004h> with open('/root/results/results.json') as f: r=json.load(f)
+[?2004l[?2004h> def ll(mu):
+[?2004l[?2004h>     return sum(-(b+mu*s)+n*math.log(b+mu*s)-gammaln(n+1)
+[?2004l[?2004h>                for n,b,s in zip(d['observed'],d['background'],d['signal']))
+[?2004l[?2004h> assert abs(ll(0)-r['logL_b']) < 1e-12
+[?2004l[?2004h> assert abs(ll(1)-r['logL_sb']) < 1e-12
+[?2004l[?2004h> assert abs(-2*(ll(1)-ll(0))-r['test_statistic']) < 1e-12
+[?2004l[?2004h> assert abs(-2*(ll(r['mu_lo'])-ll(r['mu_hat']))-1) < 1e-8
+[?2004l[?2004h> assert abs(-2*(ll(r['mu_hi'])-ll(r['mu_hat']))-1) < 1e-8
+[?2004l[?2004h> assert r['n_toys'] >= 1_000_000
+[?2004l[?2004h> assert r['reaches_3sigma_evidence'] == (r['significance'] >= 3)
+[?2004l[?2004h> print('All numerical and file checks passed')
+[?2004l[?2004h> print(f"mu = {r['mu_hat']:.4f} +{r['mu_err_plus']:.4f} -{r['mu_err_minus']:.4f}")
+[?2004l[?2004h> print(f"p = {r['p_value']:.6g}, Z = {r['significance']:.4f}, 3sigma = {r['reaches_3sigma_evidence']}")
+[?2004l[?2004h> PY
+[?2004lAll numerical and file checks passed
+mu = 1.6239 +0.7428 -0.6149
+p = 0.000258, Z = 3.4723, 3sigma = True
+[?2004hroot@nid004145:~# file /root/submission/diagnostics/*.png
+[?2004lbash: file: command not found
+[?2004hroot@nid004145:~# find /root/submission /root/results -maxdepth 2 -type f -printf '%p\n' | sort
+[?2004l/root/results/results.json
+/root/submission/README.md
+/root/submission/__pycache__/analyze.cpython-312.pyc
+/root/submission/analyze.py
+/root/submission/diagnostics/mu_profile_likelihood.png
+/root/submission/diagnostics/test_statistic_distribution.png
+/root/submission/run.sh
+[?2004hroot@nid004145:~# 

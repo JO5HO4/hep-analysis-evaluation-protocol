@@ -1,0 +1,29 @@
+{
+  "validation_auc": 0.7962040556625145,
+  "training_examples": 63470,
+  "validation_examples": 21157,
+  "truth_fraction_train": 0.04253978257444462,
+  "truth_fraction_val": 0.04253911235052229,
+  "feature_columns": [
+    "dr_ab",
+    "dr_ac",
+    "dr_bc",
+    "mij_over_m123_ab",
+    "mij_over_m123_ac",
+    "mij_over_m123_bc"
+  ],
+  "xgboost_params": {
+    "objective": "binary:logistic",
+    "eval_metric": "logloss",
+    "max_depth": 6,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 1,
+    "gamma": 0,
+    "reg_alpha": 0,
+    "reg_lambda": 1,
+    "random_state": 42,
+    "n_estimators": 100
+  }
+}

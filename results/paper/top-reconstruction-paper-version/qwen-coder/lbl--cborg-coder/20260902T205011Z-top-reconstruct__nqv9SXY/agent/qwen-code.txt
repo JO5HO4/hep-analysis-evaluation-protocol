@@ -1,0 +1,18 @@
+Warning: running headless with --yolo / approval-mode=yolo and no sandbox. All tool calls (shell, write, edit) auto-execute at this process's privilege level. Enable a sandbox via --sandbox / QWEN_SANDBOX, or set QWEN_CODE_SUPPRESS_YOLO_WARNING=1 to silence this notice.
+I have completed the hadronic top-quark reconstruction pipeline.
+
+### Summary of Work:
+1.  **Dataset Construction**: Processed `/root/data/ttbar.root` to create a raw triplets dataset with kinematic features ($\Delta R$, relative mass ratios) and truth labels.
+2.  **Classifier**: Trained an XGBoost binary classifier with class balancing. The model achieved a validation AUC of $\sim 0.837$.
+3.  **Inference & Selection**: Implemented a jet-disjoint selection algorithm (max 2 candidates per event) that sorts triplets by score and ensures no shared jets between selected candidates.
+4.  **Optimization**: Iterated over score thresholds, finding that a threshold of $0.4$ yielded the best triplet reconstruction efficiency of **0.4116**.
+5.  **Validation**: Performed a mass sanity check. The reconstructed mass distribution is physically plausible, peaking near the top mass and separating signal from combinatorial background.
+
+### Final Artifacts:
+- **Data**: `/root/results/dataset_build/triplets_raw.parquet`, `/root/results/dataset_prepare/train|val|test.parquet`
+- **Model**: `/root/results/train/model_xgb.json`, `/root/results/train/training_report_xgb.json`
+- **Inference**: `/root/results/infer/inference_test_xgb.parquet`, `/root/results/infer/inference_report_xgb.json`
+- **Selection**: `/root/results/select_triplets/selected_triplets.parquet`, `/root/results/select_triplets/event_selection.parquet`, `/root/results/select_triplets/selection_report.json`
+- **Analysis**: `/root/results/select_triplets/plots/mass_sanity.png`, `/root/results/sanity_checks/sanity_report.json`, `/root/results/optimization_report.md`
+
+The final `triplet_reconstruction_efficiency` is **0.4116**.

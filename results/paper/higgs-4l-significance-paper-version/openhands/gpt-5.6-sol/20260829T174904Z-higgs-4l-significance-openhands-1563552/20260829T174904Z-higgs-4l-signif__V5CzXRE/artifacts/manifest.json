@@ -1,0 +1,23 @@
+[
+  {
+    "source": "/logs/artifacts",
+    "destination": "artifacts/logs/artifacts",
+    "type": "directory",
+    "status": "empty",
+    "service": null
+  },
+  {
+    "source": "/root/submission",
+    "destination": "artifacts/root/submission",
+    "type": "directory",
+    "status": "ok",
+    "service": null
+  },
+  {
+    "source": "/root/results/results.json",
+    "destination": "artifacts/root/results/results.json",
+    "type": "file",
+    "status": "failed",
+    "service": null
+  }
+]

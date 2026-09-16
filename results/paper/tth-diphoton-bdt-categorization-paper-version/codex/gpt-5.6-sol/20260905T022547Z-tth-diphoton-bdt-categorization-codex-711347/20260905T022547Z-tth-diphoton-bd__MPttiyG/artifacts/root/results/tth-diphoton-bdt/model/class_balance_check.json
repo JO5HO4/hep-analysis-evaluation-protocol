@@ -1,0 +1,21 @@
+{
+  "applied_after_physical_mixture_construction": true,
+  "balance_factors": {
+    "background": 0.6734571452494168,
+    "signal": 1.9412781879957781
+  },
+  "nonpositive_signed_mc_events_receive_zero_classifier_fit_weight": true,
+  "signed_weights_remain_available_for_yields": true,
+  "training_partition_class_sums_after_balancing": {
+    "background": 27.72289664669007,
+    "signal": 27.722896646690074
+  },
+  "training_partition_class_sums_before_balancing": {
+    "background": 41.16504939066734,
+    "signal": 14.280743902712807
+  },
+  "training_partition_signed_physical_sums_before_balancing": {
+    "background": 41.16504939066735,
+    "signal": 11.89014852619025
+  }
+}

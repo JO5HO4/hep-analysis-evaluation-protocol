@@ -1,0 +1,16 @@
+{
+  "ROOT_version": "6.38.00",
+  "backend": "ROOT/PyROOT/RooFit",
+  "categories": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "tH_had_4j1b",
+    "tH_had_4j2b"
+  ],
+  "expected_Z": 1.43840636125547,
+  "leptonic_categories_excluded": true,
+  "observed_TI_125_plusminus_2_blinded": true,
+  "q0": 2.0690128601002016,
+  "shared_signal_strength": "mu",
+  "workspace": "fit/FIT1/workspace.root"
+}

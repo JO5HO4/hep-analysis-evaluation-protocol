@@ -1,0 +1,99 @@
+{
+  "tag": "xgb",
+  "inference_parquet": "/root/results/infer/inference_test_xgb.parquet",
+  "selection_config": {
+    "strategy": "pair_alpha",
+    "max_candidates_per_event": 2,
+    "score_threshold": null,
+    "second_candidate_threshold": null,
+    "jet_disjoint_required": true,
+    "score_column": "score_xgb",
+    "pair_objective": "argmax over jet-disjoint pairs of s_a^alpha + w*s_b^alpha",
+    "alpha": 0.3,
+    "w_second": 1.0
+  },
+  "n_inference_events": 1733,
+  "n_inference_triplets": 22021,
+  "n_truth_triplets_in_inference": 931,
+  "n_selected_triplets": 2221,
+  "n_selected_truth": 736,
+  "triplet_reconstruction_efficiency": 0.790547798066595,
+  "selection_purity": 0.3313822602431337,
+  "constraint_checks": {
+    "max_two_per_event_ok": true,
+    "events_with_more_than_two": 0,
+    "jet_disjoint_ok": true,
+    "overlapping_pairs_found": 0
+  },
+  "selected_multiplicity": {
+    "1": 1245,
+    "2": 488
+  },
+  "mean_selected_per_event": 1.281592613964224,
+  "efficiency_by_n_genjet": {
+    "3": {
+      "n_truth": 38,
+      "n_recovered": 38,
+      "efficiency": 1.0
+    },
+    "4": {
+      "n_truth": 167,
+      "n_recovered": 139,
+      "efficiency": 0.8323353293413174
+    },
+    "5": {
+      "n_truth": 239,
+      "n_recovered": 180,
+      "efficiency": 0.7531380753138075
+    },
+    "6": {
+      "n_truth": 232,
+      "n_recovered": 186,
+      "efficiency": 0.8017241379310345
+    },
+    "7": {
+      "n_truth": 162,
+      "n_recovered": 126,
+      "efficiency": 0.7777777777777778
+    },
+    "8": {
+      "n_truth": 64,
+      "n_recovered": 51,
+      "efficiency": 0.796875
+    },
+    "9": {
+      "n_truth": 21,
+      "n_recovered": 11,
+      "efficiency": 0.5238095238095238
+    },
+    "10": {
+      "n_truth": 3,
+      "n_recovered": 1,
+      "efficiency": 0.3333333333333333
+    },
+    "11": {
+      "n_truth": 2,
+      "n_recovered": 2,
+      "efficiency": 1.0
+    },
+    "12": {
+      "n_truth": 3,
+      "n_recovered": 2,
+      "efficiency": 0.6666666666666666
+    }
+  },
+  "rank1_purity": 0.363531448355453,
+  "rank2_purity": 0.21721311475409835,
+  "event_level_truth_recovery": {
+    "events_with_truth": 816,
+    "events_all_truth_recovered": 533
+  },
+  "selected_mass_stats": {
+    "mean": 208.30817885473635,
+    "median": 171.8572330557773,
+    "std": 136.6575415635632,
+    "q16": 147.2759403810229,
+    "q84": 258.3546899338446,
+    "frac_in_130_210": 0.6708689779378658
+  }
+}

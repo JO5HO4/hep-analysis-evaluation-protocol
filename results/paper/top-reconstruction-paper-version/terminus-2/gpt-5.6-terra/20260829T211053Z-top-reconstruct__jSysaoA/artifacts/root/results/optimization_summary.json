@@ -1,0 +1,53 @@
+{
+  "final_test_triplet_reconstruction_efficiency": 0.7023675310033822,
+  "final_test_selected_truth_triplets": 623,
+  "final_test_truth_triplets": 887,
+  "final_selection_strategy": "pairmax",
+  "selection_strategy_iterations": [
+    {
+      "configuration": "one",
+      "validation_triplet_reconstruction_efficiency": 0.6219640971488912,
+      "n_selected": 1722,
+      "selected_truth": 589
+    },
+    {
+      "configuration": "greedy",
+      "validation_triplet_reconstruction_efficiency": 0.7096092925026399,
+      "n_selected": 2202,
+      "selected_truth": 672
+    },
+    {
+      "configuration": "pairmax",
+      "validation_triplet_reconstruction_efficiency": 0.7138331573389651,
+      "n_selected": 2202,
+      "selected_truth": 676
+    }
+  ],
+  "classifier_hyperparameter_iterations": [
+    {
+      "name": "baseline",
+      "max_depth": 5,
+      "eta": 0.07,
+      "best_iteration": 127,
+      "validation_pairmax_efficiency": 0.7138331573389651,
+      "validation_auc_xgb": 0.9354693552079731
+    },
+    {
+      "name": "shallow",
+      "max_depth": 4,
+      "eta": 0.07,
+      "best_iteration": 200,
+      "validation_pairmax_efficiency": 0.706441393875396,
+      "validation_auc_xgb": 0.9354893604727353
+    },
+    {
+      "name": "deep_slow",
+      "max_depth": 6,
+      "eta": 0.045,
+      "best_iteration": 144,
+      "validation_pairmax_efficiency": 0.7074973600844773,
+      "validation_auc_xgb": 0.935316847540241
+    }
+  ],
+  "decision": "Retained baseline depth-5 eta-0.07 classifier because it had the largest validation pairmax triplet recall."
+}

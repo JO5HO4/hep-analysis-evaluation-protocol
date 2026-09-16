@@ -1,0 +1,19 @@
+{
+    "photon_selection": "Two photons, kinematic acceptance, no tight ID/iso required",
+    "hadronic_selection": "n_leptons == 0, n_jets >= 3, n_bjets >= 1",
+    "leptonic_bookkeeping": "n_leptons >= 1, n_bjets >= 1",
+    "overall_counts": {
+        "raw": 5222,
+        "weighted": 5222.0
+    },
+    "by_process": {
+        "VBF": 656.0,
+        "WH": 636.0,
+        "ZH": 661.0,
+        "data_GamGam": 658.0,
+        "ggH": 629.0,
+        "ggZH": 668.0,
+        "tH": 665.0,
+        "ttH": 649.0
+    }
+}

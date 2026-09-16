@@ -1,0 +1,182 @@
+[
+  {
+    "method": "greedy",
+    "threshold": 0.0,
+    "n_selected": 1643,
+    "n_selected_truth": 517,
+    "n_truth_total": 697,
+    "efficiency": 0.7417503586800573,
+    "purity": 0.3146682897139379,
+    "mean_selected_per_event": 1.26481909160893
+  },
+  {
+    "method": "greedy",
+    "threshold": 0.01,
+    "n_selected": 1420,
+    "n_selected_truth": 517,
+    "n_truth_total": 697,
+    "efficiency": 0.7417503586800573,
+    "purity": 0.36408450704225354,
+    "mean_selected_per_event": 1.1774461028192371
+  },
+  {
+    "method": "greedy",
+    "threshold": 0.05,
+    "n_selected": 1302,
+    "n_selected_truth": 516,
+    "n_truth_total": 697,
+    "efficiency": 0.7403156384505022,
+    "purity": 0.39631336405529954,
+    "mean_selected_per_event": 1.160427807486631
+  },
+  {
+    "method": "greedy",
+    "threshold": 0.1,
+    "n_selected": 1216,
+    "n_selected_truth": 513,
+    "n_truth_total": 697,
+    "efficiency": 0.7360114777618364,
+    "purity": 0.421875,
+    "mean_selected_per_event": 1.1332712022367195
+  },
+  {
+    "method": "greedy",
+    "threshold": 0.2,
+    "n_selected": 1094,
+    "n_selected_truth": 508,
+    "n_truth_total": 697,
+    "efficiency": 0.7288378766140603,
+    "purity": 0.4643510054844607,
+    "mean_selected_per_event": 1.125514403292181
+  },
+  {
+    "method": "greedy",
+    "threshold": 0.3,
+    "n_selected": 1004,
+    "n_selected_truth": 498,
+    "n_truth_total": 697,
+    "efficiency": 0.7144906743185079,
+    "purity": 0.4960159362549801,
+    "mean_selected_per_event": 1.1192865105908585
+  },
+  {
+    "method": "greedy",
+    "threshold": 0.5,
+    "n_selected": 861,
+    "n_selected_truth": 480,
+    "n_truth_total": 697,
+    "efficiency": 0.6886657101865137,
+    "purity": 0.5574912891986062,
+    "mean_selected_per_event": 1.0996168582375478
+  },
+  {
+    "method": "greedy",
+    "threshold": 0.7,
+    "n_selected": 730,
+    "n_selected_truth": 441,
+    "n_truth_total": 697,
+    "efficiency": 0.6327116212338594,
+    "purity": 0.6041095890410959,
+    "mean_selected_per_event": 1.0798816568047338
+  },
+  {
+    "method": "greedy",
+    "threshold": 0.9,
+    "n_selected": 328,
+    "n_selected_truth": 244,
+    "n_truth_total": 697,
+    "efficiency": 0.3500717360114778,
+    "purity": 0.7439024390243902,
+    "mean_selected_per_event": 1.0546623794212218
+  },
+  {
+    "method": "optimal",
+    "threshold": 0.0,
+    "n_selected": 1643,
+    "n_selected_truth": 527,
+    "n_truth_total": 697,
+    "efficiency": 0.7560975609756098,
+    "purity": 0.32075471698113206,
+    "mean_selected_per_event": 1.26481909160893
+  },
+  {
+    "method": "optimal",
+    "threshold": 0.01,
+    "n_selected": 1425,
+    "n_selected_truth": 527,
+    "n_truth_total": 697,
+    "efficiency": 0.7560975609756098,
+    "purity": 0.3698245614035088,
+    "mean_selected_per_event": 1.181592039800995
+  },
+  {
+    "method": "optimal",
+    "threshold": 0.05,
+    "n_selected": 1315,
+    "n_selected_truth": 525,
+    "n_truth_total": 697,
+    "efficiency": 0.7532281205164992,
+    "purity": 0.39923954372623577,
+    "mean_selected_per_event": 1.1720142602495545
+  },
+  {
+    "method": "optimal",
+    "threshold": 0.1,
+    "n_selected": 1235,
+    "n_selected_truth": 523,
+    "n_truth_total": 697,
+    "efficiency": 0.7503586800573888,
+    "purity": 0.4234817813765182,
+    "mean_selected_per_event": 1.1509785647716682
+  },
+  {
+    "method": "optimal",
+    "threshold": 0.2,
+    "n_selected": 1115,
+    "n_selected_truth": 519,
+    "n_truth_total": 697,
+    "efficiency": 0.7446197991391679,
+    "purity": 0.4654708520179372,
+    "mean_selected_per_event": 1.147119341563786
+  },
+  {
+    "method": "optimal",
+    "threshold": 0.3,
+    "n_selected": 1022,
+    "n_selected_truth": 508,
+    "n_truth_total": 697,
+    "efficiency": 0.7288378766140603,
+    "purity": 0.49706457925636005,
+    "mean_selected_per_event": 1.1393534002229655
+  },
+  {
+    "method": "optimal",
+    "threshold": 0.5,
+    "n_selected": 874,
+    "n_selected_truth": 491,
+    "n_truth_total": 697,
+    "efficiency": 0.7044476327116213,
+    "purity": 0.5617848970251716,
+    "mean_selected_per_event": 1.116219667943806
+  },
+  {
+    "method": "optimal",
+    "threshold": 0.7,
+    "n_selected": 732,
+    "n_selected_truth": 445,
+    "n_truth_total": 697,
+    "efficiency": 0.6384505021520803,
+    "purity": 0.6079234972677595,
+    "mean_selected_per_event": 1.0828402366863905
+  },
+  {
+    "method": "optimal",
+    "threshold": 0.9,
+    "n_selected": 329,
+    "n_selected_truth": 246,
+    "n_truth_total": 697,
+    "efficiency": 0.35294117647058826,
+    "purity": 0.7477203647416414,
+    "mean_selected_per_event": 1.0578778135048232
+  }
+]

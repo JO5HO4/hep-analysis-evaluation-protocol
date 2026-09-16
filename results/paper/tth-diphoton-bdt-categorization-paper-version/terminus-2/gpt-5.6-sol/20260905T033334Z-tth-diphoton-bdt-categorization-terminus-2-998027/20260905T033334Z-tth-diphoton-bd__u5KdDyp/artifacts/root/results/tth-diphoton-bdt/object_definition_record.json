@@ -1,0 +1,24 @@
+{
+  "units": "GeV",
+  "photons": {
+    "pt_min": 25,
+    "eta_max": 2.37,
+    "crack_excluded": [
+      1.37,
+      1.52
+    ],
+    "tight_id_required": false,
+    "isolation_required": false
+  },
+  "leptons": {
+    "pt_min": 10,
+    "id_required": false,
+    "isolation_required": false
+  },
+  "jets": {
+    "pt_min": 25,
+    "central": "|eta|<=2.5",
+    "forward": "|eta|>2.5",
+    "btag": "jet_btag_quantile>=4"
+  }
+}

@@ -1,0 +1,9 @@
+features:
+- n_jets
+- n_bjets
+- leading_jet_pt
+- subleading_jet_pt
+- ht_jets
+input: /data/GamGam
+max_selected_per_sample: uncapped
+seed: 20240517

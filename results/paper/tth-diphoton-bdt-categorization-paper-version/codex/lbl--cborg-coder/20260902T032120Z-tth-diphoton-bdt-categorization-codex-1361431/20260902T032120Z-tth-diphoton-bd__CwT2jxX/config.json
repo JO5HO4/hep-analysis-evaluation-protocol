@@ -1,0 +1,26 @@
+{
+    "task": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260902T032120Z-tth-diphoton-bdt-categorization-codex-1361431"
+    },
+    "trial_name": "20260902T032120Z-tth-diphoton-bd__CwT2jxX",
+    "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260902T032120Z-tth-diphoton-bdt-categorization-codex-1361431",
+    "agent": {
+        "name": "harbor_agents.preinstalled:PreinstalledCodex",
+        "model_name": "lbl/cborg-coder",
+        "env": {
+            "TB_HYY_INPUTS": "/data/GamGam"
+        }
+    },
+    "environment": {
+        "type": "docker",
+        "mounts": [
+            {
+                "type": "bind",
+                "source": "<source-repository>/data/GamGam",
+                "target": "/data/GamGam",
+                "read_only": true
+            }
+        ]
+    },
+    "job_id": "f3cb6e6f-7162-4c81-9d33-2bcb43aaca03"
+}

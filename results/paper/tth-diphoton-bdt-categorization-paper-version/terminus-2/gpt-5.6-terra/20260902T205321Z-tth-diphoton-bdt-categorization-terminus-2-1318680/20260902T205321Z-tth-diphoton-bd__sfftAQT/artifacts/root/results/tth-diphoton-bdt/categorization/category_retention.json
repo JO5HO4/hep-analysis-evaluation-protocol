@@ -1,0 +1,26 @@
+{
+  "ttH_had_BDT1": {
+    "expected_background": 1.8829540770284634,
+    "kept": true
+  },
+  "ttH_had_BDT2": {
+    "expected_background": 2.82574866732718,
+    "kept": true
+  },
+  "ttH_had_BDT3": {
+    "expected_background": 0.0,
+    "kept": false
+  },
+  "ttH_had_BDT4": {
+    "expected_background": 0.0,
+    "kept": false
+  },
+  "tH_had_4j1b": {
+    "expected_background": 15.636649707353246,
+    "kept": true
+  },
+  "tH_had_4j2b": {
+    "expected_background": 1.6779281752010908,
+    "kept": true
+  }
+}

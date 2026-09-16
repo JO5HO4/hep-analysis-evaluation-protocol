@@ -1,0 +1,86 @@
+{
+  "categories": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "ttH_had_BDT3",
+    "tH_had_4j1b"
+  ],
+  "mu_hat": 1.000060360840747,
+  "mu_uncertainty": 0.7086130013158694,
+  "free_mu_fit": {
+    "label": "free_mu",
+    "migrad_status": 0,
+    "hesse_status": 0,
+    "fit_status": 0,
+    "cov_quality": 3,
+    "min_nll": 68.77718239668013,
+    "edm": 7.620840466815944e-10
+  },
+  "mu0_fit": {
+    "label": "mu0",
+    "migrad_status": 0,
+    "hesse_status": 0,
+    "fit_status": 0,
+    "cov_quality": 3,
+    "min_nll": 70.1945690140754,
+    "edm": 2.962807931090798e-09
+  },
+  "q0": 2.834773234790532,
+  "expected_Z": 1.6836784831999643,
+  "mu_gen": 1.0,
+  "per_category": [
+    {
+      "category": "ttH_had_BDT1",
+      "n_sig_36fb": 1.7789501633891247,
+      "n_resonant_36fb": 0.379969227149334,
+      "n_ti_sideband_observed": 4,
+      "n_continuum_full_range_extrapolated": 4.90501825628121,
+      "background_pdf": "exponential",
+      "signal_shape_source": "per-category fit",
+      "resonant_shape_source": "per-category fit",
+      "asimov_total": 7.063937646819669
+    },
+    {
+      "category": "ttH_had_BDT2",
+      "n_sig_36fb": 2.7462702779884975,
+      "n_resonant_36fb": 0.749600514292689,
+      "n_ti_sideband_observed": 36,
+      "n_continuum_full_range_extrapolated": 43.89354040543834,
+      "background_pdf": "power_law",
+      "signal_shape_source": "per-category fit",
+      "resonant_shape_source": "per-category fit",
+      "asimov_total": 47.389411197719525
+    },
+    {
+      "category": "ttH_had_BDT3",
+      "n_sig_36fb": 3.1900272197102595,
+      "n_resonant_36fb": 2.1993511694239376,
+      "n_ti_sideband_observed": 144,
+      "n_continuum_full_range_extrapolated": 179.840383809354,
+      "background_pdf": "power_law",
+      "signal_shape_source": "per-category fit",
+      "resonant_shape_source": "per-category fit",
+      "asimov_total": 185.22976219848823
+    },
+    {
+      "category": "tH_had_4j1b",
+      "n_sig_36fb": 0.24168633425880184,
+      "n_resonant_36fb": 0.19460498642920643,
+      "n_ti_sideband_observed": 43,
+      "n_continuum_full_range_extrapolated": 53.71600596387933,
+      "background_pdf": "power_law",
+      "signal_shape_source": "per-category fit",
+      "resonant_shape_source": "per-category fit",
+      "asimov_total": 54.15229728456735
+    }
+  ],
+  "fit_statuses": {
+    "free_mu": 0,
+    "mu0": 0
+  },
+  "covariance_qualities": {
+    "free_mu": 3,
+    "mu0": 3
+  },
+  "observed_significance": "blocked (observed TI data in 125 +/- 2 GeV is blinded)"
+}

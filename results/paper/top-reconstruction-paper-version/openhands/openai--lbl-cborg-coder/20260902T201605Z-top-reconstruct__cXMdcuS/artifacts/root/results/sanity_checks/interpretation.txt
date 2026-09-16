@@ -1,0 +1,1 @@
+Selected mass distribution is centered around top mass (~172.5 GeV) and reasonably wide, indicating no artificial spike.

@@ -1,0 +1,295 @@
+{
+  "counts": {
+    "selected_rows": 125381,
+    "hadronic_rows": 80585,
+    "leptonic_bookkeeping_rows": 44796,
+    "scored_rows": 125381,
+    "hadronic_scored_rows": 80585,
+    "by_process": {
+      "ttH": 87735,
+      "data": 22029,
+      "tH": 10819,
+      "ggH": 2252,
+      "ZH": 860,
+      "ggZH": 846,
+      "WH": 791,
+      "VBF": 49
+    },
+    "by_category": {
+      "unassigned": 65713,
+      "ttH_had_BDT3": 27736,
+      "ttH_had_BDT2": 17978,
+      "ttH_had_BDT1": 9778,
+      "tH_had_4j1b": 4176
+    }
+  },
+  "weighted_yields_36fb": {
+    "mc_all_selected": 40.98358431450518,
+    "signal_window_model": 72.34954781548059,
+    "signed_weight_bookkeeping": {
+      "n_negative_weight_mc_rows": 11749,
+      "sum_positive": 47.64110456122185,
+      "sum_negative": -6.657520246716674
+    }
+  },
+  "nti_scale_factors": {
+    "SF1": 0.032464650307526474,
+    "SF2": 0.0974573584427113,
+    "SF1xSF2": 0.0031639190617378855
+  },
+  "bdt": {
+    "features": [
+      "n_jets_central",
+      "n_bjets",
+      "ht_jets",
+      "met",
+      "pt_gg"
+    ],
+    "hyperparameters": {
+      "loss": "log_loss",
+      "learning_rate": 0.06,
+      "max_iter": 400,
+      "max_leaf_nodes": 16,
+      "min_samples_leaf": 60,
+      "l2_regularization": 1.0,
+      "max_bins": 128,
+      "early_stopping": false,
+      "random_state": 20240917
+    },
+    "weighted_auc": {
+      "weighted_auc_train": 0.8440580072144884,
+      "weighted_auc_val": 0.8360173621777544,
+      "weighted_auc_test": 0.8382538606833598
+    },
+    "training_wall_time_seconds": 0.9657317370292731,
+    "class_balance_before": {
+      "signal_class_weight_sum": 9.846831657602182,
+      "background_class_weight_sum": 53.67338901545409,
+      "signal_raw_rows": 22898,
+      "background_raw_rows": 16821,
+      "ratio_signal_over_background": 0.18345835502891386
+    },
+    "class_balance_after": {
+      "signal_class_weight_sum": 31.760110336528136,
+      "background_class_weight_sum": 31.760110336528136,
+      "ratio_signal_over_background": 1.0
+    },
+    "score_range": [
+      0.03985353426666798,
+      0.9658413502684374
+    ]
+  },
+  "optimization": {
+    "thresholds": [
+      0.88,
+      0.73,
+      0.36
+    ],
+    "status": "relative-improvement-below-threshold",
+    "best_combined_significance": 1.7516610358750713,
+    "relative_improvements": [
+      null,
+      0.08442214728705336,
+      0.0677861457571323
+    ]
+  },
+  "categorization": {
+    "kept_categories": [
+      "ttH_had_BDT1",
+      "ttH_had_BDT2",
+      "ttH_had_BDT3",
+      "tH_had_4j1b"
+    ],
+    "dropped_categories": [
+      "ttH_had_BDT4",
+      "tH_had_4j2b"
+    ],
+    "combined_expected_counting_significance": 1.7535990613959818,
+    "per_category": [
+      {
+        "category": "ttH_had_BDT1",
+        "kept": true,
+        "is_catch_all": false,
+        "n_hadronic_rows": 9778,
+        "signal_ttH_tH_yield": 1.4833971557,
+        "resonant_higgs_bkg_yield": 0.3142374227,
+        "nti_continuum_bkg_yield": 0.6201281361,
+        "total_background_yield": 0.9343655588,
+        "total_model_yield": 2.4177627145,
+        "S_over_B": 1.5875982817,
+        "S_over_sqrtB": 1.534613559,
+        "expected_counting_significance": 1.276904641,
+        "signal_raw_rows": 4572,
+        "resonant_raw_rows": 115,
+        "nti_proxy_raw_rows": 196,
+        "observed_ti_sideband_rows": 4,
+        "observed_ti_signal_window": "BLINDED"
+      },
+      {
+        "category": "ttH_had_BDT2",
+        "kept": true,
+        "is_catch_all": false,
+        "n_hadronic_rows": 17978,
+        "signal_ttH_tH_yield": 2.1986071824,
+        "resonant_higgs_bkg_yield": 0.5927960516,
+        "nti_continuum_bkg_yield": 3.2873119051,
+        "total_background_yield": 3.8801079567,
+        "total_model_yield": 6.0787151391,
+        "S_over_B": 0.5666355697,
+        "S_over_sqrtB": 1.1161581578,
+        "expected_counting_significance": 1.02986665,
+        "signal_raw_rows": 6926,
+        "resonant_raw_rows": 317,
+        "nti_proxy_raw_rows": 1039,
+        "observed_ti_sideband_rows": 36,
+        "observed_ti_signal_window": "BLINDED"
+      },
+      {
+        "category": "ttH_had_BDT3",
+        "kept": true,
+        "is_catch_all": false,
+        "n_hadronic_rows": 27736,
+        "signal_ttH_tH_yield": 2.5044029372,
+        "resonant_higgs_bkg_yield": 1.8857994314,
+        "nti_continuum_bkg_yield": 13.9275717098,
+        "total_background_yield": 15.8133711412,
+        "total_model_yield": 18.3177740784,
+        "S_over_B": 0.1583724884,
+        "S_over_sqrtB": 0.6297845068,
+        "expected_counting_significance": 0.6141706649,
+        "signal_raw_rows": 7850,
+        "resonant_raw_rows": 901,
+        "nti_proxy_raw_rows": 4402,
+        "observed_ti_sideband_rows": 144,
+        "observed_ti_signal_window": "BLINDED"
+      },
+      {
+        "category": "tH_had_4j1b",
+        "kept": true,
+        "is_catch_all": false,
+        "n_hadronic_rows": 4176,
+        "signal_ttH_tH_yield": 0.181875787,
+        "resonant_higgs_bkg_yield": 0.1423088746,
+        "nti_continuum_bkg_yield": 4.6667806161,
+        "total_background_yield": 4.8090894907,
+        "total_model_yield": 4.9909652777,
+        "S_over_B": 0.0378191729,
+        "S_over_sqrtB": 0.0829360708,
+        "expected_counting_significance": 0.0824213778,
+        "signal_raw_rows": 709,
+        "resonant_raw_rows": 89,
+        "nti_proxy_raw_rows": 1475,
+        "observed_ti_sideband_rows": 43,
+        "observed_ti_signal_window": "BLINDED"
+      },
+      {
+        "category": "unassigned",
+        "kept": false,
+        "is_catch_all": true,
+        "n_hadronic_rows": 20917,
+        "signal_ttH_tH_yield": 6.7966699226,
+        "resonant_higgs_bkg_yield": 2.4343537292,
+        "nti_continuum_bkg_yield": 31.313306954,
+        "total_background_yield": 33.7476606832,
+        "total_model_yield": 40.5443306058,
+        "S_over_B": 0.201396772,
+        "S_over_sqrtB": 1.1699689664,
+        "expected_counting_significance": 1.1336672894,
+        "signal_raw_rows": 21679,
+        "resonant_raw_rows": 1009,
+        "nti_proxy_raw_rows": 9897,
+        "observed_ti_sideband_rows": 324,
+        "observed_ti_signal_window": "BLINDED"
+      }
+    ]
+  },
+  "statistical_interpretation": {
+    "backend": "ROOT/PyROOT/RooFit",
+    "mu_hat": 1.000060360840747,
+    "mu_uncertainty": 0.7086130013158694,
+    "q0": 2.834773234790532,
+    "expected_Z": 1.6836784831999643,
+    "observed": "blocked (blinded)"
+  },
+  "validation": {
+    "scalar_vs_vectorised_crosscheck": [
+      {
+        "sample": "ggH",
+        "n_checked": 150,
+        "n_mismatches": 0,
+        "mismatches": [],
+        "status": "ok"
+      },
+      {
+        "sample": "VBF",
+        "n_checked": 49,
+        "n_mismatches": 0,
+        "mismatches": [],
+        "status": "ok"
+      },
+      {
+        "sample": "WH",
+        "n_checked": 150,
+        "n_mismatches": 0,
+        "mismatches": [],
+        "status": "ok"
+      },
+      {
+        "sample": "ZH",
+        "n_checked": 150,
+        "n_mismatches": 0,
+        "mismatches": [],
+        "status": "ok"
+      },
+      {
+        "sample": "ggZH",
+        "n_checked": 150,
+        "n_mismatches": 0,
+        "mismatches": [],
+        "status": "ok"
+      },
+      {
+        "sample": "ttH",
+        "n_checked": 150,
+        "n_mismatches": 0,
+        "mismatches": [],
+        "status": "ok"
+      },
+      {
+        "sample": "tH",
+        "n_checked": 150,
+        "n_mismatches": 0,
+        "mismatches": [],
+        "status": "ok"
+      },
+      {
+        "sample": "data",
+        "n_checked": 150,
+        "n_mismatches": 0,
+        "mismatches": [],
+        "status": "ok"
+      }
+    ],
+    "all_hadronic_rows_scored": true,
+    "bdt_score_within_unit_interval": true,
+    "m_gammagamma_excluded_from_features": true
+  },
+  "timing_seconds": {
+    "resolve_inputs": 0.26714478799840435,
+    "preselection": 17.176087879983243,
+    "preselection_plots": 1.3968761129654013,
+    "training_sample": 1.283886794000864,
+    "bdt_training": 1.6277519789873622,
+    "inference": 2.2849364340072498,
+    "boundary_optimization": 0.14978346700081602,
+    "categorization": 0.6097855370026082,
+    "event_tables": 9.317988077993505,
+    "histograms_and_plots": 2.00620478001656,
+    "workspace_fit": 2.1422349920030683,
+    "workspace_fit_plots": 1.9524192160461098
+  },
+  "row_cap": {
+    "max_selected_per_sample": null,
+    "uncapped": true
+  }
+}

@@ -1,0 +1,321 @@
+{
+  "final_test_efficiency": 0.6948905109489051,
+  "test_auc": 0.9498936586527827,
+  "chosen": {
+    "name": "baseline_depth4",
+    "parameters": {
+      "objective": "binary:logistic",
+      "eval_metric": "auc",
+      "tree_method": "hist",
+      "seed": 17,
+      "nthread": 8,
+      "scale_pos_weight": 1.0,
+      "verbosity": 0,
+      "max_depth": 4,
+      "eta": 0.08,
+      "min_child_weight": 2,
+      "subsample": 0.85,
+      "colsample_bytree": 0.9,
+      "lambda": 1.0
+    },
+    "rounds": 350,
+    "validation_auc": 0.9457455039022735,
+    "best_validation_efficiency": 0.7357142857142858,
+    "best_selection_mode": "exact",
+    "best_alpha": 1,
+    "n_selected": 1652,
+    "n_truth_selected": 515,
+    "selection_scan": [
+      {
+        "efficiency": 0.7171428571428572,
+        "mode": "greedy",
+        "alpha": 1,
+        "n_selected": 1652
+      },
+      {
+        "efficiency": 0.7342857142857143,
+        "mode": "exact",
+        "alpha": 0.5,
+        "n_selected": 1652
+      },
+      {
+        "efficiency": 0.7357142857142858,
+        "mode": "exact",
+        "alpha": 1,
+        "n_selected": 1652
+      },
+      {
+        "efficiency": 0.73,
+        "mode": "exact",
+        "alpha": 2,
+        "n_selected": 1652
+      },
+      {
+        "efficiency": 0.7228571428571429,
+        "mode": "exact",
+        "alpha": 4,
+        "n_selected": 1639
+      },
+      {
+        "efficiency": 0.7171428571428572,
+        "mode": "exact",
+        "alpha": 8,
+        "n_selected": 1532
+      }
+    ]
+  },
+  "iterations": [
+    {
+      "name": "baseline_depth4",
+      "parameters": {
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "tree_method": "hist",
+        "seed": 17,
+        "nthread": 8,
+        "scale_pos_weight": 1.0,
+        "verbosity": 0,
+        "max_depth": 4,
+        "eta": 0.08,
+        "min_child_weight": 2,
+        "subsample": 0.85,
+        "colsample_bytree": 0.9,
+        "lambda": 1.0
+      },
+      "rounds": 350,
+      "validation_auc": 0.9457455039022735,
+      "best_validation_efficiency": 0.7357142857142858,
+      "best_selection_mode": "exact",
+      "best_alpha": 1,
+      "n_selected": 1652,
+      "n_truth_selected": 515,
+      "selection_scan": [
+        {
+          "efficiency": 0.7171428571428572,
+          "mode": "greedy",
+          "alpha": 1,
+          "n_selected": 1652
+        },
+        {
+          "efficiency": 0.7342857142857143,
+          "mode": "exact",
+          "alpha": 0.5,
+          "n_selected": 1652
+        },
+        {
+          "efficiency": 0.7357142857142858,
+          "mode": "exact",
+          "alpha": 1,
+          "n_selected": 1652
+        },
+        {
+          "efficiency": 0.73,
+          "mode": "exact",
+          "alpha": 2,
+          "n_selected": 1652
+        },
+        {
+          "efficiency": 0.7228571428571429,
+          "mode": "exact",
+          "alpha": 4,
+          "n_selected": 1639
+        },
+        {
+          "efficiency": 0.7171428571428572,
+          "mode": "exact",
+          "alpha": 8,
+          "n_selected": 1532
+        }
+      ]
+    },
+    {
+      "name": "deeper_depth6",
+      "parameters": {
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "tree_method": "hist",
+        "seed": 17,
+        "nthread": 8,
+        "scale_pos_weight": 1.0,
+        "verbosity": 0,
+        "max_depth": 6,
+        "eta": 0.06,
+        "min_child_weight": 2,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "lambda": 1.5
+      },
+      "rounds": 500,
+      "validation_auc": 0.9449834698725096,
+      "best_validation_efficiency": 0.7314285714285714,
+      "best_selection_mode": "exact",
+      "best_alpha": 0.5,
+      "n_selected": 1652,
+      "n_truth_selected": 512,
+      "selection_scan": [
+        {
+          "efficiency": 0.7114285714285714,
+          "mode": "greedy",
+          "alpha": 1,
+          "n_selected": 1652
+        },
+        {
+          "efficiency": 0.7314285714285714,
+          "mode": "exact",
+          "alpha": 0.5,
+          "n_selected": 1652
+        },
+        {
+          "efficiency": 0.7257142857142858,
+          "mode": "exact",
+          "alpha": 1,
+          "n_selected": 1652
+        },
+        {
+          "efficiency": 0.7142857142857143,
+          "mode": "exact",
+          "alpha": 2,
+          "n_selected": 1652
+        },
+        {
+          "efficiency": 0.7128571428571429,
+          "mode": "exact",
+          "alpha": 4,
+          "n_selected": 1634
+        },
+        {
+          "efficiency": 0.7128571428571429,
+          "mode": "exact",
+          "alpha": 8,
+          "n_selected": 1512
+        }
+      ]
+    },
+    {
+      "name": "balanced_depth5",
+      "parameters": {
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "tree_method": "hist",
+        "seed": 17,
+        "nthread": 8,
+        "scale_pos_weight": 8.0,
+        "verbosity": 0,
+        "max_depth": 5,
+        "eta": 0.06,
+        "min_child_weight": 1,
+        "subsample": 0.9,
+        "colsample_bytree": 1.0,
+        "lambda": 1.0
+      },
+      "rounds": 600,
+      "validation_auc": 0.9449125987687237,
+      "best_validation_efficiency": 0.7142857142857143,
+      "best_selection_mode": "exact",
+      "best_alpha": 0.5,
+      "n_selected": 1652,
+      "n_truth_selected": 500,
+      "selection_scan": [
+        {
+          "efficiency": 0.6971428571428572,
+          "mode": "greedy",
+          "alpha": 1,
+          "n_selected": 1652
+        },
+        {
+          "efficiency": 0.7142857142857143,
+          "mode": "exact",
+          "alpha": 0.5,
+          "n_selected": 1652
+        },
+        {
+          "efficiency": 0.7142857142857143,
+          "mode": "exact",
+          "alpha": 1,
+          "n_selected": 1652
+        },
+        {
+          "efficiency": 0.71,
+          "mode": "exact",
+          "alpha": 2,
+          "n_selected": 1652
+        },
+        {
+          "efficiency": 0.7142857142857143,
+          "mode": "exact",
+          "alpha": 4,
+          "n_selected": 1622
+        },
+        {
+          "efficiency": 0.7071428571428572,
+          "mode": "exact",
+          "alpha": 8,
+          "n_selected": 1525
+        }
+      ]
+    },
+    {
+      "name": "ranking_depth5",
+      "parameters": {
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "tree_method": "hist",
+        "seed": 17,
+        "nthread": 8,
+        "scale_pos_weight": 2.5,
+        "verbosity": 0,
+        "max_depth": 5,
+        "eta": 0.05,
+        "min_child_weight": 2,
+        "subsample": 0.9,
+        "colsample_bytree": 0.95,
+        "lambda": 2.0
+      },
+      "rounds": 700,
+      "validation_auc": 0.9449967521450385,
+      "best_validation_efficiency": 0.73,
+      "best_selection_mode": "exact",
+      "best_alpha": 1,
+      "n_selected": 1652,
+      "n_truth_selected": 511,
+      "selection_scan": [
+        {
+          "efficiency": 0.72,
+          "mode": "greedy",
+          "alpha": 1,
+          "n_selected": 1652
+        },
+        {
+          "efficiency": 0.7271428571428571,
+          "mode": "exact",
+          "alpha": 0.5,
+          "n_selected": 1652
+        },
+        {
+          "efficiency": 0.73,
+          "mode": "exact",
+          "alpha": 1,
+          "n_selected": 1652
+        },
+        {
+          "efficiency": 0.7285714285714285,
+          "mode": "exact",
+          "alpha": 2,
+          "n_selected": 1652
+        },
+        {
+          "efficiency": 0.7257142857142858,
+          "mode": "exact",
+          "alpha": 4,
+          "n_selected": 1634
+        },
+        {
+          "efficiency": 0.7214285714285714,
+          "mode": "exact",
+          "alpha": 8,
+          "n_selected": 1524
+        }
+      ]
+    }
+  ]
+}

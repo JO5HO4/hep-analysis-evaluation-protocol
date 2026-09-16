@@ -1,0 +1,71 @@
+{
+  "lumi_ifb": 36.0,
+  "categories": [
+    {
+      "category": "ttH_had_BDT1",
+      "kept": true,
+      "ttH_tH_signal_yield_36fb": 1.4760011620469273,
+      "resonant_higgs_background_yield_36fb": 0.06821348405145422,
+      "NTI_continuum_proxy_yield_36fb": 1.2085962853049825,
+      "total_background_yield_36fb": 1.2768097693564369,
+      "total_model_yield_36fb": 2.7528109314033644,
+      "S_over_B": 1.1560071026014243,
+      "S_over_sqrtB": 1.306241871467227,
+      "expected_counting_significance_Z": 1.1303695976515742
+    },
+    {
+      "category": "ttH_had_BDT2",
+      "kept": true,
+      "ttH_tH_signal_yield_36fb": 3.063612546099402,
+      "resonant_higgs_background_yield_36fb": 0.7026956359422782,
+      "NTI_continuum_proxy_yield_36fb": 8.280833903186396,
+      "total_background_yield_36fb": 8.983529539128675,
+      "total_model_yield_36fb": 12.047142085228078,
+      "S_over_B": 0.3410254881175073,
+      "S_over_sqrtB": 1.0221398945039117,
+      "expected_counting_significance_Z": 0.9710158642913804
+    },
+    {
+      "category": "tH_had_4j1b",
+      "kept": true,
+      "ttH_tH_signal_yield_36fb": 1.1306521446045268,
+      "resonant_higgs_background_yield_36fb": 0.901486488871248,
+      "NTI_continuum_proxy_yield_36fb": 12.530414390226497,
+      "total_background_yield_36fb": 13.431900879097745,
+      "total_model_yield_36fb": 14.562553023702272,
+      "S_over_B": 0.08417662956134588,
+      "S_over_sqrtB": 0.3085036251636543,
+      "expected_counting_significance_Z": 0.3043205839428184
+    },
+    {
+      "category": "tH_had_4j2b",
+      "kept": true,
+      "ttH_tH_signal_yield_36fb": 0.08866356013982266,
+      "resonant_higgs_background_yield_36fb": 0.07345111289711936,
+      "NTI_continuum_proxy_yield_36fb": 0.9616787646512764,
+      "total_background_yield_36fb": 1.0351298775483957,
+      "total_model_yield_36fb": 1.1237934376882184,
+      "S_over_B": 0.08565452709162802,
+      "S_over_sqrtB": 0.0871460573636962,
+      "expected_counting_significance_Z": 0.08594438612822829
+    },
+    {
+      "category": "unassigned",
+      "kept": false,
+      "ttH_tH_signal_yield_36fb": 2.391160291266525,
+      "resonant_higgs_background_yield_36fb": 3.4546881219251384,
+      "NTI_continuum_proxy_yield_36fb": 45.549784731117896,
+      "total_background_yield_36fb": 49.00447285304303,
+      "total_model_yield_36fb": 51.395633144309556,
+      "S_over_B": 0.048794735501741876,
+      "S_over_sqrtB": 0.3415787375622466,
+      "expected_counting_significance_Z": 0.33885586192689054
+    }
+  ],
+  "combined_expected_counting_significance": 1.523353107890214,
+  "blinding_flag_signal_window_TI_data": true,
+  "signal_window_gev": [
+    123.0,
+    127.0
+  ]
+}

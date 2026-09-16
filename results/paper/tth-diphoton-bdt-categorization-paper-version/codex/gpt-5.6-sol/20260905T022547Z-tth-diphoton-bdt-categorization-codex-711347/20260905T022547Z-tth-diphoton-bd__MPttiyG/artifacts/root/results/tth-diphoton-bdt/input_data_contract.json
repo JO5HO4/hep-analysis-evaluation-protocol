@@ -1,0 +1,22 @@
+{
+  "Sherpa_yy_excluded": true,
+  "contract": "TB_HYY_INPUTS points to an ATLAS open-data GamGam directory containing MC/ and data/",
+  "environment_variable_was_set": true,
+  "other_non_Higgs_mc_excluded": true,
+  "processed_data": [
+    "/data/GamGam/data/data_preselection.root"
+  ],
+  "processed_mc": {
+    "VBF": "/data/GamGam/MC/VBF_preselection.root",
+    "WH": "/data/GamGam/MC/WH_preselection.root",
+    "ZH": "/data/GamGam/MC/ZH_preselection.root",
+    "ggH": "/data/GamGam/MC/ggH_preselection.root",
+    "ggZH": "/data/GamGam/MC/ggZH_preselection.root",
+    "tH": "/data/GamGam/MC/tH_preselection.root",
+    "ttH": "/data/GamGam/MC/ttH_preselection.root"
+  },
+  "prompt_diphoton_continuum_mc_excluded": true,
+  "resolved_input_root": "/data/GamGam",
+  "root_inputs_copied_into_submission": false,
+  "scope": "nominal Higgs MC and observed GamGam data only"
+}

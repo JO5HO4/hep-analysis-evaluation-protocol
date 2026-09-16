@@ -1,0 +1,14 @@
+{
+  "triplet_reconstruction_efficiency": 0.46375266524520253,
+  "total_truth_triplets": 938,
+  "selected_truth_triplets": 435,
+  "n_selected_events": 1733,
+  "n_events_with_truth": 839,
+  "max_per_event": 2,
+  "selection_strategy": "greedy_by_score_with_jet_disjoint_constraint",
+  "inference_dataset": "/root/results/infer/inference_test_xgb.parquet",
+  "selected_triplets_count": 2222,
+  "average_candidates_per_event": 1.2821696480092326,
+  "selected_triplets_path": "/root/results/select_triplets/selected_triplets.parquet",
+  "event_selection_path": "/root/results/select_triplets/event_selection.parquet"
+}

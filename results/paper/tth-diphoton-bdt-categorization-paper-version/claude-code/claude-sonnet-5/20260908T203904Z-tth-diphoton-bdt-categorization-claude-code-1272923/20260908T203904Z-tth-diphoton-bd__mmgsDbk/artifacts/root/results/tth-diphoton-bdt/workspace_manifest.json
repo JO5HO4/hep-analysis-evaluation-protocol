@@ -1,0 +1,12 @@
+{
+  "workspace_root_file": "fit/FIT1/workspace.root",
+  "fit_directory": "fit/FIT1",
+  "categories_fit": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "tH_had_4j1b",
+    "tH_had_4j2b"
+  ],
+  "combined_expected_significance_asimov_Z": 1.8312024498409505,
+  "backend": "PyROOT/RooFit"
+}

@@ -1,0 +1,51 @@
+{
+  "photon_definition": "two photons pT>25 GeV, |eta|<2.37 excluding 1.37<|eta|<1.52; no tight-ID or isolation requirement",
+  "hadronic_definition": "zero pT>10 GeV leptons, >=3 pT>25 GeV jets, >=1 b jet (quantile>=4)",
+  "leptonic_bookkeeping": "not retained",
+  "counts": {
+    "VBF": {
+      "raw_selected": 53,
+      "written_selected": 53,
+      "signed_weighted_yield_36fb": 0.18828165785151124
+    },
+    "WH": {
+      "raw_selected": 706,
+      "written_selected": 706,
+      "signed_weighted_yield_36fb": 0.2201602567739667
+    },
+    "ZH": {
+      "raw_selected": 821,
+      "written_selected": 821,
+      "signed_weighted_yield_36fb": 1.3769327273614105
+    },
+    "ggH": {
+      "raw_selected": 2413,
+      "written_selected": 2413,
+      "signed_weighted_yield_36fb": 7.802536653242048
+    },
+    "ggZH": {
+      "raw_selected": 853,
+      "written_selected": 853,
+      "signed_weighted_yield_36fb": 0.20328801668653942
+    },
+    "tH": {
+      "raw_selected": 7566,
+      "written_selected": 7566,
+      "signed_weighted_yield_36fb": 0.15612751989666904
+    },
+    "ttH": {
+      "raw_selected": 57677,
+      "written_selected": 57677,
+      "signed_weighted_yield_36fb": 20.182053969969356
+    },
+    "data": {
+      "raw_selected": 202287,
+      "written_selected": 202287,
+      "signed_weighted_yield_36fb": 0.0
+    }
+  },
+  "overall_raw": 272376,
+  "overall_written": 272376,
+  "overall_signed_weighted_yield_36fb": 30.1293808017815,
+  "raw_and_weighted_counts_reported_overall_and_by_process": true
+}

@@ -1,0 +1,8 @@
+{
+  "backend": "PyROOT/RooFit",
+  "root_version": "6.38.00",
+  "minimizer": "Minuit2 via RooMinimizer (migrad + hesse)",
+  "asimov_construction": "analytic deterministic construction at mu=1 (no Poisson generation)",
+  "combination_method": "quadrature sum of independent per-category Asimov Z (mu_<category> fit separately per category)",
+  "known_issue": "RooSimultaneous combination of the per-category RooAddPdf models segfaults in this ROOT build (6.38.00) inside RooSimultaneous::compileForNormSet / RooAddPdf::clone during createNLL; independent per-category fits are used instead."
+}

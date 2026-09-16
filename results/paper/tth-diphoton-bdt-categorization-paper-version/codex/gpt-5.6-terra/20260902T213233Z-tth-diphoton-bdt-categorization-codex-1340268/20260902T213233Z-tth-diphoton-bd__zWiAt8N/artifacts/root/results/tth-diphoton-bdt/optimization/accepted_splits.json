@@ -1,0 +1,14 @@
+[
+  {
+    "boundary": 0.8,
+    "z_before": 1.2393227227629846,
+    "z_after": 1.795020517368767,
+    "relative_improvement": 0.4483882885378656
+  },
+  {
+    "boundary": 0.53,
+    "z_before": 1.795020517368767,
+    "z_after": 1.9270538942815574,
+    "relative_improvement": 0.0735553580782083
+  }
+]

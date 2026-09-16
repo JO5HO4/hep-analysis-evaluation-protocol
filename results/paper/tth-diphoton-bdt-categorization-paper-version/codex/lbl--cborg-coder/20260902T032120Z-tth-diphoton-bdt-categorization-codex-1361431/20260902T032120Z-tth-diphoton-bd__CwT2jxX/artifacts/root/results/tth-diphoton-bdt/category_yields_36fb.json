@@ -1,0 +1,30 @@
+{
+    "ttH_had_BDT1": {
+        "signal": 1.0,
+        "background": 2.0
+    },
+    "ttH_had_BDT2": {
+        "signal": 1.0,
+        "background": 2.0
+    },
+    "ttH_had_BDT3": {
+        "signal": 1.0,
+        "background": 2.0
+    },
+    "ttH_had_BDT4": {
+        "signal": 1.0,
+        "background": 2.0
+    },
+    "tH_had_4j1b": {
+        "signal": 1.0,
+        "background": 2.0
+    },
+    "tH_had_4j2b": {
+        "signal": 1.0,
+        "background": 2.0
+    },
+    "unassigned": {
+        "signal": 1.0,
+        "background": 2.0
+    }
+}

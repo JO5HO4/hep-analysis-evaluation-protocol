@@ -1,0 +1,5 @@
+{
+    "test_size": 21323,
+    "num_truth": 938,
+    "truth_recall_at_05": 0.8091684434968017
+}

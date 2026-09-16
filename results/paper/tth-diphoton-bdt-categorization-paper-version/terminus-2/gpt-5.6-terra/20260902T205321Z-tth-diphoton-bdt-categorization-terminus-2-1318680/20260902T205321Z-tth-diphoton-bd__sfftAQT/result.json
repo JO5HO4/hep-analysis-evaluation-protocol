@@ -1,0 +1,166 @@
+{
+    "id": "bf1942f2-c902-4050-908a-7763df3a06bd",
+    "task_name": "haichenwangberkeley/tth-diphoton-bdt-categorization",
+    "trial_name": "20260902T205321Z-tth-diphoton-bd__sfftAQT",
+    "trial_uri": "file:///tmp/terminal-bench-harbor-jobs/20260902T205321Z-tth-diphoton-bdt-categorization-terminus-2-1318680/20260902T205321Z-tth-diphoton-bd__sfftAQT",
+    "task_id": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260902T205321Z-tth-diphoton-bdt-categorization-terminus-2-1318680"
+    },
+    "source": null,
+    "task_checksum": "31ad0448cc9391819b3faa67428ce00606878660e3e38bbbc9ac23e57ff507f0",
+    "config": {
+        "task": {
+            "path": "/tmp/terminal-bench-staged-tasks/20260902T205321Z-tth-diphoton-bdt-categorization-terminus-2-1318680",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "20260902T205321Z-tth-diphoton-bd__sfftAQT",
+        "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260902T205321Z-tth-diphoton-bdt-categorization-terminus-2-1318680",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "harbor_agents.preinstalled:PreinstalledTerminus2",
+            "import_path": null,
+            "model_name": "gpt-5.6-terra",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "model_info": {
+                    "max_input_tokens": 1050000,
+                    "max_output_tokens": 128000,
+                    "input_cost_per_token": 0,
+                    "output_cost_per_token": 0
+                },
+                "api_base": "https://api.cborg.lbl.gov/v1"
+            },
+            "env": {
+                "TB_HYY_INPUTS": "/data/GamGam"
+            },
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": [
+                {
+                    "type": "bind",
+                    "source": "<source-repository>/data/GamGam",
+                    "target": "/data/GamGam",
+                    "read_only": true
+                }
+            ],
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "8c0d19e6-4eb4-45b7-be55-80bfab864303",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "terminus-2",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "gpt-5.6-terra",
+            "provider": null
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 748278,
+        "n_cache_tokens": 625819,
+        "n_output_tokens": 24372,
+        "cost_usd": 0.79612203,
+        "rollout_details": [],
+        "metadata": {
+            "n_episodes": 28,
+            "api_request_times_msec": [
+                9107.59425163269,
+                3196.6121196746826,
+                6534.188032150269,
+                47696.611404418945,
+                2816.040515899658,
+                3463.1965160369873,
+                2761.5914344787598,
+                3321.500539779663,
+                3113.1348609924316,
+                5049.324989318848,
+                3088.1576538085938,
+                4629.352331161499,
+                5026.050329208374,
+                7368.781566619873,
+                3209.3822956085205,
+                5833.866834640503,
+                7553.864479064941,
+                9039.750099182129,
+                20234.029054641724,
+                18430.498123168945,
+                3604.9697399139404,
+                27464.7114276886,
+                5419.637680053711,
+                15704.894542694092,
+                11025.810956954956,
+                13230.966091156006,
+                4313.6632442474365,
+                3749.7479915618896
+            ],
+            "summarization_count": 0
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-09-02T20:53:56.218828Z",
+    "finished_at": "2026-09-02T21:19:21.189358Z",
+    "environment_setup": {
+        "started_at": "2026-09-02T20:53:56.346467Z",
+        "finished_at": "2026-09-02T20:54:10.234166Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-02T20:54:10.234221Z",
+        "finished_at": "2026-09-02T20:54:28.163214Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-02T20:54:28.163378Z",
+        "finished_at": "2026-09-02T21:17:27.151136Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-02T21:18:01.156274Z",
+        "finished_at": "2026-09-02T21:19:21.189327Z"
+    },
+    "step_results": null
+}

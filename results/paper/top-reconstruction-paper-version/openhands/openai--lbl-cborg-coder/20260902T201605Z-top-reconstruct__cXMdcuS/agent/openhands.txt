@@ -1,0 +1,70 @@
+/opt/openhands-venv/lib/python3.13/site-packages/fastmcp/server/auth/providers/jwt.py:10: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.
+It will be compatible before version 2.0.0.
+  from authlib.jose import JsonWebKey, JsonWebToken
+[92m20:17:09 - openhands:INFO[0m: utils.py:152 - config.toml not found: [Errno 2] No such file or directory: 'config.toml'. Toml values have not been applied.
+[92m20:17:09 - openhands:INFO[0m: llm_registry.py:87 - [LLM registry b15616d3-1bf4-48a1-b90c-7aea88409cd2]: Registering service for agent
+[92m20:17:09 - openhands:WARNING[0m: local_runtime.py:160 - Initializing LocalRuntime. WARNING: NO SANDBOX IS USED. This is an experimental feature, please report issues to https://github.com/OpenHands/OpenHands/issues. `run_as_openhands` will be ignored since the current user will be used to launch the server. We highly recommend using a sandbox (eg. DockerRuntime) unless you are running in a controlled environment.
+User ID: 0. Username: root.
+[92m20:17:09 - openhands:WARNING[0m: local_runtime.py:251 - Workspace base path is set to /root. It will be used as the path for the agent to run in. Be careful, the agent can EDIT files in this directory!
+[92m20:17:09 - openhands:INFO[0m: local_runtime.py:268 - Using workspace directory: /root
+[92m20:17:09 - openhands:INFO[0m: local_runtime.py:633 - Creating a server
+[92m20:17:09 - openhands:INFO[0m: local_runtime.py:673 - Starting server with command: ['/opt/openhands-venv/bin/python', '-u', '-m', 'openhands.runtime.action_execution_server', '33193', '--working-dir', '/root', '--plugins', 'agent_skills', 'jupyter', '--username', 'root', '--user-id', '0', '--no-enable-browser']
+[92m20:17:09 - openhands:INFO[0m: local_runtime.py:366 - [runtime bc8c15cc-528c-42-c1794f20615c702] Waiting for server to become ready at http://localhost:33193...
+[92m20:17:13 - openhands:INFO[0m: local_runtime.py:715 - server: /opt/openhands-venv/lib/python3.13/site-packages/fastmcp/server/auth/providers/jwt.py:10: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.
+[92m20:17:13 - openhands:INFO[0m: local_runtime.py:715 - server: It will be compatible before version 2.0.0.
+[92m20:17:13 - openhands:INFO[0m: local_runtime.py:715 - server: from authlib.jose import JsonWebKey, JsonWebToken
+[92m20:17:14 - openhands:INFO[0m: local_runtime.py:715 - server: [92m20:17:14 - openhands:WARNING[0m: action_execution_server.py:654 - Starting Action Execution Server
+[92m20:17:14 - openhands:INFO[0m: local_runtime.py:715 - server: [92m20:17:14 - openhands:INFO[0m: action_execution_server.py:680 - Starting file viewer server
+[92m20:17:14 - openhands:INFO[0m: local_runtime.py:715 - server: [92m20:17:14 - openhands:INFO[0m: file_viewer_server.py:92 - File viewer server URL saved to /tmp/oh-server-url: http://localhost:33888
+[92m20:17:14 - openhands:INFO[0m: local_runtime.py:715 - server: [92m20:17:14 - openhands:INFO[0m: file_viewer_server.py:93 - Starting file viewer server on port 33888
+[92m20:17:14 - openhands:INFO[0m: local_runtime.py:715 - server: [92m20:17:14 - openhands:INFO[0m: action_execution_server.py:685 - File viewer server started at http://localhost:33888
+[92m20:17:14 - openhands:INFO[0m: local_runtime.py:715 - server: [92m20:17:14 - openhands:INFO[0m: action_execution_server.py:700 - Initializing ActionExecutor...
+[92m20:17:15 - openhands:INFO[0m: local_runtime.py:715 - server: [92m20:17:15 - openhands:INFO[0m: action_execution_server.py:217 - No max memory limit set, using all available system memory
+[92m20:17:15 - openhands:INFO[0m: local_runtime.py:715 - server: [92m20:17:15 - openhands:INFO[0m: action_execution_server.py:232 - Browser environment is not enabled in config
+[92m20:17:20 - openhands:INFO[0m: local_runtime.py:715 - server: [92m20:17:20 - openhands:INFO[0m: action_execution_server.py:366 - Initializing by running 1 bash commands...
+[92m20:17:21 - openhands:INFO[0m: local_runtime.py:715 - server: [92m20:17:21 - openhands:INFO[0m: action_execution_server.py:710 - ActionExecutor initialized.
+[92m20:17:21 - openhands:INFO[0m: local_runtime.py:715 - server: [92m20:17:21 - openhands:INFO[0m: action_execution_server.py:720 - Initializing MCP Proxy Manager...
+[92m20:17:21 - openhands:INFO[0m: local_runtime.py:715 - server: [92m20:17:21 - openhands.runtime.mcp.proxy.manager:INFO[0m: manager.py:58 - No MCP servers configured for FastMCP Proxy, skipping initialization.
+[92m20:17:21 - openhands:INFO[0m: local_runtime.py:715 - server: [92m20:17:21 - openhands.runtime.mcp.proxy.manager:INFO[0m: manager.py:92 - No MCP servers configured for FastMCP Proxy, skipping mount.
+[92m20:17:23 - openhands:INFO[0m: base.py:1061 - Successfully configured git: name=openhands, email=openhands@all-hands.dev
+[92m20:17:23 - openhands:INFO[0m: base.py:890 - [runtime bc8c15cc-528c-42-c1794f20615c702] Selected repo: None, loading microagents from /root/.openhands/microagents (inside runtime)
+[92m20:17:23 - openhands:INFO[0m: local_runtime.py:715 - server: [Errno 2] No such file or directory: '/root/.openhands_instructions'
+[92m20:17:23 - openhands:INFO[0m: base.py:637 - [runtime bc8c15cc-528c-42-c1794f20615c702] Attempting to list files in repository microagents directory: /root/.openhands/microagents
+[92m20:17:23 - openhands:INFO[0m: memory.py:261 - Loading user workspace microagents: []
+[92m20:17:23 - openhands:WARNING[0m: mcp_config.py:351 - No search engine API key found, skipping search engine
+[92m20:17:23 - openhands:INFO[0m: utils.py:334 - Loaded 0 MCP tools: []
+[92m20:17:23 - openhands:INFO[0m: agent.py:169 - Setting 0 MCP tools for agent CodeActAgent: []
+[92m20:17:23 - openhands:INFO[0m: agent.py:181 - Tools updated for agent CodeActAgent, total 6: ['execute_bash', 'think', 'finish', 'execute_ipython_cell', 'task_tracker', 'str_replace_editor']
+[92m20:17:23 - openhands:INFO[0m: state_tracker.py:94 - AgentController bc8c15cc-528c-42-c1794f20615c702 - created new state. start_id: 0
+[92m20:17:23 - openhands:INFO[0m: agent_controller.py:668 - [Agent Controller bc8c15cc-528c-42-c1794f20615c702] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+[92m20:17:23 - openhands:INFO[0m: conversation_stats.py:65 - Saved conversation stats
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: [92m20:21:06 - openhands:ERROR[0m: action_execution_server.py:396 - Error running command: 'str' object has no attribute 'kind'
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: Traceback (most recent call last):
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: File "/opt/openhands-venv/lib/python3.13/site-packages/openhands/runtime/action_execution_server.py", line 393, in run
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: obs = await call_sync_from_async(bash_session.execute, action)
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: File "/opt/openhands-venv/lib/python3.13/site-packages/openhands/utils/async_utils.py", line 17, in call_sync_from_async
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: result = await coro
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: ^^^^^^^^^^
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: File "/root/.local/share/uv/python/cpython-3.13.15-linux-x86_64-gnu/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: result = self.fn(*self.args, **self.kwargs)
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: File "/opt/openhands-venv/lib/python3.13/site-packages/openhands/utils/async_utils.py", line 16, in <lambda>
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: coro = loop.run_in_executor(None, lambda: fn(*args, **kwargs))
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: ~~^^^^^^^^^^^^^^^^^
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: File "/opt/openhands-venv/lib/python3.13/site-packages/openhands/runtime/utils/bash.py", line 602, in execute
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: command = escape_bash_special_chars(command)
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: File "/opt/openhands-venv/lib/python3.13/site-packages/openhands/runtime/utils/bash.py", line 151, in escape_bash_special_chars
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: nodes = list(bashlex.parse(command))
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: ~~~~~~~~~~~~~^^^^^^^^^
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: File "/opt/openhands-venv/lib/python3.13/site-packages/bashlex/parser.py", line 620, in parse
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: ef.visit(parts[-1])
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: ~~~~~~~~^^^^^^^^^^^
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: File "/opt/openhands-venv/lib/python3.13/site-packages/bashlex/ast.py", line 38, in visit
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: k = n.kind
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: ^^^^^^
+[92m20:21:06 - openhands:INFO[0m: local_runtime.py:715 - server: AttributeError: 'str' object has no attribute 'kind'. Did you mean: 'find'?
+[92m20:33:34 - openhands:INFO[0m: agent_controller.py:668 - [Agent Controller bc8c15cc-528c-42-c1794f20615c702] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+[92m20:33:34 - openhands:INFO[0m: conversation_stats.py:65 - Saved conversation stats
+[92m20:33:34 - openhands:INFO[0m: local_runtime.py:715 - server: [92m20:33:34 - openhands:INFO[0m: action_execution_server.py:739 - Shutting down MCP Proxy Manager...
+[92m20:33:34 - openhands:INFO[0m: local_runtime.py:710 - server log thread received exit signal.
+[92m20:33:34 - openhands:INFO[0m: local_runtime.py:728 - server log output thread finished.

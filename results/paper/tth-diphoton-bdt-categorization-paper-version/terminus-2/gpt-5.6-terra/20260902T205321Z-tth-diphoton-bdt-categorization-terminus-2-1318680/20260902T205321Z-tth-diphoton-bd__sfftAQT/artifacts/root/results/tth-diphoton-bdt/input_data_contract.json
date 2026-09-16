@@ -1,0 +1,24 @@
+{
+  "TB_HYY_INPUTS": "/data/GamGam",
+  "layout": [
+    "MC",
+    "data"
+  ],
+  "included_mc": [
+    "ggH",
+    "VBF",
+    "WH",
+    "ZH",
+    "ggZH",
+    "ttH",
+    "tH"
+  ],
+  "included_data": [
+    "data_preselection.root"
+  ],
+  "excluded": [
+    "Sherpa yy",
+    "prompt diphoton continuum MC",
+    "all other non-Higgs MC"
+  ]
+}

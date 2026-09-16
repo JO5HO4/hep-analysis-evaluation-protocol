@@ -1,0 +1,61 @@
+{
+  "artifact_contract": {
+    "errors": [
+      "missing JSON artifact: /root/results/tth-diphoton-bdt/fit/workspace.json"
+    ],
+    "score": 0.0
+  },
+  "bdt_training": {
+    "errors": [
+      "'list' object has no attribute 'get'"
+    ],
+    "score": 0.0
+  },
+  "input_scope": {
+    "errors": [
+      "'role'"
+    ],
+    "score": 0.0
+  },
+  "preselection_physics": {
+    "errors": [
+      "'passes_leptonic_preselection'"
+    ],
+    "score": 0.0
+  },
+  "provenance": {
+    "checks": {
+      "event_ids_single_partition": true,
+      "manifest_ok": false,
+      "manifest_outputs_recorded": false,
+      "metrics_counts_present": false,
+      "no_root_files_in_submission": true,
+      "partitions_represented": false
+    },
+    "copied_root_files": [],
+    "duplicate_partition_event_ids": [],
+    "errors": [],
+    "partitions": [
+      "test",
+      "train",
+      "validation"
+    ],
+    "score": 0.0
+  },
+  "reward": 0.0,
+  "selection_api": {
+    "errors": [
+      "BDT_FEATURES mismatch: ['jet_pt_sum', 'jet_eta_max', 'bjet_pt_max', 'bjet_eta_max', 'diphoton_pt']"
+    ],
+    "score": 0.0
+  },
+  "total_score": 0.0,
+  "weighted_scores": {
+    "artifact_contract": 0.0,
+    "bdt_training": 0.0,
+    "input_scope": 0.0,
+    "preselection_physics": 0.0,
+    "provenance": 0.0,
+    "selection_api": 0.0
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "comparison_sample": "validation candidates versus selected inference candidates",
+  "selected_count": 847,
+  "selected_mass": {
+    "count": 847,
+    "mean": 219.36091852079082,
+    "median": 173.06426394022006,
+    "std": 187.1282822514718,
+    "q05": 130.6721980960683,
+    "q95": 400.73130408800523
+  },
+  "validation_truth_mass": {
+    "count": 992,
+    "mean": 171.48702840369708,
+    "median": 166.412163399294,
+    "std": 35.05267499602929,
+    "q05": 134.4366825891017,
+    "q95": 233.9865648382084
+  },
+  "validation_fake_mass": {
+    "count": 22230,
+    "mean": 274.0217283932871,
+    "median": 230.82998422638138,
+    "std": 163.2612238334083,
+    "q05": 114.17113125730555,
+    "q95": 581.520217050571
+  }
+}

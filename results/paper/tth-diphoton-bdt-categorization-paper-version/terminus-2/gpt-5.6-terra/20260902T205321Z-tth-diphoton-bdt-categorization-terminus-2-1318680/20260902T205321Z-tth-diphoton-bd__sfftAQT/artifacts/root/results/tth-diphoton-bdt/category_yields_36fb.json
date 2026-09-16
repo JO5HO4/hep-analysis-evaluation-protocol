@@ -1,0 +1,79 @@
+[
+  {
+    "category": "ttH_had_BDT1",
+    "signal_ttH_tH": 1.6128204988655588,
+    "resonant_higgs_background": 0.07495496591735273,
+    "nti_continuum_proxy": 1.807999111111111,
+    "total_background": 1.8829540770284636,
+    "total_model_yield": 3.495774575894022,
+    "S/B": 0.8565373518884702,
+    "S/sqrt(B)": 1.1753471823975021,
+    "expected_counting_Z": 1.0488670789584347
+  },
+  {
+    "category": "ttH_had_BDT2",
+    "signal_ttH_tH": 1.1873006317067865,
+    "resonant_higgs_background": 0.17566777843829123,
+    "nti_continuum_proxy": 2.6500808888888887,
+    "total_background": 2.82574866732718,
+    "total_model_yield": 4.013049299033966,
+    "S/B": 0.4201720575630071,
+    "S/sqrt(B)": 0.7063076874635434,
+    "expected_counting_Z": 0.6639109910301504
+  },
+  {
+    "category": "ttH_had_BDT3",
+    "signal_ttH_tH": 0.0,
+    "resonant_higgs_background": 0.0,
+    "nti_continuum_proxy": 0.0,
+    "total_background": 0.0,
+    "total_model_yield": 0.0,
+    "S/B": 0.0,
+    "S/sqrt(B)": 0.0,
+    "expected_counting_Z": 0
+  },
+  {
+    "category": "ttH_had_BDT4",
+    "signal_ttH_tH": 0.0,
+    "resonant_higgs_background": 0.0,
+    "nti_continuum_proxy": 0.0,
+    "total_background": 0.0,
+    "total_model_yield": 0.0,
+    "S/B": 0.0,
+    "S/sqrt(B)": 0.0,
+    "expected_counting_Z": 0
+  },
+  {
+    "category": "tH_had_4j1b",
+    "signal_ttH_tH": 1.6636606333049557,
+    "resonant_higgs_background": 1.0166240184643598,
+    "nti_continuum_proxy": 14.620025688888886,
+    "total_background": 15.636649707353245,
+    "total_model_yield": 17.3003103406582,
+    "S/B": 0.10639495444619493,
+    "S/sqrt(B)": 0.42071973722943945,
+    "expected_counting_Z": 0.4135718172238346
+  },
+  {
+    "category": "tH_had_4j2b",
+    "signal_ttH_tH": 0.25495145579514406,
+    "resonant_higgs_background": 0.1497974196455356,
+    "nti_continuum_proxy": 1.5281307555555552,
+    "total_background": 1.6779281752010908,
+    "total_model_yield": 1.9328796309962348,
+    "S/B": 0.15194420092778374,
+    "S/sqrt(B)": 0.19682071848809096,
+    "expected_counting_Z": 0.19212777701662612
+  },
+  {
+    "category": "unassigned",
+    "signal_ttH_tH": 3.132278169635427,
+    "resonant_higgs_background": 3.606545164815352,
+    "nti_continuum_proxy": 48.486573422222214,
+    "total_background": 52.093118587037566,
+    "total_model_yield": 55.22539675667299,
+    "S/B": 0.060128444113054846,
+    "S/sqrt(B)": 0.4339804291318509,
+    "expected_counting_Z": 0.42973680288276134
+  }
+]

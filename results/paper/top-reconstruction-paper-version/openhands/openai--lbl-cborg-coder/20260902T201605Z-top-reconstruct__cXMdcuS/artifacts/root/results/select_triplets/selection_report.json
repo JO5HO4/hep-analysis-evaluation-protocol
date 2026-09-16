@@ -1,0 +1,7 @@
+{
+    "triplet_reconstruction_efficiency": 0.35287846481876334,
+    "score_threshold": 0.7,
+    "max_tops_per_event": 2,
+    "num_selected_triplets": 1177,
+    "num_selected_truth": 331
+}

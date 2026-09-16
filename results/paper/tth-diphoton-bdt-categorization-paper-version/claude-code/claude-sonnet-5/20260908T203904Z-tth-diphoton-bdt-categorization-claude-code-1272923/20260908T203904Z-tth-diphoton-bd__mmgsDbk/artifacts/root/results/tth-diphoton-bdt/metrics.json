@@ -1,0 +1,20 @@
+{
+  "bdt_weighted_roc_auc_by_partition": {
+    "train": 0.8051128454372919,
+    "val": 0.7900185686879356,
+    "test": 0.7844370524593633
+  },
+  "bdt_boundaries_accepted": [
+    0.87,
+    0.68
+  ],
+  "n_categories_kept": 4,
+  "n_categories_merged_to_unassigned": 2,
+  "combined_expected_counting_significance_Z_36fb": 1.523353107890214,
+  "combined_expected_asimov_significance_Z_36fb": 1.8312024498409505,
+  "sideband_scale_factors": {
+    "SF1": 0.026207001175712064,
+    "SF2": 0.09917700155497403,
+    "SF1_times_SF2": 0.0025991317963548013
+  }
+}

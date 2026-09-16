@@ -1,0 +1,14 @@
+{
+  "NTI_proxy_used": false,
+  "ranges_GeV": [
+    [
+      105,
+      120
+    ],
+    [
+      130,
+      160
+    ]
+  ],
+  "source": "observed TI GamGam data sidebands only"
+}

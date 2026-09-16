@@ -1,0 +1,23 @@
+{
+  "steps": [
+    "All events",
+    "Photon selection",
+    "Lepton selection",
+    "Jet selection",
+    "Event selection (hadronic or leptonic bookkeeping)"
+  ],
+  "yields": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "efficiencies": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ]
+}

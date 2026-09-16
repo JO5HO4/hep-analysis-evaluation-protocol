@@ -1,0 +1,56 @@
+{
+  "photons": {
+    "collection": "photon_*",
+    "pt_min_gev": 25.0,
+    "pt_operator": ">",
+    "abs_eta_max": 2.37,
+    "crack_veto_abs_eta": [
+      1.37,
+      1.52
+    ],
+    "require_tight_id": false,
+    "require_isolation": false,
+    "photon_tight_id_required": false,
+    "photon_isolation_required": false,
+    "explicit_statement": "Photon tight ID (photon_isTightID) is NOT required and photon isolation (photon_isTightIso) is NOT required for this preselection sample. Both flags are read and stored, but only to define the TI / NTI diphoton control categories used for the data-driven continuum estimate; neither is applied as an event selection cut at preselection.",
+    "higgs_candidate": "two leading-pT photons passing kinematic acceptance; relative-pT cuts lead pT/m_yy > 0.35 and sublead pT/m_yy > 0.25",
+    "ti_definition": "TI diphoton: BOTH photons pass tight ID AND tight isolation.",
+    "nti_definition": "NTI diphoton: at least one of the two photons FAILS tight ID or FAILS tight isolation.",
+    "m_gammagamma": "retained for bookkeeping and later validation; never a BDT input"
+  },
+  "electrons_muons": {
+    "collection": "lep_*",
+    "pt_min_gev": 10.0,
+    "pt_operator": ">",
+    "flavours": {
+      "electron": "lep_type == 11",
+      "muon": "lep_type == 13"
+    },
+    "require_id": false,
+    "require_isolation": false,
+    "explicit_statement": "No lepton ID and no lepton isolation requirement is applied for this preselection sample."
+  },
+  "jets": {
+    "collection": "jet_*",
+    "pt_min_gev": 25.0,
+    "pt_operator": ">",
+    "central_definition": "|eta| <= 2.5",
+    "forward_definition": "|eta| > 2.5",
+    "btag_definition": "jet_btag_quantile >= 4",
+    "btag_definition_note": "Documented b-tag working point: the per-jet b-tagging quantile stored in the open-data ntuple, jet_btag_quantile >= 4.",
+    "forward_jet_availability": "The current ATLAS open-data GamGam ntuples contain no reconstructed jets with |eta| > 2.5, so n_jets_forward is identically 0 in this run. Leptonic top-associated categories that rely on forward jets are therefore out of scope."
+  },
+  "missing_transverse_momentum": {
+    "branch": "met",
+    "units": "GeV"
+  },
+  "channels": {
+    "hadronic": "n_leptons == 0 AND n_jets >= 3 AND n_bjets >= 1",
+    "leptonic_bookkeeping": "n_leptons >= 1 AND n_bjets >= 1 (provenance only; excluded from BDT training, boundary optimisation, categorization metrics and the workspace)"
+  },
+  "units": {
+    "momenta": "GeV",
+    "energies": "GeV",
+    "cross_sections": "pb"
+  }
+}

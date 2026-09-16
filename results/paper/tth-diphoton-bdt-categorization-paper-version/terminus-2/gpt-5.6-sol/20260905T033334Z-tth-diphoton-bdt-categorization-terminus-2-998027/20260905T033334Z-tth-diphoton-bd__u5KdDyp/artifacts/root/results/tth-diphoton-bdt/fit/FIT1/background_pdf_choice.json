@@ -1,0 +1,5 @@
+{
+  "choice": "RooExponential",
+  "per_category_floating_slope_and_normalization": true,
+  "selected_from": "observed TI sidebands only"
+}

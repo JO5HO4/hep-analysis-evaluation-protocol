@@ -1,0 +1,5 @@
+{
+  "ROOT_version": "6.38.00",
+  "backend": "ROOT/PyROOT/RooFit",
+  "workspace": "fit/FIT1/workspace.root"
+}

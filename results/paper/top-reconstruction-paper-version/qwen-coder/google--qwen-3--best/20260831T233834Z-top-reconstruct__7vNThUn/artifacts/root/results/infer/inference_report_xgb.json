@@ -1,0 +1,14 @@
+{
+  "n_test_triplets": 21323,
+  "n_truth_triplets": 938,
+  "truth_fraction": 0.04399005768419078,
+  "score_stats": {
+    "mean": 0.04208030551671982,
+    "std": 0.06752146780490875,
+    "min": 5.7123819715343416e-05,
+    "max": 0.6241010427474976,
+    "median": 0.014565451070666313
+  },
+  "model_path": "/root/results/train/model_xgb.json",
+  "input_dataset": "/root/results/dataset_prepare/test.parquet"
+}

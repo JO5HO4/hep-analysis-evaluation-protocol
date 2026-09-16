@@ -1,0 +1,35 @@
+{
+  "selection_strategy": "pairmax",
+  "configuration": "score-maximizing exhaustive choice of one or up to two mutually jet-disjoint triplets; no score threshold (recall-optimized)",
+  "max_candidates_per_event": 2,
+  "mutual_jet_exclusivity": true,
+  "inference_events": 1726,
+  "inference_truth_triplets": 887,
+  "selected_triplets": 2194,
+  "selected_truth_triplets": 623,
+  "triplet_reconstruction_efficiency": 0.7023675310033822,
+  "selected_multiplicity": {
+    "1": 1258,
+    "2": 468
+  },
+  "validation_strategy_comparison": [
+    {
+      "configuration": "one",
+      "validation_triplet_reconstruction_efficiency": 0.6219640971488912,
+      "n_selected": 1722,
+      "selected_truth": 589
+    },
+    {
+      "configuration": "greedy",
+      "validation_triplet_reconstruction_efficiency": 0.7096092925026399,
+      "n_selected": 2202,
+      "selected_truth": 672
+    },
+    {
+      "configuration": "pairmax",
+      "validation_triplet_reconstruction_efficiency": 0.7138331573389651,
+      "n_selected": 2202,
+      "selected_truth": 676
+    }
+  ]
+}

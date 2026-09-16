@@ -1,0 +1,54 @@
+{
+  "results": {
+    "summary": {
+      "failed": 6,
+      "other": 0,
+      "passed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "tests": 6
+    },
+    "tests": [
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [\"BDT_FEATURES mismatch: ['n_jets', 'n_bjets', 'jet_ht', 'lead_jet_pt', 'central_jet_fraction']\"], \"score\": 0.0}",
+        "name": "tth_preselection_score::selection_api",
+        "status": "failed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [\"'category_kept_for_analysis'\"], \"score\": 0.0}",
+        "name": "tth_preselection_score::artifact_contract",
+        "status": "failed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [\"'passes_leptonic_preselection'\"], \"score\": 0.0}",
+        "name": "tth_preselection_score::preselection_physics",
+        "status": "failed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [\"'role'\"], \"score\": 0.0}",
+        "name": "tth_preselection_score::input_scope",
+        "status": "failed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"after_balance\": {}, \"checks\": {\"background_mentions_ggh_and_nti\": false, \"boundary_optimization_uses_5pct_rule\": false, \"categorization_separates_components\": false, \"categorization_uses_36fb_not_fit_weight\": false, \"categorization_uses_assigned_categories\": true, \"class_balance_equal\": false, \"component_shape_components\": false, \"component_shapes_unit_area\": false, \"duration_recorded\": false, \"event_weight_order_recorded\": false, \"features_exact\": false, \"hadronic_prediction_scores_finite\": true, \"hadronic_scores_finite\": true, \"mgg_not_feature\": true, \"mixture_records_sf1_sf2\": false, \"no_ti_data_signal_window_training\": true, \"required_files_non_empty\": true, \"score_bins_explicit\": false, \"sidebands_and_signal_window_recorded\": false, \"signal_breakdown_has_tth_and_th\": false, \"signal_mentions_tth_and_th\": false, \"thresholds_present\": false, \"training_components_exact\": false}, \"components\": [], \"errors\": [], \"hadronic_scored_rows\": 272376, \"missing_or_empty\": [], \"prediction_scored_rows\": 272376, \"score\": 0.0, \"shape_unit_area\": {\"NTI_continuum_proxy_sideband\": false, \"ggH_resonant_background\": false, \"topH_signal\": false}, \"training_rows\": 52640}",
+        "name": "tth_preselection_score::bdt_training",
+        "status": "failed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"checks\": {\"event_ids_single_partition\": true, \"manifest_ok\": false, \"manifest_outputs_recorded\": false, \"metrics_counts_present\": false, \"no_root_files_in_submission\": true, \"partitions_represented\": false}, \"copied_root_files\": [], \"duplicate_partition_event_ids\": [], \"errors\": [], \"partitions\": [\"test\", \"train\", \"validation\"], \"score\": 0.0}",
+        "name": "tth_preselection_score::provenance",
+        "status": "failed"
+      }
+    ],
+    "tool": {
+      "name": "custom-tth-diphoton-preselection-scorer",
+      "version": "1"
+    }
+  }
+}

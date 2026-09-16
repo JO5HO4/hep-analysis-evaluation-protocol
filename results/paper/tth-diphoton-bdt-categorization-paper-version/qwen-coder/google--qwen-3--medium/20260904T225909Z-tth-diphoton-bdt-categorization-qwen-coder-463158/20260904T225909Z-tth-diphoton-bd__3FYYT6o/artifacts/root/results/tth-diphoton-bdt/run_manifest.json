@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-09-04 23:06:44",
+  "input_dir": "/root/submission/tth-diphoton-bdt/data",
+  "output_dir": "/root/results/tth-diphoton-bdt",
+  "tb_hyy_inputs": "/root/submission/tth-diphoton-bdt/data",
+  "tth_max_selected_per_sample": 0,
+  "config_file": "/root/submission/tth-diphoton-bdt/config/resolved.yaml",
+  "artifacts": [
+    "config_resolved.yaml",
+    "input_data_contract.json"
+  ]
+}

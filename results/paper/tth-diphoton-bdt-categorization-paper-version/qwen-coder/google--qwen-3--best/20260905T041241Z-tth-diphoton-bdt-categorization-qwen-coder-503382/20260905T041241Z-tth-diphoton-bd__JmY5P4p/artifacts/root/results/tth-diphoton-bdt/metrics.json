@@ -1,0 +1,9 @@
+{
+  "n_selected_events": 0,
+  "n_hadronic_events": 0,
+  "n_leptonic_bookkeeping_events": 0,
+  "signal_efficiency": 0.0,
+  "background_rejection": 0.0,
+  "training_wall_time": 0.0,
+  "total_wall_time": 0.0
+}

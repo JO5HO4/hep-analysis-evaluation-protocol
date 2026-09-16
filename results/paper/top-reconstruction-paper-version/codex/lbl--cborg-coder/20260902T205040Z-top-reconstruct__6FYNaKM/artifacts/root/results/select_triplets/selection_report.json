@@ -1,0 +1,7 @@
+{
+    "triplet_reconstruction_efficiency": 0.6136114160263447,
+    "total_truth_triplets": 911,
+    "recovered_truth_triplets": 559,
+    "selection_strategy": "greedy_score_disjoint_jets",
+    "max_candidates_per_event": 2
+}

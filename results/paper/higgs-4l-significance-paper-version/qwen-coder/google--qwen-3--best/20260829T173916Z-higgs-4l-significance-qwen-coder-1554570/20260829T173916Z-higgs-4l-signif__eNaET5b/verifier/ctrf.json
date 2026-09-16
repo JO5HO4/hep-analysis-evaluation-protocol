@@ -1,0 +1,48 @@
+{
+  "results": {
+    "summary": {
+      "failed": 3,
+      "other": 0,
+      "passed": 2,
+      "pending": 0,
+      "skipped": 0,
+      "tests": 5
+    },
+    "tests": [
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [], \"functional\": true, \"readme\": true, \"runtime_sec\": 37.02001225500135, \"score\": 100.0}",
+        "name": "higgs_4l_significance::framework",
+        "status": "passed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [], \"logL_b\": -7.951245680204403, \"logL_sb\": -6.278607590251634, \"ref_logL_b\": -7.951245680204405, \"ref_logL_sb\": -6.278607590251635, \"ref_test_statistic\": -3.3452761799055395, \"score\": 100.0, \"test_statistic\": -3.3452761799055377}",
+        "name": "higgs_4l_significance::test_statistic",
+        "status": "passed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [], \"p_value\": 0.970037, \"ref_p_value\": 0.0303385, \"ref_significance\": 1.8758418459887942, \"score\": 0.0, \"significance\": -1.8813376686123973}",
+        "name": "higgs_4l_significance::significance",
+        "status": "failed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [], \"mu_hat\": 1.033990803664225, \"mu_hi\": 1.7702228903725798, \"mu_lo\": 0.0, \"ref_mu_hat\": 1.034, \"ref_mu_hi\": 1.77, \"ref_mu_lo\": 0.421, \"score\": 75.0}",
+        "name": "higgs_4l_significance::signal_strength",
+        "status": "failed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"files\": [], \"score\": 0.0}",
+        "name": "higgs_4l_significance::diagnostics",
+        "status": "failed"
+      }
+    ],
+    "tool": {
+      "name": "custom-higgs-4l-significance-scorer",
+      "version": "1"
+    }
+  }
+}

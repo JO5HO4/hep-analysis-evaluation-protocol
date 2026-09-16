@@ -1,0 +1,12 @@
+{
+  "hadronic_selection": "N_leptons = 0, N_jets >= 3, N_bjets >= 1",
+  "leptonic_bookkeeping": "N_leptons >= 1, N_bjets >= 1",
+  "total_selected": 4000,
+  "by_process": {
+    "ggH": 1000,
+    "ttH": 1000,
+    "tH": 1000,
+    "data": 1000
+  },
+  "weighted_yield": 4000.0
+}

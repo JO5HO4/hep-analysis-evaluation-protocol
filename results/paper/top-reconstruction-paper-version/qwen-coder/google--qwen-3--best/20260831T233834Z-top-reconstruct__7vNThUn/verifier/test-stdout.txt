@@ -1,0 +1,137 @@
+{
+  "constraint_penalty": {
+    "applied": false,
+    "jet_exclusivity_violated": false,
+    "score_multiplier": 1.0,
+    "selection_constraints": {
+      "errors": [],
+      "event_selection_max_n_top_selected": 2,
+      "events_over_two_candidates": 0,
+      "events_with_shared_jets": 0,
+      "jet_exclusivity_violated": false,
+      "max_selected_per_event": 2,
+      "rows_with_duplicate_jets": 0,
+      "selection_report_max_top_per_event": null,
+      "top_candidate_limit_violated": false,
+      "valid": true
+    },
+    "top_candidate_limit_violated": false
+  },
+  "framework": {
+    "empty_files": [],
+    "errors": [],
+    "missing": [],
+    "optimization_report_has_configuration_comparison": true,
+    "optimization_report_has_efficiency": true,
+    "optimization_report_numeric_values": 24,
+    "present": [
+      "dataset_build/triplets_raw.parquet",
+      "dataset_prepare/train.parquet",
+      "dataset_prepare/val.parquet",
+      "dataset_prepare/test.parquet",
+      "train/model_xgb.json",
+      "train/training_report_xgb.json",
+      "infer/inference_test_xgb.parquet",
+      "infer/inference_report_xgb.json",
+      "select_triplets/selected_triplets.parquet",
+      "select_triplets/event_selection.parquet",
+      "select_triplets/selection_report.json",
+      "optimization_report.md"
+    ],
+    "schema_errors": [
+      "selected_triplets.parquet failed selector-style validation: 1733 events have nonconsecutive selected_rank values"
+    ],
+    "score": 0.0,
+    "selection_constraints": {
+      "errors": [],
+      "event_selection_max_n_top_selected": 2,
+      "events_over_two_candidates": 0,
+      "events_with_shared_jets": 0,
+      "jet_exclusivity_violated": false,
+      "max_selected_per_event": 2,
+      "rows_with_duplicate_jets": 0,
+      "selection_report_max_top_per_event": null,
+      "top_candidate_limit_violated": false,
+      "valid": true
+    },
+    "selection_quality": {
+      "duplicate_selected_candidates": 0,
+      "errors": [
+        "1733 events have nonconsecutive selected_rank values"
+      ],
+      "events_with_nonconsecutive_ranks": 1733,
+      "fake_to_true_selected_ratio": 4.1080459770114945,
+      "selected_candidates": 2222,
+      "selected_candidates_missing_from_inference": 0,
+      "selected_fake_triplets": 1787,
+      "selected_rows": 2222,
+      "selected_truth_matched_triplets": 435,
+      "valid": false
+    }
+  },
+  "pipeline_quality": {
+    "auc_score": 0.0,
+    "efficiency_score": 35.66286215978928,
+    "errors": [],
+    "fake_to_true_selected_ratio": 4.1080459770114945,
+    "reconstruction_efficiency": 0.46375266524520253,
+    "score": 17.83143107989464,
+    "selected_fake_triplets": 1787,
+    "selected_truth_matched_triplets": 435,
+    "selection_constraints": {
+      "errors": [],
+      "event_selection_max_n_top_selected": 2,
+      "events_over_two_candidates": 0,
+      "events_with_shared_jets": 0,
+      "jet_exclusivity_violated": false,
+      "max_selected_per_event": 2,
+      "rows_with_duplicate_jets": 0,
+      "selection_report_max_top_per_event": null,
+      "top_candidate_limit_violated": false,
+      "valid": true
+    },
+    "selection_quality": {
+      "duplicate_selected_candidates": 0,
+      "errors": [
+        "1733 events have nonconsecutive selected_rank values"
+      ],
+      "events_with_nonconsecutive_ranks": 1733,
+      "fake_to_true_selected_ratio": 4.1080459770114945,
+      "selected_candidates": 2222,
+      "selected_candidates_missing_from_inference": 0,
+      "selected_fake_triplets": 1787,
+      "selected_rows": 2222,
+      "selected_truth_matched_triplets": 435,
+      "valid": false
+    },
+    "val_auc": 0.0
+  },
+  "raw_total_score_before_constraint_penalty": 35.08047995317529,
+  "reward": 0.3508047995317529,
+  "sanity_check": {
+    "files_found": [
+      "/root/results/sanity_checks/mass_comparison.png",
+      "/root/results/sanity_checks/sanity_check_report.json",
+      "/root/results/select_triplets/plots/n_selected_per_event.png",
+      "/root/results/select_triplets/plots/score_distribution.png",
+      "/root/results/select_triplets/plots/triplet_mass_distribution.png"
+    ],
+    "interpretation_or_quantitative_check": true,
+    "score": 100.0,
+    "selected_mass_distribution": true,
+    "true_and_fake_distributions": true
+  },
+  "score_units": "points out of 100; Harbor reward is total_score / 100; total_score = (0.75 * efficiency_score + 0.25 * mean(framework, validation_auc, sanity_check)) * constraint_violation_multiplier",
+  "score_weights": {
+    "constraint_violation_multiplier": 1.0,
+    "efficiency_assessment": 0.75,
+    "supporting_checks_total": 0.25
+  },
+  "supporting_component_scores": {
+    "framework": 0.0,
+    "sanity_check": 100.0,
+    "validation_auc": 0.0
+  },
+  "supporting_score": 33.333333333333336,
+  "total_score": 35.08047995317529
+}

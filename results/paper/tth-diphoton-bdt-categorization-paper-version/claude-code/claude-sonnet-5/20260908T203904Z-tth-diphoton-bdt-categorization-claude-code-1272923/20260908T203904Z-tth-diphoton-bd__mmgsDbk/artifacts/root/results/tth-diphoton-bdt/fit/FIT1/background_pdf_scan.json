@@ -1,0 +1,266 @@
+{
+  "ttH_had_BDT1": {
+    "n_sideband_events": 7,
+    "sideband_ranges_gev": {
+      "low": [
+        105.0,
+        120.0
+      ],
+      "high": [
+        130.0,
+        160.0
+      ]
+    },
+    "fit_range_gev": [
+      105.0,
+      160.0
+    ],
+    "scan": {
+      "exponential": {
+        "migrad_status": 0,
+        "nll": 26.61543626575007,
+        "n_free_params": 1,
+        "aic": 55.23087253150014,
+        "params": {
+          "slope_sb": -0.006417142379244305
+        },
+        "extrapolation_factor_full_over_sidebands": 1.2343069438363532,
+        "background_yield_full_range_estimate": 8.640148606854472
+      },
+      "chebychev1": {
+        "migrad_status": 0,
+        "nll": 26.60382050694749,
+        "n_free_params": 1,
+        "aic": 55.20764101389498,
+        "params": {
+          "cheb1_a1": -0.20279356478612295
+        },
+        "extrapolation_factor_full_over_sidebands": 1.2374308901856905,
+        "background_yield_full_range_estimate": 8.662016231299834
+      },
+      "chebychev2": {
+        "migrad_status": 0,
+        "nll": 25.628556030540885,
+        "n_free_params": 2,
+        "aic": 55.25711206108177,
+        "params": {
+          "cheb2_a1": -0.4762768976942432,
+          "cheb2_a2": -0.999556663792147
+        },
+        "extrapolation_factor_full_over_sidebands": 1.3644961861766072,
+        "background_yield_full_range_estimate": 9.55147330323625
+      }
+    },
+    "chosen_model": "chebychev1",
+    "chosen_model_result": {
+      "migrad_status": 0,
+      "nll": 26.60382050694749,
+      "n_free_params": 1,
+      "aic": 55.20764101389498,
+      "params": {
+        "cheb1_a1": -0.20279356478612295
+      },
+      "extrapolation_factor_full_over_sidebands": 1.2374308901856905,
+      "background_yield_full_range_estimate": 8.662016231299834
+    },
+    "chosen_exponential_slope": null
+  },
+  "ttH_had_BDT2": {
+    "n_sideband_events": 60,
+    "sideband_ranges_gev": {
+      "low": [
+        105.0,
+        120.0
+      ],
+      "high": [
+        130.0,
+        160.0
+      ]
+    },
+    "fit_range_gev": [
+      105.0,
+      160.0
+    ],
+    "scan": {
+      "exponential": {
+        "migrad_status": 0,
+        "nll": 228.2286376137234,
+        "n_free_params": 1,
+        "aic": 458.4572752274468,
+        "params": {
+          "slope_sb": -0.004457576613826417
+        },
+        "extrapolation_factor_full_over_sidebands": 1.2308373410351106,
+        "background_yield_full_range_estimate": 73.85024046210663
+      },
+      "chebychev1": {
+        "migrad_status": 0,
+        "nll": 228.2237875805815,
+        "n_free_params": 1,
+        "aic": 458.447575161163,
+        "params": {
+          "cheb1_a1": -0.12544939677962683
+        },
+        "extrapolation_factor_full_over_sidebands": 1.2315859625912724,
+        "background_yield_full_range_estimate": 73.89515775547635
+      },
+      "chebychev2": {
+        "migrad_status": 0,
+        "nll": 228.19427575745357,
+        "n_free_params": 2,
+        "aic": 460.38855151490714,
+        "params": {
+          "cheb2_a1": -0.11672032496469331,
+          "cheb2_a2": -0.05520445052461623
+        },
+        "extrapolation_factor_full_over_sidebands": 1.2382192205630682,
+        "background_yield_full_range_estimate": 74.2931532337841
+      }
+    },
+    "chosen_model": "chebychev1",
+    "chosen_model_result": {
+      "migrad_status": 0,
+      "nll": 228.2237875805815,
+      "n_free_params": 1,
+      "aic": 458.447575161163,
+      "params": {
+        "cheb1_a1": -0.12544939677962683
+      },
+      "extrapolation_factor_full_over_sidebands": 1.2315859625912724,
+      "background_yield_full_range_estimate": 73.89515775547635
+    },
+    "chosen_exponential_slope": null
+  },
+  "tH_had_4j1b": {
+    "n_sideband_events": 138,
+    "sideband_ranges_gev": {
+      "low": [
+        105.0,
+        120.0
+      ],
+      "high": [
+        130.0,
+        160.0
+      ]
+    },
+    "fit_range_gev": [
+      105.0,
+      160.0
+    ],
+    "scan": {
+      "exponential": {
+        "migrad_status": 0,
+        "nll": 516.7114108096548,
+        "n_free_params": 1,
+        "aic": 1035.4228216193096,
+        "params": {
+          "slope_sb": -0.02051986090158684
+        },
+        "extrapolation_factor_full_over_sidebands": 1.2524591346062193,
+        "background_yield_full_range_estimate": 172.83936057565825
+      },
+      "chebychev1": {
+        "migrad_status": 0,
+        "nll": 516.9528107045323,
+        "n_free_params": 1,
+        "aic": 1035.9056214090647,
+        "params": {
+          "cheb1_a1": -0.527964454147863
+        },
+        "extrapolation_factor_full_over_sidebands": 1.2626234526446354,
+        "background_yield_full_range_estimate": 174.24203646495968
+      },
+      "chebychev2": {
+        "migrad_status": 0,
+        "nll": 516.664151695996,
+        "n_free_params": 2,
+        "aic": 1037.328303391992,
+        "params": {
+          "cheb2_a1": -0.5346005723039972,
+          "cheb2_a2": 0.09737282645667646
+        },
+        "extrapolation_factor_full_over_sidebands": 1.250223741417536,
+        "background_yield_full_range_estimate": 172.53087631561996
+      }
+    },
+    "chosen_model": "exponential",
+    "chosen_model_result": {
+      "migrad_status": 0,
+      "nll": 516.7114108096548,
+      "n_free_params": 1,
+      "aic": 1035.4228216193096,
+      "params": {
+        "slope_sb": -0.02051986090158684
+      },
+      "extrapolation_factor_full_over_sidebands": 1.2524591346062193,
+      "background_yield_full_range_estimate": 172.83936057565825
+    },
+    "chosen_exponential_slope": -0.02051986090158684
+  },
+  "tH_had_4j2b": {
+    "n_sideband_events": 10,
+    "sideband_ranges_gev": {
+      "low": [
+        105.0,
+        120.0
+      ],
+      "high": [
+        130.0,
+        160.0
+      ]
+    },
+    "fit_range_gev": [
+      105.0,
+      160.0
+    ],
+    "scan": {
+      "exponential": {
+        "migrad_status": 0,
+        "nll": 37.254087034487064,
+        "n_free_params": 1,
+        "aic": 76.50817406897413,
+        "params": {
+          "slope_sb": -0.02384205362352187
+        },
+        "extrapolation_factor_full_over_sidebands": 1.2548125377052324,
+        "background_yield_full_range_estimate": 12.548125377052324
+      },
+      "chebychev1": {
+        "migrad_status": 0,
+        "nll": 37.25322061568437,
+        "n_free_params": 1,
+        "aic": 76.50644123136874,
+        "params": {
+          "cheb1_a1": -0.6242293057000247
+        },
+        "extrapolation_factor_full_over_sidebands": 1.2702795382341527,
+        "background_yield_full_range_estimate": 12.702795382341527
+      },
+      "chebychev2": {
+        "migrad_status": 0,
+        "nll": 37.253245246765154,
+        "n_free_params": 2,
+        "aic": 78.50649049353031,
+        "params": {
+          "cheb2_a1": -0.6231670474647432,
+          "cheb2_a2": -0.010689861447278496
+        },
+        "extrapolation_factor_full_over_sidebands": 1.271568441888818,
+        "background_yield_full_range_estimate": 12.71568441888818
+      }
+    },
+    "chosen_model": "chebychev1",
+    "chosen_model_result": {
+      "migrad_status": 0,
+      "nll": 37.25322061568437,
+      "n_free_params": 1,
+      "aic": 76.50644123136874,
+      "params": {
+        "cheb1_a1": -0.6242293057000247
+      },
+      "extrapolation_factor_full_over_sidebands": 1.2702795382341527,
+      "background_yield_full_range_estimate": 12.702795382341527
+    },
+    "chosen_exponential_slope": null
+  }
+}

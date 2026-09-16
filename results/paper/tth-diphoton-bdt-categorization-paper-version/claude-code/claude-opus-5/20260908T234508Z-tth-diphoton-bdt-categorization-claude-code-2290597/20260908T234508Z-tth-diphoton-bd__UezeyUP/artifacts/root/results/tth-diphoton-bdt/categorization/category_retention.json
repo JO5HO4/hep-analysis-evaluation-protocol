@@ -1,0 +1,117 @@
+{
+  "requirement": "A non-catch-all physics category is kept only if its TOTAL expected background yield in the 125 +/- 2 GeV signal window is >= 0.8 events, after applying the resonant Higgs normalisation and the scaled NTI continuum normalisation.",
+  "min_background_yield": 0.8,
+  "weight_used": "significance_model_weight_36fb",
+  "iterations": [
+    {
+      "iteration": 1,
+      "categories": {
+        "ttH_had_BDT1": {
+          "kept": true,
+          "total_expected_background_signal_window": 0.9343655588121915,
+          "resonant_higgs_bkg": 0.3142374227115658,
+          "nti_continuum_bkg": 0.6201281361006258,
+          "signal_ttH_tH": 1.4833971556779126,
+          "threshold": 0.8
+        },
+        "ttH_had_BDT2": {
+          "kept": true,
+          "total_expected_background_signal_window": 3.8801079567144385,
+          "resonant_higgs_bkg": 0.5927960515687745,
+          "nti_continuum_bkg": 3.287311905145664,
+          "signal_ttH_tH": 2.1986071823931996,
+          "threshold": 0.8
+        },
+        "ttH_had_BDT3": {
+          "kept": true,
+          "total_expected_background_signal_window": 15.813371141178605,
+          "resonant_higgs_bkg": 1.8857994314084305,
+          "nti_continuum_bkg": 13.927571709770174,
+          "signal_ttH_tH": 2.504402937229864,
+          "threshold": 0.8
+        },
+        "ttH_had_BDT4": {
+          "kept": false,
+          "total_expected_background_signal_window": 0.0,
+          "resonant_higgs_bkg": 0.0,
+          "nti_continuum_bkg": 0.0,
+          "signal_ttH_tH": 0.0,
+          "threshold": 0.8
+        },
+        "tH_had_4j1b": {
+          "kept": true,
+          "total_expected_background_signal_window": 4.8090894907046025,
+          "resonant_higgs_bkg": 0.14230887464122033,
+          "nti_continuum_bkg": 4.666780616063382,
+          "signal_ttH_tH": 0.1818757869548837,
+          "threshold": 0.8
+        },
+        "tH_had_4j2b": {
+          "kept": false,
+          "total_expected_background_signal_window": 0.31019851878417437,
+          "resonant_higgs_bkg": 0.025445803227764546,
+          "nti_continuum_bkg": 0.2847527155564098,
+          "signal_ttH_tH": 0.008864458425393738,
+          "threshold": 0.8
+        }
+      }
+    },
+    {
+      "iteration": 2,
+      "categories": {
+        "ttH_had_BDT1": {
+          "kept": true,
+          "total_expected_background_signal_window": 0.9343655588121915,
+          "resonant_higgs_bkg": 0.3142374227115658,
+          "nti_continuum_bkg": 0.6201281361006258,
+          "signal_ttH_tH": 1.4833971556779126,
+          "threshold": 0.8
+        },
+        "ttH_had_BDT2": {
+          "kept": true,
+          "total_expected_background_signal_window": 3.8801079567144385,
+          "resonant_higgs_bkg": 0.5927960515687745,
+          "nti_continuum_bkg": 3.287311905145664,
+          "signal_ttH_tH": 2.1986071823931996,
+          "threshold": 0.8
+        },
+        "ttH_had_BDT3": {
+          "kept": true,
+          "total_expected_background_signal_window": 15.813371141178605,
+          "resonant_higgs_bkg": 1.8857994314084305,
+          "nti_continuum_bkg": 13.927571709770174,
+          "signal_ttH_tH": 2.504402937229864,
+          "threshold": 0.8
+        },
+        "ttH_had_BDT4": {
+          "kept": false,
+          "reason": "dropped in an earlier iteration"
+        },
+        "tH_had_4j1b": {
+          "kept": true,
+          "total_expected_background_signal_window": 4.8090894907046025,
+          "resonant_higgs_bkg": 0.14230887464122033,
+          "nti_continuum_bkg": 4.666780616063382,
+          "signal_ttH_tH": 0.1818757869548837,
+          "threshold": 0.8
+        },
+        "tH_had_4j2b": {
+          "kept": false,
+          "reason": "dropped in an earlier iteration"
+        }
+      }
+    }
+  ],
+  "kept_categories": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "ttH_had_BDT3",
+    "tH_had_4j1b"
+  ],
+  "dropped_categories": [
+    "ttH_had_BDT4",
+    "tH_had_4j2b"
+  ],
+  "dropped_policy": "events of a dropped category fall through to the next priority category and ultimately to `unassigned`; dropped categories are excluded from final yields, significances, plots and the workspace",
+  "catch_all_category": "unassigned"
+}

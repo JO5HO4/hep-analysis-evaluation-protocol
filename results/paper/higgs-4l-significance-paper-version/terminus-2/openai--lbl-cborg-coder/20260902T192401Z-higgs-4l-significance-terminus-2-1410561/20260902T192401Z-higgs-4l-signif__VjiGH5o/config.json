@@ -1,0 +1,21 @@
+{
+    "task": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260902T192401Z-higgs-4l-significance-terminus-2-1410561"
+    },
+    "trial_name": "20260902T192401Z-higgs-4l-signif__VjiGH5o",
+    "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260902T192401Z-higgs-4l-significance-terminus-2-1410561",
+    "agent": {
+        "name": "harbor_agents.preinstalled:PreinstalledTerminus2",
+        "model_name": "openai/lbl/cborg-coder",
+        "kwargs": {
+            "model_info": {
+                "max_input_tokens": 114688,
+                "max_output_tokens": 16384,
+                "input_cost_per_token": 0,
+                "output_cost_per_token": 0
+            },
+            "api_base": "https://api.cborg.lbl.gov/v1"
+        }
+    },
+    "job_id": "ddae6ee9-018e-4889-8cb6-cb6ad046b3a0"
+}

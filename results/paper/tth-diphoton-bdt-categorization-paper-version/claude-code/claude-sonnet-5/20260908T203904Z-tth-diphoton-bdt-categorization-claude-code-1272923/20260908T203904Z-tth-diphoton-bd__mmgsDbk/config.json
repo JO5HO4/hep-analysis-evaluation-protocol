@@ -1,0 +1,28 @@
+{
+    "task": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260908T203904Z-tth-diphoton-bdt-categorization-claude-code-1272923"
+    },
+    "trial_name": "20260908T203904Z-tth-diphoton-bd__mmgsDbk",
+    "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260908T203904Z-tth-diphoton-bdt-categorization-claude-code-1272923",
+    "timeout_multiplier": 3.0,
+    "agent_setup_timeout_multiplier": 2.0,
+    "agent": {
+        "name": "harbor_agents.preinstalled:PreinstalledClaudeCode",
+        "model_name": "claude-sonnet-5",
+        "env": {
+            "TB_HYY_INPUTS": "/data/GamGam"
+        }
+    },
+    "environment": {
+        "type": "docker",
+        "mounts": [
+            {
+                "type": "bind",
+                "source": "<host-path>",
+                "target": "/data/GamGam",
+                "read_only": true
+            }
+        ]
+    },
+    "job_id": "6d65a6de-09ba-4dbf-91b9-9af582a62184"
+}

@@ -1,0 +1,42 @@
+{
+  "classifier": "sklearn.ensemble.HistGradientBoostingClassifier",
+  "deterministic_seed": 240513,
+  "evaluation_partition": "test",
+  "features": [
+    "n_central_jets",
+    "n_bjets",
+    "jet1_pt",
+    "jet_ht",
+    "diphoton_pt"
+  ],
+  "hyperparameters": {
+    "categorical_features": "from_dtype",
+    "class_weight": null,
+    "early_stopping": "auto",
+    "interaction_cst": null,
+    "l2_regularization": 1.0,
+    "learning_rate": 0.055,
+    "loss": "log_loss",
+    "max_bins": 255,
+    "max_depth": 4,
+    "max_features": 1.0,
+    "max_iter": 180,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 20,
+    "monotonic_cst": null,
+    "n_iter_no_change": 10,
+    "random_state": 240513,
+    "scoring": "loss",
+    "tol": 1e-07,
+    "validation_fraction": 0.1,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "mass_used_as_input": false,
+  "model_path": "model/bdt_model.pkl",
+  "negative_weight_policy_for_fit": "nonpositive signed physical weights get zero bdt_fit_weight; signed values are retained for yields",
+  "test_weighted_roc_auc": 0.8176052139123798,
+  "training_partition": "train",
+  "training_rows_with_positive_fit_weight": 48784,
+  "training_stage_duration_seconds": 1.236968405006337
+}

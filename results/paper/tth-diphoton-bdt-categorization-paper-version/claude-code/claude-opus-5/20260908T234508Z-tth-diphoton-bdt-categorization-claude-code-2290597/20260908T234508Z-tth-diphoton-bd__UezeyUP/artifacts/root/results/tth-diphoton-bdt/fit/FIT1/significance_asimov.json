@@ -1,0 +1,17 @@
+{
+  "method": "asymptotic likelihood-ratio discovery test statistic on signal+background Asimov data",
+  "mu_gen": 1.0,
+  "mu_hat": 1.000060360840747,
+  "mu_uncertainty": 0.7086130013158694,
+  "q0": 2.834773234790532,
+  "expected_Z": 1.6836784831999643,
+  "shared_signal_strength": true,
+  "categories": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "ttH_had_BDT3",
+    "tH_had_4j1b"
+  ],
+  "observed_Z": null,
+  "observed_blocked": true
+}

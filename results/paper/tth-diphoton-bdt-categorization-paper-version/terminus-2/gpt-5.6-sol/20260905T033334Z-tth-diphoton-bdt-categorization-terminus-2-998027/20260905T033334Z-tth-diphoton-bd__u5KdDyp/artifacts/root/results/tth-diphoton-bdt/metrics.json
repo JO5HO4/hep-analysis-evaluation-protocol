@@ -1,0 +1,8 @@
+{
+  "weighted_training_auc": 0.7622711449201789,
+  "combined_expected_counting_significance": 1.252250119856921,
+  "SF1": 0.026218933788654905,
+  "SF2": 0.09926010244735345,
+  "SF1_times_SF2": 0.002602494053922263,
+  "blinded_observed_TI_signal_window": true
+}

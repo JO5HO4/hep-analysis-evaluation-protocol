@@ -1,0 +1,11 @@
+{
+  "backend": "ROOT/PyROOT/RooFit",
+  "categories": [
+    "ttH_had_BDT1",
+    "ttH_had_BDT2",
+    "ttH_had_BDT3",
+    "tH_had_4j1b"
+  ],
+  "expected_Z": 1.435087899760357,
+  "blinded": true
+}

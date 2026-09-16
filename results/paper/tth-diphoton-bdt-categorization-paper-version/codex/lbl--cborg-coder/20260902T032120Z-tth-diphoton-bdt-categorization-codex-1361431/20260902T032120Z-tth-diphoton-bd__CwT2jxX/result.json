@@ -1,0 +1,125 @@
+{
+    "id": "fbe37392-2fc1-4d50-839d-bff8735b9777",
+    "task_name": "haichenwangberkeley/tth-diphoton-bdt-categorization",
+    "trial_name": "20260902T032120Z-tth-diphoton-bd__CwT2jxX",
+    "trial_uri": "file:///tmp/terminal-bench-harbor-jobs/20260902T032120Z-tth-diphoton-bdt-categorization-codex-1361431/20260902T032120Z-tth-diphoton-bd__CwT2jxX",
+    "task_id": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260902T032120Z-tth-diphoton-bdt-categorization-codex-1361431"
+    },
+    "source": null,
+    "task_checksum": "31ad0448cc9391819b3faa67428ce00606878660e3e38bbbc9ac23e57ff507f0",
+    "config": {
+        "task": {
+            "path": "/tmp/terminal-bench-staged-tasks/20260902T032120Z-tth-diphoton-bdt-categorization-codex-1361431",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "20260902T032120Z-tth-diphoton-bd__CwT2jxX",
+        "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260902T032120Z-tth-diphoton-bdt-categorization-codex-1361431",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "harbor_agents.preinstalled:PreinstalledCodex",
+            "import_path": null,
+            "model_name": "lbl/cborg-coder",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "env": {
+                "TB_HYY_INPUTS": "/data/GamGam"
+            },
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": [
+                {
+                    "type": "bind",
+                    "source": "<source-repository>/data/GamGam",
+                    "target": "/data/GamGam",
+                    "read_only": true
+                }
+            ],
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "f3cb6e6f-7162-4c81-9d33-2bcb43aaca03",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "codex",
+        "version": "0.149.0",
+        "model_info": {
+            "name": "cborg-coder",
+            "provider": "lbl"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 4241880,
+        "n_cache_tokens": 3747232,
+        "n_output_tokens": 45874,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-09-02T03:21:45.416280Z",
+    "finished_at": "2026-09-02T03:50:16.720514Z",
+    "environment_setup": {
+        "started_at": "2026-09-02T03:21:45.533956Z",
+        "finished_at": "2026-09-02T03:21:58.212991Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-02T03:21:58.213057Z",
+        "finished_at": "2026-09-02T03:22:03.077952Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-02T03:22:03.078134Z",
+        "finished_at": "2026-09-02T03:48:33.311383Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-02T03:49:06.227712Z",
+        "finished_at": "2026-09-02T03:50:16.720501Z"
+    },
+    "step_results": null
+}

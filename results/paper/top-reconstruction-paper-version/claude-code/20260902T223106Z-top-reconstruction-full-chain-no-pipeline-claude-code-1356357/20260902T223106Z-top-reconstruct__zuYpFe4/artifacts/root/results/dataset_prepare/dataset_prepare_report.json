@@ -1,0 +1,32 @@
+{
+  "seed": 42,
+  "fracs": [
+    0.6,
+    0.2,
+    0.2
+  ],
+  "train_events_cap": null,
+  "neg_per_pos": null,
+  "require_ge_ntruth": 0,
+  "n_events": {
+    "train": 5199,
+    "val": 1733,
+    "test": 1733
+  },
+  "n_rows": {
+    "train": 63261,
+    "val": 20502,
+    "test": 22021
+  },
+  "n_truth": {
+    "train": 2684,
+    "val": 885,
+    "test": 931
+  },
+  "signal_fraction": {
+    "train": 0.04242740392975135,
+    "val": 0.04316652033947908,
+    "test": 0.04227782571182054
+  },
+  "raw_train_rows": 63261
+}

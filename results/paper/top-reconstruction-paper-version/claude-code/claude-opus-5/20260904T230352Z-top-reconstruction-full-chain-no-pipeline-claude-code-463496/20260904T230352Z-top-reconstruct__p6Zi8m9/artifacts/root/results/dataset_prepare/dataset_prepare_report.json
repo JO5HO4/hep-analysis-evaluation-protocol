@@ -1,0 +1,30 @@
+{
+  "seed": 42,
+  "n_events_total": 8665,
+  "frac_train": 0.6,
+  "frac_val": 0.2,
+  "frac_test": 0.2,
+  "splits": {
+    "train": {
+      "n_events": 5199,
+      "n_triplets": 63261,
+      "n_truth": 2684,
+      "truth_fraction": 0.04242740392975135,
+      "pos_weight_balanced": 22.56967213114754
+    },
+    "val": {
+      "n_events": 1733,
+      "n_triplets": 20502,
+      "n_truth": 885,
+      "truth_fraction": 0.04316652033947908,
+      "pos_weight_balanced": 22.166101694915255
+    },
+    "test": {
+      "n_events": 1733,
+      "n_triplets": 22021,
+      "n_truth": 931,
+      "truth_fraction": 0.04227782571182054,
+      "pos_weight_balanced": 22.653061224489797
+    }
+  }
+}

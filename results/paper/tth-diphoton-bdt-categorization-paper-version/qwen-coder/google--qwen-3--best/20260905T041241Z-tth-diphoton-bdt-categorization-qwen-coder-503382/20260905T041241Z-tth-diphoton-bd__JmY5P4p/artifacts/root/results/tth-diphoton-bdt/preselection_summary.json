@@ -1,0 +1,12 @@
+{
+  "event_selection": {
+    "hadronic": "zero selected leptons, at least three selected jets, at least one selected b-jet",
+    "leptonic_bookkeeping": "at least one selected lepton, at least one selected b-jet (for provenance only)"
+  },
+  "photon_selection": "Kinematic acceptance (pT > 20 GeV), no tight ID or isolation requirement",
+  "counts": {
+    "total": 0,
+    "by_process": {},
+    "by_channel": {}
+  }
+}

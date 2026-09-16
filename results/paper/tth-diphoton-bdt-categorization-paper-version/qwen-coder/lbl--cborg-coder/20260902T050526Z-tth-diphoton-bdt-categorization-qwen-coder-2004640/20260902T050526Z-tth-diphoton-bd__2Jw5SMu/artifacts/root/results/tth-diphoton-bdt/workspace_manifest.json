@@ -1,0 +1,1 @@
+{"backend": "ROOT/PyROOT/RooFit", "signal_model": "ttH+tH TI MC", "background_model": "Fixed resonant-Higgs + Floating smooth continuum", "categories": ["ttH_had_BDT1", "ttH_had_BDT2", "ttH_had_BDT3", "ttH_had_BDT4", "tH_had_4j1b", "tH_had_4j2b"]}

@@ -1,0 +1,20 @@
+{
+    "task": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260902T201605Z-top-reconstruction-full-chain-no-pipeline-openhands-1305603"
+    },
+    "trial_name": "20260902T201605Z-top-reconstruct__cXMdcuS",
+    "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260902T201605Z-top-reconstruction-full-chain-no-pipeline-openhands-1305603",
+    "agent": {
+        "name": "harbor_agents.preinstalled:PreinstalledOpenHands",
+        "model_name": "openai/lbl/cborg-coder",
+        "kwargs": {
+            "model_info": {
+                "max_input_tokens": 114688,
+                "max_output_tokens": 16384,
+                "input_cost_per_token": 0,
+                "output_cost_per_token": 0
+            }
+        }
+    },
+    "job_id": "084c619f-16e9-414f-837a-99213a818a11"
+}

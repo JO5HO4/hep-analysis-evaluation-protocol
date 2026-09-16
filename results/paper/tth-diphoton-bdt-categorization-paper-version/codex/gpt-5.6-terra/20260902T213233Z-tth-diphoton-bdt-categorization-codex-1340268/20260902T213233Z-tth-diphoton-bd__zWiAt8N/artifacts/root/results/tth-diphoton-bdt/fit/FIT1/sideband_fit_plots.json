@@ -1,0 +1,22 @@
+{
+  "plots": [
+    "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT1.png",
+    "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT2.png",
+    "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_ttH_had_BDT3.png",
+    "/root/results/tth-diphoton-bdt/fit/FIT1/plots/sidebands_background_fit_tH_had_4j1b.png"
+  ],
+  "sidebands": [
+    [
+      105,
+      120
+    ],
+    [
+      130,
+      160
+    ]
+  ],
+  "blinded": [
+    123,
+    127
+  ]
+}

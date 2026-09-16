@@ -1,0 +1,16 @@
+{
+  "selected_rows_visible_under_blinding": 339948,
+  "hadronic": 272376,
+  "leptonic_bookkeeping": 67630,
+  "by_process": {
+    "data": 219784,
+    "ttH": 102190,
+    "tH": 12512,
+    "ggH": 2532,
+    "ZH": 1008,
+    "ggZH": 954,
+    "WH": 909,
+    "VBF": 59
+  },
+  "observed_TI_signal_window_blinded": true
+}

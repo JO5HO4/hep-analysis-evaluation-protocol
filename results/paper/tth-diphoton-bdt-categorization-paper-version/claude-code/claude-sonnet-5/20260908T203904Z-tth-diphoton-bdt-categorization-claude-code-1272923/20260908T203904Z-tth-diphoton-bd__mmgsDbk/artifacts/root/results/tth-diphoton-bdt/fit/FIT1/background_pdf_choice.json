@@ -1,0 +1,50 @@
+{
+  "ttH_had_BDT1": {
+    "category": "ttH_had_BDT1",
+    "chosen_model": "chebychev1",
+    "chosen_params": {
+      "cheb1_a1": -0.20279356478612295
+    },
+    "aic_by_model": {
+      "exponential": 55.23087253150014,
+      "chebychev1": 55.20764101389498,
+      "chebychev2": 55.25711206108177
+    }
+  },
+  "ttH_had_BDT2": {
+    "category": "ttH_had_BDT2",
+    "chosen_model": "chebychev1",
+    "chosen_params": {
+      "cheb1_a1": -0.12544939677962683
+    },
+    "aic_by_model": {
+      "exponential": 458.4572752274468,
+      "chebychev1": 458.447575161163,
+      "chebychev2": 460.38855151490714
+    }
+  },
+  "tH_had_4j1b": {
+    "category": "tH_had_4j1b",
+    "chosen_model": "exponential",
+    "chosen_params": {
+      "slope_sb": -0.02051986090158684
+    },
+    "aic_by_model": {
+      "exponential": 1035.4228216193096,
+      "chebychev1": 1035.9056214090647,
+      "chebychev2": 1037.328303391992
+    }
+  },
+  "tH_had_4j2b": {
+    "category": "tH_had_4j2b",
+    "chosen_model": "chebychev1",
+    "chosen_params": {
+      "cheb1_a1": -0.6242293057000247
+    },
+    "aic_by_model": {
+      "exponential": 76.50817406897413,
+      "chebychev1": 76.50644123136874,
+      "chebychev2": 78.50649049353031
+    }
+  }
+}

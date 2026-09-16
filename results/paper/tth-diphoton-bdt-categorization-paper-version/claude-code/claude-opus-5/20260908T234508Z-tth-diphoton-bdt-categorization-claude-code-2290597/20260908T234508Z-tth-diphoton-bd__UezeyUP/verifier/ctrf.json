@@ -1,0 +1,54 @@
+{
+  "results": {
+    "summary": {
+      "failed": 6,
+      "other": 0,
+      "passed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "tests": 6
+    },
+    "tests": [
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [\"BDT_FEATURES mismatch: ('n_jets_central', 'n_bjets', 'ht_jets', 'met', 'pt_gg')\"], \"score\": 0.0}",
+        "name": "tth_preselection_score::selection_api",
+        "status": "failed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [\"'category_kept_for_analysis'\"], \"score\": 0.0}",
+        "name": "tth_preselection_score::artifact_contract",
+        "status": "failed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [\"'n_btags'\"], \"score\": 0.0}",
+        "name": "tth_preselection_score::preselection_physics",
+        "status": "failed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [\"'role'\"], \"score\": 0.0}",
+        "name": "tth_preselection_score::input_scope",
+        "status": "failed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"errors\": [\"'str' object has no attribute 'get'\"], \"score\": 0.0}",
+        "name": "tth_preselection_score::bdt_training",
+        "status": "failed"
+      },
+      {
+        "duration": 0.0,
+        "message": "{\"checks\": {\"event_ids_single_partition\": true, \"manifest_ok\": false, \"manifest_outputs_recorded\": false, \"metrics_counts_present\": false, \"no_root_files_in_submission\": true, \"partitions_represented\": false}, \"copied_root_files\": [], \"duplicate_partition_event_ids\": [], \"errors\": [], \"partitions\": [\"test\", \"train\", \"val\"], \"score\": 0.0}",
+        "name": "tth_preselection_score::provenance",
+        "status": "failed"
+      }
+    ],
+    "tool": {
+      "name": "custom-tth-diphoton-preselection-scorer",
+      "version": "1"
+    }
+  }
+}

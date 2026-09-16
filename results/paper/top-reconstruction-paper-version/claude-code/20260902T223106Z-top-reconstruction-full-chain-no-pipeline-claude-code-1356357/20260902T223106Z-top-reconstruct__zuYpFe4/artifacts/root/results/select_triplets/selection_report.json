@@ -1,0 +1,112 @@
+{
+  "selection_config": {
+    "strategy": "maxsum",
+    "max_candidates_per_event": 2,
+    "score_threshold_rank1": null,
+    "score_threshold_rank2": null,
+    "jet_disjoint_constraint": true,
+    "score_column": "score_xgb",
+    "note": "maxsum = choose the jet-disjoint pair of triplets maximising the sum of calibrated truth probabilities; this maximises the expected number of recovered truth triplets. No score threshold is applied because the target metric is pure recall."
+  },
+  "triplet_reconstruction_efficiency": 0.7787325456498388,
+  "n_truth_triplets_in_inference_sample": 931,
+  "n_selected_truth_triplets": 725,
+  "n_selected_triplets": 2221,
+  "selection_purity": 0.3264295362449347,
+  "n_events_in_inference_sample": 1733,
+  "n_events_with_selection": 1733,
+  "selected_multiplicity": {
+    "1": 1245,
+    "2": 488
+  },
+  "constraint_checks": {
+    "max_selected_per_event": 2,
+    "events_exceeding_two": 0,
+    "overlapping_pairs_within_event": 0,
+    "all_constraints_satisfied": true
+  },
+  "efficiency_by_n_truth_in_event": {
+    "1": {
+      "n_events": 701,
+      "n_truth": 701,
+      "n_recovered": 535,
+      "efficiency": 0.7631954350927247
+    },
+    "2": {
+      "n_events": 115,
+      "n_truth": 230,
+      "n_recovered": 190,
+      "efficiency": 0.8260869565217391
+    }
+  },
+  "efficiency_by_n_genjet": {
+    "3": {
+      "n_events": 356,
+      "n_truth": 38,
+      "n_recovered": 38,
+      "efficiency": 1.0
+    },
+    "4": {
+      "n_events": 464,
+      "n_truth": 167,
+      "n_recovered": 141,
+      "efficiency": 0.844311377245509
+    },
+    "5": {
+      "n_events": 425,
+      "n_truth": 239,
+      "n_recovered": 178,
+      "efficiency": 0.7447698744769874
+    },
+    "6": {
+      "n_events": 274,
+      "n_truth": 232,
+      "n_recovered": 183,
+      "efficiency": 0.7887931034482759
+    },
+    "7": {
+      "n_events": 142,
+      "n_truth": 162,
+      "n_recovered": 121,
+      "efficiency": 0.7469135802469136
+    },
+    "8": {
+      "n_events": 50,
+      "n_truth": 64,
+      "n_recovered": 50,
+      "efficiency": 0.78125
+    },
+    "9": {
+      "n_events": 16,
+      "n_truth": 21,
+      "n_recovered": 9,
+      "efficiency": 0.42857142857142855
+    },
+    "10": {
+      "n_events": 3,
+      "n_truth": 3,
+      "n_recovered": 1,
+      "efficiency": 0.3333333333333333
+    },
+    "11": {
+      "n_events": 1,
+      "n_truth": 2,
+      "n_recovered": 2,
+      "efficiency": 1.0
+    },
+    "12": {
+      "n_events": 2,
+      "n_truth": 3,
+      "n_recovered": 2,
+      "efficiency": 0.6666666666666666
+    }
+  },
+  "efficiency_rank1_only": 0.6745435016111708,
+  "selected_mass_summary": {
+    "mean": 206.75241557932395,
+    "std": 135.21038712287657,
+    "median": 171.38937377929688,
+    "q16": 147.04507141113282,
+    "q84": 257.1481079101562
+  }
+}

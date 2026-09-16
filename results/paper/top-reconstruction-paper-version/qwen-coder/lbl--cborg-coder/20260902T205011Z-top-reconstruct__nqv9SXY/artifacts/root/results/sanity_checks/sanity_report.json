@@ -1,0 +1,7 @@
+{
+    "selected_mass_mean": 170.13307189941406,
+    "selected_mass_std": 68.10195922851562,
+    "truth_mass_mean": 170.4082794189453,
+    "fake_mass_mean": 278.7167663574219,
+    "interpretation": "Selected mass distribution peaks around the top mass (172.5 GeV) and is broader than truth but narrower than fake, indicating successful reconstruction."
+}

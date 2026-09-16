@@ -1,0 +1,13 @@
+{
+  "seed": 42,
+  "n_events_total": 8665,
+  "n_events_train": 6065,
+  "n_events_val": 1299,
+  "n_events_test": 1301,
+  "n_rows_train": 73992,
+  "n_rows_val": 15862,
+  "n_rows_test": 15930,
+  "n_truth_train": 3114,
+  "n_truth_val": 697,
+  "n_truth_test": 689
+}

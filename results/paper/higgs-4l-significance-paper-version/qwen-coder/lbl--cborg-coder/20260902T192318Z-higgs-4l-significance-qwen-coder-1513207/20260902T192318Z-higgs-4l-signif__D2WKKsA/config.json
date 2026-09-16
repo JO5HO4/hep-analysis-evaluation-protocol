@@ -1,0 +1,12 @@
+{
+    "task": {
+        "path": "/tmp/terminal-bench-staged-tasks/20260902T192318Z-higgs-4l-significance-qwen-coder-1513207"
+    },
+    "trial_name": "20260902T192318Z-higgs-4l-signif__D2WKKsA",
+    "trials_dir": "/tmp/terminal-bench-harbor-jobs/20260902T192318Z-higgs-4l-significance-qwen-coder-1513207",
+    "agent": {
+        "name": "harbor_agents.preinstalled:PreinstalledQwenCode",
+        "model_name": "lbl/cborg-coder"
+    },
+    "job_id": "13bf7581-2c99-4e1a-a0e4-f165fab36a03"
+}

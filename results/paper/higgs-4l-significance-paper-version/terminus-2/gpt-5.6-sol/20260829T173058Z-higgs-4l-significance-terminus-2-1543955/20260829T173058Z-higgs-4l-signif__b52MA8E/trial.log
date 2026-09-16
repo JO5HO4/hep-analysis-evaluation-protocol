@@ -1,0 +1,11 @@
+Skipping image OS validation for hb__48bfa032ce03010eb446b5b01777b333: container inspect returned 125
+container copy failed; retrying upload with tar stream: podman cp failed. Return code: 125. Stdout: . Stderr: Error: 1 error occurred:
+	* copying from host: copier: get: "<host-path>": getting extended attributes for "<host-path>": listing extended attributes of "<host-path>": protocol error
+.
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260829T173058Z-higgs-4l-significance-terminus-2-1543955/20260829T173058Z-higgs-4l-signif__b52MA8E/agent/trajectory.json
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260829T173058Z-higgs-4l-significance-terminus-2-1543955/20260829T173058Z-higgs-4l-signif__b52MA8E/agent/trajectory.json
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260829T173058Z-higgs-4l-significance-terminus-2-1543955/20260829T173058Z-higgs-4l-signif__b52MA8E/agent/trajectory.json
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260829T173058Z-higgs-4l-significance-terminus-2-1543955/20260829T173058Z-higgs-4l-signif__b52MA8E/agent/trajectory.json
+Trajectory dumped to /tmp/terminal-bench-harbor-jobs/20260829T173058Z-higgs-4l-significance-terminus-2-1543955/20260829T173058Z-higgs-4l-signif__b52MA8E/agent/trajectory.json
+Collecting main service artifacts
+Skipping image OS validation for hb__e0d6b29c24d24afda34d930a021db290: container inspect returned 125
