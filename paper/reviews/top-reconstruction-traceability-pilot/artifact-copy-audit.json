@@ -115,6 +115,7 @@
     "smallest_safe_recovery_rule": "Parse shell heredocs/redirections and native write or patch payloads into reviewer-generated recovered-source files; do not execute them.",
     "source_recovery_state": "recoverable_from_transcript",
     "status": "completed",
+    "task_set": "top-reconstruction-paper-version",
     "training_or_model_artifacts": [
       "artifacts/root/results/dataset_prepare/train.parquet",
       "artifacts/root/results/train/model_xgb.json",
@@ -188,6 +189,7 @@
     "smallest_safe_recovery_rule": "Parse shell heredocs/redirections and native write or patch payloads into reviewer-generated recovered-source files; do not execute them.",
     "source_recovery_state": "recoverable_from_transcript",
     "status": "completed",
+    "task_set": "top-reconstruction-paper-version",
     "training_or_model_artifacts": [],
     "transcript_written_script_paths": []
   },
@@ -304,6 +306,7 @@
     "smallest_safe_recovery_rule": "Parse shell heredocs/redirections and native write or patch payloads into reviewer-generated recovered-source files; do not execute them.",
     "source_recovery_state": "recoverable_from_transcript",
     "status": "completed",
+    "task_set": "top-reconstruction-paper-version",
     "training_or_model_artifacts": [
       "artifacts/root/results/dataset_prepare/train.parquet",
       "artifacts/root/results/train/model_it1_binary.json",
@@ -409,6 +412,7 @@
     "smallest_safe_recovery_rule": "Parse shell heredocs/redirections and native write or patch payloads into reviewer-generated recovered-source files; do not execute them.",
     "source_recovery_state": "recoverable_from_transcript",
     "status": "completed",
+    "task_set": "top-reconstruction-paper-version",
     "training_or_model_artifacts": [
       "artifacts/root/results/dataset_prepare/train.parquet",
       "artifacts/root/results/train/model_xgb.json",
@@ -504,6 +508,7 @@
     "smallest_safe_recovery_rule": "Parse shell heredocs/redirections and native write or patch payloads into reviewer-generated recovered-source files; do not execute them.",
     "source_recovery_state": "recoverable_from_transcript",
     "status": "completed",
+    "task_set": "top-reconstruction-paper-version",
     "training_or_model_artifacts": [
       "artifacts/root/results/dataset_prepare/train.parquet",
       "artifacts/root/results/train/model_xgb.json",
@@ -606,6 +611,7 @@
     "smallest_safe_recovery_rule": "Parse shell heredocs/redirections and native write or patch payloads into reviewer-generated recovered-source files; do not execute them.",
     "source_recovery_state": "recoverable_from_transcript",
     "status": "completed",
+    "task_set": "top-reconstruction-paper-version",
     "training_or_model_artifacts": [
       "artifacts/root/results/dataset_prepare/train.parquet",
       "artifacts/root/results/train/model_xgb.json",
@@ -695,6 +701,7 @@
     "smallest_safe_recovery_rule": "Parse shell heredocs/redirections and native write or patch payloads into reviewer-generated recovered-source files; do not execute them.",
     "source_recovery_state": "recoverable_from_transcript",
     "status": "completed",
+    "task_set": "top-reconstruction-paper-version",
     "training_or_model_artifacts": [
       "artifacts/root/results/dataset_prepare/train.parquet",
       "artifacts/root/results/train/model_xgb.json",
@@ -787,6 +794,7 @@
     "smallest_safe_recovery_rule": "Parse shell heredocs/redirections and native write or patch payloads into reviewer-generated recovered-source files; do not execute them.",
     "source_recovery_state": "recoverable_from_transcript",
     "status": "completed",
+    "task_set": "top-reconstruction-paper-version",
     "training_or_model_artifacts": [
       "artifacts/root/results/dataset_prepare/train.parquet",
       "artifacts/root/results/train/model_xgb.json",
@@ -863,6 +871,7 @@
     "smallest_safe_recovery_rule": "Record the command only. Future collection should copy files created or modified outside results/**, with a manifest.",
     "source_recovery_state": "execution_without_recoverable_code",
     "status": "completed",
+    "task_set": "top-reconstruction-paper-version",
     "training_or_model_artifacts": [],
     "transcript_written_script_paths": []
   },
@@ -926,6 +935,7 @@
     "smallest_safe_recovery_rule": "Record the command only. Future collection should copy files created or modified outside results/**, with a manifest.",
     "source_recovery_state": "execution_without_recoverable_code",
     "status": "completed",
+    "task_set": "top-reconstruction-paper-version",
     "training_or_model_artifacts": [],
     "transcript_written_script_paths": []
   },
@@ -989,6 +999,7 @@
     "smallest_safe_recovery_rule": "Record the command only. Future collection should copy files created or modified outside results/**, with a manifest.",
     "source_recovery_state": "execution_without_recoverable_code",
     "status": "completed",
+    "task_set": "top-reconstruction-paper-version",
     "training_or_model_artifacts": [],
     "transcript_written_script_paths": []
   },
@@ -1659,6 +1670,7 @@
     "smallest_safe_recovery_rule": "Parse shell heredocs/redirections and native write or patch payloads into reviewer-generated recovered-source files; do not execute them.",
     "source_recovery_state": "recoverable_from_transcript",
     "status": "completed",
+    "task_set": "top-reconstruction-paper-version",
     "training_or_model_artifacts": [
       "artifacts/root/results/dataset_prepare/train.parquet",
       "artifacts/root/results/train/model_xgb.json",
@@ -1766,6 +1778,7 @@
     "smallest_safe_recovery_rule": "Parse shell heredocs/redirections and native write or patch payloads into reviewer-generated recovered-source files; do not execute them.",
     "source_recovery_state": "recoverable_from_transcript",
     "status": "completed",
+    "task_set": "top-reconstruction-paper-version",
     "training_or_model_artifacts": [
       "artifacts/root/results/dataset_prepare/train.parquet",
       "artifacts/root/results/train/feature_importance.png",
@@ -1864,6 +1877,7 @@
     "smallest_safe_recovery_rule": "Parse shell heredocs/redirections and native write or patch payloads into reviewer-generated recovered-source files; do not execute them.",
     "source_recovery_state": "recoverable_from_transcript",
     "status": "completed",
+    "task_set": "top-reconstruction-paper-version",
     "training_or_model_artifacts": [
       "artifacts/root/results/dataset_prepare/train.parquet",
       "artifacts/root/results/train/model_xgb.json",
@@ -1952,6 +1966,7 @@
     "smallest_safe_recovery_rule": "Parse shell heredocs/redirections and native write or patch payloads into reviewer-generated recovered-source files; do not execute them.",
     "source_recovery_state": "recoverable_from_transcript",
     "status": "completed",
+    "task_set": "top-reconstruction-paper-version",
     "training_or_model_artifacts": [
       "artifacts/root/results/dataset_prepare/train.parquet",
       "artifacts/root/results/train/model_xgb.json",
@@ -2040,6 +2055,7 @@
     "smallest_safe_recovery_rule": "Parse shell heredocs/redirections and native write or patch payloads into reviewer-generated recovered-source files; do not execute them.",
     "source_recovery_state": "recoverable_from_transcript",
     "status": "completed",
+    "task_set": "top-reconstruction-paper-version",
     "training_or_model_artifacts": [
       "artifacts/root/results/dataset_prepare/train.parquet",
       "artifacts/root/results/train/model_xgb.json",
@@ -2132,6 +2148,7 @@
     "smallest_safe_recovery_rule": "Parse shell heredocs/redirections and native write or patch payloads into reviewer-generated recovered-source files; do not execute them.",
     "source_recovery_state": "recoverable_from_transcript",
     "status": "completed",
+    "task_set": "top-reconstruction-paper-version",
     "training_or_model_artifacts": [
       "artifacts/root/results/dataset_prepare/train.parquet",
       "artifacts/root/results/train/model_variant_comparison.json",
@@ -2225,6 +2242,7 @@
     "smallest_safe_recovery_rule": "Parse shell heredocs/redirections and native write or patch payloads into reviewer-generated recovered-source files; do not execute them.",
     "source_recovery_state": "recoverable_from_transcript",
     "status": "completed",
+    "task_set": "top-reconstruction-paper-version",
     "training_or_model_artifacts": [
       "artifacts/root/results/dataset_prepare/train.parquet",
       "artifacts/root/results/train/model_xgb.json",

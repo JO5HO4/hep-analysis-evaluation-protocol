@@ -7,6 +7,7 @@ files and direct code-writing/execution evidence in preserved transcripts.
 """
 from __future__ import annotations
 
+import argparse
 import json
 import re
 from pathlib import Path
@@ -14,7 +15,8 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-RUNS = ROOT / "results/paper/top-reconstruction-paper-version"
+PAPER_RESULTS = ROOT / "results/paper"
+RUNS = PAPER_RESULTS / "top-reconstruction-paper-version"
 OUT = Path(__file__).resolve().parent
 
 EXECUTE = re.compile(r"(?:python3?|uv run python)\s+([/A-Za-z0-9_.-]+\.py)")
@@ -77,7 +79,7 @@ def inventory(run: Path) -> dict[str, list[str]]:
     return groups
 
 
-def audit_run(run: Path) -> dict[str, Any]:
+def audit_run(run: Path, evidence_root: Path) -> dict[str, Any]:
     info = metadata(run)
     groups = inventory(run)
     transcript_paths = sorted({
@@ -129,6 +131,7 @@ def audit_run(run: Path) -> dict[str, Any]:
         signatures.append("final outputs exist but copied transcripts contain no code-writing payload")
     return {
         **info,
+        "task_set": run.relative_to(PAPER_RESULTS).parts[0],
         "evidence_root": posix(run),
         "inventory": groups,
         "inventory_counts": {name: len(paths) for name, paths in groups.items()},
@@ -144,15 +147,18 @@ def audit_run(run: Path) -> dict[str, Any]:
     }
 
 
-def markdown(records: list[dict[str, Any]]) -> str:
+def markdown(records: list[dict[str, Any]], title: str) -> str:
+    by_task: dict[str, int] = {}
+    for item in records:
+        by_task[item["task_set"]] = by_task.get(item["task_set"], 0) + 1
     lines = [
-        "# Top-reconstruction artifact-copy audit",
+        f"# {title}",
         "",
-        "This is an evaluator-owned recovery audit, not a physics score. It uses only the bounded `results/paper/top-reconstruction-paper-version/` tree. A result, plot, or report is never treated as proof of uncopied source behavior.",
+        "This is an evaluator-owned recovery audit, not a physics score. It uses only the declared bounded retained-results tree. A result, plot, or report is never treated as proof of uncopied source behavior.",
         "",
         "## Summary",
         "",
-        f"- Runs inspected: {len(records)}.",
+        f"- Runs inspected: {len(records)} ({', '.join(f'{task}={count}' for task, count in sorted(by_task.items()))}).",
         f"- Direct copied final source: {sum(item['source_recovery_state'] == 'recoverable_final_code' for item in records)}.",
         f"- Source recoverable from already copied transcripts: {sum(item['source_recovery_state'] == 'recoverable_from_transcript' for item in records)}.",
         f"- Execution evidence without recoverable code: {sum(item['source_recovery_state'] == 'execution_without_recoverable_code' for item in records)}.",
@@ -163,7 +169,7 @@ def markdown(records: list[dict[str, Any]]) -> str:
     ]
     for item in records:
         lines += [
-            f"### {item['run_id']} — {item['agent']} / {item['model']}",
+        f"### {item['task_set']} / {item['run_id']} — {item['agent']} / {item['model']}",
             "",
             f"- Retained evidence root: `{item['evidence_root']}`",
             f"- Execution status / Harbor reward: `{item['status']}` / `{item['harbor_reward']}`",
@@ -171,9 +177,10 @@ def markdown(records: list[dict[str, Any]]) -> str:
             f"- Inventory counts: " + ", ".join(f"{name}={count}" for name, count in item["inventory_counts"].items()) + ".",
             f"- Final training/model paths: `{', '.join(item['training_or_model_artifacts']) or 'none'}`.",
             f"- Final selection paths: `{', '.join(item['selection_artifacts']) or 'none'}`.",
+            f"- Copied source recoverable now: `{', '.join(item['inventory']['copied_workspace_source']) or 'none'}`.",
             f"- Transcript evidence paths: `{', '.join(item['code_construction_evidence']) or 'none'}`.",
             f"- Executed script paths seen directly in transcripts: `{', '.join(item['executed_script_paths']) or 'none'}`.",
-            f"- Runtime source not copied as a workspace artifact: `{', '.join(item['transcript_written_script_paths'] or item['executed_script_paths']) or 'none'}`.",
+            f"- Runtime source not copied as a workspace artifact: `{', '.join(item['transcript_written_script_paths'] or item['executed_script_paths']) if item['source_recovery_state'] != 'recoverable_final_code' else 'none'}`.",
             f"- Incomplete-copy signatures: {'; '.join(item['incomplete_copy_signatures']) or 'none observed'}.",
             f"- Smallest safe recovery rule: {item['smallest_safe_recovery_rule']}",
             "",
@@ -192,11 +199,23 @@ def markdown(records: list[dict[str, Any]]) -> str:
 
 
 def main() -> None:
-    runs = sorted({path.parent for path in RUNS.rglob("result.json") if "__" in path.parent.name})
-    records = [audit_run(run) for run in runs]
-    (OUT / "artifact-copy-audit.json").write_text(json.dumps(records, indent=2, sort_keys=True) + "\n")
-    (OUT / "artifact-copy-audit.md").write_text(markdown(records))
-    print(f"wrote artifact-copy audit for {len(records)} top-reconstruction runs")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--all-paper-results", action="store_true", help="audit every retained task set under results/paper")
+    args = parser.parse_args()
+    evidence_root = PAPER_RESULTS if args.all_paper_results else RUNS
+    runs = sorted({path.parent for path in evidence_root.rglob("result.json") if "__" in path.parent.name})
+    records = [audit_run(run, evidence_root) for run in runs]
+    if args.all_paper_results:
+        output_dir = OUT.parent
+        stem = "artifact-copy-audit-all-paper-results"
+        title = "Artifact-copy audit for all retained paper results"
+    else:
+        output_dir = OUT
+        stem = "artifact-copy-audit"
+        title = "Top-reconstruction artifact-copy audit"
+    (output_dir / f"{stem}.json").write_text(json.dumps(records, indent=2, sort_keys=True) + "\n")
+    (output_dir / f"{stem}.md").write_text(markdown(records, title))
+    print(f"wrote artifact-copy audit for {len(records)} runs under {evidence_root.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":
